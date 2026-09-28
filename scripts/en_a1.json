@@ -1,0 +1,1922 @@
+[
+  {
+    "id": "en-a1-0001",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Hello",
+    "phonetic": "/həˈləʊ/",
+    "partOfSpeech": "thán từ",
+    "vietnameseMeaning": "xin chào",
+    "example": "Hello, nice to meet you!",
+    "exampleMeaning": "Xin chào, rất vui được gặp bạn!",
+    "collocations": [
+      "say hello"
+    ],
+    "mnemonicTip": "Lời chào hỏi lịch sự cơ bản nhất."
+  },
+  {
+    "id": "en-a1-0002",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Goodbye",
+    "phonetic": "/ɡʊdˈbaɪ/",
+    "partOfSpeech": "thán từ",
+    "vietnameseMeaning": "tạm biệt",
+    "example": "Goodbye, see you tomorrow.",
+    "exampleMeaning": "Tạm biệt, hẹn gặp lại ngày mai.",
+    "collocations": [
+      "say goodbye"
+    ],
+    "mnemonicTip": "Chào tạm biệt kinh điển."
+  },
+  {
+    "id": "en-a1-0003",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Name",
+    "phonetic": "/neɪm/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tên gọi, họ tên",
+    "example": "What is your full name?",
+    "exampleMeaning": "Tên đầy đủ của bạn là gì?",
+    "collocations": [
+      "full name"
+    ],
+    "mnemonicTip": "Xác định danh tính cá nhân."
+  },
+  {
+    "id": "en-a1-0004",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Friend",
+    "phonetic": "/frend/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "người bạn",
+    "example": "She is my closest friend.",
+    "exampleMeaning": "Cô ấy là người bạn thân nhất của tôi.",
+    "collocations": [
+      "best friend"
+    ],
+    "mnemonicTip": "Mối quan hệ bạn bè gắn bó."
+  },
+  {
+    "id": "en-a1-0005",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Family",
+    "phonetic": "/ˈfæm.əl.i/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "gia đình",
+    "example": "I love spending time with my family.",
+    "exampleMeaning": "Tôi thích dành thời gian bên gia đình.",
+    "collocations": [
+      "family member"
+    ],
+    "mnemonicTip": "Tổ ấm thiêng liêng."
+  },
+  {
+    "id": "en-a1-0006",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Father",
+    "phonetic": "/ˈfɑː.ðər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "bố, người cha",
+    "example": "My father is an engineer.",
+    "exampleMeaning": "Bố tôi là một kỹ sư.",
+    "collocations": [
+      "father and son"
+    ],
+    "mnemonicTip": "Trụ cột gia đình."
+  },
+  {
+    "id": "en-a1-0007",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Mother",
+    "phonetic": "/ˈmʌð.ər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "mẹ, người mẹ",
+    "example": "My mother cooks delicious meals.",
+    "exampleMeaning": "Mẹ tôi nấu những bữa ăn rất ngon.",
+    "collocations": [
+      "caring mother"
+    ],
+    "mnemonicTip": "Tình mẫu tử thiêng liêng."
+  },
+  {
+    "id": "en-a1-0008",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Brother",
+    "phonetic": "/ˈbrʌð.ər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "anh/em trai",
+    "example": "My brother is a college student.",
+    "exampleMeaning": "Anh trai tôi là một sinh viên đại học.",
+    "collocations": [
+      "older brother"
+    ],
+    "mnemonicTip": "Anh em ruột thịt."
+  },
+  {
+    "id": "en-a1-0009",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Sister",
+    "phonetic": "/ˈsɪs.tər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "chị/em gái",
+    "example": "My sister plays the piano beautifully.",
+    "exampleMeaning": "Em gái tôi chơi đàn dương cầm rất hay.",
+    "collocations": [
+      "younger sister"
+    ],
+    "mnemonicTip": "Chị em gái yêu thương."
+  },
+  {
+    "id": "en-a1-0010",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Child",
+    "phonetic": "/tʃaɪld/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "đứa trẻ, con cái",
+    "example": "The child is laughing joyfully.",
+    "exampleMeaning": "Đứa trẻ đang cười một cách vui sướng.",
+    "collocations": [
+      "happy child"
+    ],
+    "mnemonicTip": "Số nhiều là children."
+  },
+  {
+    "id": "en-a1-0011",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Baby",
+    "phonetic": "/ˈbeɪ.bi/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "em bé sơ sinh",
+    "example": "The baby fell asleep peacefully.",
+    "exampleMeaning": "Em bé đã ngủ say một cách yên bình.",
+    "collocations": [
+      "newborn baby"
+    ],
+    "mnemonicTip": "Em bé mới sinh."
+  },
+  {
+    "id": "en-a1-0012",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Man",
+    "phonetic": "/mæn/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "người đàn ông",
+    "example": "A polite man held the door open.",
+    "exampleMeaning": "Một người đàn ông lịch sự đã giữ cửa mở.",
+    "collocations": [
+      "young man"
+    ],
+    "mnemonicTip": "Số nhiều là men."
+  },
+  {
+    "id": "en-a1-0013",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Woman",
+    "phonetic": "/ˈwʊm.ən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "người phụ nữ",
+    "example": "She is an inspiring woman.",
+    "exampleMeaning": "Cô ấy là một người phụ nữ truyền cảm hứng.",
+    "collocations": [
+      "wise woman"
+    ],
+    "mnemonicTip": "Số nhiều là women /wɪm.ɪn/."
+  },
+  {
+    "id": "en-a1-0014",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Boy",
+    "phonetic": "/bɔɪ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cậu bé",
+    "example": "The boy loves reading adventure novels.",
+    "exampleMeaning": "Cậu bé thích đọc tiểu thuyết phiêu lưu.",
+    "collocations": [
+      "school boy"
+    ],
+    "mnemonicTip": "Bé trai hoặc thiếu niên."
+  },
+  {
+    "id": "en-a1-0015",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Girl",
+    "phonetic": "/ɡɜːl/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cô bé",
+    "example": "The little girl drew a colorful rainbow.",
+    "exampleMeaning": "Cô bé vẽ một chiếc cầu vồng nhiều màu sắc.",
+    "collocations": [
+      "little girl"
+    ],
+    "mnemonicTip": "Bé gái hoặc thiếu nữ."
+  },
+  {
+    "id": "en-a1-0016",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "People",
+    "phonetic": "/ˈpiː.pəl/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "con người, mọi người",
+    "example": "Many people gathered in the central square.",
+    "exampleMeaning": "Nhiều người tụ tập ở quảng trường trung tâm.",
+    "collocations": [
+      "friendly people"
+    ],
+    "mnemonicTip": "Danh từ số nhiều chỉ người."
+  },
+  {
+    "id": "en-a1-0017",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Person",
+    "phonetic": "/ˈpɜː.sən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "một người, cá nhân",
+    "example": "He is a remarkably polite person.",
+    "exampleMeaning": "Anh ấy là một người cực kỳ lịch thiệp.",
+    "collocations": [
+      "good person"
+    ],
+    "mnemonicTip": "Số ít của people."
+  },
+  {
+    "id": "en-a1-0018",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Home",
+    "phonetic": "/həʊm/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tổ ấm, gia đình",
+    "example": "There is no place like home.",
+    "exampleMeaning": "Không có nơi nào ấm áp như tổ ấm gia đình.",
+    "collocations": [
+      "at home"
+    ],
+    "mnemonicTip": "Home mang tình cảm ấm áp."
+  },
+  {
+    "id": "en-a1-0019",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "House",
+    "phonetic": "/haʊs/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "ngôi nhà",
+    "example": "They moved into a spacious house.",
+    "exampleMeaning": "Họ chuyển đến một ngôi nhà rộng rãi.",
+    "collocations": [
+      "buy a house"
+    ],
+    "mnemonicTip": "Công trình nhà ở vật chất."
+  },
+  {
+    "id": "en-a1-0020",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Room",
+    "phonetic": "/ruːm/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "căn phòng",
+    "example": "My room has a sunny window.",
+    "exampleMeaning": "Phòng tôi có cửa sổ đón nắng.",
+    "collocations": [
+      "living room"
+    ],
+    "mnemonicTip": "Không gian sinh hoạt."
+  },
+  {
+    "id": "en-a1-0021",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "School",
+    "phonetic": "/skuːl/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "trường học",
+    "example": "Students arrive at school early.",
+    "exampleMeaning": "Học sinh đến trường từ sáng sớm.",
+    "collocations": [
+      "primary school"
+    ],
+    "mnemonicTip": "Nơi truyền thụ tri thức."
+  },
+  {
+    "id": "en-a1-0022",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Teacher",
+    "phonetic": "/ˈtiː.tʃər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thầy cô giáo",
+    "example": "Our English teacher is passionate.",
+    "exampleMeaning": "Giáo viên tiếng Anh của chúng tôi rất nhiệt huyết.",
+    "collocations": [
+      "good teacher"
+    ],
+    "mnemonicTip": "Người dẫn dắt tương lai."
+  },
+  {
+    "id": "en-a1-0023",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Student",
+    "phonetic": "/ˈstjuː.dənt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "học sinh, sinh viên",
+    "example": "Diligent students achieve high scores.",
+    "exampleMeaning": "Những học sinh chăm chỉ đạt điểm số cao.",
+    "collocations": [
+      "college student"
+    ],
+    "mnemonicTip": "Người tiếp thu tri thức."
+  },
+  {
+    "id": "en-a1-0024",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Book",
+    "phonetic": "/bʊk/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cuốn sách",
+    "example": "Books are bridges to wisdom.",
+    "exampleMeaning": "Sách là cây cầu dẫn tới trí tuệ.",
+    "collocations": [
+      "read a book"
+    ],
+    "mnemonicTip": "Kho tàng tri thức vô tận."
+  },
+  {
+    "id": "en-a1-0025",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Pen",
+    "phonetic": "/pen/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cây bút mực",
+    "example": "Sign your signature with a pen.",
+    "exampleMeaning": "Hãy ký tên bạn bằng chiếc bút mực.",
+    "collocations": [
+      "ballpoint pen"
+    ],
+    "mnemonicTip": "Dụng cụ ghi chép."
+  },
+  {
+    "id": "en-a1-0026",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Table",
+    "phonetic": "/ˈteɪ.bəl/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cái bàn",
+    "example": "Set the dinner table carefully.",
+    "exampleMeaning": "Hãy dọn bàn ăn cẩn thận nhé.",
+    "collocations": [
+      "dining table"
+    ],
+    "mnemonicTip": "Đồ nội thất mặt phẳng."
+  },
+  {
+    "id": "en-a1-0027",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Chair",
+    "phonetic": "/tʃeər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "chiếc ghế",
+    "example": "Pull up a chair and join us.",
+    "exampleMeaning": "Hãy kéo ghế lại và cùng tham gia với chúng tôi.",
+    "collocations": [
+      "comfortable chair"
+    ],
+    "mnemonicTip": "Đồ dùng để ngồi."
+  },
+  {
+    "id": "en-a1-0028",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Door",
+    "phonetic": "/dɔːr/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cánh cửa",
+    "example": "Please lock the door at night.",
+    "exampleMeaning": "Xin hãy khóa cửa vào ban đêm.",
+    "collocations": [
+      "open the door"
+    ],
+    "mnemonicTip": "Lối ra vào."
+  },
+  {
+    "id": "en-a1-0029",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Window",
+    "phonetic": "/ˈwɪn.dəʊ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cửa sổ",
+    "example": "The window overlooks a green park.",
+    "exampleMeaning": "Cửa sổ nhìn ra một công viên xanh mát.",
+    "collocations": [
+      "window view"
+    ],
+    "mnemonicTip": "Khung đón ánh sáng."
+  },
+  {
+    "id": "en-a1-0030",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 1: Chào hỏi, Bản thân & Gia đình",
+    "word": "Bed",
+    "phonetic": "/bed/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "chiếc giường",
+    "example": "A cozy bed guarantees sweet dreams.",
+    "exampleMeaning": "Chiếc giường êm ái đảm bảo giấc mơ ngọt ngào.",
+    "collocations": [
+      "make the bed"
+    ],
+    "mnemonicTip": "Nơi ngả lưng nghỉ ngơi."
+  },
+  {
+    "id": "en-a1-0031",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Water",
+    "phonetic": "/ˈwɔː.tər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "nước uống",
+    "example": "Drink pure water every morning.",
+    "exampleMeaning": "Hãy uống nước tinh khiết mỗi sáng.",
+    "collocations": [
+      "glass of water"
+    ],
+    "mnemonicTip": "Cội nguồn sự sống."
+  },
+  {
+    "id": "en-a1-0032",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Food",
+    "phonetic": "/fuːd/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thức ăn, thực phẩm",
+    "example": "Eat wholesome, nourishing food.",
+    "exampleMeaning": "Hãy ăn những món ăn lành mạnh, bổ dưỡng.",
+    "collocations": [
+      "fresh food"
+    ],
+    "mnemonicTip": "Dinh dưỡng nuôi cơ thể."
+  },
+  {
+    "id": "en-a1-0033",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Bread",
+    "phonetic": "/bred/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "bánh mì",
+    "example": "Warm bread with honey is delicious.",
+    "exampleMeaning": "Bánh mì ấm ăn với mật ong thật ngon miệng.",
+    "collocations": [
+      "slice of bread"
+    ],
+    "mnemonicTip": "Lương thực căn bản."
+  },
+  {
+    "id": "en-a1-0034",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Rice",
+    "phonetic": "/raɪs/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cơm, gạo",
+    "example": "Rice is eaten daily in Vietnam.",
+    "exampleMeaning": "Cơm được ăn hàng ngày ở Việt Nam.",
+    "collocations": [
+      "steamed rice"
+    ],
+    "mnemonicTip": "Hạt ngọc trời ban."
+  },
+  {
+    "id": "en-a1-0035",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Meat",
+    "phonetic": "/miːt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thịt",
+    "example": "Lean meat provides good protein.",
+    "exampleMeaning": "Thịt nạc cung cấp lượng đạm tốt.",
+    "collocations": [
+      "fresh meat"
+    ],
+    "mnemonicTip": "Thực phẩm giàu đạm."
+  },
+  {
+    "id": "en-a1-0036",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Fish",
+    "phonetic": "/fɪʃ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cá",
+    "example": "Salmon is a nutritious oily fish.",
+    "exampleMeaning": "Cá hồi là một loại cá giàu dinh dưỡng.",
+    "collocations": [
+      "fresh fish"
+    ],
+    "mnemonicTip": "Thực phẩm sông biển."
+  },
+  {
+    "id": "en-a1-0037",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Egg",
+    "phonetic": "/eɡ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "quả trứng",
+    "example": "Start your morning with a boiled egg.",
+    "exampleMeaning": "Bắt đầu buổi sáng với một quả trứng luộc.",
+    "collocations": [
+      "fried egg"
+    ],
+    "mnemonicTip": "Bữa ăn giàu protein."
+  },
+  {
+    "id": "en-a1-0038",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Milk",
+    "phonetic": "/mɪlk/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sữa tươi",
+    "example": "Drink milk to strengthen your bones.",
+    "exampleMeaning": "Uống sữa để xương thêm chắc khỏe.",
+    "collocations": [
+      "warm milk"
+    ],
+    "mnemonicTip": "Giàu canxi và khoáng chất."
+  },
+  {
+    "id": "en-a1-0039",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Tea",
+    "phonetic": "/tiː/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "trà, nước chè",
+    "example": "Enjoy a soothing cup of herbal tea.",
+    "exampleMeaning": "Thưởng thức một tách trà thảo mộc êm dịu.",
+    "collocations": [
+      "green tea"
+    ],
+    "mnemonicTip": "Nét văn hóa tao nhã."
+  },
+  {
+    "id": "en-a1-0040",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Coffee",
+    "phonetic": "/ˈkɒf.i/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cà phê",
+    "example": "Black coffee sharpens mental focus.",
+    "exampleMeaning": "Cà phê đen giúp trí óc tỉnh táo và tập trung.",
+    "collocations": [
+      "hot coffee"
+    ],
+    "mnemonicTip": "Thức uống tỉnh táo."
+  },
+  {
+    "id": "en-a1-0041",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Apple",
+    "phonetic": "/ˈæp.əl/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "quả táo",
+    "example": "Eat a crisp apple as a healthy snack.",
+    "exampleMeaning": "Ăn một quả táo giòn như món ăn nhẹ lành mạnh.",
+    "collocations": [
+      "red apple"
+    ],
+    "mnemonicTip": "Trái cây giàu chất xơ."
+  },
+  {
+    "id": "en-a1-0042",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Orange",
+    "phonetic": "/ˈɒr.ɪndʒ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "quả cam",
+    "example": "Fresh oranges are packed with vitamin C.",
+    "exampleMeaning": "Cam tươi chứa đầy vitamin C.",
+    "collocations": [
+      "orange juice"
+    ],
+    "mnemonicTip": "Nước ép thơm mát."
+  },
+  {
+    "id": "en-a1-0043",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Banana",
+    "phonetic": "/bəˈnɑː.nə/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "quả chuối",
+    "example": "Bananas give endurance for athletes.",
+    "exampleMeaning": "Chuối mang lại sức bền cho vận động viên.",
+    "collocations": [
+      "ripe banana"
+    ],
+    "mnemonicTip": "Nạp kali nhanh chóng."
+  },
+  {
+    "id": "en-a1-0044",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Eat",
+    "phonetic": "/iːt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "ăn uống",
+    "example": "We eat meals together as a family.",
+    "exampleMeaning": "Chúng tôi ăn cơm cùng nhau như một gia đình.",
+    "collocations": [
+      "eat well"
+    ],
+    "mnemonicTip": "Hành động nạp năng lượng."
+  },
+  {
+    "id": "en-a1-0045",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Drink",
+    "phonetic": "/drɪŋk/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "uống nước",
+    "example": "Drink plenty of fluids in summer.",
+    "exampleMeaning": "Uống nhiều nước vào mùa hè.",
+    "collocations": [
+      "drink water"
+    ],
+    "mnemonicTip": "Bù nước cho cơ thể."
+  },
+  {
+    "id": "en-a1-0046",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Sleep",
+    "phonetic": "/sliːp/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "ngủ nghỉ",
+    "example": "Sleep deeply for eight hours.",
+    "exampleMeaning": "Hãy ngủ sâu trong tám tiếng.",
+    "collocations": [
+      "sleep well"
+    ],
+    "mnemonicTip": "Hồi phục tế bào cơ thể."
+  },
+  {
+    "id": "en-a1-0047",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Wake",
+    "phonetic": "/weɪk/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "thức giấc",
+    "example": "Wake up with gratitude each day.",
+    "exampleMeaning": "Hãy thức dậy với lòng biết ơn mỗi ngày.",
+    "collocations": [
+      "wake up early"
+    ],
+    "mnemonicTip": "Khởi đầu ngày mới."
+  },
+  {
+    "id": "en-a1-0048",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Walk",
+    "phonetic": "/wɔːk/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "đi bộ",
+    "example": "We walk along the quiet beach.",
+    "exampleMeaning": "Chúng tôi đi bộ dọc theo bãi biển thanh bình.",
+    "collocations": [
+      "walk slowly"
+    ],
+    "mnemonicTip": "Vận động nhẹ nhàng."
+  },
+  {
+    "id": "en-a1-0049",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Run",
+    "phonetic": "/rʌn/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "chạy bộ",
+    "example": "Run for fifteen minutes every day.",
+    "exampleMeaning": "Hãy chạy bộ mười lăm phút mỗi ngày.",
+    "collocations": [
+      "run fast"
+    ],
+    "mnemonicTip": "Rèn luyện thể lực."
+  },
+  {
+    "id": "en-a1-0050",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Read",
+    "phonetic": "/riːd/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "đọc sách",
+    "example": "Read inspiring stories of courage.",
+    "exampleMeaning": "Hãy đọc những câu chuyện can trường truyền cảm hứng.",
+    "collocations": [
+      "read books"
+    ],
+    "mnemonicTip": "Nuôi dưỡng tâm hồn."
+  },
+  {
+    "id": "en-a1-0051",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Write",
+    "phonetic": "/raɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "viết lách",
+    "example": "Write your diary every evening.",
+    "exampleMeaning": "Hãy viết nhật ký vào mỗi buổi tối.",
+    "collocations": [
+      "write clearly"
+    ],
+    "mnemonicTip": "Ghi lại tư tưởng."
+  },
+  {
+    "id": "en-a1-0052",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Listen",
+    "phonetic": "/ˈlɪs.ən/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "lắng nghe",
+    "example": "Listen attentively to good advice.",
+    "exampleMeaning": "Hãy chăm chú lắng nghe lời khuyên hay.",
+    "collocations": [
+      "listen closely"
+    ],
+    "mnemonicTip": "Âm 't' câm: /ˈlɪs.ən/."
+  },
+  {
+    "id": "en-a1-0053",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Speak",
+    "phonetic": "/spiːk/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "nói chuyện",
+    "example": "Speak words of kindness and truth.",
+    "exampleMeaning": "Hãy nói những lời nhân ái và chân thành.",
+    "collocations": [
+      "speak English"
+    ],
+    "mnemonicTip": "Diễn đạt bằng lời nói."
+  },
+  {
+    "id": "en-a1-0054",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Buy",
+    "phonetic": "/baɪ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "mua sắm",
+    "example": "Buy only what brings genuine value.",
+    "exampleMeaning": "Chỉ mua những gì mang lại giá trị thực sự.",
+    "collocations": [
+      "buy groceries"
+    ],
+    "mnemonicTip": "Giao dịch sở hữu."
+  },
+  {
+    "id": "en-a1-0055",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Sell",
+    "phonetic": "/sel/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "bán hàng",
+    "example": "They sell handcrafted artisan goods.",
+    "exampleMeaning": "Họ bán những món đồ thủ công mỹ nghệ tinh xảo.",
+    "collocations": [
+      "sell goods"
+    ],
+    "mnemonicTip": "Cung cấp cho thị trường."
+  },
+  {
+    "id": "en-a1-0056",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Open",
+    "phonetic": "/ˈəʊ.pən/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "mở ra",
+    "example": "Open the door to new possibilities.",
+    "exampleMeaning": "Hãy mở cánh cửa đón những cơ hội mới.",
+    "collocations": [
+      "open wide"
+    ],
+    "mnemonicTip": "Mở rộng giới hạn."
+  },
+  {
+    "id": "en-a1-0057",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Close",
+    "phonetic": "/kləʊz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "đóng lại",
+    "example": "Close the book and reflect on lessons.",
+    "exampleMeaning": "Hãy khép sách lại và suy ngẫm bài học.",
+    "collocations": [
+      "close down"
+    ],
+    "mnemonicTip": "Khép lại kết thúc."
+  },
+  {
+    "id": "en-a1-0058",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Help",
+    "phonetic": "/help/",
+    "partOfSpeech": "động từ/danh từ",
+    "vietnameseMeaning": "giúp đỡ",
+    "example": "Always be ready to help a neighbor.",
+    "exampleMeaning": "Hãy luôn sẵn sàng giúp đỡ láng giềng.",
+    "collocations": [
+      "help out"
+    ],
+    "mnemonicTip": "Tương thân tương ái."
+  },
+  {
+    "id": "en-a1-0059",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Work",
+    "phonetic": "/wɜːk/",
+    "partOfSpeech": "động từ/danh từ",
+    "vietnameseMeaning": "làm việc",
+    "example": "Do honest work with diligence.",
+    "exampleMeaning": "Lao động chân chính bằng sự cần mẫn.",
+    "collocations": [
+      "work hard"
+    ],
+    "mnemonicTip": "Lao động tạo giá trị."
+  },
+  {
+    "id": "en-a1-0060",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 2: Ẩm thực & Thói quen thường nhật",
+    "word": "Play",
+    "phonetic": "/pleɪ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "vui chơi",
+    "example": "Kids play soccer in the yard.",
+    "exampleMeaning": "Lũ trẻ chơi bóng đá trong sân.",
+    "collocations": [
+      "play sports"
+    ],
+    "mnemonicTip": "Thư giãn tinh thần."
+  },
+  {
+    "id": "en-a1-0061",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Time",
+    "phonetic": "/taɪm/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thời gian",
+    "example": "Value every second of your time.",
+    "exampleMeaning": "Hãy trân trọng từng giây phút thời gian của bạn.",
+    "collocations": [
+      "on time"
+    ],
+    "mnemonicTip": "Tài sản vô giá nhất."
+  },
+  {
+    "id": "en-a1-0062",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Day",
+    "phonetic": "/deɪ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "ngày",
+    "example": "Make each day a masterpiece.",
+    "exampleMeaning": "Hãy biến mỗi ngày thành một tuyệt tác.",
+    "collocations": [
+      "sunny day"
+    ],
+    "mnemonicTip": "Chu kỳ 24 giờ."
+  },
+  {
+    "id": "en-a1-0063",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Night",
+    "phonetic": "/naɪt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "đêm tối",
+    "example": "The starry night is calm and silent.",
+    "exampleMeaning": "Đêm đầy sao thật êm đềm và tĩnh lặng.",
+    "collocations": [
+      "good night"
+    ],
+    "mnemonicTip": "Thời gian nghỉ ngơi."
+  },
+  {
+    "id": "en-a1-0064",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Morning",
+    "phonetic": "/ˈmɔː.nɪŋ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "buổi sáng",
+    "example": "Early morning air is crisp and pure.",
+    "exampleMeaning": "Không khí sớm mai thật trong lành và thanh khiết.",
+    "collocations": [
+      "early morning"
+    ],
+    "mnemonicTip": "Bình minh lên."
+  },
+  {
+    "id": "en-a1-0065",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Evening",
+    "phonetic": "/ˈiːv.nɪŋ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "buổi tối",
+    "example": "Rest and unwind in the evening.",
+    "exampleMeaning": "Hãy nghỉ ngơi và thư giãn vào buổi tối.",
+    "collocations": [
+      "in the evening"
+    ],
+    "mnemonicTip": "Hoàng hôn buông."
+  },
+  {
+    "id": "en-a1-0066",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Today",
+    "phonetic": "/təˈdeɪ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "hôm nay",
+    "example": "Today is full of new beginnings.",
+    "exampleMeaning": "Hôm nay tràn ngập những khởi đầu mới mẻ.",
+    "collocations": [
+      "today only"
+    ],
+    "mnemonicTip": "Hiện tại quý giá."
+  },
+  {
+    "id": "en-a1-0067",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Tomorrow",
+    "phonetic": "/təˈmɒr.əʊ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "ngày mai",
+    "example": "Tomorrow promises brighter horizons.",
+    "exampleMeaning": "Ngày mai hứa hẹn những chân trời tươi sáng hơn.",
+    "collocations": [
+      "see you tomorrow"
+    ],
+    "mnemonicTip": "Tương lai gần."
+  },
+  {
+    "id": "en-a1-0068",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Yesterday",
+    "phonetic": "/ˈjes.tə.deɪ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "hôm qua",
+    "example": "Yesterday is history, learn from it.",
+    "exampleMeaning": "Hôm qua đã là lịch sử, hãy học từ nó.",
+    "collocations": [
+      "yesterday evening"
+    ],
+    "mnemonicTip": "Quá khứ vừa qua."
+  },
+  {
+    "id": "en-a1-0069",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Hour",
+    "phonetic": "/aʊər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "giờ đồng hồ",
+    "example": "Dedicate one hour daily to study.",
+    "exampleMeaning": "Hãy dành một giờ mỗi ngày để học tập.",
+    "collocations": [
+      "per hour"
+    ],
+    "mnemonicTip": "Âm 'h' câm: /aʊər/."
+  },
+  {
+    "id": "en-a1-0070",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Minute",
+    "phonetic": "/ˈmɪn.ɪt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "phút",
+    "example": "Give me a minute to finish this.",
+    "exampleMeaning": "Cho tôi một phút để hoàn tất việc này nhé.",
+    "collocations": [
+      "just a minute"
+    ],
+    "mnemonicTip": "60 giây ngắn ngủi."
+  },
+  {
+    "id": "en-a1-0071",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Car",
+    "phonetic": "/kɑːr/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "xe hơi, ô tô",
+    "example": "Modern electric cars are whisper-quiet.",
+    "exampleMeaning": "Xe điện hiện đại chạy êm ru như tiếng thì thầm.",
+    "collocations": [
+      "drive a car"
+    ],
+    "mnemonicTip": "Phương tiện cá nhân."
+  },
+  {
+    "id": "en-a1-0072",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Bus",
+    "phonetic": "/bʌs/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "xe buýt",
+    "example": "Take the express bus downtown.",
+    "exampleMeaning": "Hãy đón tuyến xe buýt nhanh vào trung tâm.",
+    "collocations": [
+      "bus station"
+    ],
+    "mnemonicTip": "Phương tiện công cộng."
+  },
+  {
+    "id": "en-a1-0073",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Train",
+    "phonetic": "/treɪn/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "xe lửa, tàu hỏa",
+    "example": "The high-speed train arrived on time.",
+    "exampleMeaning": "Chuyến tàu cao tốc đã đến ga đúng giờ.",
+    "collocations": [
+      "catch a train"
+    ],
+    "mnemonicTip": "Phương tiện đường ray."
+  },
+  {
+    "id": "en-a1-0074",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Plane",
+    "phonetic": "/pleɪn/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "máy bay",
+    "example": "The plane flew above the clouds.",
+    "exampleMeaning": "Chiếc máy bay lướt đi trên những đám mây.",
+    "collocations": [
+      "by plane"
+    ],
+    "mnemonicTip": "Phương tiện hàng không."
+  },
+  {
+    "id": "en-a1-0075",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Boat",
+    "phonetic": "/bəʊt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thuyền bè",
+    "example": "A small boat sailed across the bay.",
+    "exampleMeaning": "Một chiếc thuyền nhỏ giương buồm băng qua vịnh.",
+    "collocations": [
+      "fishing boat"
+    ],
+    "mnemonicTip": "Phương tiện đường thủy."
+  },
+  {
+    "id": "en-a1-0076",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Bicycle",
+    "phonetic": "/ˈbaɪ.sɪ.kəl/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "xe đạp",
+    "example": "Riding a bicycle keeps you fit.",
+    "exampleMeaning": "Đạp xe đạp giúp bạn luôn cân đối khỏe mạnh.",
+    "collocations": [
+      "ride a bicycle"
+    ],
+    "mnemonicTip": "Bảo vệ môi trường."
+  },
+  {
+    "id": "en-a1-0077",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Road",
+    "phonetic": "/rəʊd/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "con đường",
+    "example": "The mountain road is scenic and winding.",
+    "exampleMeaning": "Con đường núi uốn lượn phong cảnh hữu tình.",
+    "collocations": [
+      "open road"
+    ],
+    "mnemonicTip": "Lối đi giao thông."
+  },
+  {
+    "id": "en-a1-0078",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Street",
+    "phonetic": "/striːt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "phố xá",
+    "example": "Streets in Hanoi are bustling and vibrant.",
+    "exampleMeaning": "Đường phố ở Hà Nội thật nhộn nhịp và sống động.",
+    "collocations": [
+      "main street"
+    ],
+    "mnemonicTip": "Đường phố dân cư."
+  },
+  {
+    "id": "en-a1-0079",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "City",
+    "phonetic": "/ˈsɪt.i/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thành phố",
+    "example": "Metropolitan cities attract talent.",
+    "exampleMeaning": "Những thành phố lớn thu hút nhiều nhân tài.",
+    "collocations": [
+      "big city"
+    ],
+    "mnemonicTip": "Đô thị hiện đại."
+  },
+  {
+    "id": "en-a1-0080",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Village",
+    "phonetic": "/ˈvɪl.ɪdʒ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "ngôi làng",
+    "example": "Life in the mountain village is peaceful.",
+    "exampleMeaning": "Cuộc sống ở ngôi làng vùng núi thật thanh bình.",
+    "collocations": [
+      "ancient village"
+    ],
+    "mnemonicTip": "Làng quê mộc mạc."
+  },
+  {
+    "id": "en-a1-0081",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Shop",
+    "phonetic": "/ʃɒp/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cửa tiệm",
+    "example": "A local coffee shop with cozy seats.",
+    "exampleMeaning": "Một quán cà phê địa phương với những chỗ ngồi ấm cúng.",
+    "collocations": [
+      "coffee shop"
+    ],
+    "mnemonicTip": "Nơi buôn bán nhỏ."
+  },
+  {
+    "id": "en-a1-0082",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Market",
+    "phonetic": "/ˈmɑː.kɪt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "khu chợ",
+    "example": "The morning market is packed with fresh produce.",
+    "exampleMeaning": "Chợ buổi sáng đầy ắp nông sản tươi ngon.",
+    "collocations": [
+      "supermarket"
+    ],
+    "mnemonicTip": "Nơi trao đổi hàng hóa."
+  },
+  {
+    "id": "en-a1-0083",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Money",
+    "phonetic": "/ˈmʌn.i/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tiền tệ",
+    "example": "Invest money in books and education.",
+    "exampleMeaning": "Hãy đầu tư tiền bạc vào sách vở và giáo dục.",
+    "collocations": [
+      "save money"
+    ],
+    "mnemonicTip": "Phương tiện thanh toán."
+  },
+  {
+    "id": "en-a1-0084",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Price",
+    "phonetic": "/praɪs/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "giá cả",
+    "example": "Fair prices encourage honest trade.",
+    "exampleMeaning": "Mức giá hợp lý khuyến khích thương mại lành mạnh.",
+    "collocations": [
+      "good price"
+    ],
+    "mnemonicTip": "Số tiền phải trả."
+  },
+  {
+    "id": "en-a1-0085",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Bag",
+    "phonetic": "/bæɡ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cặp xách, túi",
+    "example": "Carry a reusable canvas bag.",
+    "exampleMeaning": "Hãy mang theo túi vải tái sử dụng.",
+    "collocations": [
+      "handbag"
+    ],
+    "mnemonicTip": "Đựng đồ cá nhân."
+  },
+  {
+    "id": "en-a1-0086",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Box",
+    "phonetic": "/bɒks/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "chiếc hộp",
+    "example": "A wooden box filled with memories.",
+    "exampleMeaning": "Chiếc hộp gỗ chứa đầy những kỷ niệm.",
+    "collocations": [
+      "small box"
+    ],
+    "mnemonicTip": "Vật chứa hình khối."
+  },
+  {
+    "id": "en-a1-0087",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Paper",
+    "phonetic": "/ˈpeɪ.pər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "giấy viết",
+    "example": "Write your thoughts on crisp white paper.",
+    "exampleMeaning": "Hãy viết suy nghĩ lên trang giấy trắng tinh khôi.",
+    "collocations": [
+      "sheet of paper"
+    ],
+    "mnemonicTip": "Vật liệu ghi chép."
+  },
+  {
+    "id": "en-a1-0088",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Letter",
+    "phonetic": "/ˈlet.ər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "lá thư, chữ cái",
+    "example": "Handwritten letters carry heartfelt warmth.",
+    "exampleMeaning": "Những lá thư viết tay mang hơi ấm chân tình.",
+    "collocations": [
+      "write a letter"
+    ],
+    "mnemonicTip": "Thư từ giao tiếp."
+  },
+  {
+    "id": "en-a1-0089",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Picture",
+    "phonetic": "/ˈpɪk.tʃər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "bức tranh, ảnh",
+    "example": "A picture paints a thousand words.",
+    "exampleMeaning": "Một bức tranh đáng giá bằng vạn lời nói.",
+    "collocations": [
+      "take a picture"
+    ],
+    "mnemonicTip": "Hình ảnh nghệ thuật."
+  },
+  {
+    "id": "en-a1-0090",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 3: Thời gian, Phương tiện & Không gian",
+    "word": "Clock",
+    "phonetic": "/klɒk/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "đồng hồ",
+    "example": "The antique clock chimed twelve times.",
+    "exampleMeaning": "Chiếc đồng hồ cổ điểm chuông mười hai tiếng.",
+    "collocations": [
+      "wall clock"
+    ],
+    "mnemonicTip": "Dụng cụ đo giờ."
+  },
+  {
+    "id": "en-a1-0091",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Sun",
+    "phonetic": "/sʌn/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "mặt trời",
+    "example": "The morning sun banishes shadows.",
+    "exampleMeaning": "Mặt trời sớm mai xua tan bóng tối.",
+    "collocations": [
+      "sunshine"
+    ],
+    "mnemonicTip": "Nguồn năng lượng Trái Đất."
+  },
+  {
+    "id": "en-a1-0092",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Moon",
+    "phonetic": "/muːn/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "mặt trăng",
+    "example": "The autumn moon is round and bright.",
+    "exampleMeaning": "Vầng trăng thu tròn vành vạnh và sáng tỏ.",
+    "collocations": [
+      "full moon"
+    ],
+    "mnemonicTip": "Trăng thanh gió mát."
+  },
+  {
+    "id": "en-a1-0093",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Star",
+    "phonetic": "/stɑːr/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "ngôi sao",
+    "example": "Aim for the stars in your endeavors.",
+    "exampleMeaning": "Hãy nhắm tới các vì sao trong nỗ lực của bạn.",
+    "collocations": [
+      "bright star"
+    ],
+    "mnemonicTip": "Vật thể tỏa sáng bầu trời."
+  },
+  {
+    "id": "en-a1-0094",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Sky",
+    "phonetic": "/skaɪ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "bầu trời",
+    "example": "The sky turns golden at dusk.",
+    "exampleMeaning": "Bầu trời chuyển sang sắc vàng lúc hoàng hôn.",
+    "collocations": [
+      "blue sky"
+    ],
+    "mnemonicTip": "Vòm trời bao la."
+  },
+  {
+    "id": "en-a1-0095",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Rain",
+    "phonetic": "/reɪn/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "cơn mưa",
+    "example": "Gentle rain revives the dry land.",
+    "exampleMeaning": "Cơn mưa êm dịu làm hồi sinh mảnh đất khô cằn.",
+    "collocations": [
+      "heavy rain"
+    ],
+    "mnemonicTip": "Nước tưới mát vạn vật."
+  },
+  {
+    "id": "en-a1-0096",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Wind",
+    "phonetic": "/wɪnd/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "ngọn gió",
+    "example": "A refreshing sea wind cooled our faces.",
+    "exampleMeaning": "Cơn gió biển mát rượi xua đi cái nóng trên gương mặt.",
+    "collocations": [
+      "gentle wind"
+    ],
+    "mnemonicTip": "Không khí chuyển dịch."
+  },
+  {
+    "id": "en-a1-0097",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Tree",
+    "phonetic": "/triː/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cây xanh",
+    "example": "Ancient banyan trees guard the village.",
+    "exampleMeaning": "Cây đa cổ thụ che chở cho cả ngôi làng.",
+    "collocations": [
+      "green tree"
+    ],
+    "mnemonicTip": "Bóng râm tự nhiên."
+  },
+  {
+    "id": "en-a1-0098",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Flower",
+    "phonetic": "/flaʊ.ər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "bông hoa",
+    "example": "Orchids are elegant and resilient flowers.",
+    "exampleMeaning": "Hoa phong lan là loài hoa thanh nhã và kiên cường.",
+    "collocations": [
+      "fresh flower"
+    ],
+    "mnemonicTip": "Sắc đẹp tạo hóa."
+  },
+  {
+    "id": "en-a1-0099",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "River",
+    "phonetic": "/ˈrɪv.ər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "dòng sông",
+    "example": "Rivers carry life wherever they flow.",
+    "exampleMeaning": "Những dòng sông mang sự sống đến mọi nơi chúng chảy qua.",
+    "collocations": [
+      "river bank"
+    ],
+    "mnemonicTip": "Dòng nước trong lành."
+  },
+  {
+    "id": "en-a1-0100",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Sea",
+    "phonetic": "/siː/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "biển cả",
+    "example": "The turquoise sea stretched to the horizon.",
+    "exampleMeaning": "Vùng biển xanh ngọc bích trải dài đến tận chân trời.",
+    "collocations": [
+      "deep sea"
+    ],
+    "mnemonicTip": "Đại dương mênh mông."
+  },
+  {
+    "id": "en-a1-0101",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Dog",
+    "phonetic": "/dɒɡ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "chú chó",
+    "example": "Dogs show unwavering loyalty.",
+    "exampleMeaning": "Loài chó thể hiện sự trung thành son sắt.",
+    "collocations": [
+      "faithful dog"
+    ],
+    "mnemonicTip": "Người bạn trung thành."
+  },
+  {
+    "id": "en-a1-0102",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Cat",
+    "phonetic": "/kæt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "con mèo",
+    "example": "The cat purred contentedly in the sun.",
+    "exampleMeaning": "Chú mèo kêu rừ rừ thỏa mãn dưới ánh mặt trời.",
+    "collocations": [
+      "playful cat"
+    ],
+    "mnemonicTip": "Vật cưng êm ái."
+  },
+  {
+    "id": "en-a1-0103",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Bird",
+    "phonetic": "/bɜːd/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "loài chim",
+    "example": "Songbirds greet the morning sun.",
+    "exampleMeaning": "Những chú chim hót ca chào đón ánh ban mai.",
+    "collocations": [
+      "flying bird"
+    ],
+    "mnemonicTip": "Tự do cất cánh."
+  },
+  {
+    "id": "en-a1-0104",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Fish",
+    "phonetic": "/fɪʃ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "con cá",
+    "example": "Goldfish swim calmly in the pond.",
+    "exampleMeaning": "Cá vàng bơi lội thanh thản trong hồ.",
+    "collocations": [
+      "swim like a fish"
+    ],
+    "mnemonicTip": "Sinh vật dưới nước."
+  },
+  {
+    "id": "en-a1-0105",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Eye",
+    "phonetic": "/aɪ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "đôi mắt",
+    "example": "Her eyes shone with sincere joy.",
+    "exampleMeaning": "Đôi mắt cô ấy ánh lên niềm vui chân thành.",
+    "collocations": [
+      "bright eyes"
+    ],
+    "mnemonicTip": "Cửa sổ tâm hồn."
+  },
+  {
+    "id": "en-a1-0106",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Hand",
+    "phonetic": "/hænd/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "bàn tay",
+    "example": "Hold hands and walk forward together.",
+    "exampleMeaning": "Hãy nắm tay nhau và cùng bước về phía trước.",
+    "collocations": [
+      "give a hand"
+    ],
+    "mnemonicTip": "Bàn tay lao động."
+  },
+  {
+    "id": "en-a1-0107",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Heart",
+    "phonetic": "/hɑːt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "trái tim",
+    "example": "Follow what brings true joy to your heart.",
+    "exampleMeaning": "Hãy đi theo điều gì mang lại niềm vui đích thực cho trái tim.",
+    "collocations": [
+      "warm heart"
+    ],
+    "mnemonicTip": "Nơi chứa đựng cảm xúc."
+  },
+  {
+    "id": "en-a1-0108",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Smile",
+    "phonetic": "/smaɪl/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "nụ cười",
+    "example": "A kind smile costs nothing but gives much.",
+    "exampleMeaning": "Một nụ cười nhân hậu không tốn kém gì nhưng cho đi rất nhiều.",
+    "collocations": [
+      "bright smile"
+    ],
+    "mnemonicTip": "Lan tỏa niềm vui."
+  },
+  {
+    "id": "en-a1-0109",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Happy",
+    "phonetic": "/ˈhæp.i/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hạnh phúc",
+    "example": "Be happy with what you currently have.",
+    "exampleMeaning": "Hãy hạnh phúc với những gì bạn đang có hiện tại.",
+    "collocations": [
+      "happy life"
+    ],
+    "mnemonicTip": "Cảm xúc an lạc."
+  },
+  {
+    "id": "en-a1-0110",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Good",
+    "phonetic": "/ɡʊd/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "tốt đẹp",
+    "example": "Good character endures forever.",
+    "exampleMeaning": "Phẩm hạnh tốt đẹp trường tồn mãi mãi.",
+    "collocations": [
+      "good work"
+    ],
+    "mnemonicTip": "Chuẩn mực đạo đức."
+  },
+  {
+    "id": "en-a1-0111",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Red",
+    "phonetic": "/red/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "màu đỏ",
+    "example": "Red roses symbolize affection.",
+    "exampleMeaning": "Hoa hồng đỏ tượng trưng cho tình cảm nồng nàn.",
+    "collocations": [
+      "bright red"
+    ],
+    "mnemonicTip": "Màu sắc nhiệt huyết."
+  },
+  {
+    "id": "en-a1-0112",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Blue",
+    "phonetic": "/bluː/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "màu xanh da trời",
+    "example": "The calm blue ocean soothes the mind.",
+    "exampleMeaning": "Đại dương xanh biếc êm dịu làm thanh thản tâm trí.",
+    "collocations": [
+      "ocean blue"
+    ],
+    "mnemonicTip": "Màu bình yên."
+  },
+  {
+    "id": "en-a1-0113",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Green",
+    "phonetic": "/ɡriːn/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "màu xanh lá",
+    "example": "Green forests protect our ecosystem.",
+    "exampleMeaning": "Những khu rừng xanh bảo vệ hệ sinh thái của chúng ta.",
+    "collocations": [
+      "green nature"
+    ],
+    "mnemonicTip": "Màu của sự sống."
+  },
+  {
+    "id": "en-a1-0114",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Yellow",
+    "phonetic": "/ˈjel.əʊ/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "màu vàng",
+    "example": "Golden yellow autumn leaves carpet the path.",
+    "exampleMeaning": "Những chiếc lá thu vàng óng trải thảm con đường.",
+    "collocations": [
+      "yellow leaves"
+    ],
+    "mnemonicTip": "Màu của sự tươi vui."
+  },
+  {
+    "id": "en-a1-0115",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "White",
+    "phonetic": "/waɪt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "màu trắng",
+    "example": "White clouds sail across azure skies.",
+    "exampleMeaning": "Những đám mây trắng trôi qua bầu trời xanh biếc.",
+    "collocations": [
+      "snow white"
+    ],
+    "mnemonicTip": "Màu thuần khiết."
+  },
+  {
+    "id": "en-a1-0116",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Black",
+    "phonetic": "/blæk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "màu đen",
+    "example": "The black night sky was illuminated by stars.",
+    "exampleMeaning": "Bầu trời đêm đen thẳm được thắp sáng bởi những vì sao.",
+    "collocations": [
+      "black coffee"
+    ],
+    "mnemonicTip": "Màu huyền bí."
+  },
+  {
+    "id": "en-a1-0117",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Hot",
+    "phonetic": "/hɒt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nóng",
+    "example": "Drink cool lemonade on hot afternoons.",
+    "exampleMeaning": "Hãy uống nước chanh mát vào những buổi trưa nóng nực.",
+    "collocations": [
+      "hot summer"
+    ],
+    "mnemonicTip": "Nhiệt độ cao."
+  },
+  {
+    "id": "en-a1-0118",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Cold",
+    "phonetic": "/kəʊld/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "lạnh giá",
+    "example": "Crisp cold winter air refreshes breathing.",
+    "exampleMeaning": "Không khí mùa đông lạnh se làm tươi mới từng nhịp thở.",
+    "collocations": [
+      "cold winter"
+    ],
+    "mnemonicTip": "Nhiệt độ thấp."
+  },
+  {
+    "id": "en-a1-0119",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Warm",
+    "phonetic": "/wɔːm/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "ấm áp",
+    "example": "A warm embrace gives reassurance.",
+    "exampleMeaning": "Một cái ôm ấm áp mang lại sự an tâm tuyệt vời.",
+    "collocations": [
+      "warm tea"
+    ],
+    "mnemonicTip": "Nhiệt độ dễ chịu."
+  },
+  {
+    "id": "en-a1-0120",
+    "language": "en",
+    "level": "A1",
+    "unit": "Unit 4: Tự nhiên, Màu sắc & Cảm xúc",
+    "word": "Easy",
+    "phonetic": "/ˈiː.zi/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "dễ dàng",
+    "example": "Simple steps make daunting tasks easy.",
+    "exampleMeaning": "Từng bước giản dị giúp những việc to tát trở nên dễ dàng.",
+    "collocations": [
+      "take it easy"
+    ],
+    "mnemonicTip": "Thuận lợi không khó khăn."
+  }
+]

@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+# Oxford 5000 Level B2 and Level C1 Advanced English Vocabulary Dataset
+
+ENGLISH_B2 = [
+    # Unit 1: Critical Thinking & Logic
+    ("Hypothesis", "/haɪˈpɒθ.ə.sɪs/", "noun", "giả thuyết khoa học", "Scientists formulated a testable hypothesis regarding the phenomenon.", "Các nhà khoa học đã đưa ra một giả thuyết có thể kiểm chứng về hiện tượng này.", ["formulate a hypothesis"], "Số nhiều là hypotheses /haɪˈpɒθ.ə.siːz/."),
+    ("Analyze", "/ˈæn.əl.aɪz/", "verb", "phân tích kỹ lưỡng", "The data analytics team analyzed consumer trends comprehensively.", "Đội ngũ phân tích dữ liệu đã phân tích xu hướng người tiêu dùng một cách toàn diện.", ["analyze data"], "Danh từ là analysis."),
+    ("Evaluate", "/ɪˈvæl.ju.eɪt/", "verb", "đánh giá giá trị, thẩm định", "Educators evaluate students through holistic performance assessments.", "Các nhà giáo dục đánh giá học sinh thông qua các bài kiểm tra năng lực toàn diện.", ["evaluate performance"], "Danh từ là evaluation."),
+    ("Evidence", "/ˈev.ɪ.dəns/", "noun", "bằng chứng xác thực", "The lawyer presented compelling evidence to the jury.", "Luật sư đã trình bày những bằng chứng thuyết phục trước bồi thẩm đoàn.", ["empirical evidence"], "Không đếm được, dùng a piece of evidence."),
+    ("Logical", "/ˈlɒdʒ.ɪ.kəl/", "adj", "hợp lý, có logic", "Present your argument in a clear, logical sequence.", "Hãy trình bày luận điểm của bạn theo một trình tự rõ ràng và hợp lý.", ["logical reasoning"], "Trái nghĩa với illogical."),
+    ("Contradict", "/ˌkɒn.trəˈdɪkt/", "verb", "mâu thuẫn, trái ngược", "His recent public statements contradict his earlier promises.", "Các phát biểu công khai gần đây của anh ấy mâu thuẫn với những lời hứa trước đó.", ["contradict each other"], "Danh từ là contradiction."),
+    ("Assess", "/əˈses/", "verb", "thẩm định, lượng giá", "Inspectors assessed the structural integrity of the bridge.", "Các thanh tra đã thẩm định độ an toàn cấu trúc của cây cầu.", ["assess risk"], "Danh từ là assessment."),
+    ("Assumption", "/əˈsʌmp.ʃən/", "noun", "giả định, điều suy diễn", "Do not base major investment decisions on unverified assumptions.", "Đừng dựa những quyết định đầu tư lớn vào các giả định chưa được kiểm chứng.", ["make an assumption"], "Động từ là assume."),
+    ("Perspective", "/pəˈspek.tɪv/", "noun", "góc nhìn, quan điểm", "Traveling abroad provides a fresh perspective on domestic customs.", "Đi du lịch nước ngoài mang lại một góc nhìn mới mẻ về các phong tục trong nước.", ["from my perspective"], "Trọng âm âm tiết thứ hai /spek/."),
+    ("Criteria", "/kraɪˈtɪə.ri.ə/", "noun", "các tiêu chí đánh giá", "Applicants must fulfill strict academic admission criteria.", "Ứng viên phải đáp ứng các tiêu chí tuyển sinh học thuật khắt khe.", ["selection criteria"], "Số ít là criterion."),
+
+    # Unit 2: Psychology & Human Behavior
+    ("Perception", "/pəˈsep.ʃən/", "noun", "sự nhận thức, cảm quan", "Visual perception varies under different lighting conditions.", "Sự nhận thức thị giác thay đổi dưới các điều kiện ánh sáng khác nhau.", ["sensory perception"], "Động từ là perceive."),
+    ("Motivation", "/ˌməʊ.tɪˈveɪ.ʃən/", "noun", "động lực thúc đẩy", "Intrinsic motivation drives sustained long-term achievement.", "Động lực nội tại thúc đẩy thành tựu lâu dài và bền vững.", ["intrinsic motivation"], "Động từ là motivate."),
+    ("Empathy", "/ˈem.pə.θi/", "noun", "sự thấu cảm, đồng cảm", "Empathy allows leaders to understand team struggles deeply.", "Sự thấu cảm cho phép các nhà lãnh đạo hiểu sâu sắc những khó khăn của đội ngũ.", ["feel empathy for"], "Khác với sympathy (sự thương hại)."),
+    ("Cognitive", "/ˈkɒɡ.nə.tɪv/", "adj", "thuộc về nhận thức tư duy", "Puzzles stimulate cognitive functions in aging adults.", "Trò chơi giải đố kích thích các chức năng nhận thức ở người cao tuổi.", ["cognitive skills"], "Gốc Latin cognoscere (biết)."),
+    ("Resilience", "/rɪˈzɪl.jəns/", "noun", "khả năng phục hồi, sự kiên cường", "Emotional resilience helps people overcome unexpected adversity.", "Sự kiên cường về mặt cảm xúc giúp con người vượt qua những nghịch cảnh bất ngờ.", ["mental resilience"], "Tính từ là resilient."),
+    ("Subconscious", "/ˌsʌbˈkɒn.ʃəs/", "adj", "thuộc về tiềm thức", "Dreams frequently mirror subconscious anxieties and wishes.", "Những giấc mơ thường phản chiếu những lo lắng và ước mong trong tiềm thức.", ["subconscious mind"], "Sub (dưới) + conscious (ý thức)."),
+    ("Habitual", "/həˈbɪtʃ.u.əl/", "adj", "theo thói quen, quen thuộc", "Breaking habitual procrastination requires deliberate conscious effort.", "Phá bỏ thói quen trì hoãn đòi hỏi nỗ lực có ý thức và kiên định.", ["habitual behavior"], "Gốc từ habit (thói quen)."),
+    ("Tendency", "/ˈten.dən.si/", "noun", "khuynh hướng, xu hướng", "Humans possess a natural tendency to seek social acceptance.", "Con người có một khuynh hướng tự nhiên là tìm kiếm sự chấp nhận từ xã hội.", ["have a tendency to"], "Động từ là tend."),
+    ("Emotion", "/ɪˈməʊ.ʃən/", "noun", "cảm xúc sâu sắc", "Managing intense emotions is key to high emotional intelligence.", "Quản lý những cảm xúc mãnh liệt là chìa khóa của trí tuệ cảm xúc cao.", ["positive emotions"], "Tính từ là emotional."),
+    ("Character", "/ˈkær.ək.tər/", "noun", "tính cách, nhân vật, phẩm chất", "Adversity does not build character, it reveals it.", "Nghịch cảnh không tạo nên tính cách, nó bộc lộ tính cách con người.", ["moral character"], "Ch phát âm là /k/.")
+]
+
+ENGLISH_C1 = [
+    # Unit 1: Academic Rigor & Advanced Nuance
+    ("Nuance", "/ˈnjuː.ɑːns/", "noun", "sắc thái tinh tế, điểm khác biệt nhỏ", "A translator must capture subtle cultural nuances in prose.", "Người dịch thuật phải nắm bắt được những sắc thái văn hóa tinh tế trong văn xuôi.", ["subtle nuance"], "Gốc tiếng Pháp, chỉ sự tinh tế."),
+    ("Ambiguity", "/ˌæm.bɪˈɡjuː.ə.ti/", "noun", "sự mơ hồ, tính đa nghĩa", "Legal drafters strive to eliminate ambiguity from contractual clauses.", "Những người soạn thảo văn bản luật nỗ lực loại bỏ sự mơ hồ khỏi các điều khoản hợp đồng.", ["avoid ambiguity"], "Tính từ là ambiguous."),
+    ("Paradigm", "/ˈpær.ə.daɪm/", "noun", "hệ hình, mô thức mẫu mực", "Quantum computing represents a fundamental paradigm shift.", "Điện toán lượng tử đại diện cho một sự chuyển dịch hệ hình căn bản.", ["paradigm shift"], "Chữ g câm, phát âm /ˈpær.ə.daɪm/."),
+    ("Empirical", "/ɪmˈpɪr.ɪ.kəl/", "adj", "dựa trên kinh nghiệm thực chứng", "The thesis is supported by rigorous empirical research data.", "Luận án được củng cố bởi các dữ liệu nghiên cứu thực chứng nghiêm ngặt.", ["empirical evidence"], "Trái nghĩa với theoretical."),
+    ("Discourse", "/ˈdɪs.kɔːs/", "noun", "diễn ngôn học thuật, đàm luận", "Academic discourse requires objective evidence and civil dialogue.", "Diễn ngôn học thuật đòi hỏi bằng chứng khách quan và đối thoại lịch sự.", ["academic discourse"], "Dis (phân tán) + course (dòng chảy)."),
+    ("Ubiquitous", "/juːˈbɪk.wɪ.təs/", "adj", "ở khắp mọi nơi, phổ biến rộng rãi", "Smartphones have become ubiquitous across modern urban centers.", "Điện thoại thông minh đã trở nên hiện diện ở khắp mọi nơi trên các đô thị hiện đại.", ["ubiquitous presence"], "Đồng nghĩa với omnipresent."),
+    ("Eloquent", "/ˈel.ə.kwənt/", "adj", "hùng hồn, lưu loát và truyền cảm", "The statesman delivered an eloquent defense of democratic liberties.", "Nhà chính khách đã đưa ra một lời biện hộ hùng hồn cho các quyền tự do dân chủ.", ["eloquent speech"], "Danh từ là eloquence."),
+    ("Meticulous", "/məˈtɪk.jə.ləs/", "adj", "tỉ mỉ, cẩn thận từng chi tiết nhỏ", "The archival restoration required months of meticulous labor.", "Việc phục hồi tư liệu lưu trữ đòi hỏi nhiều tháng lao động vô cùng tỉ mỉ.", ["meticulous research"], "Rất kỹ lưỡng và chỉn chu."),
+    ("Pragmatic", "/præɡˈmæt.ɪk/", "adj", "thực dụng, thực tế, trọng hiệu quả", "We must adopt a pragmatic approach to resolve this fiscal impasse.", "Chúng ta phải áp dụng một cách tiếp cận thực tế để giải quyết bế tắc tài chính này.", ["pragmatic solution"], "Danh từ là pragmatism."),
+    ("Resilient", "/rɪˈzɪl.jənt/", "adj", "kiên cường, đàn hồi bền bỉ", "A resilient supply chain withstands unforeseen geopolitical shocks.", "Một chuỗi cung ứng bền bỉ có thể chống đỡ những cú sốc địa chính trị không lường trước.", ["resilient economy"], "Khả năng phục hồi nhanh."),
+    ("Catalyst", "/ˈkæt.əl.ɪst/", "noun", "chất xúc tác, tác nhân thúc đẩy", "Technological innovation acts as a catalyst for economic growth.", "Đổi mới công nghệ đóng vai trò như một chất xúc tác cho tăng trưởng kinh tế.", ["act as a catalyst"], "Thuật ngữ hóa học và xã hội."),
+    ("Comprehensive", "/ˌkɒm.prɪˈhen.sɪv/", "adj", "toàn diện, bao quát mọi mặt", "The university published a comprehensive survey of graduate outcomes.", "Trường đại học đã công bố một cuộc khảo sát toàn diện về kết quả đầu ra của sinh viên.", ["comprehensive study"], "Bao hàm mọi khía cạnh."),
+    ("Substantiate", "/səbˈstæn.ʃi.eɪt/", "verb", "chứng minh bằng bằng chứng xác thực", "Claimants must substantiate their allegations with documentary proof.", "Người khiếu nại phải chứng minh những cáo buộc của mình bằng các bằng chứng tài liệu.", ["substantiate a claim"], "Gốc từ substance (thực chất)."),
+    ("Inevitable", "/ɪnˈev.ɪ.tə.bəl/", "adj", "không thể tránh khỏi, tất yếu xảy ra", "Change is inevitable in an evolving technological landscape.", "Thay đổi là điều tất yếu trong một bối cảnh công nghệ không ngừng phát triển.", ["inevitable outcome"], "In (không) + evitable (có thể tránh)."),
+    ("Exemplify", "/ɪɡˈzem.plɪ.faɪ/", "verb", "minh họa điển hình, là tấm gương sáng", "Her philanthropic deeds exemplify true civic leadership.", "Những việc làm từ thiện của cô ấy là minh chứng điển hình cho vai trò lãnh đạo vì cộng đồng.", ["exemplify the spirit"], "Example + ify (biến thành ví dụ mẫu).")
+]
+
+print(f"Loaded English B2: {len(ENGLISH_B2)}, English C1: {len(ENGLISH_C1)}")

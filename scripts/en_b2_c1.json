@@ -1,0 +1,3042 @@
+[
+  {
+    "id": "en-b2-0361",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Resilience",
+    "phonetic": "/rɪˈzɪl.jəns/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "khả năng phục hồi, sự kiên cường vượt khó",
+    "example": "Courage and emotional resilience are crucial when facing adversity.",
+    "exampleMeaning": "Lòng dũng cảm và sự kiên cường về mặt cảm xúc là yếu tố cốt lõi khi đối mặt nghịch cảnh.",
+    "collocations": [
+      "build resilience"
+    ],
+    "mnemonicTip": "Khả năng uốn cong trước bão giông mà không gãy."
+  },
+  {
+    "id": "en-b2-0362",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Subtle",
+    "phonetic": "/ˈsʌt.əl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "tinh tế, khó nhận thấy, vi tế",
+    "example": "There was a subtle difference in the color shades of the two designs.",
+    "exampleMeaning": "Có một sự khác biệt rất tinh tế trong sắc thái màu của hai bản thiết kế.",
+    "collocations": [
+      "subtle difference"
+    ],
+    "mnemonicTip": "Chữ 'b' câm: /ˈsʌt.əl/."
+  },
+  {
+    "id": "en-b2-0363",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Sustainable",
+    "phonetic": "/səˈsteɪ.nə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "bền vững, thân thiện môi trường lâu dài",
+    "example": "We must transition towards sustainable energy sources to protect the planet.",
+    "exampleMeaning": "Chúng ta phải chuyển đổi sang các nguồn năng lượng bền vững để bảo vệ hành tinh.",
+    "collocations": [
+      "sustainable growth"
+    ],
+    "mnemonicTip": "Duy trì lâu dài không cạn kiệt."
+  },
+  {
+    "id": "en-b2-0364",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Vulnerable",
+    "phonetic": "/ˈvʌl.nər.ə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "dễ bị tổn thương, mong manh",
+    "example": "Admitting mistakes makes us vulnerable yet fundamentally human.",
+    "exampleMeaning": "Thừa nhận sai lầm khiến ta có vẻ mong manh nhưng đó chính là bản chất con người.",
+    "collocations": [
+      "vulnerable group"
+    ],
+    "mnemonicTip": "Dễ bị tác động tiêu cực."
+  },
+  {
+    "id": "en-b2-0365",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Ambiguity",
+    "phonetic": "/ˌæm.bɪˈɡjuː.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự mơ hồ, đa nghĩa, không rõ ràng",
+    "example": "Entrepreneurs must learn to navigate strategic ambiguity.",
+    "exampleMeaning": "Các doanh nhân phải học cách chèo lái qua sự mơ hồ mang tính chiến lược.",
+    "collocations": [
+      "tolerate ambiguity"
+    ],
+    "mnemonicTip": "Tình trạng có thể hiểu theo nhiều cách."
+  },
+  {
+    "id": "en-b2-0366",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Cognitive",
+    "phonetic": "/ˈkɒɡ.nə.tɪv/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thuộc về nhận thức và tư duy",
+    "example": "Puzzles stimulate cognitive functions in aging minds.",
+    "exampleMeaning": "Các câu đố kích thích các chức năng nhận thức ở người cao tuổi.",
+    "collocations": [
+      "cognitive skills"
+    ],
+    "mnemonicTip": "Liên quan đến quá trình tư duy não bộ."
+  },
+  {
+    "id": "en-b2-0367",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Empathy",
+    "phonetic": "/ˈem.pə.θi/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự thấu cảm, khả năng đặt mình vào người khác",
+    "example": "True leadership begins with deep empathy for team members.",
+    "exampleMeaning": "Năng lực lãnh đạo chân chính bắt đầu từ sự thấu cảm sâu sắc với các thành viên.",
+    "collocations": [
+      "show empathy"
+    ],
+    "mnemonicTip": "Cảm nhận và thấu hiểu cảm xúc của người khác."
+  },
+  {
+    "id": "en-b2-0368",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Integrity",
+    "phonetic": "/ɪnˈteɡ.rə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự chính trực, thanh liêm",
+    "example": "Personal integrity is more precious than transient wealth.",
+    "exampleMeaning": "Sự chính trực của bản thân quý giá hơn của cải phù du.",
+    "collocations": [
+      "moral integrity"
+    ],
+    "mnemonicTip": "Ngay thẳng, trước sau như một."
+  },
+  {
+    "id": "en-b2-0369",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Perspective",
+    "phonetic": "/pəˈspek.tɪv/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "góc nhìn, lăng kính nhận thức",
+    "example": "Living abroad broadens your cultural perspective enormously.",
+    "exampleMeaning": "Sống ở nước ngoài mở rộng lăng kính văn hóa của bạn một cách to lớn.",
+    "collocations": [
+      "gain perspective"
+    ],
+    "mnemonicTip": "Góc độ quan sát vấn đề."
+  },
+  {
+    "id": "en-b2-0370",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Paradox",
+    "phonetic": "/ˈpær.ə.dɒks/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "nghịch lý, mâu thuẫn tưởng như vô lý",
+    "example": "It is an apparent paradox that giving makes us richer.",
+    "exampleMeaning": "Một nghịch lý hiển nhiên là việc cho đi lại khiến chúng ta giàu có hơn.",
+    "collocations": [
+      "apparent paradox"
+    ],
+    "mnemonicTip": "Điều mâu thuẫn nhưng chứa đựng chân lý."
+  },
+  {
+    "id": "en-b2-0371",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Comprehend",
+    "phonetic": "/ˌkɒm.prɪˈhend/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "lĩnh hội, thấu hiểu trọn vẹn",
+    "example": "She struggled to comprehend the scale of the universe.",
+    "exampleMeaning": "Cô ấy phải chật vật mới có thể lĩnh hội được quy mô của vũ trụ.",
+    "collocations": [
+      "fully comprehend"
+    ],
+    "mnemonicTip": "Hiểu sâu sắc mọi ngóc ngách."
+  },
+  {
+    "id": "en-b2-0372",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Articulate",
+    "phonetic": "/ɑːˈtɪk.jə.lət/",
+    "partOfSpeech": "tính từ/động từ",
+    "vietnameseMeaning": "diễn đạt lưu loát; ăn nói gãy gọn",
+    "example": "He gave an articulate summary of the research.",
+    "exampleMeaning": "Anh ấy đã đưa ra một bản tóm tắt gãy gọn và lưu loát về nghiên cứu.",
+    "collocations": [
+      "articulate speaker"
+    ],
+    "mnemonicTip": "Khả năng dùng ngôn từ khúc chiết."
+  },
+  {
+    "id": "en-b2-0373",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Persuasive",
+    "phonetic": "/pəˈsweɪ.sɪv/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "có sức thuyết phục cao",
+    "example": "Her persuasive presentation won over skeptical investors.",
+    "exampleMeaning": "Bài thuyết trình đầy sức thuyết phục của cô đã chinh phục những nhà đầu tư hoài nghi.",
+    "collocations": [
+      "persuasive argument"
+    ],
+    "mnemonicTip": "Khiến người khác đồng thuận."
+  },
+  {
+    "id": "en-b2-0374",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Coherent",
+    "phonetic": "/kəʊˈhɪə.rənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "mạch lạc, liên kết chặt chẽ",
+    "example": "Construct a coherent argument backed by statistical evidence.",
+    "exampleMeaning": "Hãy xây dựng một lập luận mạch lạc được củng cố bằng bằng chứng thống kê.",
+    "collocations": [
+      "coherent essay"
+    ],
+    "mnemonicTip": "Các ý kết nối tự nhiên logic."
+  },
+  {
+    "id": "en-b2-0375",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Nuance",
+    "phonetic": "/ˈnjuː.ɑːns/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sắc thái tinh tế, chi tiết vi tế",
+    "example": "Translators must preserve the delicate nuances of poetry.",
+    "exampleMeaning": "Người dịch thuật phải gìn giữ những sắc thái vi tế của thi ca.",
+    "collocations": [
+      "subtle nuance"
+    ],
+    "mnemonicTip": "Khác biệt rất nhỏ nhưng cốt tử."
+  },
+  {
+    "id": "en-b2-0376",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Profound",
+    "phonetic": "/prəˈfaʊnd/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "sâu sắc, uyên thâm, thâm thúy",
+    "example": "The mentor's advice had a profound effect on my worldview.",
+    "exampleMeaning": "Lời khuyên của người thầy đã có một ảnh hưởng sâu sắc đến thế giới quan của tôi.",
+    "collocations": [
+      "profound impact"
+    ],
+    "mnemonicTip": "Chạm đến tầng sâu nhất."
+  },
+  {
+    "id": "en-b2-0377",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Authentic",
+    "phonetic": "/ɔːˈθen.tɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "chân thực, đích thực, nguyên bản",
+    "example": "Living an authentic life requires tremendous courage.",
+    "exampleMeaning": "Sống một cuộc đời chân thực đòi hỏi lòng can đảm phi thường.",
+    "collocations": [
+      "authentic voice"
+    ],
+    "mnemonicTip": "Đúng với bản chất thật."
+  },
+  {
+    "id": "en-b2-0378",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Pragmatic",
+    "phonetic": "/præɡˈmæt.ɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thực dụng, thực tế, coi trọng hiệu quả",
+    "example": "Engineers adopt pragmatic solutions over abstract theories.",
+    "exampleMeaning": "Các kỹ sư áp dụng những giải pháp thực tế hơn là những lý thuyết trừu tượng.",
+    "collocations": [
+      "pragmatic approach"
+    ],
+    "mnemonicTip": "Tập trung vào tính khả thi thực tế."
+  },
+  {
+    "id": "en-b2-0379",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Dilemma",
+    "phonetic": "/daɪˈlem.ə/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thế tiến thoái lưỡng nan",
+    "example": "Medical ethics often grapples with complex moral dilemmas.",
+    "exampleMeaning": "Y đức thường phải vật lộn với những tình huống tiến thoái lưỡng nan phức tạp.",
+    "collocations": [
+      "ethical dilemma"
+    ],
+    "mnemonicTip": "Tình cảnh khó xử chọn bên nào cũng khó."
+  },
+  {
+    "id": "en-b2-0380",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Intuition",
+    "phonetic": "/ˌɪn.tʃuːˈɪʃ.ən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "trực giác, linh cảm",
+    "example": "Experienced detectives often rely on sharp intuition.",
+    "exampleMeaning": "Các thám tử dày dạn kinh nghiệm thường dựa vào trực giác sắc bén.",
+    "collocations": [
+      "gut intuition"
+    ],
+    "mnemonicTip": "Nhận thức tức thời không qua suy luận chậm."
+  },
+  {
+    "id": "en-b2-0381",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Hypothesis",
+    "phonetic": "/haɪˈpɒθ.ə.sɪs/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "giả thuyết",
+    "example": "Formulate a testable hypothesis based on preliminary observations.",
+    "exampleMeaning": "Đưa ra một giả thuyết có thể kiểm chứng dựa trên các quan sát sơ bộ.",
+    "collocations": [
+      "test hypothesis"
+    ],
+    "mnemonicTip": "Số nhiều là hypotheses."
+  },
+  {
+    "id": "en-b2-0382",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Paradigm",
+    "phonetic": "/ˈpær.ə.daɪm/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "hệ hình, mô thức",
+    "example": "Quantum computing represents a paradigm shift.",
+    "exampleMeaning": "Máy tính lượng tử đại diện cho một bước chuyển dịch hệ hình.",
+    "collocations": [
+      "paradigm shift"
+    ],
+    "mnemonicTip": "Chữ 'g' câm: /ˈpær.ə.daɪm/."
+  },
+  {
+    "id": "en-b2-0383",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Empirical",
+    "phonetic": "/ɪmˈpɪr.ɪ.kəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thuộc về thực nghiệm",
+    "example": "Empirical evidence must corroborate theoretical models.",
+    "exampleMeaning": "Bằng chứng thực nghiệm phải chứng thực cho các mô hình lý thuyết.",
+    "collocations": [
+      "empirical data"
+    ],
+    "mnemonicTip": "Dựa trên quan sát và thí nghiệm thực tế."
+  },
+  {
+    "id": "en-b2-0384",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Rhetoric",
+    "phonetic": "/ˈret.ər.ɪk/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thuật hùng biện, tài ăn nói",
+    "example": "Politicians often employ eloquent rhetoric.",
+    "exampleMeaning": "Các chính trị gia thường sử dụng tài hùng biện lưu loát.",
+    "collocations": [
+      "political rhetoric"
+    ],
+    "mnemonicTip": "Nghệ thuật sử dụng ngôn từ thuyết phục."
+  },
+  {
+    "id": "en-b2-0385",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 1: Tâm lý học, Nhận thức & Bản lĩnh",
+    "word": "Metaphor",
+    "phonetic": "/ˈmet.ə.fɔːr/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "phép ẩn dụ",
+    "example": "Life is a journey is a universal metaphor.",
+    "exampleMeaning": "Cuộc đời là một chuyến hành trình là một phép ẩn dụ phổ quát.",
+    "collocations": [
+      "poetic metaphor"
+    ],
+    "mnemonicTip": "So sánh ngầm không dùng từ so sánh."
+  },
+  {
+    "id": "en-b2-0386",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Disrupt",
+    "phonetic": "/dɪsˈrʌpt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "làm gián đoạn, đột phá thay đổi",
+    "example": "Innovative platforms disrupt traditional business models.",
+    "exampleMeaning": "Các nền tảng đổi mới sáng tạo làm thay đổi hoàn toàn mô hình kinh doanh truyền thống.",
+    "collocations": [
+      "disrupt industry"
+    ],
+    "mnemonicTip": "Phá vỡ thế cân bằng cũ."
+  },
+  {
+    "id": "en-b2-0387",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Optimize",
+    "phonetic": "/ˈɒp.tɪ.maɪz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "tối ưu hóa, tinh chỉnh",
+    "example": "Optimize algorithm runtimes to conserve cloud resources.",
+    "exampleMeaning": "Tối ưu hóa thời gian chạy của thuật toán để tiết kiệm tài nguyên đám mây.",
+    "collocations": [
+      "optimize performance"
+    ],
+    "mnemonicTip": "Đưa về trạng thái tốt nhất."
+  },
+  {
+    "id": "en-b2-0388",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Scalable",
+    "phonetic": "/ˈskeɪ.lə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "có thể mở rộng quy mô",
+    "example": "Architect a scalable database backend.",
+    "exampleMeaning": "Thiết kế một kiến trúc cơ sở dữ liệu có khả năng mở rộng linh hoạt.",
+    "collocations": [
+      "scalable architecture"
+    ],
+    "mnemonicTip": "Có thể đáp ứng khi quy mô tăng cao."
+  },
+  {
+    "id": "en-b2-0389",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Synthesize",
+    "phonetic": "/ˈsɪn.θə.saɪz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "tổng hợp, kết hợp nhiều nguồn",
+    "example": "Synthesize findings from multidisciplinary research papers.",
+    "exampleMeaning": "Tổng hợp các phát hiện từ những bài báo nghiên cứu đa ngành.",
+    "collocations": [
+      "synthesize information"
+    ],
+    "mnemonicTip": "Gộp các phần tử thành một chỉnh thể."
+  },
+  {
+    "id": "en-b2-0390",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Facilitate",
+    "phonetic": "/fəˈsɪl.ɪ.teɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "tạo điều kiện thuận lợi",
+    "example": "Modern software facilitates smooth remote collaboration.",
+    "exampleMeaning": "Phần mềm hiện đại tạo điều kiện thuận lợi cho việc cộng tác từ xa mượt mà.",
+    "collocations": [
+      "facilitate learning"
+    ],
+    "mnemonicTip": "Làm cho tiến trình dễ dàng hơn."
+  },
+  {
+    "id": "en-b2-0391",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Correlate",
+    "phonetic": "/ˈkɒr.ə.leɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "tương quan với nhau",
+    "example": "Regular aerobic exercise correlates with longevity.",
+    "exampleMeaning": "Tập thể dục nhịp điệu đều đặn có mối tương quan thuận với tuổi thọ.",
+    "collocations": [
+      "correlate with"
+    ],
+    "mnemonicTip": "Có mối liên hệ đồng biến hoặc nghịch biến."
+  },
+  {
+    "id": "en-b2-0392",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Rigorous",
+    "phonetic": "/ˈrɪɡ.ər.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nghiêm ngặt, chặt chẽ, khắt khe",
+    "example": "Scientific trials undergo rigorous peer review.",
+    "exampleMeaning": "Các thử nghiệm khoa học phải trải qua quá trình bình duyệt vô cùng nghiêm ngặt.",
+    "collocations": [
+      "rigorous testing"
+    ],
+    "mnemonicTip": "Chính xác và không khoan nhượng."
+  },
+  {
+    "id": "en-b2-0393",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Coincide",
+    "phonetic": "/ˌkəʊ.ɪnˈsaɪd/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "trùng hợp, diễn ra đồng thời",
+    "example": "The festival coincided with the lunar eclipse.",
+    "exampleMeaning": "Lễ hội diễn ra trùng hợp với hiện tượng nguyệt thực.",
+    "collocations": [
+      "coincide with"
+    ],
+    "mnemonicTip": "Xảy ra cùng lúc."
+  },
+  {
+    "id": "en-b2-0394",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Comprehensive",
+    "phonetic": "/ˌkɒm.prɪˈhen.sɪv/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "toàn diện, bao quát",
+    "example": "The report offers a comprehensive economic assessment.",
+    "exampleMeaning": "Báo cáo đưa ra một đánh giá kinh tế toàn diện và sâu sát.",
+    "collocations": [
+      "comprehensive guide"
+    ],
+    "mnemonicTip": "Bao trùm mọi khía cạnh."
+  },
+  {
+    "id": "en-b2-0395",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Fundamental",
+    "phonetic": "/ˌfʌn.dəˈmen.təl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "căn bản, cốt lõi, nền tảng",
+    "example": "Freedom of inquiry is fundamental to academia.",
+    "exampleMeaning": "Tự do tìm tòi là điều cốt lõi đối với giới học thuật.",
+    "collocations": [
+      "fundamental right"
+    ],
+    "mnemonicTip": "Thuộc về nền móng gốc rễ."
+  },
+  {
+    "id": "en-b2-0396",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Implication",
+    "phonetic": "/ˌɪm.plɪˈkeɪ.ʃən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "hệ quả, hàm ý sâu xa",
+    "example": "Analyze the legal implications of the new policy.",
+    "exampleMeaning": "Phân tích những hệ quả pháp lý sâu xa của chính sách mới.",
+    "collocations": [
+      "practical implications"
+    ],
+    "mnemonicTip": "Điều được ngụ ý hoặc phát sinh sau đó."
+  },
+  {
+    "id": "en-b2-0397",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Mechanism",
+    "phonetic": "/ˈmek.ə.nɪ.zəm/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cơ chế hoạt động",
+    "example": "Biologists study the molecular mechanism of aging.",
+    "exampleMeaning": "Các nhà sinh học nghiên cứu cơ chế phân tử của sự lão hóa.",
+    "collocations": [
+      "defense mechanism"
+    ],
+    "mnemonicTip": "Cách thức vận hành của một hệ thống."
+  },
+  {
+    "id": "en-b2-0398",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Phenomenon",
+    "phonetic": "/fəˈnɒm.ɪ.nən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "hiện tượng",
+    "example": "The northern lights are a stunning natural phenomenon.",
+    "exampleMeaning": "Cực quang phương bắc là một hiện tượng tự nhiên tuyệt mỹ.",
+    "collocations": [
+      "natural phenomenon"
+    ],
+    "mnemonicTip": "Số nhiều là phenomena."
+  },
+  {
+    "id": "en-b2-0399",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Precedent",
+    "phonetic": "/ˈpres.ɪ.dənt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tiền lệ",
+    "example": "The court verdict established an unprecedented precedent.",
+    "exampleMeaning": "Phán quyết của tòa án đã thiết lập một tiền lệ chưa từng có.",
+    "collocations": [
+      "set a precedent"
+    ],
+    "mnemonicTip": "Sự việc tương tự đã xảy ra trước đó."
+  },
+  {
+    "id": "en-b2-0400",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Criteria",
+    "phonetic": "/kraɪˈtɪə.ri.ə/",
+    "partOfSpeech": "danh từ số nhiều",
+    "vietnameseMeaning": "các tiêu chí đánh giá",
+    "example": "Establish transparent criteria for merit scholarships.",
+    "exampleMeaning": "Thiết lập các tiêu chí minh bạch cho học bổng tài năng.",
+    "collocations": [
+      "selection criteria"
+    ],
+    "mnemonicTip": "Số ít là criterion."
+  },
+  {
+    "id": "en-b2-0401",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Simulate",
+    "phonetic": "/ˈsɪm.jə.leɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "mô phỏng, giả lập",
+    "example": "Flight simulators train pilots in turbulent conditions.",
+    "exampleMeaning": "Hệ thống mô phỏng bay huấn luyện phi công trong điều kiện nhiễu động.",
+    "collocations": [
+      "simulate reality"
+    ],
+    "mnemonicTip": "Tái tạo môi trường thực tế."
+  },
+  {
+    "id": "en-b2-0402",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Allocate",
+    "phonetic": "/ˈæl.ə.keɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "phân bổ, phân phối nguồn lực",
+    "example": "Allocate budget resources towards renewable research.",
+    "exampleMeaning": "Phân bổ nguồn lực ngân sách cho nghiên cứu năng lượng tái tạo.",
+    "collocations": [
+      "allocate resources"
+    ],
+    "mnemonicTip": "Chia phần định mức."
+  },
+  {
+    "id": "en-b2-0403",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Dimension",
+    "phonetic": "/daɪˈmen.ʃən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "chiều không gian, khía cạnh",
+    "example": "The crisis added a geopolitical dimension to talks.",
+    "exampleMeaning": "Cuộc khủng hoảng đã thêm vào một khía cạnh địa chính trị cho các cuộc đàm phán.",
+    "collocations": [
+      "new dimension"
+    ],
+    "mnemonicTip": "Khía cạnh hoặc chiều hướng."
+  },
+  {
+    "id": "en-b2-0404",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Equilibrium",
+    "phonetic": "/ˌiː.kwɪˈlɪb.ri.əm/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "trạng thái cân bằng",
+    "example": "Ecosystems maintain delicate ecological equilibrium.",
+    "exampleMeaning": "Các hệ sinh thái duy trì trạng thái cân bằng sinh thái mong manh.",
+    "collocations": [
+      "stable equilibrium"
+    ],
+    "mnemonicTip": "Sự thăng bằng hài hòa."
+  },
+  {
+    "id": "en-b2-0405",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Infrastructure",
+    "phonetic": "/ˈɪn.frəˌstrʌk.tʃər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cơ sở hạ tầng",
+    "example": "Modern transport infrastructure accelerates commerce.",
+    "exampleMeaning": "Cơ sở hạ tầng giao thông hiện đại đẩy nhanh thương mại.",
+    "collocations": [
+      "digital infrastructure"
+    ],
+    "mnemonicTip": "Hệ thống nền tảng phục vụ đời sống."
+  },
+  {
+    "id": "en-b2-0406",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Legislation",
+    "phonetic": "/ˌledʒ.ɪˈsleɪ.ʃən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "pháp luật, đạo luật",
+    "example": "Pass progressive environmental protection legislation.",
+    "exampleMeaning": "Thông qua các đạo luật bảo vệ môi trường tiến bộ.",
+    "collocations": [
+      "new legislation"
+    ],
+    "mnemonicTip": "Văn bản quy phạm pháp luật."
+  },
+  {
+    "id": "en-b2-0407",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Policy",
+    "phonetic": "/ˈpɒl.ə.si/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "chính sách, đường lối",
+    "example": "Adopt sensible fiscal policies to curb inflation.",
+    "exampleMeaning": "Áp dụng những chính sách tài khóa hợp lý để kiềm chế lạm phát.",
+    "collocations": [
+      "government policy"
+    ],
+    "mnemonicTip": "Định hướng hành động của tổ chức."
+  },
+  {
+    "id": "en-b2-0408",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Protocol",
+    "phonetic": "/ˈprəʊ.tə.kɒl/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "nghị định thư, giao thức",
+    "example": "Follow strict safety protocols in cleanrooms.",
+    "exampleMeaning": "Tuân thủ các giao thức an toàn nghiêm ngặt trong phòng sạch.",
+    "collocations": [
+      "security protocol"
+    ],
+    "mnemonicTip": "Quy tắc chuẩn hóa."
+  },
+  {
+    "id": "en-b2-0409",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Transition",
+    "phonetic": "/trænˈzɪʃ.ən/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "sự chuyển tiếp, chuyển giao",
+    "example": "The transition to electric mobility is accelerating.",
+    "exampleMeaning": "Sự chuyển giao sang phương tiện di chuyển bằng điện đang tăng tốc.",
+    "collocations": [
+      "smooth transition"
+    ],
+    "mnemonicTip": "Quá trình đổi từ trạng thái này sang trạng thái khác."
+  },
+  {
+    "id": "en-b2-0410",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 2: Khoa học, Xã hội & Đổi mới",
+    "word": "Transformation",
+    "phonetic": "/ˌtræns.fəˈmeɪ.ʃən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự biến đổi căn bản, lột xác",
+    "example": "Digital transformation reshapes customer service.",
+    "exampleMeaning": "Chuyển đổi số tái định hình toàn diện dịch vụ khách hàng.",
+    "collocations": [
+      "complete transformation"
+    ],
+    "mnemonicTip": "Thay đổi diện mạo bản chất."
+  },
+  {
+    "id": "en-b2-0411",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Capital",
+    "phonetic": "/ˈkæp.ɪ.təl/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thủ đô; nguồn vốn",
+    "example": "Venture capital funds cutting-edge startups.",
+    "exampleMeaning": "Nguồn vốn mạo hiểm rót tiền cho những công ty khởi nghiệp tiên phong.",
+    "collocations": [
+      "raise capital"
+    ],
+    "mnemonicTip": "Tiền bạc đầu tư sản xuất."
+  },
+  {
+    "id": "en-b2-0412",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Revenue",
+    "phonetic": "/ˈrev.ən.juː/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "doanh thu",
+    "example": "Subscription software generates recurring revenue.",
+    "exampleMeaning": "Mô hình phần mềm thuê bao tạo ra doanh thu định kỳ.",
+    "collocations": [
+      "annual revenue"
+    ],
+    "mnemonicTip": "Tổng số tiền thu về."
+  },
+  {
+    "id": "en-b2-0413",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Deficit",
+    "phonetic": "/ˈdef.ɪ.sɪt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thâm hụt, thiếu hụt",
+    "example": "Governments strive to reduce trade deficits.",
+    "exampleMeaning": "Các chính phủ nỗ lực để giảm thâm hụt thương mại.",
+    "collocations": [
+      "trade deficit"
+    ],
+    "mnemonicTip": "Chi nhiều hơn thu."
+  },
+  {
+    "id": "en-b2-0414",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Surplus",
+    "phonetic": "/ˈsɜː.pləs/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thặng dư, dôi dư",
+    "example": "Food surpluses can be redistributed to shelters.",
+    "exampleMeaning": "Lượng thực phẩm thặng dư có thể được phân phát lại cho các mái ấm.",
+    "collocations": [
+      "budget surplus"
+    ],
+    "mnemonicTip": "Thu nhiều hơn chi."
+  },
+  {
+    "id": "en-b2-0415",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Asset",
+    "phonetic": "/ˈæs.et/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tài sản quý giá",
+    "example": "Knowledge is an intangible but invaluable asset.",
+    "exampleMeaning": "Tri thức là một tài sản vô hình nhưng vô giá.",
+    "collocations": [
+      "valuable asset"
+    ],
+    "mnemonicTip": "Của cải có giá trị."
+  },
+  {
+    "id": "en-b2-0416",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Liability",
+    "phonetic": "/ˌlaɪ.əˈbɪl.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "khoản nợ phải trả; gánh nặng",
+    "example": "Minimize unnecessary short-term financial liabilities.",
+    "exampleMeaning": "Giảm thiểu những khoản nợ tài chính ngắn hạn không cần thiết.",
+    "collocations": [
+      "current liability"
+    ],
+    "mnemonicTip": "Trách nhiệm pháp lý hoặc nợ nần."
+  },
+  {
+    "id": "en-b2-0417",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Equity",
+    "phonetic": "/ˈek.wɪ.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "vốn chủ sở hữu; sự công bằng",
+    "example": "Employees received equity shares in the venture.",
+    "exampleMeaning": "Nhân viên nhận được cổ phần sở hữu trong dự án kinh doanh.",
+    "collocations": [
+      "private equity"
+    ],
+    "mnemonicTip": "Giá trị ròng thuộc về chủ sở hữu."
+  },
+  {
+    "id": "en-b2-0418",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Dividend",
+    "phonetic": "/ˈdɪv.ɪ.dend/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cổ tức, phần chia lời",
+    "example": "Sound investments pay reliable quarterly dividends.",
+    "exampleMeaning": "Các khoản đầu tư lành mạnh chi trả cổ tức hàng quý đáng tin cậy.",
+    "collocations": [
+      "pay dividends"
+    ],
+    "mnemonicTip": "Lợi nhuận chia cho cổ đông."
+  },
+  {
+    "id": "en-b2-0419",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Inflation",
+    "phonetic": "/ɪnˈfleɪ.ʃən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự lạm phát",
+    "example": "Central banks adjust interest rates to temper inflation.",
+    "exampleMeaning": "Các ngân hàng trung ương điều chỉnh lãi suất để kiềm chế lạm phát.",
+    "collocations": [
+      "curb inflation"
+    ],
+    "mnemonicTip": "Mức giá chung tăng cao."
+  },
+  {
+    "id": "en-b2-0420",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Interest",
+    "phonetic": "/ˈɪn.trəst/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "lãi suất; sự quan tâm",
+    "example": "Compound interest is considered the eighth wonder.",
+    "exampleMeaning": "Lãi kép được coi là kỳ quan thứ tám của thế giới.",
+    "collocations": [
+      "compound interest"
+    ],
+    "mnemonicTip": "Tiền lãi thu được."
+  },
+  {
+    "id": "en-b2-0421",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Venture",
+    "phonetic": "/ˈven.tʃər/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "dự án mạo hiểm; dấn thân",
+    "example": "They launched a daring new business venture.",
+    "exampleMeaning": "Họ đã khởi động một dự án kinh doanh mạo hiểm đầy táo bạo.",
+    "collocations": [
+      "joint venture"
+    ],
+    "mnemonicTip": "Hành trình có rủi ro."
+  },
+  {
+    "id": "en-b2-0422",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Stakeholder",
+    "phonetic": "/ˈsteɪkˌhəʊl.dər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "bên liên quan, cổ đông",
+    "example": "Engage all stakeholders before enacting changes.",
+    "exampleMeaning": "Lấy ý kiến tất cả các bên liên quan trước khi ban hành thay đổi.",
+    "collocations": [
+      "key stakeholder"
+    ],
+    "mnemonicTip": "Người có quyền lợi liên đới."
+  },
+  {
+    "id": "en-b2-0423",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Merger",
+    "phonetic": "/ˈmɜː.dʒər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự sáp nhập doanh nghiệp",
+    "example": "The cross-border merger created an industry titan.",
+    "exampleMeaning": "Vụ sáp nhập xuyên biên giới đã tạo ra một người khổng lồ trong ngành.",
+    "collocations": [
+      "merger and acquisition"
+    ],
+    "mnemonicTip": "Hợp nhất hai tổ chức."
+  },
+  {
+    "id": "en-b2-0424",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Acquisition",
+    "phonetic": "/ˌæk.wɪˈzɪʃ.ən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự thâu tóm; sự tiếp thu",
+    "example": "Language acquisition thrives through natural immersion.",
+    "exampleMeaning": "Sự tiếp thu ngôn ngữ phát triển mạnh mẽ qua việc đắm mình tự nhiên.",
+    "collocations": [
+      "language acquisition"
+    ],
+    "mnemonicTip": "Nhận được hoặc thâu tóm."
+  },
+  {
+    "id": "en-b2-0425",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Monopoly",
+    "phonetic": "/məˈnɒp.əl.i/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự độc quyền thị trường",
+    "example": "Antitrust regulations prevent harmful monopolies.",
+    "exampleMeaning": "Các đạo luật chống độc quyền ngăn chặn tình trạng độc quyền gây hại.",
+    "collocations": [
+      "market monopoly"
+    ],
+    "mnemonicTip": "Một thực thể thao túng thị trường."
+  },
+  {
+    "id": "en-b2-0426",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Competition",
+    "phonetic": "/ˌkɒm.pəˈtɪʃ.ən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự cạnh tranh",
+    "example": "Healthy competition spurs creative product refinement.",
+    "exampleMeaning": "Cạnh tranh lành mạnh thúc đẩy tinh chỉnh sản phẩm sáng tạo.",
+    "collocations": [
+      "stiff competition"
+    ],
+    "mnemonicTip": "Thi đua cùng phát triển."
+  },
+  {
+    "id": "en-b2-0427",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Consumer",
+    "phonetic": "/kənˈsjuː.mər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "người tiêu dùng",
+    "example": "Conscious consumers demand ethical supply chains.",
+    "exampleMeaning": "Người tiêu dùng có ý thức đòi hỏi chuỗi cung ứng minh bạch đạo đức.",
+    "collocations": [
+      "consumer demand"
+    ],
+    "mnemonicTip": "Khách hàng cuối cùng."
+  },
+  {
+    "id": "en-b2-0428",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Commodity",
+    "phonetic": "/kəˈmɒd.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "hàng hóa thiết yếu",
+    "example": "Clean drinking water is an indispensable commodity.",
+    "exampleMeaning": "Nước uống sạch là một loại hàng hóa thiết yếu không thể thiếu.",
+    "collocations": [
+      "basic commodity"
+    ],
+    "mnemonicTip": "Hàng hóa tiêu chuẩn hóa."
+  },
+  {
+    "id": "en-b2-0429",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Supply",
+    "phonetic": "/səˈplaɪ/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "nguồn cung",
+    "example": "The law of supply and demand dictates fair pricing.",
+    "exampleMeaning": "Quy luật cung và cầu chi phối việc định giá công bằng.",
+    "collocations": [
+      "supply chain"
+    ],
+    "mnemonicTip": "Lượng hàng đưa ra thị trường."
+  },
+  {
+    "id": "en-b2-0430",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Demand",
+    "phonetic": "/dɪˈmɑːnd/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "nhu cầu, yêu cầu",
+    "example": "Surging demand for renewable power outstrips capacity.",
+    "exampleMeaning": "Nhu cầu bùng nổ về năng lượng tái tạo vượt quá công suất hiện tại.",
+    "collocations": [
+      "high demand"
+    ],
+    "mnemonicTip": "Lượng muốn mua của người dân."
+  },
+  {
+    "id": "en-b2-0431",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Fluctuate",
+    "phonetic": "/ˈflʌk.tʃu.eɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "dao động, biến thiên",
+    "example": "Currency exchange rates fluctuate during instability.",
+    "exampleMeaning": "Tỷ giá hối đoái dao động mạnh trong giai đoạn bất ổn.",
+    "collocations": [
+      "fluctuate wildly"
+    ],
+    "mnemonicTip": "Lên xuống thất thường."
+  },
+  {
+    "id": "en-b2-0432",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Stagnant",
+    "phonetic": "/ˈstæɡ.nənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "trì trệ, tù đọng",
+    "example": "Avoid letting your creative skills become stagnant.",
+    "exampleMeaning": "Tránh để kỹ năng sáng tạo của bạn trở nên trì trệ lụi tàn.",
+    "collocations": [
+      "stagnant economy"
+    ],
+    "mnemonicTip": "Không có sự vận động đi lên."
+  },
+  {
+    "id": "en-b2-0433",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Prosperity",
+    "phonetic": "/prɒsˈper.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự phồn vinh, thịnh vượng",
+    "example": "Peace and fair laws foster lasting prosperity.",
+    "exampleMeaning": "Hòa bình và luật pháp công bằng nuôi dưỡng sự thịnh vượng lâu dài.",
+    "collocations": [
+      "economic prosperity"
+    ],
+    "mnemonicTip": "Phát triển rực rỡ giàu có."
+  },
+  {
+    "id": "en-b2-0434",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Affluence",
+    "phonetic": "/ˈæf.lu.əns/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự giàu sang, phú quý",
+    "example": "True nobility lies in character, not mere affluence.",
+    "exampleMeaning": "Sự quý phái thực sự nằm ở nhân cách, không chỉ ở sự giàu sang đơn thuần.",
+    "collocations": [
+      "growing affluence"
+    ],
+    "mnemonicTip": "Dồi dào của cải tiền bạc."
+  },
+  {
+    "id": "en-b2-0435",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 3: Tài chính, Chiến lược & Kinh tế",
+    "word": "Poverty",
+    "phonetic": "/ˈpɒv.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự nghèo khó",
+    "example": "Access to education is the ultimate weapon against poverty.",
+    "exampleMeaning": "Tiếp cận giáo dục là vũ khí tối thượng chống lại đói nghèo.",
+    "collocations": [
+      "eradicate poverty"
+    ],
+    "mnemonicTip": "Cảnh thiếu thốn vật chất."
+  },
+  {
+    "id": "en-b2-0436",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Articulate",
+    "phonetic": "/ɑːˈtɪk.jə.lət/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "diễn đạt mạch lạc, hoạt ngôn",
+    "example": "An articulate summary clarified the findings.",
+    "exampleMeaning": "Một bản tóm tắt mạch lạc đã làm sáng tỏ các phát hiện.",
+    "collocations": [
+      "articulate speaker"
+    ],
+    "mnemonicTip": "Khúc chiết, dễ hiểu."
+  },
+  {
+    "id": "en-b2-0437",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Assert",
+    "phonetic": "/əˈsɜːt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "khẳng định chắc nịch",
+    "example": "Assert your constitutional rights with confidence.",
+    "exampleMeaning": "Khẳng định các quyền hiến định của bạn một cách tự tin.",
+    "collocations": [
+      "assert rights"
+    ],
+    "mnemonicTip": "Tuyên bố quả quyết."
+  },
+  {
+    "id": "en-b2-0438",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Advocate",
+    "phonetic": "/ˈæd.və.keɪt/",
+    "partOfSpeech": "động từ/danh từ",
+    "vietnameseMeaning": "chủ trương, ủng hộ nhiệt thành",
+    "example": "She advocates for educational access for all children.",
+    "exampleMeaning": "Cô ấy chủ trương quyền tiếp cận giáo dục cho tất cả trẻ em.",
+    "collocations": [
+      "advocate for"
+    ],
+    "mnemonicTip": "Hết lòng cổ vũ."
+  },
+  {
+    "id": "en-b2-0439",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Challenge",
+    "phonetic": "/ˈtʃæl.ɪndʒ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "chất vấn, thách thức",
+    "example": "Challenge outdated orthodoxies with fresh evidence.",
+    "exampleMeaning": "Chất vấn những giáo điều lỗi thời bằng bằng chứng mới mẻ.",
+    "collocations": [
+      "challenge assumptions"
+    ],
+    "mnemonicTip": "Đặt câu hỏi phản biện."
+  },
+  {
+    "id": "en-b2-0440",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Contradict",
+    "phonetic": "/ˌkɒn.trəˈdɪkt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "mâu thuẫn với, trái ngược",
+    "example": "Empirical data contradicts the preliminary hypothesis.",
+    "exampleMeaning": "Dữ liệu thực nghiệm mâu thuẫn với giả thuyết sơ bộ ban đầu.",
+    "collocations": [
+      "contradict each other"
+    ],
+    "mnemonicTip": "Phủ định lẫn nhau."
+  },
+  {
+    "id": "en-b2-0441",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Concede",
+    "phonetic": "/kənˈsiːd/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "thừa nhận nhượng bộ",
+    "example": "He conceded that his opponent made a valid point.",
+    "exampleMeaning": "Anh ấy đã thừa nhận rằng đối thủ có một luận điểm hợp lý.",
+    "collocations": [
+      "concede defeat"
+    ],
+    "mnemonicTip": "Chấp nhận sự thật dù bất lợi."
+  },
+  {
+    "id": "en-b2-0442",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Refute",
+    "phonetic": "/rɪˈfjuːt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "bác bỏ, chứng minh là sai",
+    "example": "Rigorous double-blind experiments refuted the myth.",
+    "exampleMeaning": "Các thí nghiệm mù đôi nghiêm ngặt đã bác bỏ hoàn toàn huyền thoại ấy.",
+    "collocations": [
+      "refute claims"
+    ],
+    "mnemonicTip": "Đánh đổ lập luận."
+  },
+  {
+    "id": "en-b2-0443",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Endorse",
+    "phonetic": "/ɪnˈdɔːs/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "tán thành, chuẩn thuận",
+    "example": "Eminent scientists endorsed the declaration.",
+    "exampleMeaning": "Các nhà khoa học lỗi lạc đã tán thành bản tuyên ngôn.",
+    "collocations": [
+      "endorse a plan"
+    ],
+    "mnemonicTip": "Xác nhận ủng hộ chính thức."
+  },
+  {
+    "id": "en-b2-0444",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Justify",
+    "phonetic": "/ˈdʒʌs.tɪ.faɪ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "biện minh, chứng minh là chính đáng",
+    "example": "The end does not always justify the means.",
+    "exampleMeaning": "Cái đích cuối cùng không phải lúc nào cũng biện minh được cho phương tiện thực hiện.",
+    "collocations": [
+      "justify actions"
+    ],
+    "mnemonicTip": "Cho thấy điều đó là đúng."
+  },
+  {
+    "id": "en-b2-0445",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Clarify",
+    "phonetic": "/ˈklær.ɪ.faɪ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "làm sáng tỏ",
+    "example": "Please clarify ambiguous terminology in the contract.",
+    "exampleMeaning": "Xin vui lòng làm sáng tỏ những thuật ngữ mơ hồ trong hợp đồng.",
+    "collocations": [
+      "clarify points"
+    ],
+    "mnemonicTip": "Xua tan điểm chưa rõ."
+  },
+  {
+    "id": "en-b2-0446",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Deduce",
+    "phonetic": "/dɪˈdʒuːs/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "suy luận, suy diễn logic",
+    "example": "Sherlock Holmes could deduce secrets from tiny clues.",
+    "exampleMeaning": "Sherlock Holmes có thể suy luận ra bí mật từ những manh mối nhỏ bé.",
+    "collocations": [
+      "deduce facts"
+    ],
+    "mnemonicTip": "Rút ra kết luận từ tiền đề."
+  },
+  {
+    "id": "en-b2-0447",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Induce",
+    "phonetic": "/ɪnˈdʒuːs/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "quy nạp; xui khiến",
+    "example": "Induce general laws from specific observations.",
+    "exampleMeaning": "Quy nạp các định luật tổng quát từ những quan sát cụ thể.",
+    "collocations": [
+      "induce change"
+    ],
+    "mnemonicTip": "Từ cụ thể đến tổng quát."
+  },
+  {
+    "id": "en-b2-0448",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Infer",
+    "phonetic": "/ɪnˈfɜːr/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "suy ra, ngầm hiểu",
+    "example": "Readers infer subtle emotional states between lines.",
+    "exampleMeaning": "Người đọc ngầm hiểu được những trạng thái cảm xúc tinh tế giữa các dòng chữ.",
+    "collocations": [
+      "infer meaning"
+    ],
+    "mnemonicTip": "Rút ra từ gợi ý gián tiếp."
+  },
+  {
+    "id": "en-b2-0449",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Generalize",
+    "phonetic": "/ˈdʒen.ər.əl.aɪz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "khái quát hóa",
+    "example": "Avoid generalizing from an isolated anomaly.",
+    "exampleMeaning": "Tránh việc khái quát hóa từ một ngoại lệ đơn lẻ.",
+    "collocations": [
+      "hasty generalization"
+    ],
+    "mnemonicTip": "Quy thành quy luật chung."
+  },
+  {
+    "id": "en-b2-0450",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Speculate",
+    "phonetic": "/ˈspek.jə.leɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "suy đoán, ức đoán",
+    "example": "Cosmologists speculate about multiverses.",
+    "exampleMeaning": "Các nhà vũ trụ học suy đoán về sự tồn tại của đa vũ trụ.",
+    "collocations": [
+      "speculate about"
+    ],
+    "mnemonicTip": "Đoán dựa trên ít bằng chứng."
+  },
+  {
+    "id": "en-b2-0451",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Synthesize",
+    "phonetic": "/ˈsɪn.θə.saɪz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "tổng hợp tri thức",
+    "example": "Synthesize insights from history, economics, and art.",
+    "exampleMeaning": "Tổng hợp những hiểu biết sâu sắc từ lịch sử, kinh tế và nghệ thuật.",
+    "collocations": [
+      "synthesize data"
+    ],
+    "mnemonicTip": "Đúc kết thành hệ thống."
+  },
+  {
+    "id": "en-b2-0452",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Rational",
+    "phonetic": "/ˈræʃ.ən.əl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "có lý trí, duy lý",
+    "example": "Make calm, rational decisions devoid of panic.",
+    "exampleMeaning": "Đưa ra những quyết định bình tĩnh, lý trí và không hoảng loạn.",
+    "collocations": [
+      "rational mind"
+    ],
+    "mnemonicTip": "Dựa trên lý trí."
+  },
+  {
+    "id": "en-b2-0453",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Irrational",
+    "phonetic": "/ɪˈræʃ.ən.əl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "phi lý, vô lý",
+    "example": "Irrational fears vanish under objective scrutiny.",
+    "exampleMeaning": "Những nỗi sợ hãi phi lý sẽ tan biến dưới sự soi chiếu khách quan.",
+    "collocations": [
+      "irrational behavior"
+    ],
+    "mnemonicTip": "Trái với lẽ phải."
+  },
+  {
+    "id": "en-b2-0454",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Credible",
+    "phonetic": "/ˈkred.ə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "đáng tin cậy",
+    "example": "Always cite credible peer-reviewed research.",
+    "exampleMeaning": "Hãy luôn trích dẫn những nghiên cứu được bình duyệt đáng tin cậy.",
+    "collocations": [
+      "credible source"
+    ],
+    "mnemonicTip": "Đáng để tin tưởng."
+  },
+  {
+    "id": "en-b2-0455",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Incredible",
+    "phonetic": "/ɪnˈkred.ə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "không thể tin nổi, phi thường",
+    "example": "The human body possesses incredible healing capacities.",
+    "exampleMeaning": "Cơ thể con người sở hữu năng lực tự chữa lành phi thường.",
+    "collocations": [
+      "incredible journey"
+    ],
+    "mnemonicTip": "Vượt trên mức bình thường."
+  },
+  {
+    "id": "en-b2-0456",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Plausible",
+    "phonetic": "/ˈplɔː.zə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hợp lý, có thể tin được",
+    "example": "The detective proposed a plausible scenario.",
+    "exampleMeaning": "Thám tử đã đề xuất một kịch bản hợp lý và đáng tin cậy.",
+    "collocations": [
+      "plausible explanation"
+    ],
+    "mnemonicTip": "Có vẻ đúng sự thật."
+  },
+  {
+    "id": "en-b2-0457",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Implausible",
+    "phonetic": "/ɪmˈplɔː.zə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "khó tin, không hợp lý",
+    "example": "The defendant offered an implausible alibi.",
+    "exampleMeaning": "Bị cáo đưa ra một bằng chứng ngoại phạm thiếu tính thuyết phục.",
+    "collocations": [
+      "implausible excuse"
+    ],
+    "mnemonicTip": "Khó lòng chấp nhận."
+  },
+  {
+    "id": "en-b2-0458",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Valid",
+    "phonetic": "/ˈvæl.ɪd/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hợp lệ, có hiệu lực, xác đáng",
+    "example": "Your passport must remain valid for international transit.",
+    "exampleMeaning": "Hộ chiếu của bạn phải còn hiệu lực để quá cảnh quốc tế.",
+    "collocations": [
+      "valid point"
+    ],
+    "mnemonicTip": "Có cơ sở vững chắc."
+  },
+  {
+    "id": "en-b2-0459",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Invalid",
+    "phonetic": "/ɪnˈvæl.ɪd/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "vô hiệu, không xác đáng",
+    "example": "The faulty methodology rendered the conclusions invalid.",
+    "exampleMeaning": "Phương pháp luận sai lầm đã khiến các kết luận trở nên vô hiệu.",
+    "collocations": [
+      "invalid data"
+    ],
+    "mnemonicTip": "Không có giá trị pháp lý/logic."
+  },
+  {
+    "id": "en-b2-0460",
+    "language": "en",
+    "level": "B2",
+    "unit": "Unit 4: Văn phong, Tranh luận & Học thuật B2",
+    "word": "Cohesive",
+    "phonetic": "/kəʊˈhiː.sɪv/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "gắn kết chặt chẽ",
+    "example": "A cohesive team outperforms fractured giants.",
+    "exampleMeaning": "Một đội ngũ gắn kết chặt chẽ sẽ vượt trội hơn những người khổng lồ chia rẽ.",
+    "collocations": [
+      "cohesive group"
+    ],
+    "mnemonicTip": "Dính kết làm một."
+  },
+  {
+    "id": "en-c1-0461",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Ubiquitous",
+    "phonetic": "/juːˈbɪk.wɪ.təs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "phổ biến ở khắp mọi nơi, nhan nhản",
+    "example": "Smartphones have become ubiquitous in daily modern existence.",
+    "exampleMeaning": "Điện thoại thông minh đã trở nên hiện diện ở khắp mọi nơi trong đời sống hiện đại.",
+    "collocations": [
+      "ubiquitous presence"
+    ],
+    "mnemonicTip": "Có mặt khắp nơi cùng một lúc."
+  },
+  {
+    "id": "en-c1-0462",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Exemplify",
+    "phonetic": "/ɪɡˈzem.plɪ.faɪ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "minh họa điển hình, là tấm gương sáng",
+    "example": "Her lifelong career exemplifies selfless dedication to education.",
+    "exampleMeaning": "Sự nghiệp cả đời của cô là minh chứng điển hình cho sự cống hiến quên mình vì giáo dục.",
+    "collocations": [
+      "exemplify virtues"
+    ],
+    "mnemonicTip": "Là tấm gương tiêu biểu."
+  },
+  {
+    "id": "en-c1-0463",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Paradigm",
+    "phonetic": "/ˈpær.ə.daɪm/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "khuôn mẫu, hệ hình tư duy",
+    "example": "Artificial intelligence catalyzes a fundamental paradigm shift in work.",
+    "exampleMeaning": "Trí tuệ nhân tạo xúc tác cho một bước chuyển dịch hệ hình căn bản trong công việc.",
+    "collocations": [
+      "paradigm shift"
+    ],
+    "mnemonicTip": "Chữ 'g' câm: /ˈpær.ə.daɪm/."
+  },
+  {
+    "id": "en-c1-0464",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Ephemeral",
+    "phonetic": "/ɪˈfem.ər.əl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "phù du, sớm nở tối tàn, ngắn ngủi",
+    "example": "Material fame is ephemeral compared to timeless virtue.",
+    "exampleMeaning": "Danh vọng vật chất thật phù du so với phẩm hạnh trường tồn.",
+    "collocations": [
+      "ephemeral beauty"
+    ],
+    "mnemonicTip": "Chỉ tồn tại trong chốc lát."
+  },
+  {
+    "id": "en-c1-0465",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Pragmatic",
+    "phonetic": "/præɡˈmæt.ɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thực tiễn, vị lợi ích thực tế",
+    "example": "A pragmatic leader strikes workable compromises.",
+    "exampleMeaning": "Một nhà lãnh đạo thực tế biết tìm kiếm những thỏa hiệp khả thi.",
+    "collocations": [
+      "pragmatic approach"
+    ],
+    "mnemonicTip": "Trọng kết quả thực tế."
+  },
+  {
+    "id": "en-c1-0466",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Equivocal",
+    "phonetic": "/ɪˈkwɪv.ə.kəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nhập nhằng, nước đôi, mập mờ",
+    "example": "The spokesperson gave an intentionally equivocal answer.",
+    "exampleMeaning": "Người phát ngôn đã đưa ra một câu trả lời cố tình nước đôi mập mờ.",
+    "collocations": [
+      "equivocal response"
+    ],
+    "mnemonicTip": "Có thể hiểu nhiều nghĩa mâu thuẫn."
+  },
+  {
+    "id": "en-c1-0467",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Unequivocal",
+    "phonetic": "/ˌʌn.ɪˈkwɪv.ə.kəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "rõ ràng dứt khoát, không thể tranh cãi",
+    "example": "The board gave unequivocal backing to the reform program.",
+    "exampleMeaning": "Hội đồng quản trị đã thể hiện sự ủng hộ rõ ràng dứt khoát với chương trình cải cách.",
+    "collocations": [
+      "unequivocal support"
+    ],
+    "mnemonicTip": "Minh bạch không thể chối cãi."
+  },
+  {
+    "id": "en-c1-0468",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Meticulous",
+    "phonetic": "/məˈtɪk.jə.ləs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "tỉ mỉ, cẩn trọng từng chi tiết nhỏ",
+    "example": "Her meticulous proofreading caught subtle typographical errors.",
+    "exampleMeaning": "Sự đọc soát tỉ mỉ của cô ấy đã phát hiện ra những lỗi in ấn tinh vi.",
+    "collocations": [
+      "meticulous attention"
+    ],
+    "mnemonicTip": "Kỹ lưỡng chu toàn."
+  },
+  {
+    "id": "en-c1-0469",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Superfluous",
+    "phonetic": "/suːˈpɜː.flu.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "dư thừa, không cần thiết",
+    "example": "Edit your prose to excise all superfluous adjectives.",
+    "exampleMeaning": "Hãy biên tập lại văn xuôi để cắt bỏ tất cả những tính từ dư thừa.",
+    "collocations": [
+      "superfluous words"
+    ],
+    "mnemonicTip": "Thừa thãi lãng phí."
+  },
+  {
+    "id": "en-c1-0470",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Dichotomy",
+    "phonetic": "/daɪˈkɒt.ə.mi/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự phân đôi, thế lưỡng phân đối lập",
+    "example": "Philosophers debate the false dichotomy between mind and matter.",
+    "exampleMeaning": "Các triết gia tranh luận về sự phân đôi giả tạo giữa tâm trí và vật chất.",
+    "collocations": [
+      "false dichotomy"
+    ],
+    "mnemonicTip": "Tách làm hai phần đối lập."
+  },
+  {
+    "id": "en-c1-0471",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Pervasive",
+    "phonetic": "/pəˈveɪ.sɪv/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "lan tỏa khắp nơi, thâm nhập sâu rộng",
+    "example": "Digital technology exerts a pervasive influence on childhood.",
+    "exampleMeaning": "Công nghệ số gây ra một ảnh hưởng lan tỏa sâu rộng lên tuổi thơ.",
+    "collocations": [
+      "pervasive influence"
+    ],
+    "mnemonicTip": "Tỏa khắp hang cùng ngõ hẻm."
+  },
+  {
+    "id": "en-c1-0472",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Anachronism",
+    "phonetic": "/əˈnæk.rə.nɪ.zəm/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự lỗi thời, sai niên đại",
+    "example": "Using handwritten telegrams today feels like an quaint anachronism.",
+    "exampleMeaning": "Việc dùng điện tín viết tay ngày nay cho cảm giác như một sự lỗi thời cổ xưa.",
+    "collocations": [
+      "historical anachronism"
+    ],
+    "mnemonicTip": "Không hợp với thời đại hiện tại."
+  },
+  {
+    "id": "en-c1-0473",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Juxtapose",
+    "phonetic": "/ˌdʒʌk.stəˈpəʊz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "đặt cạnh nhau để tạo tương phản",
+    "example": "The exhibit juxtaposes modern abstract art with classical relics.",
+    "exampleMeaning": "Triển lãm đặt nghệ thuật trừu tượng hiện đại bên cạnh các cổ vật kinh điển để so sánh.",
+    "collocations": [
+      "juxtapose elements"
+    ],
+    "mnemonicTip": "Đặt kề cận để đối chiếu."
+  },
+  {
+    "id": "en-c1-0474",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Eloquence",
+    "phonetic": "/ˈel.ə.kwəns/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tài hùng biện, tài ăn nói lưu loát",
+    "example": "The orator's natural eloquence moved listeners to tears.",
+    "exampleMeaning": "Tài hùng biện bẩm sinh của diễn giả đã làm người nghe rơi lệ.",
+    "collocations": [
+      "natural eloquence"
+    ],
+    "mnemonicTip": "Lời hay ý đẹp thuyết phục."
+  },
+  {
+    "id": "en-c1-0475",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Rhetorical",
+    "phonetic": "/rɪˈtɒr.ɪ.kəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thuộc về tu từ, mang tính hùng biện",
+    "example": "A rhetorical question demands reflection rather than vocal answers.",
+    "exampleMeaning": "Một câu hỏi tu từ đòi hỏi sự ngẫm nghĩ hơn là câu trả lời thành tiếng.",
+    "collocations": [
+      "rhetorical question"
+    ],
+    "mnemonicTip": "Nghệ thuật tu từ."
+  },
+  {
+    "id": "en-c1-0476",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Tacit",
+    "phonetic": "/ˈtæs.ɪt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "ngầm hiểu, không cần nói ra lời",
+    "example": "There was tacit understanding between the veteran partners.",
+    "exampleMeaning": "Có một sự ngầm hiểu thấu suốt giữa các đối tác lâu năm.",
+    "collocations": [
+      "tacit agreement"
+    ],
+    "mnemonicTip": "Hiểu nhau không cần mở lời."
+  },
+  {
+    "id": "en-c1-0477",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Explicit",
+    "phonetic": "/ɪkˈsplɪs.ɪt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "rõ ràng tường minh, dứt khoát",
+    "example": "The contract outlines explicit conditions for termination.",
+    "exampleMeaning": "Hợp đồng nêu rõ những điều kiện tường minh cho việc chấm dứt.",
+    "collocations": [
+      "explicit instructions"
+    ],
+    "mnemonicTip": "Nói toạc móng heo, rõ ràng."
+  },
+  {
+    "id": "en-c1-0478",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Ambivalent",
+    "phonetic": "/æmˈbɪv.ə.lənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "vừa yêu vừa ghét, mâu thuẫn nội tâm",
+    "example": "He felt ambivalent about accepting the overseas promotion.",
+    "exampleMeaning": "Anh cảm thấy băn khoăn mâu thuẫn về việc chấp nhận chuyển công tác nước ngoài.",
+    "collocations": [
+      "feel ambivalent"
+    ],
+    "mnemonicTip": "Có hai cảm xúc trái ngược cùng lúc."
+  },
+  {
+    "id": "en-c1-0479",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Altruism",
+    "phonetic": "/ˈæl.tru.ɪ.zəm/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "lòng vị tha, sự vì người khác",
+    "example": "True altruism expects no fanfare or compensation.",
+    "exampleMeaning": "Lòng vị tha đích thực không màng tới sự tung hô hay đền đáp.",
+    "collocations": [
+      "pure altruism"
+    ],
+    "mnemonicTip": "Sống vì tha nhân."
+  },
+  {
+    "id": "en-c1-0480",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Prerequisite",
+    "phonetic": "/ˌpriːˈrek.wɪ.zɪt/",
+    "partOfSpeech": "danh từ/tính từ",
+    "vietnameseMeaning": "điều kiện tiên quyết",
+    "example": "Integrity is an absolute prerequisite for public trust.",
+    "exampleMeaning": "Sự chính trực là điều kiện tiên quyết tuyệt đối cho lòng tin của công chúng.",
+    "collocations": [
+      "necessary prerequisite"
+    ],
+    "mnemonicTip": "Cần phải có trước tiên."
+  },
+  {
+    "id": "en-c1-0481",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Idiosyncrasy",
+    "phonetic": "/ˌɪd.i.əˈsɪŋ.krə.si/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "nét lập dị độc đáo, tính khí riêng",
+    "example": "Every artist possesses peculiar creative idiosyncrasies.",
+    "exampleMeaning": "Mỗi nghệ sĩ đều sở hữu những nét lập dị sáng tạo độc đáo riêng.",
+    "collocations": [
+      "cultural idiosyncrasy"
+    ],
+    "mnemonicTip": "Đặc điểm riêng biệt không giống ai."
+  },
+  {
+    "id": "en-c1-0482",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Cognizant",
+    "phonetic": "/ˈkɒɡ.nɪ.zənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nhận thức rõ, am hiểu thấu đáo",
+    "example": "Leaders must remain cognizant of grassroots realities.",
+    "exampleMeaning": "Người lãnh đạo phải luôn nhận thức rõ rệt thực tế đời sống người dân.",
+    "collocations": [
+      "be cognizant of"
+    ],
+    "mnemonicTip": "Biết rõ mười mươi."
+  },
+  {
+    "id": "en-c1-0483",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Disparate",
+    "phonetic": "/ˈdɪs.pər.ət/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "khác biệt hoàn toàn, rời rạc",
+    "example": "The genius connected disparate threads of knowledge.",
+    "exampleMeaning": "Bậc thiên tài đã kết nối những luồng tri thức hoàn toàn khác biệt nhau.",
+    "collocations": [
+      "disparate ideas"
+    ],
+    "mnemonicTip": "Khác nhau một trời một vực."
+  },
+  {
+    "id": "en-c1-0484",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Enigmatic",
+    "phonetic": "/ˌen.ɪɡˈmæt.ɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "bí ẩn, khó hiểu, như câu đố",
+    "example": "The Mona Lisa's enigmatic smile intrigues centuries of viewers.",
+    "exampleMeaning": "Nụ cười bí ẩn khó hiểu của nàng Mona Lisa mê hoặc người xem suốt bao thế kỷ.",
+    "collocations": [
+      "enigmatic smile"
+    ],
+    "mnemonicTip": "Bí hiểm khó giải mã."
+  },
+  {
+    "id": "en-c1-0485",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 1: Học thuật, Triết luận & Hùng biện C1",
+    "word": "Esoteric",
+    "phonetic": "/ˌes.əˈter.ɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "bí truyền, thâm sâu chỉ ít người hiểu",
+    "example": "Ancient alchemy preserved esoteric philosophical tenets.",
+    "exampleMeaning": "Thuật giả kim cổ đại gìn giữ những nguyên lý triết học bí truyền thâm sâu.",
+    "collocations": [
+      "esoteric knowledge"
+    ],
+    "mnemonicTip": "Chỉ dành cho giới chuyên sâu tinh hoa."
+  },
+  {
+    "id": "en-c1-0486",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Proponent",
+    "phonetic": "/prəˈpəʊ.nənt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "người đề xuất, người ủng hộ nhiệt tình",
+    "example": "He is a leading proponent of clean nuclear fusion.",
+    "exampleMeaning": "Ông là người ủng hộ hàng đầu cho phản ứng nhiệt hạch sạch.",
+    "collocations": [
+      "leading proponent"
+    ],
+    "mnemonicTip": "Người đứng ra cổ vũ."
+  },
+  {
+    "id": "en-c1-0487",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Opponent",
+    "phonetic": "/əˈpəʊ.nənt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "đối thủ, phe phản đối",
+    "example": "Respect your opponents even in fierce electoral battles.",
+    "exampleMeaning": "Hãy tôn trọng đối thủ của bạn ngay cả trong các cuộc bầu cử khốc liệt.",
+    "collocations": [
+      "worthy opponent"
+    ],
+    "mnemonicTip": "Người ở bên kia chiến tuyến."
+  },
+  {
+    "id": "en-c1-0488",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Manifest",
+    "phonetic": "/ˈmæn.ɪ.fest/",
+    "partOfSpeech": "động từ/tính từ",
+    "vietnameseMeaning": "biểu hiện rõ ràng, phô bày",
+    "example": "Stress manifests physically as insomnia and tension.",
+    "exampleMeaning": "Sự căng thẳng biểu hiện rõ rệt qua việc mất ngủ và căng cơ.",
+    "collocations": [
+      "manifest destiny"
+    ],
+    "mnemonicTip": "Hiện rõ ra bên ngoài."
+  },
+  {
+    "id": "en-c1-0489",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Latent",
+    "phonetic": "/ˈleɪ.tənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "tiềm tàng, ẩn giấu chưa bộc lộ",
+    "example": "Great mentors awaken latent genius in their students.",
+    "exampleMeaning": "Những người thầy lớn đánh thức thiên tài tiềm tàng nơi học trò.",
+    "collocations": [
+      "latent talent"
+    ],
+    "mnemonicTip": "Nằm sâu bên trong chờ dịp bộc lộ."
+  },
+  {
+    "id": "en-c1-0490",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Indispensable",
+    "phonetic": "/ˌɪn.dɪˈspen.sə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "không thể thiếu được, tối quan trọng",
+    "example": "Critical thinking is an indispensable tool in modern times.",
+    "exampleMeaning": "Tư duy phản biện là một công cụ tối quan trọng không thể thiếu trong thời hiện đại.",
+    "collocations": [
+      "indispensable tool"
+    ],
+    "mnemonicTip": "Vắng nó là không xong."
+  },
+  {
+    "id": "en-c1-0491",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Superficial",
+    "phonetic": "/ˌsuː.pəˈfɪʃ.əl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nông cạn, hời hợt, bề ngoài",
+    "example": "Avoid superficial judgments based merely on appearance.",
+    "exampleMeaning": "Hãy tránh những phán xét nông cạn hời hợt chỉ dựa vào vẻ bề ngoài.",
+    "collocations": [
+      "superficial knowledge"
+    ],
+    "mnemonicTip": "Chỉ thấy phần vỏ không thấy phần lõi."
+  },
+  {
+    "id": "en-c1-0492",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Omnipresent",
+    "phonetic": "/ˌɒm.nɪˈprez.ənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hiện diện ở khắp mọi nơi",
+    "example": "The omnipresent beauty of nature surrounds observant souls.",
+    "exampleMeaning": "Vẻ đẹp hiện diện khắp nơi của thiên nhiên bao quanh những tâm hồn biết quan sát.",
+    "collocations": [
+      "omnipresent force"
+    ],
+    "mnemonicTip": "Có mặt khắp vũ trụ."
+  },
+  {
+    "id": "en-c1-0493",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Inherent",
+    "phonetic": "/ɪnˈher.ənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "vốn có, cố hữu, bất khả phân",
+    "example": "Dignity is an inherent right of every human being.",
+    "exampleMeaning": "Phẩm giá là quyền vốn có bất khả xâm phạm của mọi con người.",
+    "collocations": [
+      "inherent right"
+    ],
+    "mnemonicTip": "Bẩm sinh gắn liền với bản chất."
+  },
+  {
+    "id": "en-c1-0494",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Extrinsic",
+    "phonetic": "/eksˈtrɪn.zɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "tác động từ bên ngoài",
+    "example": "Do not let extrinsic pressure distort inner values.",
+    "exampleMeaning": "Đừng để áp lực từ bên ngoài bóp méo những giá trị nội tâm.",
+    "collocations": [
+      "extrinsic motivation"
+    ],
+    "mnemonicTip": "Bên ngoài đưa vào."
+  },
+  {
+    "id": "en-c1-0495",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Intrinsic",
+    "phonetic": "/ɪnˈtrɪn.zɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nội tại, thuộc về bản chất bên trong",
+    "example": "Intrinsic motivation sustains lifelong dedication.",
+    "exampleMeaning": "Động lực nội tại duy trì sự cống hiến bền bỉ suốt cả đời.",
+    "collocations": [
+      "intrinsic value"
+    ],
+    "mnemonicTip": "Từ bên trong tự thân sinh ra."
+  },
+  {
+    "id": "en-c1-0496",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Vindicate",
+    "phonetic": "/ˈvɪn.dɪ.keɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "minh oan, chứng minh là đúng",
+    "example": "Subsequent discoveries vindicated Galileo's cosmological claims.",
+    "exampleMeaning": "Những phát hiện về sau đã minh oan cho các tuyên bố vũ trụ học của Galileo.",
+    "collocations": [
+      "vindicate honor"
+    ],
+    "mnemonicTip": "Giải tỏa hàm oan, chứng minh chân lý."
+  },
+  {
+    "id": "en-c1-0497",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Substantiate",
+    "phonetic": "/səbˈstæn.ʃi.eɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "chứng minh có căn cứ thực tế",
+    "example": "Can you substantiate your assertions with documented evidence?",
+    "exampleMeaning": "Bạn có thể chứng minh những khẳng định của mình bằng bằng chứng văn bản không?",
+    "collocations": [
+      "substantiate claims"
+    ],
+    "mnemonicTip": "Đưa ra bằng chứng vững chắc."
+  },
+  {
+    "id": "en-c1-0498",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Concomitant",
+    "phonetic": "/kənˈkɒm.ɪ.tənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "đồng thời, đi kèm theo",
+    "example": "Economic growth brought concomitant environmental challenges.",
+    "exampleMeaning": "Tăng trưởng kinh tế mang theo những thách thức môi trường đi kèm đồng thời.",
+    "collocations": [
+      "concomitant factor"
+    ],
+    "mnemonicTip": "Xảy ra song hành cùng lúc."
+  },
+  {
+    "id": "en-c1-0499",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Preponderance",
+    "phonetic": "/prɪˈpɒn.dər.əns/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự vượt trội về số lượng hoặc uy thế",
+    "example": "The preponderance of scientific evidence points to climate warming.",
+    "exampleMeaning": "Đại đa số áp đảo các bằng chứng khoa học đều chỉ ra sự nóng lên của khí hậu.",
+    "collocations": [
+      "preponderance of evidence"
+    ],
+    "mnemonicTip": "Chiếm phần áp đảo."
+  },
+  {
+    "id": "en-c1-0500",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Recalcitrant",
+    "phonetic": "/rɪˈkæl.sɪ.trənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "ngoan cố, cứng đầu, chống đối",
+    "example": "The recalcitrant committee refused to adopt standard protocols.",
+    "exampleMeaning": "Ủy ban ngoan cố đã từ chối áp dụng các giao thức chuẩn mực.",
+    "collocations": [
+      "recalcitrant behavior"
+    ],
+    "mnemonicTip": "Khó bảo, khăng khăng không nghe theo."
+  },
+  {
+    "id": "en-c1-0501",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Surreptitious",
+    "phonetic": "/ˌsʌr.əpˈtɪʃ.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "lén lút, vụng trộm, giấu giếm",
+    "example": "They took surreptitious glances at the classified documents.",
+    "exampleMeaning": "Họ đã liếc nhìn lén lút vào các tài liệu mật.",
+    "collocations": [
+      "surreptitious glance"
+    ],
+    "mnemonicTip": "Âm thầm vụng trộm."
+  },
+  {
+    "id": "en-c1-0502",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Inadvertent",
+    "phonetic": "/ˌɪn.ədˈvɜː.tənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "vô tình, không cố ý",
+    "example": "An inadvertent slip of the tongue revealed the hidden plan.",
+    "exampleMeaning": "Một sự lỡ lời vô tình đã làm lộ kế hoạch bí mật.",
+    "collocations": [
+      "inadvertent error"
+    ],
+    "mnemonicTip": "Sơ suất ngoài ý muốn."
+  },
+  {
+    "id": "en-c1-0503",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Plausibility",
+    "phonetic": "/ˌplɔː.zəˈbɪl.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tính hợp lý, độ tin cậy",
+    "example": "Assess the plausibility of historical eyewitness accounts.",
+    "exampleMeaning": "Đánh giá tính hợp lý của các lời kể nhân chứng lịch sử.",
+    "collocations": [
+      "assess plausibility"
+    ],
+    "mnemonicTip": "Khả năng đáng tin."
+  },
+  {
+    "id": "en-c1-0504",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Quintessential",
+    "phonetic": "/ˌkwɪn.tɪˈsen.ʃəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "tinh túy, tinh hoa điển hình nhất",
+    "example": "Afternoon tea is the quintessential British cultural ritual.",
+    "exampleMeaning": "Trà chiều là nghi thức văn hóa tinh hoa điển hình nhất của người Anh.",
+    "collocations": [
+      "quintessential example"
+    ],
+    "mnemonicTip": "Cô đọng những gì tinh túy nhất."
+  },
+  {
+    "id": "en-c1-0505",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Resplendent",
+    "phonetic": "/rɪˈsplen.dənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "chói lọi, lộng lẫy rực rỡ",
+    "example": "The palace halls stood resplendent in gold leaf.",
+    "exampleMeaning": "Các đại sảnh của cung điện hiện lên lộng lẫy chói lọi trong lớp vàng lá.",
+    "collocations": [
+      "resplendent beauty"
+    ],
+    "mnemonicTip": "Rực rỡ ngút ngàn."
+  },
+  {
+    "id": "en-c1-0506",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Scrupulous",
+    "phonetic": "/ˈskruː.pjə.ləs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "cực kỳ cẩn trọng, liêm khiết đàng hoàng",
+    "example": "The accountant maintained scrupulous financial records.",
+    "exampleMeaning": "Kế toán viên duy trì sổ sách tài chính cực kỳ cẩn trọng và chuẩn xác.",
+    "collocations": [
+      "scrupulous care"
+    ],
+    "mnemonicTip": "Nghiêm cẩn đúng đạo lý."
+  },
+  {
+    "id": "en-c1-0507",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Spurious",
+    "phonetic": "/ˈspjʊə.ri.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "giả mạo, ngụy tạo, thiếu xác thực",
+    "example": "Dismiss spurious claims propagated on anonymous forums.",
+    "exampleMeaning": "Hãy gạt bỏ những tuyên bố ngụy tạo được lan truyền trên các diễn đàn vô danh.",
+    "collocations": [
+      "spurious claim"
+    ],
+    "mnemonicTip": "Giả trá không có thật."
+  },
+  {
+    "id": "en-c1-0508",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Tenacious",
+    "phonetic": "/təˈneɪ.ʃəs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "bền bỉ, ngoan cường, dai dẳng",
+    "example": "Her tenacious defense of human rights inspired millions.",
+    "exampleMeaning": "Sự bảo vệ nhân quyền bền bỉ ngoan cường của cô đã truyền cảm hứng cho hàng triệu người.",
+    "collocations": [
+      "tenacious grip"
+    ],
+    "mnemonicTip": "Nắm giữ không buông tha."
+  },
+  {
+    "id": "en-c1-0509",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Transcend",
+    "phonetic": "/trænˈsend/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "vượt lên trên, siêu việt",
+    "example": "Great poetry transcends temporal and geographic borders.",
+    "exampleMeaning": "Thơ ca vĩ đại vượt lên trên mọi ranh giới thời gian và địa lý.",
+    "collocations": [
+      "transcend limitations"
+    ],
+    "mnemonicTip": "Vượt thoát giới hạn."
+  },
+  {
+    "id": "en-c1-0510",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 2: Xã hội, Pháp lý & Khoa học nâng cao",
+    "word": "Venerable",
+    "phonetic": "/ˈven.ər.ə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "đáng tôn kính, đáng kính trọng",
+    "example": "The venerable scholar shared decades of distilled wisdom.",
+    "exampleMeaning": "Học giả đáng kính đã chia sẻ hàng thập kỷ trí tuệ cô đọng.",
+    "collocations": [
+      "venerable teacher"
+    ],
+    "mnemonicTip": "Có tuổi tác và đạo đức cao quý."
+  },
+  {
+    "id": "en-c1-0511",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Nadir",
+    "phonetic": "/ˈneɪ.dɪər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "điểm thấp nhất, vực thẳm",
+    "example": "From the nadir of despair, she rebuilt her empire.",
+    "exampleMeaning": "Từ vực thẳm của sự tuyệt vọng, cô đã gầy dựng lại đế chế của mình.",
+    "collocations": [
+      "reach the nadir"
+    ],
+    "mnemonicTip": "Đối lập với Zenith (đỉnh cao)."
+  },
+  {
+    "id": "en-c1-0512",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Zenith",
+    "phonetic": "/ˈzen.ɪθ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thiên đỉnh, thời kỳ đỉnh cao",
+    "example": "The empire reached its cultural zenith under peace.",
+    "exampleMeaning": "Đế chế đã chạm tới thời kỳ hoàng kim đỉnh cao dưới thời thái bình.",
+    "collocations": [
+      "at the zenith"
+    ],
+    "mnemonicTip": "Điểm cao nhất trên bầu trời."
+  },
+  {
+    "id": "en-c1-0513",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Salient",
+    "phonetic": "/ˈseɪ.li.ənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nổi bật, cốt yếu, đáng chú ý nhất",
+    "example": "Highlight salient points in your executive overview.",
+    "exampleMeaning": "Hãy làm nổi bật những luận điểm cốt yếu trong bản tổng quan điều hành.",
+    "collocations": [
+      "salient feature"
+    ],
+    "mnemonicTip": "Đập ngay vào mắt."
+  },
+  {
+    "id": "en-c1-0514",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Juxtaposition",
+    "phonetic": "/ˌdʒʌk.stə.pəˈzɪʃ.ən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự đặt cạnh nhau đối chiếu",
+    "example": "The juxtaposition of old and new architecture enchants tourists.",
+    "exampleMeaning": "Sự đặt cạnh nhau của kiến trúc cổ và mới làm say đắm khách du lịch.",
+    "collocations": [
+      "sharp juxtaposition"
+    ],
+    "mnemonicTip": "Kê sát để so bì."
+  },
+  {
+    "id": "en-c1-0515",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Equanimity",
+    "phonetic": "/ˌek.wəˈnɪm.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự điềm tĩnh, an nhiên tự tại",
+    "example": "He endured triumph and disaster with unbroken equanimity.",
+    "exampleMeaning": "Ông đón nhận chiến thắng và thảm họa với sự điềm tĩnh an nhiên không đổi.",
+    "collocations": [
+      "maintain equanimity"
+    ],
+    "mnemonicTip": "Tâm thế không xao động."
+  },
+  {
+    "id": "en-c1-0516",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Magnanimous",
+    "phonetic": "/mæɡˈnæn.ɪ.məs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hào hiệp, rộng lượng, cao thượng",
+    "example": "Be magnanimous in victory and gracious in defeat.",
+    "exampleMeaning": "Hãy cao thượng khi thắng trận và nhã nhặn khi bại trận.",
+    "collocations": [
+      "magnanimous gesture"
+    ],
+    "mnemonicTip": "Tâm hồn rộng mở đại lượng."
+  },
+  {
+    "id": "en-c1-0517",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Obfuscate",
+    "phonetic": "/ˈɒb.fʌs.keɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "làm mập mờ, làm khó hiểu",
+    "example": "Do not obfuscate plain facts with dense corporate jargon.",
+    "exampleMeaning": "Đừng làm mập mờ sự thật hiển nhiên bằng những thuật ngữ doanh nghiệp rắm rối.",
+    "collocations": [
+      "obfuscate the truth"
+    ],
+    "mnemonicTip": "Cố tình bôi mờ."
+  },
+  {
+    "id": "en-c1-0518",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Parsimony",
+    "phonetic": "/ˈpɑː.sɪ.mə.ni/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự kiệm ước tối đa; tính hà tiện",
+    "example": "Occam's razor champions explanatory parsimony.",
+    "exampleMeaning": "Dao cạo Occam ủng hộ sự tiết kiệm tối đa trong các giả định giải thích.",
+    "collocations": [
+      "law of parsimony"
+    ],
+    "mnemonicTip": "Không dùng giả định thừa."
+  },
+  {
+    "id": "en-c1-0519",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Quixotic",
+    "phonetic": "/kwɪkˈsɒt.ɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hão huyền, viển vông như Đôn Ki-hô-tê",
+    "example": "His quixotic crusade against windmills drew amused smiles.",
+    "exampleMeaning": "Cuộc thập tự chinh viển vông của ông chống lại cối xay gió khiến mọi người bật cười hóm hỉnh.",
+    "collocations": [
+      "quixotic venture"
+    ],
+    "mnemonicTip": "Lý tưởng hóa xa rời thực tế."
+  },
+  {
+    "id": "en-c1-0520",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Sycophant",
+    "phonetic": "/ˈsɪk.ə.fænt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "kẻ nịnh bợ, kẻ bợ đỡ",
+    "example": "Wise monarchs banish sycophants from the court.",
+    "exampleMeaning": "Các bậc minh quân đuổi những kẻ bợ đỡ nịnh nọt ra khỏi triều đình.",
+    "collocations": [
+      "flattering sycophant"
+    ],
+    "mnemonicTip": "Nịnh hót vì tư lợi."
+  },
+  {
+    "id": "en-c1-0521",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Tirade",
+    "phonetic": "/taɪˈreɪd/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tràng đả kích dài giận dữ",
+    "example": "He launched into a bitter tirade against modern cynicism.",
+    "exampleMeaning": "Ông đã tuôn ra một tràng đả kích cay đắng chống lại thói hoài nghi hiện đại.",
+    "collocations": [
+      "angry tirade"
+    ],
+    "mnemonicTip": "Bài diễn thuyết gay gắt."
+  },
+  {
+    "id": "en-c1-0522",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Vicarious",
+    "phonetic": "/vɪˈkeə.ri.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "trải nghiệm gián tiếp qua người khác",
+    "example": "Parents derive vicarious joy from children's sports triumphs.",
+    "exampleMeaning": "Cha mẹ cảm nhận được niềm vui gián tiếp từ chiến thắng thể thao của con cái.",
+    "collocations": [
+      "vicarious pleasure"
+    ],
+    "mnemonicTip": "Cảm nhận qua lăng kính người khác."
+  },
+  {
+    "id": "en-c1-0523",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Wistful",
+    "phonetic": "/ˈwɪst.fəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "bâng khuâng, tiếc nuối hoài niệm",
+    "example": "She cast a wistful glance at her childhood home.",
+    "exampleMeaning": "Cô ấy đưa ánh mắt bâng khuâng luyến lưu nhìn về ngôi nhà tuổi thơ.",
+    "collocations": [
+      "wistful smile"
+    ],
+    "mnemonicTip": "Pha lẫn buồn bã và nhung nhớ."
+  },
+  {
+    "id": "en-c1-0524",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Zealot",
+    "phonetic": "/ˈzel.ət/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "người cuồng tín, cực đoan",
+    "example": "Zealots brook no debate or nuance in dogma.",
+    "exampleMeaning": "Những kẻ cuồng tín không dung thứ bất kỳ cuộc tranh luận hay sắc thái nào trong giáo lý.",
+    "collocations": [
+      "religious zealot"
+    ],
+    "mnemonicTip": "Mù quáng theo đuổi giáo điều."
+  },
+  {
+    "id": "en-c1-0525",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Abstruse",
+    "phonetic": "/æbˈstruːs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thâm sâu, khó hiểu, bí hiểm",
+    "example": "The treatise explored abstruse metaphysical problems.",
+    "exampleMeaning": "Luận văn khảo cứu những vấn đề siêu hình học thâm sâu khó hiểu.",
+    "collocations": [
+      "abstruse theory"
+    ],
+    "mnemonicTip": "Đòi hỏi trí tuệ cao mới lĩnh hội."
+  },
+  {
+    "id": "en-c1-0526",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Belligerent",
+    "phonetic": "/bəˈlɪdʒ.ər.ənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hiếu chiến, gây gổ",
+    "example": "A belligerent regime poses threats to regional peace.",
+    "exampleMeaning": "Một chế độ hiếu chiến đe dọa nền hòa bình khu vực.",
+    "collocations": [
+      "belligerent tone"
+    ],
+    "mnemonicTip": "Sẵn sàng xung đột vũ trang."
+  },
+  {
+    "id": "en-c1-0527",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Cacophony",
+    "phonetic": "/kəˈkɒf.ə.ni/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "mớ âm thanh hỗn độn chói tai",
+    "example": "Traffic horns created a cacophony in the intersection.",
+    "exampleMeaning": "Còi xe tạo nên một mớ âm thanh hỗn độn chói tai nơi giao lộ.",
+    "collocations": [
+      "dissonant cacophony"
+    ],
+    "mnemonicTip": "Âm thanh nghịch tai."
+  },
+  {
+    "id": "en-c1-0528",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Debilitate",
+    "phonetic": "/dɪˈbɪl.ɪ.teɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "làm suy nhược, làm kiệt quệ",
+    "example": "Chronic stress can debilitate immune defenses.",
+    "exampleMeaning": "Căng thẳng kinh niên có thể làm suy nhược các hàng rào miễn dịch.",
+    "collocations": [
+      "debilitating illness"
+    ],
+    "mnemonicTip": "Lấy đi sinh lực sức mạnh."
+  },
+  {
+    "id": "en-c1-0529",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Eclectic",
+    "phonetic": "/ekˈlek.tɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "chiết trung, tổng hòa đa dạng",
+    "example": "Her reading taste is wonderfully eclectic.",
+    "exampleMeaning": "Gu đọc sách của cô ấy thật đa dạng và phong phú một cách tuyệt vời.",
+    "collocations": [
+      "eclectic taste"
+    ],
+    "mnemonicTip": "Thu nhặt từ nhiều trường phái."
+  },
+  {
+    "id": "en-c1-0530",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Fastidious",
+    "phonetic": "/fæsˈtɪd.i.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "kỹ tính, kén chọn, khắt khe",
+    "example": "The fastidious watchmaker inspected each miniature gear.",
+    "exampleMeaning": "Người thợ đồng hồ kỹ tính tỉ mẩn kiểm tra từng bánh răng tí hon.",
+    "collocations": [
+      "fastidious attention"
+    ],
+    "mnemonicTip": "Đòi hỏi hoàn hảo tuyệt đối."
+  },
+  {
+    "id": "en-c1-0531",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Garrulous",
+    "phonetic": "/ˈɡær.əl.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nói nhiều, lắm lời, ba hoa",
+    "example": "The garrulous traveler talked incessantly through the journey.",
+    "exampleMeaning": "Người bạn đồng hành lắm lời nói liên tu bất tận suốt cả chuyến đi.",
+    "collocations": [
+      "garrulous old man"
+    ],
+    "mnemonicTip": "Thích huyên thuyên những chuyện vặt."
+  },
+  {
+    "id": "en-c1-0532",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Hegemony",
+    "phonetic": "/hɪˈɡem.ə.ni/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "bá quyền, sự thống trị",
+    "example": "Cultural hegemony influences taste worldwide.",
+    "exampleMeaning": "Bá quyền văn hóa định hình thị hiếu trên toàn cầu.",
+    "collocations": [
+      "global hegemony"
+    ],
+    "mnemonicTip": "Uy quyền chi phối tuyệt đối."
+  },
+  {
+    "id": "en-c1-0533",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Inculcate",
+    "phonetic": "/ˈɪn.kʌl.keɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "khắc sâu, rèn đúc vào tâm trí",
+    "example": "Schools inculcate virtues of civility and honesty.",
+    "exampleMeaning": "Trường học khắc sâu các đức tính văn minh và trung thực vào tâm hồn trẻ nhỏ.",
+    "collocations": [
+      "inculcate values"
+    ],
+    "mnemonicTip": "Dạy dỗ lặp đi lặp lại để ghi nhớ sâu."
+  },
+  {
+    "id": "en-c1-0534",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Lugubrious",
+    "phonetic": "/luːˈɡuː.bri.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thê lương, sầu thảm, tang tóc",
+    "example": "The cello played a lugubrious, haunting dirge.",
+    "exampleMeaning": "Cây đàn hồ cầm tấu lên khúc tang ca thê lương ám ảnh.",
+    "collocations": [
+      "lugubrious tone"
+    ],
+    "mnemonicTip": "Não nề ủ rũ."
+  },
+  {
+    "id": "en-c1-0535",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 3: Triết luận & Trừu tượng C1",
+    "word": "Nefarious",
+    "phonetic": "/nəˈfeə.ri.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hung ác, bất chính, độc ác",
+    "example": "Cyber criminals hatch nefarious plots to steal identities.",
+    "exampleMeaning": "Bọn tội phạm mạng ấp ủ những âm mưu bất chính hung độc để đánh cắp danh tính.",
+    "collocations": [
+      "nefarious plot"
+    ],
+    "mnemonicTip": "Tội ác tày đình."
+  },
+  {
+    "id": "en-c1-0536",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Penchant",
+    "phonetic": "/ˈpɒ̃ː.ʃɒ̃ː/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sở thích đặc biệt, thiên hướng",
+    "example": "She has an innate penchant for classical literature.",
+    "exampleMeaning": "Cô ấy có một thiên hướng đặc biệt bẩm sinh dành cho văn học cổ điển.",
+    "collocations": [
+      "have a penchant for"
+    ],
+    "mnemonicTip": "Xu hướng yêu thích rõ rệt."
+  },
+  {
+    "id": "en-c1-0537",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Reciprocity",
+    "phonetic": "/ˌres.ɪˈprɒs.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tính tương hỗ, có qua có lại",
+    "example": "Diplomatic relations hinge on mutual reciprocity.",
+    "exampleMeaning": "Quan hệ ngoại giao phụ thuộc vào nguyên tắc tương hỗ có qua có lại.",
+    "collocations": [
+      "mutual reciprocity"
+    ],
+    "mnemonicTip": "Đáp lại lòng tốt tương xứng."
+  },
+  {
+    "id": "en-c1-0538",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Sagacious",
+    "phonetic": "/səˈɡeɪ.ʃəs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "sáng suốt, thông thái, thức thời",
+    "example": "The sagacious elder foresaw the storm's trajectory.",
+    "exampleMeaning": "Bậc trưởng lão thông thái đã tiên liệu được quỹ đạo của cơn bão.",
+    "collocations": [
+      "sagacious advice"
+    ],
+    "mnemonicTip": "Có khả năng phán đoán sâu sắc."
+  },
+  {
+    "id": "en-c1-0539",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Temerity",
+    "phonetic": "/təˈmer.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự liều lĩnh táo bạo, bạt mạng",
+    "example": "He had the temerity to challenge the autocratic leader.",
+    "exampleMeaning": "Anh ấy đã có sự liều lĩnh táo bạo dám chất vấn kẻ độc tài.",
+    "collocations": [
+      "have the temerity to"
+    ],
+    "mnemonicTip": "Dám làm việc mạo hiểm coi thường hiểm nguy."
+  },
+  {
+    "id": "en-c1-0540",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Ubiquity",
+    "phonetic": "/juːˈbɪk.wə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tính hiện diện khắp nơi",
+    "example": "The ubiquity of plastic is an ecological disaster.",
+    "exampleMeaning": "Sự hiện diện ở khắp nơi của rác thải nhựa là một thảm họa sinh thái.",
+    "collocations": [
+      "ubiquity of technology"
+    ],
+    "mnemonicTip": "Trạng thái nhan nhản mọi nơi."
+  },
+  {
+    "id": "en-c1-0541",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Vacillate",
+    "phonetic": "/ˈvæs.ɪ.leɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "do dự, lắc lư, dao động không dứt",
+    "example": "Do not vacillate when crisis calls for decisive action.",
+    "exampleMeaning": "Đừng do dự chần chừ khi khủng hoảng đòi hỏi hành động dứt khoát.",
+    "collocations": [
+      "vacillate between"
+    ],
+    "mnemonicTip": "Lưỡng lự qua lại giữa hai ý kiến."
+  },
+  {
+    "id": "en-c1-0542",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Winsome",
+    "phonetic": "/ˈwɪn.səm/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "duyên dáng, cuốn hút đáng yêu",
+    "example": "Her winsome manner charmed everyone she met.",
+    "exampleMeaning": "Cử chỉ duyên dáng đáng yêu của cô đã quyến rũ tất cả những ai cô gặp gỡ.",
+    "collocations": [
+      "winsome smile"
+    ],
+    "mnemonicTip": "Vẻ hấp dẫn nhẹ nhàng tự nhiên."
+  },
+  {
+    "id": "en-c1-0543",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Xenophobia",
+    "phonetic": "/ˌzen.əˈfəʊ.bi.ə/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "chứng bài ngoại, sợ người lạ",
+    "example": "Education is the antidote to fear and xenophobia.",
+    "exampleMeaning": "Giáo dục là liều thuốc giải trừ nỗi sợ hãi và thói bài ngoại.",
+    "collocations": [
+      "combat xenophobia"
+    ],
+    "mnemonicTip": "Định kiến chống lại người nước ngoài."
+  },
+  {
+    "id": "en-c1-0544",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Yoke",
+    "phonetic": "/jəʊk/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "ách áp bức; cái ách; liên kết lại",
+    "example": "Nations threw off the colonial yoke to claim liberty.",
+    "exampleMeaning": "Các dân tộc đã lật đổ ách thuộc địa để giành lấy tự do.",
+    "collocations": [
+      "throw off the yoke"
+    ],
+    "mnemonicTip": "Chiếc ách cày trâu; biểu tượng sự kìm kẹp."
+  },
+  {
+    "id": "en-c1-0545",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Zephyr",
+    "phonetic": "/ˈzef.ər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "làn gió nhẹ mát hiu hiu",
+    "example": "A gentle sea zephyr rustled the curtains.",
+    "exampleMeaning": "Một làn gió biển nhẹ hiu hiu làm xao động tấm rèm cửa.",
+    "collocations": [
+      "gentle zephyr"
+    ],
+    "mnemonicTip": "Gió tây mát rượi thanh thoát."
+  },
+  {
+    "id": "en-c1-0546",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Acrimony",
+    "phonetic": "/ˈæk.rɪ.mə.ni/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự gay gắt, cay cú, hằn học",
+    "example": "The debate concluded with bitter personal acrimony.",
+    "exampleMeaning": "Cuộc tranh luận đã khép lại trong sự cay cú hằn học cá nhân.",
+    "collocations": [
+      "bitter acrimony"
+    ],
+    "mnemonicTip": "Sự cay độc trong lời ăn tiếng nói."
+  },
+  {
+    "id": "en-c1-0547",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Benevolent",
+    "phonetic": "/bəˈnev.əl.ənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nhân từ, nhân ái, từ tâm",
+    "example": "The benevolent monarch funded free hospitals.",
+    "exampleMeaning": "Vị quân vương nhân từ đã tài trợ xây dựng những bệnh viện miễn phí.",
+    "collocations": [
+      "benevolent attitude"
+    ],
+    "mnemonicTip": "Có tấm lòng yêu thương đồng loại."
+  },
+  {
+    "id": "en-c1-0548",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Circumspect",
+    "phonetic": "/ˈsɜː.kəm.spekt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thận trọng, cẩn tắc vô ưu",
+    "example": "Be circumspect when signing legal documents.",
+    "exampleMeaning": "Hãy thận trọng xem xét tứ phía khi ký kết các văn bản pháp lý.",
+    "collocations": [
+      "circumspect behavior"
+    ],
+    "mnemonicTip": "Nhìn trước ngó sau cẩn thận."
+  },
+  {
+    "id": "en-c1-0549",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Deference",
+    "phonetic": "/ˈdef.ər.əns/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự tôn kính phục tùng, kính nhường",
+    "example": "Treat seasoned elders with deserved deference.",
+    "exampleMeaning": "Hãy đối xử với các bậc cao niên từng trải bằng sự kính nhường xứng đáng.",
+    "collocations": [
+      "show deference"
+    ],
+    "mnemonicTip": "Nhường nhịn vì tôn trọng."
+  },
+  {
+    "id": "en-c1-0550",
+    "language": "en",
+    "level": "C1",
+    "unit": "Unit 4: Văn phong Cao cấp & Tinh hoa",
+    "word": "Ephemeral",
+    "phonetic": "/ɪˈfem.ər.əl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "ngắn ngủi, sớm nở tối tàn",
+    "example": "Youthful vanity is inherently ephemeral.",
+    "exampleMeaning": "Thói phù phiếm của tuổi trẻ vốn dĩ rất ngắn ngủi phù du.",
+    "collocations": [
+      "ephemeral pleasures"
+    ],
+    "mnemonicTip": "Mau chóng qua đi."
+  }
+]

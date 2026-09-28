@@ -1,0 +1,1922 @@
+[
+  {
+    "id": "en-b1-0241",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Accomplish",
+    "phonetic": "/əˈkʌm.plɪʃ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "hoàn thành xuất sắc, đạt được",
+    "example": "With steady effort, you will accomplish great goals.",
+    "exampleMeaning": "Với nỗ lực kiên định, bạn sẽ hoàn thành những mục tiêu lớn lao.",
+    "collocations": [
+      "accomplish a mission"
+    ],
+    "mnemonicTip": "Gốc từ complete -> hoàn thành mỹ mãn."
+  },
+  {
+    "id": "en-b1-0242",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Efficient",
+    "phonetic": "/ɪˈfɪʃ.ənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hiệu suất cao, làm việc hiệu quả",
+    "example": "The automated workflow is remarkably efficient.",
+    "exampleMeaning": "Quy trình tự động hóa đạt hiệu suất làm việc rất cao.",
+    "collocations": [
+      "highly efficient"
+    ],
+    "mnemonicTip": "Tối ưu hóa thời gian và công sức."
+  },
+  {
+    "id": "en-b1-0243",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Challenge",
+    "phonetic": "/ˈtʃæl.ɪndʒ/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "thách thức, thử thách cam go",
+    "example": "Embrace every difficult challenge as a teacher.",
+    "exampleMeaning": "Hãy đón nhận mọi thử thách cam go như một người thầy.",
+    "collocations": [
+      "face a challenge"
+    ],
+    "mnemonicTip": "Thử thách tôi luyện bản lĩnh."
+  },
+  {
+    "id": "en-b1-0244",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Opportunity",
+    "phonetic": "/ˌɒp.əˈtʃuː.nə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cơ hội, vận hội",
+    "example": "Preparation turns luck into real opportunity.",
+    "exampleMeaning": "Sự chuẩn bị kỹ càng biến vận may thành cơ hội thực sự.",
+    "collocations": [
+      "golden opportunity"
+    ],
+    "mnemonicTip": "Thời cơ quý giá."
+  },
+  {
+    "id": "en-b1-0245",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Achieve",
+    "phonetic": "/əˈtʃiːv/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "đạt được thành tựu",
+    "example": "Those who persevere achieve lasting success.",
+    "exampleMeaning": "Những ai kiên trì sẽ đạt được thành công bền vững.",
+    "collocations": [
+      "achieve goals"
+    ],
+    "mnemonicTip": "Chạm tới mục tiêu."
+  },
+  {
+    "id": "en-b1-0246",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Motivate",
+    "phonetic": "/ˈməʊ.tɪ.veɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "thúc đẩy, tạo động lực",
+    "example": "Inspiring leaders motivate their entire team.",
+    "exampleMeaning": "Người lãnh đạo truyền cảm hứng tạo động lực cho cả đội ngũ.",
+    "collocations": [
+      "highly motivated"
+    ],
+    "mnemonicTip": "Kích hoạt ý chí hành động."
+  },
+  {
+    "id": "en-b1-0247",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Improve",
+    "phonetic": "/ɪmˈpruːv/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "cải thiện, tiến bộ",
+    "example": "Read daily to improve vocabulary retention.",
+    "exampleMeaning": "Đọc sách hàng ngày để cải thiện vốn từ vựng.",
+    "collocations": [
+      "improve skills"
+    ],
+    "mnemonicTip": "Trở nên tốt hơn."
+  },
+  {
+    "id": "en-b1-0248",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Develop",
+    "phonetic": "/dɪˈvel.əp/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "phát triển, hoàn thiện",
+    "example": "Engineers develop innovative software solutions.",
+    "exampleMeaning": "Các kỹ sư phát triển những giải pháp phần mềm đổi mới.",
+    "collocations": [
+      "develop a product"
+    ],
+    "mnemonicTip": "Mở rộng và nâng tầm."
+  },
+  {
+    "id": "en-b1-0249",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Manage",
+    "phonetic": "/ˈmæn.ɪdʒ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "quản lý, thu xếp được",
+    "example": "Learn to manage personal finances prudently.",
+    "exampleMeaning": "Học cách quản lý tài chính cá nhân một cách thận trọng.",
+    "collocations": [
+      "manage time"
+    ],
+    "mnemonicTip": "Điều hành kiểm soát."
+  },
+  {
+    "id": "en-b1-0250",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Organize",
+    "phonetic": "/ˈɔː.ɡən.aɪz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "tổ chức, sắp xếp khoa học",
+    "example": "Organize files cleanly to speed up productivity.",
+    "exampleMeaning": "Sắp xếp tệp tin gọn gàng để nâng cao năng suất.",
+    "collocations": [
+      "well organized"
+    ],
+    "mnemonicTip": "Sắp đặt trật tự."
+  },
+  {
+    "id": "en-b1-0251",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Productive",
+    "phonetic": "/prəˈdʌk.tɪv/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "năng suất, sinh lời",
+    "example": "Morning hours are often the most productive.",
+    "exampleMeaning": "Những giờ buổi sáng thường là lúc làm việc năng suất nhất.",
+    "collocations": [
+      "productive day"
+    ],
+    "mnemonicTip": "Tạo ra nhiều kết quả tốt."
+  },
+  {
+    "id": "en-b1-0252",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Strategy",
+    "phonetic": "/ˈstræt.ə.dʒi/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "chiến lược",
+    "example": "A clear strategy directs effective execution.",
+    "exampleMeaning": "Một chiến lược rõ ràng sẽ định hướng thực thi hiệu quả.",
+    "collocations": [
+      "business strategy"
+    ],
+    "mnemonicTip": "Kế hoạch tổng thể dài hạn."
+  },
+  {
+    "id": "en-b1-0253",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Target",
+    "phonetic": "/ˈtɑː.ɡɪt/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "mục tiêu ngắm tới",
+    "example": "Hit quarterly targets through diligent execution.",
+    "exampleMeaning": "Đạt các mục tiêu hàng quý nhờ thực thi cần cù.",
+    "collocations": [
+      "reach the target"
+    ],
+    "mnemonicTip": "Đích ngắm cụ thể."
+  },
+  {
+    "id": "en-b1-0254",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Progress",
+    "phonetic": "/ˈprəʊ.ɡres/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "tiến độ, sự tiến bộ",
+    "example": "Track daily learning progress to stay accountable.",
+    "exampleMeaning": "Theo dõi tiến độ học hàng ngày để tự nhắc nhở bản thân.",
+    "collocations": [
+      "make progress"
+    ],
+    "mnemonicTip": "Sự đi lên từng ngày."
+  },
+  {
+    "id": "en-b1-0255",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Success",
+    "phonetic": "/səkˈses/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thành công rực rỡ",
+    "example": "Patience and grit breed authentic success.",
+    "exampleMeaning": "Kiên nhẫn và lòng quả cảm tạo nên thành công đích thực.",
+    "collocations": [
+      "key to success"
+    ],
+    "mnemonicTip": "Thành tựu viên mãn."
+  },
+  {
+    "id": "en-b1-0256",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Collaborate",
+    "phonetic": "/kəˈlæb.ə.reɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "hợp tác, phối hợp làm việc",
+    "example": "Researchers collaborate across global boundaries.",
+    "exampleMeaning": "Các nhà nghiên cứu hợp tác vượt qua ranh giới toàn cầu.",
+    "collocations": [
+      "collaborate closely"
+    ],
+    "mnemonicTip": "Co (cùng) + Labor (lao động)."
+  },
+  {
+    "id": "en-b1-0257",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Communicate",
+    "phonetic": "/kəˈmjuː.nɪ.keɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "giao tiếp, truyền đạt",
+    "example": "Communicate complex concepts in simple terms.",
+    "exampleMeaning": "Truyền đạt những khái niệm phức tạp bằng từ ngữ giản dị.",
+    "collocations": [
+      "effective communication"
+    ],
+    "mnemonicTip": "Trao đổi thông điệp."
+  },
+  {
+    "id": "en-b1-0258",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Negotiate",
+    "phonetic": "/nəˈɡəʊ.ʃi.eɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "đàm phán, thương lượng",
+    "example": "Negotiate win-win agreements with integrity.",
+    "exampleMeaning": "Đàm phán các thỏa thuận đôi bên cùng có lợi bằng sự chính trực.",
+    "collocations": [
+      "negotiate terms"
+    ],
+    "mnemonicTip": "Thương lượng đi đến thống nhất."
+  },
+  {
+    "id": "en-b1-0259",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Promote",
+    "phonetic": "/prəˈməʊt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "thăng tiến, quảng bá",
+    "example": "Dedication earns you a deserved promotion.",
+    "exampleMeaning": "Sự tận hiến giúp bạn nhận được sự thăng chức xứng đáng.",
+    "collocations": [
+      "promote health"
+    ],
+    "mnemonicTip": "Nâng lên vị thế cao hơn."
+  },
+  {
+    "id": "en-b1-0260",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Responsible",
+    "phonetic": "/rɪˈspɒn.sə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "có tinh thần trách nhiệm",
+    "example": "Be responsible for your choices and habits.",
+    "exampleMeaning": "Hãy chịu trách nhiệm cho các lựa chọn và thói quen của bạn.",
+    "collocations": [
+      "take responsibility"
+    ],
+    "mnemonicTip": "Gánh vác nghĩa vụ."
+  },
+  {
+    "id": "en-b1-0261",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Reliable",
+    "phonetic": "/rɪˈlaɪ.ə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "đáng tin cậy",
+    "example": "She is a thoroughly reliable team member.",
+    "exampleMeaning": "Cô ấy là một thành viên đội ngũ hoàn toàn đáng tin cậy.",
+    "collocations": [
+      "reliable partner"
+    ],
+    "mnemonicTip": "Có thể dựa cậy vào."
+  },
+  {
+    "id": "en-b1-0262",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Professional",
+    "phonetic": "/prəˈfeʃ.ən.əl/",
+    "partOfSpeech": "tính từ/danh từ",
+    "vietnameseMeaning": "chuyên nghiệp, giới chuyên gia",
+    "example": "Uphold high professional standards in writing.",
+    "exampleMeaning": "Duy trì tiêu chuẩn chuyên nghiệp cao trong văn phong.",
+    "collocations": [
+      "professional career"
+    ],
+    "mnemonicTip": "Chuẩn mực nghề nghiệp."
+  },
+  {
+    "id": "en-b1-0263",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Experience",
+    "phonetic": "/ɪkˈspɪə.ri.əns/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "kinh nghiệm, trải nghiệm",
+    "example": "Valuable experience is forged through trials.",
+    "exampleMeaning": "Kinh nghiệm quý báu được tôi luyện qua thử thách.",
+    "collocations": [
+      "hands-on experience"
+    ],
+    "mnemonicTip": "Vốn sống tích lũy."
+  },
+  {
+    "id": "en-b1-0264",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Knowledge",
+    "phonetic": "/ˈnɒl.ɪdʒ/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tri thức, kiến thức",
+    "example": "Knowledge empowers lifelong freedom.",
+    "exampleMeaning": "Tri thức trao quyền tự do cho cả đời người.",
+    "collocations": [
+      "expand knowledge"
+    ],
+    "mnemonicTip": "Âm 'k' câm: /ˈnɒl.ɪdʒ/."
+  },
+  {
+    "id": "en-b1-0265",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Ability",
+    "phonetic": "/əˈbɪl.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "năng lực, khả năng",
+    "example": "Foster your ability to solve novel problems.",
+    "exampleMeaning": "Bồi đắp năng lực giải quyết các vấn đề mới lạ.",
+    "collocations": [
+      "natural ability"
+    ],
+    "mnemonicTip": "Khả năng làm được."
+  },
+  {
+    "id": "en-b1-0266",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Expert",
+    "phonetic": "/ˈek.spɜːt/",
+    "partOfSpeech": "danh từ/tính từ",
+    "vietnameseMeaning": "chuyên gia, tinh thông",
+    "example": "Consult an expert in data architecture.",
+    "exampleMeaning": "Hãy tham khảo ý kiến chuyên gia về kiến trúc dữ liệu.",
+    "collocations": [
+      "industry expert"
+    ],
+    "mnemonicTip": "Bậc thầy một lĩnh vực."
+  },
+  {
+    "id": "en-b1-0267",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Solution",
+    "phonetic": "/səˈluː.ʃən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "giải pháp, lời giải",
+    "example": "Engineers design elegant technical solutions.",
+    "exampleMeaning": "Các kỹ sư thiết kế những giải pháp kỹ thuật tinh tế.",
+    "collocations": [
+      "find a solution"
+    ],
+    "mnemonicTip": "Tháo gỡ khúc mắc."
+  },
+  {
+    "id": "en-b1-0268",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Decision",
+    "phonetic": "/dɪˈsɪʒ.ən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "quyết định",
+    "example": "Sound decisions require calm deliberation.",
+    "exampleMeaning": "Những quyết định đúng đắn đòi hỏi sự suy xét bình tĩnh.",
+    "collocations": [
+      "make a decision"
+    ],
+    "mnemonicTip": "Lựa chọn dứt khoát."
+  },
+  {
+    "id": "en-b1-0269",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Opinion",
+    "phonetic": "/əˈpɪn.jən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "quan điểm, ý kiến",
+    "example": "Respect differing opinions with an open mind.",
+    "exampleMeaning": "Tôn trọng những ý kiến khác biệt với tâm hồn cởi mở.",
+    "collocations": [
+      "in my opinion"
+    ],
+    "mnemonicTip": "Cách nhìn nhận cá nhân."
+  },
+  {
+    "id": "en-b1-0270",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 1: Sự nghiệp & Thành tựu",
+    "word": "Argument",
+    "phonetic": "/ˈɑːɡ.jə.mənt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "lập luận, sự tranh luận",
+    "example": "Construct a logical and compelling argument.",
+    "exampleMeaning": "Xây dựng một lập luận logic và thuyết phục.",
+    "collocations": [
+      "strong argument"
+    ],
+    "mnemonicTip": "Lý lẽ minh chứng."
+  },
+  {
+    "id": "en-b1-0271",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Revolutionize",
+    "phonetic": "/ˌrev.əˈluː.ʃən.aɪz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "cách mạng hóa hoàn toàn",
+    "example": "AI will revolutionize diagnostic medicine.",
+    "exampleMeaning": "Trí tuệ nhân tạo sẽ cách mạng hóa y học chẩn đoán.",
+    "collocations": [
+      "revolutionize industry"
+    ],
+    "mnemonicTip": "Biến đổi căn bản."
+  },
+  {
+    "id": "en-b1-0272",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Environment",
+    "phonetic": "/ɪnˈvaɪ.rən.mənt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "môi trường sinh thái",
+    "example": "Preserve the natural environment for future youth.",
+    "exampleMeaning": "Gìn giữ môi trường tự nhiên cho thế hệ mai sau.",
+    "collocations": [
+      "protect environment"
+    ],
+    "mnemonicTip": "Hệ sinh thái bao quanh."
+  },
+  {
+    "id": "en-b1-0273",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Pollution",
+    "phonetic": "/pəˈluː.ʃən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự ô nhiễm",
+    "example": "Combat plastic pollution in rivers and oceans.",
+    "exampleMeaning": "Chống lại ô nhiễm rác thải nhựa ở sông và đại dương.",
+    "collocations": [
+      "air pollution"
+    ],
+    "mnemonicTip": "Làm bẩn môi trường."
+  },
+  {
+    "id": "en-b1-0274",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Recycle",
+    "phonetic": "/ˌriːˈsaɪ.kəl/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "tái chế",
+    "example": "Recycle aluminum cans to conserve energy.",
+    "exampleMeaning": "Tái chế lon nhôm để tiết kiệm năng lượng.",
+    "collocations": [
+      "recycle waste"
+    ],
+    "mnemonicTip": "Biến phế liệu thành tài nguyên."
+  },
+  {
+    "id": "en-b1-0275",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Energy",
+    "phonetic": "/ˈen.ə.dʒi/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "năng lượng",
+    "example": "Solar energy is inexhaustible and clean.",
+    "exampleMeaning": "Năng lượng mặt trời là vô tận và sạch sẽ.",
+    "collocations": [
+      "renewable energy"
+    ],
+    "mnemonicTip": "Nguồn phát động lực."
+  },
+  {
+    "id": "en-b1-0276",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Resource",
+    "phonetic": "/rɪˈzɔːs/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "nguồn tài nguyên",
+    "example": "Manage scarce water resources wisely.",
+    "exampleMeaning": "Quản lý nguồn tài nguyên nước khan hiếm một cách khôn ngoan.",
+    "collocations": [
+      "natural resources"
+    ],
+    "mnemonicTip": "Tư liệu sản xuất và sống."
+  },
+  {
+    "id": "en-b1-0277",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Protect",
+    "phonetic": "/prəˈtekt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "bảo vệ, che chở",
+    "example": "Protect endangered biodiversity reserves.",
+    "exampleMeaning": "Bảo vệ các khu bảo tồn đa dạng sinh học quý hiếm.",
+    "collocations": [
+      "protect nature"
+    ],
+    "mnemonicTip": "Giữ gìn an toàn."
+  },
+  {
+    "id": "en-b1-0278",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Climate",
+    "phonetic": "/ˈklaɪ.mət/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "khí hậu",
+    "example": "Global climate patterns are shifting rapidly.",
+    "exampleMeaning": "Các hình thái khí hậu toàn cầu đang biến đổi nhanh chóng.",
+    "collocations": [
+      "climate change"
+    ],
+    "mnemonicTip": "Thời tiết theo chu kỳ năm."
+  },
+  {
+    "id": "en-b1-0279",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Nature",
+    "phonetic": "/ˈneɪ.tʃər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thiên nhiên",
+    "example": "Spending time in nature calms the heart.",
+    "exampleMeaning": "Dành thời gian giữa thiên nhiên làm lắng dịu con tim.",
+    "collocations": [
+      "mother nature"
+    ],
+    "mnemonicTip": "Mẹ thiên nhiên."
+  },
+  {
+    "id": "en-b1-0280",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Species",
+    "phonetic": "/ˈspiː.ʃiːz/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "loài sinh vật",
+    "example": "Discover new marine species in deep trenches.",
+    "exampleMeaning": "Phát hiện những loài sinh vật biển mới ở rãnh biển sâu.",
+    "collocations": [
+      "endangered species"
+    ],
+    "mnemonicTip": "Hình thái phân loại sinh học."
+  },
+  {
+    "id": "en-b1-0281",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Technology",
+    "phonetic": "/tekˈnɒl.ə.dʒi/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "công nghệ, kỹ thuật",
+    "example": "Modern technology bridges vast distances.",
+    "exampleMeaning": "Công nghệ hiện đại thu hẹp những khoảng cách xa xôi.",
+    "collocations": [
+      "advanced technology"
+    ],
+    "mnemonicTip": "Ứng dụng khoa học."
+  },
+  {
+    "id": "en-b1-0282",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Digital",
+    "phonetic": "/ˈdɪdʒ.ɪ.təl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "kỹ thuật số",
+    "example": "Digital tools streamline creative design.",
+    "exampleMeaning": "Các công cụ kỹ thuật số tối ưu hóa thiết kế sáng tạo.",
+    "collocations": [
+      "digital world"
+    ],
+    "mnemonicTip": "Công nghệ số hóa."
+  },
+  {
+    "id": "en-b1-0283",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Device",
+    "phonetic": "/dɪˈvaɪs/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "thiết bị, công cụ",
+    "example": "Smart devices enhance household comfort.",
+    "exampleMeaning": "Thiết bị thông minh nâng tầm tiện nghi gia đình.",
+    "collocations": [
+      "electronic device"
+    ],
+    "mnemonicTip": "Đồ dùng kỹ thuật."
+  },
+  {
+    "id": "en-b1-0284",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Network",
+    "phonetic": "/ˈnet.wɜːk/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "mạng lưới, kết nối",
+    "example": "Build a supportive network of colleagues.",
+    "exampleMeaning": "Xây dựng một mạng lưới đồng nghiệp hỗ trợ nhau.",
+    "collocations": [
+      "social network"
+    ],
+    "mnemonicTip": "Hệ thống liên kết."
+  },
+  {
+    "id": "en-b1-0285",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Security",
+    "phonetic": "/sɪˈkjʊə.rə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "sự an ninh, bảo mật",
+    "example": "Cyber security defends vital digital infrastructure.",
+    "exampleMeaning": "An ninh mạng bảo vệ hạ tầng số thiết yếu.",
+    "collocations": [
+      "data security"
+    ],
+    "mnemonicTip": "An toàn bảo mật."
+  },
+  {
+    "id": "en-b1-0286",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Privacy",
+    "phonetic": "/ˈprɪv.ə.si/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "quyền riêng tư",
+    "example": "Protect your digital privacy vigilantly.",
+    "exampleMeaning": "Hãy cảnh giác bảo vệ quyền riêng tư kỹ thuật số của bạn.",
+    "collocations": [
+      "user privacy"
+    ],
+    "mnemonicTip": "Quyền bất khả xâm phạm."
+  },
+  {
+    "id": "en-b1-0287",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Access",
+    "phonetic": "/ˈæk.ses/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "quyền truy cập, tiếp cận",
+    "example": "Ensure equal access to educational resources.",
+    "exampleMeaning": "Đảm bảo quyền tiếp cận công bằng tới nguồn tài nguyên giáo dục.",
+    "collocations": [
+      "gain access"
+    ],
+    "mnemonicTip": "Khả năng bước vào."
+  },
+  {
+    "id": "en-b1-0288",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Modern",
+    "phonetic": "/ˈmɒd.ən/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hiện đại, tân tiến",
+    "example": "Modern libraries feature collaborative spaces.",
+    "exampleMeaning": "Thư viện hiện đại sở hữu các không gian hợp tác.",
+    "collocations": [
+      "modern society"
+    ],
+    "mnemonicTip": "Bắt kịp thời đại."
+  },
+  {
+    "id": "en-b1-0289",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Ancient",
+    "phonetic": "/ˈeɪn.ʃənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "cổ đại, xa xưa",
+    "example": "Ancient wisdom speaks across centuries.",
+    "exampleMeaning": "Trí tuệ cổ đại vẫn lên tiếng qua bao thế kỷ.",
+    "collocations": [
+      "ancient city"
+    ],
+    "mnemonicTip": "Tồn tại từ ngàn xưa."
+  },
+  {
+    "id": "en-b1-0290",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Future",
+    "phonetic": "/ˈfjuː.tʃər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tương lai",
+    "example": "Shape the future with compassionate vision.",
+    "exampleMeaning": "Định hình tương lai bằng tầm nhìn nhân ái.",
+    "collocations": [
+      "bright future"
+    ],
+    "mnemonicTip": "Những ngày phía trước."
+  },
+  {
+    "id": "en-b1-0291",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Community",
+    "phonetic": "/kəˈmjuː.nə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "cộng đồng",
+    "example": "Strong communities support vulnerable members.",
+    "exampleMeaning": "Những cộng đồng vững mạnh nâng đỡ những người yếu thế.",
+    "collocations": [
+      "local community"
+    ],
+    "mnemonicTip": "Tập thể gắn kết."
+  },
+  {
+    "id": "en-b1-0292",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Society",
+    "phonetic": "/səˈsaɪ.ə.ti/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "xã hội",
+    "example": "A civil society values freedom and empathy.",
+    "exampleMeaning": "Một xã hội văn minh coi trọng tự do và sự thấu cảm.",
+    "collocations": [
+      "civil society"
+    ],
+    "mnemonicTip": "Cộng đồng con người."
+  },
+  {
+    "id": "en-b1-0293",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Culture",
+    "phonetic": "/ˈkʌl.tʃər/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "văn hóa",
+    "example": "Cultural heritage connects past with present.",
+    "exampleMeaning": "Di sản văn hóa kết nối quá khứ với hiện tại.",
+    "collocations": [
+      "cultural identity"
+    ],
+    "mnemonicTip": "Bản sắc văn hiến."
+  },
+  {
+    "id": "en-b1-0294",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Education",
+    "phonetic": "/ˌedʒ.uˈkeɪ.ʃən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "nền giáo dục",
+    "example": "Education is an investment that always pays dividends.",
+    "exampleMeaning": "Giáo dục là khoản đầu tư luôn sinh hoa lợi lớn.",
+    "collocations": [
+      "higher education"
+    ],
+    "mnemonicTip": "Trồng người."
+  },
+  {
+    "id": "en-b1-0295",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Institution",
+    "phonetic": "/ˌɪn.stɪˈtʃuː.ʃən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "học viện, thể chế",
+    "example": "Academic institutions foster research excellence.",
+    "exampleMeaning": "Các viện nghiên cứu học thuật nuôi dưỡng sự xuất sắc.",
+    "collocations": [
+      "educational institution"
+    ],
+    "mnemonicTip": "Tổ chức quy mô."
+  },
+  {
+    "id": "en-b1-0296",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Government",
+    "phonetic": "/ˈɡʌv.ən.mənt/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "chính phủ, chính quyền",
+    "example": "Transparent governments build civic trust.",
+    "exampleMeaning": "Chính phủ minh bạch xây dựng lòng tin người dân.",
+    "collocations": [
+      "local government"
+    ],
+    "mnemonicTip": "Bộ máy quản lý đất nước."
+  },
+  {
+    "id": "en-b1-0297",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Economy",
+    "phonetic": "/iˈkɒn.ə.mi/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "nền kinh tế",
+    "example": "A resilient economy weathers global crises.",
+    "exampleMeaning": "Một nền kinh tế kiên cường vượt qua các cuộc khủng hoảng toàn cầu.",
+    "collocations": [
+      "global economy"
+    ],
+    "mnemonicTip": "Hệ thống lưu thông của cải."
+  },
+  {
+    "id": "en-b1-0298",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Industry",
+    "phonetic": "/ˈɪn.də.stri/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "ngành công nghiệp",
+    "example": "Renewable energy is a surging industry.",
+    "exampleMeaning": "Năng lượng tái tạo là ngành công nghiệp bùng nổ.",
+    "collocations": [
+      "manufacturing industry"
+    ],
+    "mnemonicTip": "Ngành sản xuất hàng hóa."
+  },
+  {
+    "id": "en-b1-0299",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Global",
+    "phonetic": "/ˈɡləʊ.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "toàn cầu, bao quát",
+    "example": "Global collaboration solves planetary issues.",
+    "exampleMeaning": "Sự hợp tác toàn cầu giải quyết các vấn đề cấp hành tinh.",
+    "collocations": [
+      "global scale"
+    ],
+    "mnemonicTip": "Quy mô toàn thế giới."
+  },
+  {
+    "id": "en-b1-0300",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 2: Công nghệ, Xã hội & Đổi mới",
+    "word": "Local",
+    "phonetic": "/ˈləʊ.kəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "địa phương, sở tại",
+    "example": "Support local organic farmers and markets.",
+    "exampleMeaning": "Hãy ủng hộ nông dân và các khu chợ hữu cơ địa phương.",
+    "collocations": [
+      "local produce"
+    ],
+    "mnemonicTip": "Trong phạm vi khu vực."
+  },
+  {
+    "id": "en-b1-0301",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Analyze",
+    "phonetic": "/ˈæn.əl.aɪz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "phân tích thấu đáo",
+    "example": "Analyze empirical data before drawing conclusions.",
+    "exampleMeaning": "Hãy phân tích dữ liệu thực nghiệm trước khi rút ra kết luận.",
+    "collocations": [
+      "analyze data"
+    ],
+    "mnemonicTip": "Mổ xẻ chi tiết vấn đề."
+  },
+  {
+    "id": "en-b1-0302",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Concept",
+    "phonetic": "/ˈkɒn.sept/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "khái niệm, ý niệm",
+    "example": "Grasp the core concept behind calculus.",
+    "exampleMeaning": "Nắm vững khái niệm cốt lõi đằng sau môn giải tích.",
+    "collocations": [
+      "basic concept"
+    ],
+    "mnemonicTip": "Ý niệm nền tảng."
+  },
+  {
+    "id": "en-b1-0303",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Theory",
+    "phonetic": "/ˈθɪə.ri/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "lý thuyết, học thuyết",
+    "example": "Scientific theories withstand rigorous testing.",
+    "exampleMeaning": "Các học thuyết khoa học vượt qua những cuộc kiểm chứng gắt gao.",
+    "collocations": [
+      "scientific theory"
+    ],
+    "mnemonicTip": "Hệ thống lý luận."
+  },
+  {
+    "id": "en-b1-0304",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Practice",
+    "phonetic": "/ˈpræk.tɪs/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "thực hành, rèn luyện",
+    "example": "Theory without practice remains sterile.",
+    "exampleMeaning": "Lý thuyết mà không có thực hành sẽ mãi khô cằn.",
+    "collocations": [
+      "in practice"
+    ],
+    "mnemonicTip": "Hiện thực hóa kiến thức."
+  },
+  {
+    "id": "en-b1-0305",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Research",
+    "phonetic": "/rɪˈsɜːtʃ/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "nghiên cứu khoa học",
+    "example": "Groundbreaking research uncovers medical cures.",
+    "exampleMeaning": "Nghiên cứu mang tính đột phá hé lộ phương pháp chữa bệnh.",
+    "collocations": [
+      "do research"
+    ],
+    "mnemonicTip": "Tìm tòi phát hiện mới."
+  },
+  {
+    "id": "en-b1-0306",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Evidence",
+    "phonetic": "/ˈev.ɪ.dəns/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "bằng chứng, chứng cứ",
+    "example": "Substantiate claims with verifiable evidence.",
+    "exampleMeaning": "Chứng minh tuyên bố bằng chứng cứ có thể xác minh.",
+    "collocations": [
+      "solid evidence"
+    ],
+    "mnemonicTip": "Căn cứ xác thực."
+  },
+  {
+    "id": "en-b1-0307",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Conclude",
+    "phonetic": "/kənˈkluːd/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "kết luận, khép lại",
+    "example": "The investigator concluded after thorough inquiry.",
+    "exampleMeaning": "Điều tra viên kết luận sau cuộc thẩm tra toàn diện.",
+    "collocations": [
+      "conclude a study"
+    ],
+    "mnemonicTip": "Rút ra phán đoán cuối."
+  },
+  {
+    "id": "en-b1-0308",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Evaluate",
+    "phonetic": "/ɪˈvæl.ju.eɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "đánh giá, thẩm định",
+    "example": "Evaluate arguments on merit rather than bias.",
+    "exampleMeaning": "Đánh giá các lập luận dựa trên giá trị thay vì định kiến.",
+    "collocations": [
+      "evaluate performance"
+    ],
+    "mnemonicTip": "Định lượng phẩm chất."
+  },
+  {
+    "id": "en-b1-0309",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Identify",
+    "phonetic": "/aɪˈden.tɪ.faɪ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "nhận diện, xác định",
+    "example": "Identify root causes of systemic bottlenecks.",
+    "exampleMeaning": "Xác định nguyên nhân gốc rễ của những điểm nghẽn hệ thống.",
+    "collocations": [
+      "identify problems"
+    ],
+    "mnemonicTip": "Chỉ mặt đặt tên."
+  },
+  {
+    "id": "en-b1-0310",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Demonstrate",
+    "phonetic": "/ˈdem.ən.streɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "chứng minh, thị phạm",
+    "example": "Experiments demonstrate physical laws clearly.",
+    "exampleMeaning": "Thí nghiệm chứng minh các định luật vật lý một cách sáng tỏ.",
+    "collocations": [
+      "demonstrate clearly"
+    ],
+    "mnemonicTip": "Làm mẫu chứng tỏ."
+  },
+  {
+    "id": "en-b1-0311",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Illustrate",
+    "phonetic": "/ˈɪl.ə.streɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "minh họa, làm rõ",
+    "example": "Diagrams illustrate the cellular process.",
+    "exampleMeaning": "Sơ đồ minh họa rõ nét tiến trình tế bào.",
+    "collocations": [
+      "illustrate a point"
+    ],
+    "mnemonicTip": "Làm sáng tỏ bằng hình ảnh."
+  },
+  {
+    "id": "en-b1-0312",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Describe",
+    "phonetic": "/dɪˈskraɪb/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "mô tả, thuật lại",
+    "example": "Describe the sunset with vivid poetic imagery.",
+    "exampleMeaning": "Mô tả hoàng hôn bằng những hình ảnh thi vị sống động.",
+    "collocations": [
+      "describe in detail"
+    ],
+    "mnemonicTip": "Diễn tả bằng lời."
+  },
+  {
+    "id": "en-b1-0313",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Explain",
+    "phonetic": "/ɪkˈspleɪn/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "giải thích, phân trần",
+    "example": "Explain complex mathematics in plain language.",
+    "exampleMeaning": "Giải thích toán học phức tạp bằng ngôn từ mộc mạc.",
+    "collocations": [
+      "explain clearly"
+    ],
+    "mnemonicTip": "Làm cho người khác hiểu."
+  },
+  {
+    "id": "en-b1-0314",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Define",
+    "phonetic": "/dɪˈfaɪn/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "định nghĩa, vạch rõ",
+    "example": "Define your personal boundaries with firmness.",
+    "exampleMeaning": "Hãy định nghĩa rõ ranh giới cá nhân một cách kiên quyết.",
+    "collocations": [
+      "define clearly"
+    ],
+    "mnemonicTip": "Xác định phạm vi."
+  },
+  {
+    "id": "en-b1-0315",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Express",
+    "phonetic": "/ɪkˈspres/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "bày tỏ, diễn đạt",
+    "example": "Express gratitude to mentors who guided you.",
+    "exampleMeaning": "Bày tỏ lòng biết ơn tới những người thầy đã dẫn lối bạn.",
+    "collocations": [
+      "express gratitude"
+    ],
+    "mnemonicTip": "Bộc lộ suy nghĩ/tình cảm."
+  },
+  {
+    "id": "en-b1-0316",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Interpret",
+    "phonetic": "/ɪnˈtɜː.prɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "thông dịch, diễn giải",
+    "example": "Scholars interpret ancient hieroglyphs.",
+    "exampleMeaning": "Các học giả diễn giải những chữ tượng hình cổ đại.",
+    "collocations": [
+      "interpret meaning"
+    ],
+    "mnemonicTip": "Hiểu và dịch nghĩa."
+  },
+  {
+    "id": "en-b1-0317",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Summarize",
+    "phonetic": "/ˈsʌm.ər.aɪz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "tóm tắt, tóm lược",
+    "example": "Summarize key findings in three concise bullet points.",
+    "exampleMeaning": "Tóm lược các phát hiện then chốt trong ba gạch đầu dòng ngắn gọn.",
+    "collocations": [
+      "summarize main points"
+    ],
+    "mnemonicTip": "Rút gọn ý chính."
+  },
+  {
+    "id": "en-b1-0318",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Compare",
+    "phonetic": "/kəmˈpeər/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "so sánh, đối chiếu",
+    "example": "Compare advantages and drawbacks of each approach.",
+    "exampleMeaning": "So sánh ưu thế và khuyết điểm của từng phương pháp.",
+    "collocations": [
+      "compare with"
+    ],
+    "mnemonicTip": "Đặt cạnh nhau đối chiếu."
+  },
+  {
+    "id": "en-b1-0319",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Contrast",
+    "phonetic": "/kənˈtrɑːst/",
+    "partOfSpeech": "động từ/danh từ",
+    "vietnameseMeaning": "tương phản, đối lập",
+    "example": "Contrast vibrant colors against dark backgrounds.",
+    "exampleMeaning": "Tạo sự tương phản màu sắc rực rỡ trên nền tối.",
+    "collocations": [
+      "in contrast"
+    ],
+    "mnemonicTip": "Làm bật sự khác biệt."
+  },
+  {
+    "id": "en-b1-0320",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Distinguish",
+    "phonetic": "/dɪˈstɪŋ.ɡwɪʃ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "phân biệt, nhận ra sự khác",
+    "example": "Distinguish facts from emotional rhetoric.",
+    "exampleMeaning": "Phân biệt sự thật khách quan khỏi lời lẽ tu từ cảm tính.",
+    "collocations": [
+      "distinguish between"
+    ],
+    "mnemonicTip": "Tách bạch rõ ràng."
+  },
+  {
+    "id": "en-b1-0321",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Investigate",
+    "phonetic": "/ɪnˈves.tɪ.ɡeɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "điều tra, khảo sát",
+    "example": "Scientists investigate anomalies in space data.",
+    "exampleMeaning": "Các nhà khoa học điều tra những điểm bất thường trong dữ liệu vũ trụ.",
+    "collocations": [
+      "investigate thoroughly"
+    ],
+    "mnemonicTip": "Xem xét kỹ lưỡng."
+  },
+  {
+    "id": "en-b1-0322",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Observe",
+    "phonetic": "/əbˈzɜːv/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "quan sát, tuân thủ",
+    "example": "Quietly observe natural phenomena in the wild.",
+    "exampleMeaning": "Lặng lẽ quan sát các hiện tượng tự nhiên nơi hoang dã.",
+    "collocations": [
+      "observe carefully"
+    ],
+    "mnemonicTip": "Nhìn ngắm tinh tế."
+  },
+  {
+    "id": "en-b1-0323",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Experiment",
+    "phonetic": "/ɪkˈsper.ɪ.mənt/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "thí nghiệm, thử nghiệm",
+    "example": "Replicate the physics experiment in lab conditions.",
+    "exampleMeaning": "Lặp lại thí nghiệm vật lý trong điều kiện phòng thí nghiệm.",
+    "collocations": [
+      "conduct an experiment"
+    ],
+    "mnemonicTip": "Thử nghiệm thực tế."
+  },
+  {
+    "id": "en-b1-0324",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Hypothesis",
+    "phonetic": "/haɪˈpɒθ.ə.sɪs/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "giả thuyết khoa học",
+    "example": "Formulate a testable scientific hypothesis.",
+    "exampleMeaning": "Xây dựng một giả thuyết khoa học có thể kiểm chứng được.",
+    "collocations": [
+      "test a hypothesis"
+    ],
+    "mnemonicTip": "Giả định đặt ra."
+  },
+  {
+    "id": "en-b1-0325",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Discover",
+    "phonetic": "/dɪˈskʌv.ər/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "phát hiện, khám phá ra",
+    "example": "Astronomers discover exoplanets in distant galaxies.",
+    "exampleMeaning": "Các nhà thiên văn học phát hiện những ngoại hành tinh ở thiên hà xa xôi.",
+    "collocations": [
+      "discover new things"
+    ],
+    "mnemonicTip": "Tìm ra điều chưa ai biết."
+  },
+  {
+    "id": "en-b1-0326",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Invent",
+    "phonetic": "/ɪnˈvent/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "phát minh, sáng chế",
+    "example": "Invent tools that elevate human potential.",
+    "exampleMeaning": "Phát minh những công cụ nâng tầm tiềm năng con người.",
+    "collocations": [
+      "invent a device"
+    ],
+    "mnemonicTip": "Tạo ra cái mới chưa từng có."
+  },
+  {
+    "id": "en-b1-0327",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Create",
+    "phonetic": "/kriˈeɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "sáng tạo, tạo nên",
+    "example": "Artists create transcendent works of beauty.",
+    "exampleMeaning": "Người nghệ sĩ sáng tạo nên những tác phẩm đẹp siêu việt.",
+    "collocations": [
+      "create value"
+    ],
+    "mnemonicTip": "Làm nảy sinh cái mới."
+  },
+  {
+    "id": "en-b1-0328",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Innovate",
+    "phonetic": "/ˈɪn.ə.veɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "đổi mới, cách tân",
+    "example": "Companies that fail to innovate perish quickly.",
+    "exampleMeaning": "Những công ty không biết đổi mới sẽ nhanh chóng lụi tàn.",
+    "collocations": [
+      "innovate constantly"
+    ],
+    "mnemonicTip": "Cải cách liên tục."
+  },
+  {
+    "id": "en-b1-0329",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Design",
+    "phonetic": "/dɪˈzaɪn/",
+    "partOfSpeech": "động từ/danh từ",
+    "vietnameseMeaning": "thiết kế, bản vẽ",
+    "example": "Design intuitive interfaces that delight users.",
+    "exampleMeaning": "Thiết kế những giao diện trực quan làm hài lòng người dùng.",
+    "collocations": [
+      "design system"
+    ],
+    "mnemonicTip": "Tạo hình và bố cục."
+  },
+  {
+    "id": "en-b1-0330",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 3: Giáo dục, Giao tiếp & Tư duy",
+    "word": "Construct",
+    "phonetic": "/kənˈstrʌkt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "xây dựng, kiến thiết",
+    "example": "Construct durable bridges and road networks.",
+    "exampleMeaning": "Xây dựng những cây cầu và mạng lưới đường xá bền vững.",
+    "collocations": [
+      "construct a bridge"
+    ],
+    "mnemonicTip": "Xây đắp nên công trình."
+  },
+  {
+    "id": "en-b1-0331",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Relationship",
+    "phonetic": "/rɪˈleɪ.ʃən.ʃɪp/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "mối quan hệ",
+    "example": "Cherish deep and supportive relationships.",
+    "exampleMeaning": "Trân trọng những mối quan hệ sâu sắc và tương trợ.",
+    "collocations": [
+      "close relationship"
+    ],
+    "mnemonicTip": "Mối liên kết giữa người với người."
+  },
+  {
+    "id": "en-b1-0332",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Trust",
+    "phonetic": "/trʌst/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "lòng tin cậy, tin tưởng",
+    "example": "Trust takes years to build and seconds to break.",
+    "exampleMeaning": "Lòng tin mất nhiều năm để gây dựng và chỉ vài giây để đánh mất.",
+    "collocations": [
+      "build trust"
+    ],
+    "mnemonicTip": "Sự tín nhiệm son sắt."
+  },
+  {
+    "id": "en-b1-0333",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Respect",
+    "phonetic": "/rɪˈspekt/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "sự tôn trọng, kính trọng",
+    "example": "Treat all beings with dignity and respect.",
+    "exampleMeaning": "Đối xử với mọi sinh linh bằng phẩm giá và sự tôn trọng.",
+    "collocations": [
+      "mutual respect"
+    ],
+    "mnemonicTip": "Kính cẩn trọng thị."
+  },
+  {
+    "id": "en-b1-0334",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Honest",
+    "phonetic": "/ˈɒn.ɪst/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thật thà, trung thực",
+    "example": "Honest dialogue heals deep misunderstandings.",
+    "exampleMeaning": "Đối thoại chân thành xoa dịu những hiểu lầm sâu sắc.",
+    "collocations": [
+      "honest person"
+    ],
+    "mnemonicTip": "Âm 'h' câm: /ˈɒn.ɪst/."
+  },
+  {
+    "id": "en-b1-0335",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Loyal",
+    "phonetic": "/ˈlɔɪ.əl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "trung thành, son sắt",
+    "example": "A loyal companion stands by you in storms.",
+    "exampleMeaning": "Người bạn đồng hành trung thành luôn kề bên bạn trong giông tố.",
+    "collocations": [
+      "loyal friend"
+    ],
+    "mnemonicTip": "Trước sau như một."
+  },
+  {
+    "id": "en-b1-0336",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Patient",
+    "phonetic": "/ˈpeɪ.ʃənt/",
+    "partOfSpeech": "tính từ/danh từ",
+    "vietnameseMeaning": "kiên nhẫn, bệnh nhân",
+    "example": "Be patient with yourself as you acquire skills.",
+    "exampleMeaning": "Hãy kiên nhẫn với bản thân khi bạn đang tiếp thu các kỹ năng.",
+    "collocations": [
+      "patient listener"
+    ],
+    "mnemonicTip": "Nhẫn nại chờ đợi."
+  },
+  {
+    "id": "en-b1-0337",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Generous",
+    "phonetic": "/ˈdʒen.ər.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "hào phóng, rộng lượng",
+    "example": "Generous souls share wisdom and resources.",
+    "exampleMeaning": "Những tâm hồn rộng lượng luôn sẻ chia tri thức và nguồn lực.",
+    "collocations": [
+      "generous donor"
+    ],
+    "mnemonicTip": "Cho đi không toan tính."
+  },
+  {
+    "id": "en-b1-0338",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Polite",
+    "phonetic": "/pəˈlaɪt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "lịch thiệp, lễ phép",
+    "example": "Polite manners open doors everywhere.",
+    "exampleMeaning": "Cử chỉ lịch thiệp mở ra mọi cánh cửa ở bất cứ nơi đâu.",
+    "collocations": [
+      "polite behavior"
+    ],
+    "mnemonicTip": "Cư xử nhã nhặn."
+  },
+  {
+    "id": "en-b1-0339",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Brave",
+    "phonetic": "/breɪv/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "dũng cảm, can trường",
+    "example": "Brave hearts confront injustice without wavering.",
+    "exampleMeaning": "Những trái tim dũng cảm đối diện với bất công mà không hề nao núng.",
+    "collocations": [
+      "brave soldier"
+    ],
+    "mnemonicTip": "Không sợ hãi hiểm nguy."
+  },
+  {
+    "id": "en-b1-0340",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Confident",
+    "phonetic": "/ˈkɒn.fɪ.dənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "tự tin, đĩnh đạc",
+    "example": "Preparation breeds quiet, unwavering confidence.",
+    "exampleMeaning": "Sự chuẩn bị kỹ lưỡng sinh ra lòng tự tin thầm lặng mà vững vàng.",
+    "collocations": [
+      "self confident"
+    ],
+    "mnemonicTip": "Tin vào bản thân."
+  },
+  {
+    "id": "en-b1-0341",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Curious",
+    "phonetic": "/ˈkjʊə.ri.əs/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "tò mò, ham học hỏi",
+    "example": "Curious minds explore uncharted horizons.",
+    "exampleMeaning": "Những tâm trí ham học hỏi khám phá những chân trời chưa ai tới.",
+    "collocations": [
+      "stay curious"
+    ],
+    "mnemonicTip": "Khát khao hiểu biết."
+  },
+  {
+    "id": "en-b1-0342",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Creative",
+    "phonetic": "/kriˈeɪ.tɪv/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "sáng tạo",
+    "example": "Creative thinking synthesizes disparate insights.",
+    "exampleMeaning": "Tư duy sáng tạo tổng hòa những góc nhìn khác biệt.",
+    "collocations": [
+      "creative thinker"
+    ],
+    "mnemonicTip": "Khả năng sáng tạo cái mới."
+  },
+  {
+    "id": "en-b1-0343",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Determined",
+    "phonetic": "/dɪˈtɜː.mɪnd/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "quyết tâm, kiên định",
+    "example": "Determined climbers conquer steep peaks.",
+    "exampleMeaning": "Những người leo núi kiên định chinh phục các đỉnh cao hiểm trở.",
+    "collocations": [
+      "strongly determined"
+    ],
+    "mnemonicTip": "Giữ vững ý chí."
+  },
+  {
+    "id": "en-b1-0344",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Independent",
+    "phonetic": "/ˌɪn.dɪˈpen.dənt/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "độc lập, tự chủ",
+    "example": "Independent thinkers evaluate claims critically.",
+    "exampleMeaning": "Những người tư duy độc lập đánh giá các luận điểm một cách phản biện.",
+    "collocations": [
+      "financially independent"
+    ],
+    "mnemonicTip": "Tự đứng trên đôi chân mình."
+  },
+  {
+    "id": "en-b1-0345",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Responsible",
+    "phonetic": "/rɪˈspɒn.sə.bəl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "có trách nhiệm",
+    "example": "Responsible stewards protect natural habitats.",
+    "exampleMeaning": "Những người quản lý có trách nhiệm bảo vệ các môi trường sống tự nhiên.",
+    "collocations": [
+      "responsible citizen"
+    ],
+    "mnemonicTip": "Làm tròn bổn phận."
+  },
+  {
+    "id": "en-b1-0346",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Optimistic",
+    "phonetic": "/ˌɒp.tɪˈmɪs.tɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "lạc quan, yêu đời",
+    "example": "An optimistic outlook sees potential in adversity.",
+    "exampleMeaning": "Một góc nhìn lạc quan nhìn thấy tiềm năng ngay trong nghịch cảnh.",
+    "collocations": [
+      "optimistic view"
+    ],
+    "mnemonicTip": "Tin tưởng tương lai tốt đẹp."
+  },
+  {
+    "id": "en-b1-0347",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Pessimistic",
+    "phonetic": "/ˌpes.ɪˈmɪs.tɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "bi quan",
+    "example": "Avoid chronic pessimistic rumination.",
+    "exampleMeaning": "Hãy tránh việc trầm ngâm suy nghĩ bi quan kinh niên.",
+    "collocations": [
+      "pessimistic attitude"
+    ],
+    "mnemonicTip": "Nhìn sự việc theo chiều hướng xấu."
+  },
+  {
+    "id": "en-b1-0348",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Emotional",
+    "phonetic": "/ɪˈməʊ.ʃən.əl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thuộc về cảm xúc",
+    "example": "Cultivate emotional balance under stress.",
+    "exampleMeaning": "Nuôi dưỡng sự cân bằng cảm xúc dưới áp lực.",
+    "collocations": [
+      "emotional intelligence"
+    ],
+    "mnemonicTip": "Liên quan tới rung động trái tim."
+  },
+  {
+    "id": "en-b1-0349",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Sensitive",
+    "phonetic": "/ˈsen.sɪ.tɪv/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nhạy cảm, tinh tế",
+    "example": "A sensitive writer captures quiet heartaches.",
+    "exampleMeaning": "Một nhà văn nhạy cảm nắm bắt được những nỗi đau thầm kín.",
+    "collocations": [
+      "sensitive skin"
+    ],
+    "mnemonicTip": "Dễ cảm nhận biến đổi."
+  },
+  {
+    "id": "en-b1-0350",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Enthusiastic",
+    "phonetic": "/ɪnˌθjuː.ziˈæs.tɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "nhiệt huyết, hăng hái",
+    "example": "Enthusiastic volunteers planted hundreds of trees.",
+    "exampleMeaning": "Những tình nguyện viên nhiệt huyết đã trồng hàng trăm cây xanh.",
+    "collocations": [
+      "enthusiastic support"
+    ],
+    "mnemonicTip": "Năng lượng bùng cháy."
+  },
+  {
+    "id": "en-b1-0351",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Inspirational",
+    "phonetic": "/ˌɪn.spɪˈreɪ.ʃən.əl/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "truyền cảm hứng",
+    "example": "Read inspirational biographies of luminaries.",
+    "exampleMeaning": "Đọc những cuốn tiểu sử truyền cảm hứng của các bậc vĩ nhân.",
+    "collocations": [
+      "inspirational story"
+    ],
+    "mnemonicTip": "Thổi bùng ý chí người khác."
+  },
+  {
+    "id": "en-b1-0352",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Sympathetic",
+    "phonetic": "/ˌsɪm.pəˈθet.ɪk/",
+    "partOfSpeech": "tính từ",
+    "vietnameseMeaning": "thông cảm, đồng cảm",
+    "example": "A sympathetic listener heals invisible wounds.",
+    "exampleMeaning": "Người lắng nghe biết thông cảm xoa dịu những vết thương vô hình.",
+    "collocations": [
+      "sympathetic smile"
+    ],
+    "mnemonicTip": "Thương cảm sẻ chia."
+  },
+  {
+    "id": "en-b1-0353",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Affection",
+    "phonetic": "/əˈfek.ʃən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "tình cảm yêu thương",
+    "example": "Show sincere affection to your family.",
+    "exampleMeaning": "Hãy bày tỏ tình cảm yêu thương chân thành tới gia đình bạn.",
+    "collocations": [
+      "deep affection"
+    ],
+    "mnemonicTip": "Tình cảm quyến luyến."
+  },
+  {
+    "id": "en-b1-0354",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Compassion",
+    "phonetic": "/kəmˈpæʃ.ən/",
+    "partOfSpeech": "danh từ",
+    "vietnameseMeaning": "lòng trắc ẩn, từ bi",
+    "example": "Compassion is the hallmark of noble spirit.",
+    "exampleMeaning": "Lòng trắc ẩn là dấu ấn của một tâm hồn cao thượng.",
+    "collocations": [
+      "show compassion"
+    ],
+    "mnemonicTip": "Tấm lòng yêu thương muôn loài."
+  },
+  {
+    "id": "en-b1-0355",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Forgive",
+    "phonetic": "/fəˈɡɪv/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "tha thứ, bao dung",
+    "example": "Forgiving others frees your own heart.",
+    "exampleMeaning": "Tha thứ cho người khác giải phóng chính trái tim bạn.",
+    "collocations": [
+      "forgive and forget"
+    ],
+    "mnemonicTip": "Bỏ qua lỗi lầm."
+  },
+  {
+    "id": "en-b1-0356",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Apologize",
+    "phonetic": "/əˈpɒl.ə.dʒaɪz/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "xin lỗi chân thành",
+    "example": "Apologize sincerely when you make mistakes.",
+    "exampleMeaning": "Hãy xin lỗi chân thành khi bạn phạm sai lầm.",
+    "collocations": [
+      "apologize for"
+    ],
+    "mnemonicTip": "Nhận lỗi về mình."
+  },
+  {
+    "id": "en-b1-0357",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Appreciate",
+    "phonetic": "/əˈpriː.ʃi.eɪt/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "trân trọng, đánh giá cao",
+    "example": "Appreciate the little blessings of each day.",
+    "exampleMeaning": "Hãy trân trọng những điều tốt lành nho nhỏ mỗi ngày.",
+    "collocations": [
+      "greatly appreciate"
+    ],
+    "mnemonicTip": "Biết ơn và quý trọng."
+  },
+  {
+    "id": "en-b1-0358",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Encourage",
+    "phonetic": "/ɪnˈkʌr.ɪdʒ/",
+    "partOfSpeech": "động từ",
+    "vietnameseMeaning": "khích lệ, động viên",
+    "example": "Encourage younger learners to persevere.",
+    "exampleMeaning": "Khích lệ các bạn nhỏ kiên trì theo đuổi việc học.",
+    "collocations": [
+      "encourage someone"
+    ],
+    "mnemonicTip": "Tiếp thêm niềm tin."
+  },
+  {
+    "id": "en-b1-0359",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Support",
+    "phonetic": "/səˈpɔːt/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "ủng hộ, nâng đỡ",
+    "example": "Strong pillars support magnificent structures.",
+    "exampleMeaning": "Những cột trụ vững chãi nâng đỡ các công trình tráng lệ.",
+    "collocations": [
+      "support each other"
+    ],
+    "mnemonicTip": "Hậu thuẫn vững vàng."
+  },
+  {
+    "id": "en-b1-0360",
+    "language": "en",
+    "level": "B1",
+    "unit": "Unit 4: Quan hệ, Cảm xúc & Nhân cách",
+    "word": "Comfort",
+    "phonetic": "/ˈkʌm.fət/",
+    "partOfSpeech": "danh từ/động từ",
+    "vietnameseMeaning": "sự an ủi, tiện nghi",
+    "example": "Words of solace bring comfort in grief.",
+    "exampleMeaning": "Những lời an ủi đem lại sự thanh thản trong đau buồn.",
+    "collocations": [
+      "find comfort"
+    ],
+    "mnemonicTip": "Êm ái xoa dịu."
+  }
+]

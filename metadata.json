@@ -1,0 +1,8 @@
+{
+  "name": "PKFire Portfolio Website",
+  "description": "Personal developer portfolio and project showcase for Bui Quang (PKFire-223).",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
