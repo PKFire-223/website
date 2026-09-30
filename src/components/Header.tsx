@@ -1,5 +1,19 @@
 import React from 'react';
-import { BookOpen, Flame, Mic, CheckCircle, Award, Search, Sparkles, Sun, Moon, Database, Shuffle } from 'lucide-react';
+import {
+  BookOpen,
+  Flame,
+  Mic,
+  CheckCircle,
+  Award,
+  Search,
+  Sparkles,
+  Sun,
+  Moon,
+  Database,
+  Shuffle,
+  FileText,
+  GraduationCap,
+} from 'lucide-react';
 import { Language, UserProfileProgress } from '../types';
 
 interface HeaderProps {
@@ -27,7 +41,9 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const tabs = [
     { id: 'explore', label: 'Cấp bậc từ vựng', icon: BookOpen },
+    { id: 'theory', label: 'Lý thuyết & Cách học', icon: GraduationCap },
     { id: 'random-draw', label: 'Lật thẻ Random', icon: Shuffle },
+    { id: 'cloze', label: 'Điền từ đoạn văn', icon: FileText },
     { id: 'flashcard', label: 'Lật thẻ (SRS)', icon: Sparkles },
     { id: 'pronunciation', label: 'Nghe & Đọc lại', icon: Mic },
     { id: 'practice', label: 'Bài tập ôn luyện', icon: CheckCircle },
@@ -48,15 +64,15 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center justify-between h-16 gap-3">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-500 via-amber-500 to-yellow-400 flex items-center justify-center shadow-md shadow-orange-500/20 text-white font-black text-xl">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-sky-600 to-indigo-500 flex items-center justify-center shadow-sm shadow-indigo-600/20 text-white font-black text-xl">
               🌐
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-extrabold text-base sm:text-lg tracking-tight">
-                  Lingua<span className="text-orange-500">Vocab</span>
+                  Lingua<span className="text-indigo-600 dark:text-indigo-400">Vocab</span>
                 </span>
-                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-orange-100 text-orange-700 border border-orange-200">
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
                   STANDARD
                 </span>
               </div>
@@ -82,7 +98,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => onLanguageChange('en')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                 currentLang === 'en'
-                  ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-sm shadow-orange-500/30'
+                  ? 'bg-indigo-600 text-white shadow-xs'
                   : isDarkMode
                   ? 'text-slate-400 hover:text-white'
                   : 'text-slate-600 hover:text-slate-900'
@@ -97,7 +113,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => onLanguageChange('zh')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                 currentLang === 'zh'
-                  ? 'bg-gradient-to-r from-rose-500 to-orange-500 text-white shadow-sm shadow-rose-500/30'
+                  ? 'bg-slate-800 dark:bg-slate-700 text-white shadow-xs'
                   : isDarkMode
                   ? 'text-slate-400 hover:text-white'
                   : 'text-slate-600 hover:text-slate-900'
@@ -137,7 +153,7 @@ export const Header: React.FC<HeaderProps> = ({
               }`}
               title="Chuỗi ngày học liên tục"
             >
-              <Flame className="w-4 h-4 text-orange-500 fill-orange-500 animate-pulse" />
+              <Flame className="w-4 h-4 text-indigo-600 fill-amber-500 animate-pulse" />
               <span>{profile.streak} ngày</span>
             </div>
 
@@ -186,7 +202,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onClick={() => onTabChange(tab.id)}
                 className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all ${
                   isActive
-                    ? 'bg-orange-500 text-white shadow-sm shadow-orange-500/25 ring-1 ring-orange-400'
+                    ? 'bg-indigo-600 text-white shadow-xs'
                     : isDarkMode
                     ? 'text-slate-400 hover:text-white hover:bg-slate-800/60'
                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'

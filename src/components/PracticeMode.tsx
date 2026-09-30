@@ -193,7 +193,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           onClick={() => setExerciseType('multiple-choice')}
           className={`px-3.5 py-3 rounded-2xl text-xs font-bold transition-all ${
             exerciseType === 'multiple-choice'
-              ? 'bg-orange-500 text-white shadow-md shadow-orange-500/20 ring-1 ring-orange-400'
+              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20 ring-1 ring-indigo-500'
               : isDarkMode
               ? 'bg-slate-900 text-slate-400 border border-slate-800 hover:text-white'
               : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 shadow-sm'
@@ -206,7 +206,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           onClick={() => setExerciseType('audio-quiz')}
           className={`px-3.5 py-3 rounded-2xl text-xs font-bold transition-all ${
             exerciseType === 'audio-quiz'
-              ? 'bg-orange-500 text-white shadow-md shadow-orange-500/20 ring-1 ring-orange-400'
+              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20 ring-1 ring-indigo-500'
               : isDarkMode
               ? 'bg-slate-900 text-slate-400 border border-slate-800 hover:text-white'
               : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 shadow-sm'
@@ -219,7 +219,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           onClick={() => setExerciseType('matching')}
           className={`col-span-2 sm:col-span-1 px-3.5 py-3 rounded-2xl text-xs font-bold transition-all ${
             exerciseType === 'matching'
-              ? 'bg-orange-500 text-white shadow-md shadow-orange-500/20 ring-1 ring-orange-400'
+              ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20 ring-1 ring-indigo-500'
               : isDarkMode
               ? 'bg-slate-900 text-slate-400 border border-slate-800 hover:text-white'
               : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 shadow-sm'
@@ -238,7 +238,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
               : 'bg-white border-slate-200 text-slate-900'
           }`}
         >
-          <div className="w-16 h-16 rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center mx-auto shadow-sm">
+          <div className="w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-700 flex items-center justify-center mx-auto shadow-sm">
             <Award className="w-8 h-8" />
           </div>
 
@@ -270,7 +270,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           <div>
             <button
               onClick={restartQuiz}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition-all shadow-md shadow-orange-500/20"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm transition-all shadow-md shadow-indigo-600/20"
             >
               <RotateCcw className="w-4 h-4" />
               <span>Ôn tập lại lượt mới</span>
@@ -284,7 +284,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
             <span className={isDarkMode ? 'text-slate-400' : 'text-slate-600 font-semibold'}>
               Nhấn chọn 1 thẻ từ và 1 thẻ nghĩa tiếng Việt tương ứng:
             </span>
-            <span className="font-mono font-bold text-orange-600">
+            <span className="font-mono font-bold text-indigo-700">
               Đã ghép: {matchedPairs.length} / 4 cặp
             </span>
           </div>
@@ -303,10 +303,10 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
                     isMatched
                       ? 'bg-emerald-50 border-emerald-300 text-emerald-800 opacity-60 line-through'
                       : isSelected
-                      ? 'bg-orange-50 border-orange-500 text-orange-700 ring-2 ring-orange-400 shadow-md'
+                      ? 'bg-indigo-50/60 border-indigo-500 text-indigo-800 ring-2 ring-indigo-500 shadow-md'
                       : isDarkMode
                       ? 'bg-slate-900 border-slate-800 text-slate-200 hover:border-slate-700'
-                      : 'bg-white border-slate-200 text-slate-800 hover:border-orange-300 hover:bg-orange-50/20 shadow-sm'
+                      : 'bg-white border-slate-200 text-slate-800 hover:border-indigo-300 hover:bg-indigo-50/20 shadow-sm'
                   }`}
                 >
                   <span className={card.type === 'word' ? 'text-lg font-black' : 'text-xs font-semibold'}>
@@ -333,7 +333,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           {/* Progress Bar */}
           <div className={`w-full h-2 rounded-full overflow-hidden ${isDarkMode ? 'bg-slate-800' : 'bg-slate-200'}`}>
             <div
-              className="bg-orange-500 h-full transition-all duration-300 rounded-full"
+              className="bg-indigo-600 h-full transition-all duration-300 rounded-full"
               style={{ width: `${((currentIndex + 1) / totalQuestions) * 100}%` }}
             />
           </div>
@@ -354,14 +354,14 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
                 <div>
                   <button
                     onClick={() => speak(currentWord.word, currentWord.language, 1.0)}
-                    className="p-4 rounded-2xl bg-orange-500 text-white hover:bg-orange-600 shadow-md shadow-orange-500/25 transition-transform active:scale-95 inline-flex items-center gap-2"
+                    className="p-4 rounded-2xl bg-indigo-600 text-white hover:bg-indigo-700 shadow-md shadow-indigo-600/20 transition-transform active:scale-95 inline-flex items-center gap-2"
                   >
                     <Volume2 className="w-6 h-6" />
                     <span className="text-xs font-bold">Nghe phát âm</span>
                   </button>
                 </div>
                 <div className={`text-xs ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Gợi ý nghĩa: <span className="font-bold text-orange-600">{currentWord.vietnameseMeaning}</span>
+                  Gợi ý nghĩa: <span className="font-bold text-indigo-700">{currentWord.vietnameseMeaning}</span>
                 </div>
               </div>
             ) : (
@@ -372,7 +372,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
                 <div className={`text-3xl sm:text-4xl font-black ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
                   {currentWord.word}
                 </div>
-                <div className="text-sm font-mono font-bold text-orange-600">
+                <div className="text-sm font-mono font-bold text-indigo-700">
                   {currentWord.phonetic}
                 </div>
               </div>
@@ -385,7 +385,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
               const isSelected = selectedOption === opt.id;
               let buttonStyle = isDarkMode
                 ? 'bg-slate-900 border-slate-800 text-slate-200 hover:border-slate-700'
-                : 'bg-white border-slate-200 text-slate-800 hover:border-orange-300 hover:bg-orange-50/20 shadow-sm';
+                : 'bg-white border-slate-200 text-slate-800 hover:border-indigo-300 hover:bg-indigo-50/20 shadow-sm';
 
               if (isAnswerChecked) {
                 if (opt.isCorrect) {
@@ -396,7 +396,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
                   buttonStyle = 'opacity-40 border-slate-200';
                 }
               } else if (isSelected) {
-                buttonStyle = 'bg-orange-50 border-orange-500 text-orange-800 ring-2 ring-orange-400 shadow-md';
+                buttonStyle = 'bg-indigo-50/60 border-indigo-500 text-indigo-800 ring-2 ring-indigo-500 shadow-md';
               }
 
               return (
@@ -424,14 +424,14 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
               <button
                 disabled={!selectedOption}
                 onClick={handleCheckAnswer}
-                className="w-full py-3.5 rounded-2xl bg-orange-500 hover:bg-orange-600 disabled:opacity-50 text-white font-bold text-sm transition-all shadow-md shadow-orange-500/20"
+                className="w-full py-3.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white font-bold text-sm transition-all shadow-md shadow-indigo-600/20"
               >
                 Kiểm tra đáp án
               </button>
             ) : (
               <button
                 onClick={handleNextQuestion}
-                className="w-full py-3.5 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition-all shadow-md shadow-orange-500/20 flex items-center justify-center gap-1.5"
+                className="w-full py-3.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm transition-all shadow-md shadow-indigo-600/20 flex items-center justify-center gap-1.5"
               >
                 <span>Câu tiếp theo</span>
                 <ChevronRight className="w-4 h-4" />

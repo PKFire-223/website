@@ -124,7 +124,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
             className={`flex-1 flex items-center gap-2 px-4 py-2.5 rounded-2xl border transition-all ${
               isDarkMode
                 ? 'bg-slate-950 border-slate-800 text-white'
-                : 'bg-slate-50 border-slate-200 text-slate-800 focus-within:border-orange-400 focus-within:bg-white'
+                : 'bg-slate-50 border-slate-200 text-slate-800 focus-within:border-indigo-400 focus-within:bg-white'
             }`}
           >
             <Search className="w-4 h-4 text-slate-400 shrink-0" />
@@ -164,7 +164,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
             onClick={() => setStatusFilter('all')}
             className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
               statusFilter === 'all'
-                ? 'bg-orange-500 text-white shadow-xs'
+                ? 'bg-indigo-600 text-white shadow-xs'
                 : isDarkMode
                 ? 'bg-slate-800 text-slate-400 hover:text-white'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
@@ -177,7 +177,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
             onClick={() => setStatusFilter('bookmarked')}
             className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1 ${
               statusFilter === 'bookmarked'
-                ? 'bg-orange-500 text-white shadow-xs'
+                ? 'bg-indigo-600 text-white shadow-xs'
                 : isDarkMode
                 ? 'bg-slate-800 text-slate-400 hover:text-white'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
@@ -191,7 +191,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
             onClick={() => setStatusFilter('mastered')}
             className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1 ${
               statusFilter === 'mastered'
-                ? 'bg-orange-500 text-white shadow-xs'
+                ? 'bg-indigo-600 text-white shadow-xs'
                 : isDarkMode
                 ? 'bg-slate-800 text-slate-400 hover:text-white'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
@@ -205,7 +205,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
             onClick={() => setStatusFilter('learning')}
             className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
               statusFilter === 'learning'
-                ? 'bg-orange-500 text-white shadow-xs'
+                ? 'bg-indigo-600 text-white shadow-xs'
                 : isDarkMode
                 ? 'bg-slate-800 text-slate-400 hover:text-white'
                 : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
@@ -229,7 +229,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
               className={`p-4 rounded-2xl border transition-all flex flex-col justify-between ${
                 isDarkMode
                   ? 'bg-slate-900 border-slate-800 hover:border-slate-700'
-                  : 'bg-white border-slate-200 hover:border-orange-300 hover:shadow-md'
+                  : 'bg-white border-slate-200 hover:border-indigo-300 hover:shadow-md'
               }`}
             >
               <div>
@@ -273,7 +273,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
                   <div className={`text-xl font-black ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
                     {word.word}
                   </div>
-                  <div className="text-xs font-mono font-bold text-orange-600">
+                  <div className="text-xs font-mono font-bold text-indigo-700">
                     {word.phonetic}
                   </div>
                 </div>
@@ -302,7 +302,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
                 <div className="flex items-center gap-1.5">
                   <button
                     onClick={() => speak(word.word, word.language, 1.0)}
-                    className="p-1.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white transition-all shadow-2xs"
+                    className="p-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-2xs"
                     title="Nghe phát âm"
                   >
                     <Volume2 className="w-3.5 h-3.5" />
@@ -317,7 +317,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
                     }`}
                     title="Luyện đọc với micro"
                   >
-                    <Mic className="w-3.5 h-3.5 text-orange-500" />
+                    <Mic className="w-3.5 h-3.5 text-indigo-600" />
                   </button>
                 </div>
 
@@ -344,7 +344,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
             className={`flex items-center gap-2 px-6 py-2.5 rounded-2xl border text-xs font-bold transition-all ${
               isDarkMode
                 ? 'bg-slate-900 border-slate-800 text-slate-200 hover:bg-slate-800'
-                : 'bg-white border-slate-200 text-slate-700 hover:bg-orange-50 hover:text-orange-600 shadow-2xs'
+                : 'bg-white border-slate-200 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 shadow-2xs'
             }`}
           >
             <span>Tải thêm 36 từ vựng tiếp theo ({filteredWords.length - displayLimit} từ còn lại)</span>

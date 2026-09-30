@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { VocabularyExplorer } from './components/VocabularyExplorer';
+import { TheoryHub } from './components/TheoryHub';
 import { RandomCardDraw } from './components/RandomCardDraw';
+import { ClozeTestMode } from './components/ClozeTestMode';
 import { FlashcardMode } from './components/FlashcardMode';
 import { PracticeMode } from './components/PracticeMode';
 import { PeriodicTestMode } from './components/PeriodicTestMode';
@@ -87,7 +89,7 @@ export const App: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen flex flex-col font-['Plus_Jakarta_Sans',sans-serif] selection:bg-orange-500 selection:text-white transition-colors duration-200 ${
+      className={`min-h-screen flex flex-col font-['Plus_Jakarta_Sans',sans-serif] selection:bg-indigo-600 selection:text-white transition-colors duration-200 ${
         isDarkMode
           ? 'bg-slate-950 text-slate-100'
           : 'bg-[#f8fafc] text-slate-800'
@@ -119,6 +121,14 @@ export const App: React.FC = () => {
           />
         )}
 
+        {activeTab === 'theory' && (
+          <TheoryHub
+            currentLang={currentLang}
+            onLanguageChange={handleLanguageChange}
+            isDarkMode={isDarkMode}
+          />
+        )}
+
         {activeTab === 'random-draw' && (
           <RandomCardDraw
             words={languageWords}
@@ -126,6 +136,15 @@ export const App: React.FC = () => {
             profile={profile}
             onUpdateProfile={handleUpdateProfile}
             onOpenPronounce={(w) => setActivePronounceWord(w)}
+            isDarkMode={isDarkMode}
+          />
+        )}
+
+        {activeTab === 'cloze' && (
+          <ClozeTestMode
+            currentLang={currentLang}
+            profile={profile}
+            onUpdateProfile={handleUpdateProfile}
             isDarkMode={isDarkMode}
           />
         )}
@@ -211,7 +230,7 @@ export const App: React.FC = () => {
             <span>&bull;</span>
             <span>Web Speech API TTS/STT</span>
             <span>&bull;</span>
-            <span className="font-semibold text-orange-500">Chế độ giao diện sáng</span>
+            <span className="font-semibold text-indigo-600 dark:text-indigo-400">Tone màu dịu mắt &bull; Giao diện chuẩn</span>
           </div>
         </div>
       </footer>

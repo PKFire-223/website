@@ -174,7 +174,7 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
             }`}
           >
             <div className="space-y-2 text-center sm:text-left">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-orange-100 text-orange-700 text-xs font-bold">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-indigo-50 text-indigo-800 text-xs font-bold">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>Kiểm Tra Định Kỳ Tiêu Chuẩn</span>
               </div>
@@ -189,7 +189,7 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
             <div className="shrink-0 text-center space-y-2">
               <button
                 onClick={handleStartTest}
-                className="px-6 py-3.5 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm transition-all shadow-md shadow-orange-500/20 active:scale-95"
+                className="px-6 py-3.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm transition-all shadow-md shadow-indigo-600/20 active:scale-95"
               >
                 Bắt đầu làm bài thi
               </button>
@@ -207,7 +207,7 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
           >
             <div className="flex items-center justify-between">
               <h3 className={`text-base font-bold flex items-center gap-2 ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
-                <BarChart2 className="w-4 h-4 text-orange-500" />
+                <BarChart2 className="w-4 h-4 text-indigo-600" />
                 <span>Lịch Sử Các Lần Kiểm Tra</span>
               </h3>
               <span className={`text-xs ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
@@ -298,7 +298,7 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
 
             <div className={`p-4 rounded-2xl border ${isDarkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
               <div className={`text-[10px] ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>Tỷ lệ chính xác</div>
-              <div className="text-2xl font-black text-orange-600 mt-0.5">
+              <div className="text-2xl font-black text-indigo-700 mt-0.5">
                 {testResult.percentage}%
               </div>
             </div>
@@ -317,7 +317,7 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
                 setIsTestStarted(false);
                 setTestResult(null);
               }}
-              className="px-6 py-3 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs transition-all shadow-md shadow-orange-500/20"
+              className="px-6 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs transition-all shadow-md shadow-indigo-600/20"
             >
               Quay lại danh sách kiểm tra
             </button>
@@ -333,7 +333,7 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
             }`}
           >
             <div className="flex items-center gap-2">
-              <span className="text-xs font-bold text-orange-600">
+              <span className="text-xs font-bold text-indigo-700">
                 Câu {currentIndex + 1} / {testWords.length}
               </span>
             </div>
@@ -344,7 +344,7 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
                   ? 'bg-rose-100 text-rose-700 animate-pulse'
                   : isDarkMode
                   ? 'bg-slate-800 text-slate-300'
-                  : 'bg-orange-50 text-orange-700 border border-orange-200'
+                  : 'bg-indigo-50/60 text-indigo-800 border border-indigo-200'
               }`}
             >
               <Clock className="w-3.5 h-3.5" />
@@ -353,7 +353,7 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
 
             <button
               onClick={handleSubmitTest}
-              className="px-3.5 py-1.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs shadow-sm"
+              className="px-3.5 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-sm"
             >
               Nộp bài thi
             </button>
@@ -369,7 +369,7 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
               Chọn nghĩa đúng cho từ vựng sau:
             </span>
             <div className="text-3xl sm:text-4xl font-black">{currentWord?.word}</div>
-            <div className="text-sm font-mono font-bold text-orange-600">
+            <div className="text-sm font-mono font-bold text-indigo-700">
               {currentWord?.phonetic}
             </div>
             {currentWord?.sinoVietnamese && (
@@ -389,10 +389,10 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
                   onClick={() => handleSelectOption(opt.id)}
                   className={`p-4 rounded-2xl border text-left font-bold text-sm transition-all ${
                     isSelected
-                      ? 'bg-orange-50 border-orange-500 text-orange-800 ring-2 ring-orange-400 shadow-md'
+                      ? 'bg-indigo-50/60 border-indigo-500 text-indigo-800 ring-2 ring-indigo-500 shadow-md'
                       : isDarkMode
                       ? 'bg-slate-900 border-slate-800 text-slate-200 hover:border-slate-700'
-                      : 'bg-white border-slate-200 text-slate-800 hover:border-orange-300 hover:bg-orange-50/20 shadow-sm'
+                      : 'bg-white border-slate-200 text-slate-800 hover:border-indigo-300 hover:bg-indigo-50/20 shadow-sm'
                   }`}
                 >
                   {opt.text}
@@ -416,7 +416,7 @@ export const PeriodicTestMode: React.FC<PeriodicTestModeProps> = ({
             <button
               disabled={currentIndex === testWords.length - 1}
               onClick={handleNext}
-              className="px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 disabled:opacity-40 text-white font-bold text-xs shadow-sm"
+              className="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 text-white font-bold text-xs shadow-sm"
             >
               Câu sau
             </button>

@@ -62,3 +62,18 @@ export interface UserProfileProgress {
   randomDrawnToday?: string[]; // IDs of words drawn today in random mode
   randomDrawnDate?: string; // YYYY-MM-DD
 }
+
+export type ClozeCategory = 'all' | 'tense' | 'meaning' | 'word-form' | 'preposition' | 'conjunction';
+
+export interface ClozeQuestion {
+  id: string;
+  passage: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+  translation: string;
+  category: string;
+  level: LevelType;
+  language: Language;
+}
+

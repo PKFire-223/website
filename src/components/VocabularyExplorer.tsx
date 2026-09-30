@@ -117,13 +117,13 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
         className={`p-6 rounded-3xl border transition-all ${
           isDarkMode
             ? 'bg-slate-900 border-slate-800 text-white'
-            : 'bg-gradient-to-r from-orange-50 via-amber-50/50 to-white border-orange-200/80 shadow-sm text-slate-900'
+            : 'bg-gradient-to-r from-indigo-50/70 via-sky-50/40 to-white border-slate-200 shadow-sm text-slate-900'
         }`}
       >
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-1.5">
-              <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-orange-500 text-white">
+              <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-indigo-600 text-white">
                 CHUYÊN GIA NGÔN NGỮ
               </span>
               <span
@@ -155,7 +155,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
               className={`flex items-center gap-2 px-3 py-2 rounded-2xl border transition-all ${
                 isDarkMode
                   ? 'bg-slate-950 border-slate-800 text-white'
-                  : 'bg-white border-slate-200 text-slate-800 shadow-sm focus-within:border-orange-400 focus-within:ring-2 focus-within:ring-orange-100'
+                  : 'bg-white border-slate-200 text-slate-800 shadow-sm focus-within:border-indigo-400 focus-within:ring-2 focus-within:ring-indigo-100'
               }`}
             >
               <Search className="w-4 h-4 text-slate-400 flex-shrink-0" />
@@ -206,16 +206,16 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                   isSelected
                     ? isDarkMode
                       ? 'bg-gradient-to-b from-orange-500/20 to-amber-500/10 border-orange-500 shadow-lg ring-2 ring-orange-500'
-                      : 'bg-gradient-to-b from-orange-50 to-amber-50/40 border-orange-400 shadow-md ring-2 ring-orange-400 text-slate-900'
+                      : 'bg-gradient-to-b from-indigo-50 to-sky-50/40 border-indigo-400 shadow-md ring-2 ring-indigo-500 text-slate-900'
                     : isDarkMode
                     ? 'bg-slate-900 border-slate-800 hover:border-slate-700 hover:bg-slate-800/60'
-                    : 'bg-white border-slate-200/90 hover:border-orange-300 hover:bg-orange-50/20 text-slate-700 shadow-sm'
+                    : 'bg-white border-slate-200/90 hover:border-indigo-300 hover:bg-indigo-50/20 text-slate-700 shadow-sm'
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <span
                     className={`text-sm font-black ${
-                      isSelected ? 'text-orange-600' : isDarkMode ? 'text-white' : 'text-slate-900'
+                      isSelected ? 'text-indigo-700' : isDarkMode ? 'text-white' : 'text-slate-900'
                     }`}
                   >
                     {lvl.id}
@@ -223,7 +223,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                   <span
                     className={`text-[11px] font-bold px-1.5 py-0.5 rounded ${
                       isSelected
-                        ? 'bg-orange-200 text-orange-800'
+                        ? 'bg-indigo-100 text-indigo-800'
                         : isDarkMode
                         ? 'bg-slate-800 text-slate-400'
                         : 'bg-slate-100 text-slate-600'
@@ -234,7 +234,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                 </div>
                 <div
                   className={`text-xs font-bold mt-1.5 line-clamp-1 ${
-                    isSelected ? 'text-orange-950 font-extrabold' : isDarkMode ? 'text-slate-200' : 'text-slate-800'
+                    isSelected ? 'text-indigo-950 font-extrabold' : isDarkMode ? 'text-slate-200' : 'text-slate-800'
                   }`}
                 >
                   {lvl.label}
@@ -249,7 +249,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                 {/* Progress bar */}
                 <div className="mt-2.5 w-full bg-slate-200/70 h-1.5 rounded-full overflow-hidden">
                   <div
-                    className="bg-orange-500 h-full rounded-full transition-all duration-300"
+                    className="bg-indigo-600 h-full rounded-full transition-all duration-300"
                     style={{
                       width: `${lvlWords.length > 0 ? (masteredCount / lvlWords.length) * 100 : 0}%`,
                     }}
@@ -281,7 +281,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
               }`}
             >
               <div className="flex items-center gap-2.5">
-                <span className="w-3 h-3 rounded-full bg-orange-500 shadow-sm shadow-orange-500/50" />
+                <span className="w-3 h-3 rounded-full bg-indigo-600 shadow-sm shadow-indigo-500/50" />
                 <h3 className="text-base font-extrabold">{unitTitle}</h3>
               </div>
               <span
@@ -309,7 +309,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                     className={`rounded-2xl border p-5 flex flex-col justify-between transition-all group ${
                       isDarkMode
                         ? 'bg-slate-950/70 border-slate-800/80 hover:border-slate-700'
-                        : 'bg-white border-slate-200/90 hover:border-orange-400 hover:shadow-md'
+                        : 'bg-white border-slate-200/90 hover:border-indigo-400 hover:shadow-md'
                     }`}
                   >
                     <div>
@@ -359,13 +359,13 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                         <div
                           className={`text-2xl font-black transition-colors ${
                             isDarkMode
-                              ? 'text-white group-hover:text-orange-400'
-                              : 'text-slate-900 group-hover:text-orange-600'
+                              ? 'text-white group-hover:text-indigo-400'
+                              : 'text-slate-900 group-hover:text-indigo-700'
                           }`}
                         >
                           {word.word}
                         </div>
-                        <div className="text-sm font-mono font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded border border-orange-200">
+                        <div className="text-sm font-mono font-bold text-indigo-700 bg-indigo-50/60 px-2 py-0.5 rounded border border-indigo-200">
                           {word.phonetic}
                         </div>
                       </div>
@@ -383,7 +383,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                       <div className="mt-3.5 flex items-center gap-2 flex-wrap">
                         <button
                           onClick={() => speak(word.word, word.language, 1.0)}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-500 text-white hover:bg-orange-600 text-xs font-bold transition-all shadow-xs"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-xs font-bold transition-all shadow-xs"
                           title="Phát âm chuẩn (Tốc độ thường 1.0x)"
                         >
                           <Volume2 className="w-3.5 h-3.5" />
@@ -407,11 +407,11 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                           className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ml-auto ${
                             isDarkMode
                               ? 'bg-slate-800 hover:bg-slate-700 text-slate-200'
-                              : 'bg-slate-100 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-300 border border-slate-200 text-slate-700'
+                              : 'bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-300 border border-slate-200 text-slate-700'
                           }`}
                           title="Luyện đọc bằng Micro với AI chấm điểm"
                         >
-                          <Mic className="w-3.5 h-3.5 text-orange-500" />
+                          <Mic className="w-3.5 h-3.5 text-indigo-600" />
                           <span>Luyện đọc lại</span>
                         </button>
                       </div>
@@ -425,15 +425,15 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
-                          <span className="font-bold text-[10px] uppercase tracking-wider text-orange-600">
+                          <span className="font-bold text-[10px] uppercase tracking-wider text-indigo-700">
                             Ví dụ thực tế:
                           </span>
                           <button
                             onClick={() => speak(word.example, word.language, 0.9)}
-                            className="p-1 rounded hover:text-orange-500 transition-colors"
+                            className="p-1 rounded hover:text-indigo-600 transition-colors"
                             title="Nghe câu ví dụ"
                           >
-                            <Volume2 className="w-3 h-3 text-slate-400 hover:text-orange-500" />
+                            <Volume2 className="w-3 h-3 text-slate-400 hover:text-indigo-600" />
                           </button>
                         </div>
                         <p className="font-medium italic leading-relaxed">&ldquo;{word.example}&rdquo;</p>
@@ -472,7 +472,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                           {word.collocations && word.collocations.length > 0 && (
                             <div className="text-[11px]">
                               <strong>Cụm từ liên quan:</strong>{' '}
-                              <span className="font-mono text-orange-700">
+                              <span className="font-mono text-indigo-800">
                                 {word.collocations.join(', ')}
                               </span>
                             </div>

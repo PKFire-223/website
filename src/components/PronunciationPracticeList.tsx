@@ -57,11 +57,11 @@ export const PronunciationPracticeList: React.FC<PronunciationPracticeListProps>
         className={`p-6 sm:p-8 rounded-3xl border shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6 ${
           isDarkMode
             ? 'bg-slate-900 border-slate-800 text-white'
-            : 'bg-gradient-to-r from-orange-50 via-amber-50/60 to-white border-orange-200 text-slate-900'
+            : 'bg-gradient-to-r from-indigo-50/70 via-sky-50/40 to-white border-indigo-200 text-slate-900'
         }`}
       >
         <div className="space-y-1.5 text-center sm:text-left">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-orange-100 text-orange-700 text-xs font-bold">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-indigo-50 text-indigo-800 text-xs font-bold">
             <Mic className="w-3.5 h-3.5" />
             <span>Phòng Luyện Phát Âm Trực Tuyến</span>
           </div>
@@ -81,7 +81,7 @@ export const PronunciationPracticeList: React.FC<PronunciationPracticeListProps>
           <div className={`text-[11px] font-semibold ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
             Cấp độ luyện tập
           </div>
-          <div className="text-2xl font-black text-orange-600 mt-0.5">
+          <div className="text-2xl font-black text-indigo-700 mt-0.5">
             {currentLevel}
           </div>
           <div className={`text-[10px] font-bold ${isDarkMode ? 'text-slate-500' : 'text-slate-400'}`}>
@@ -127,7 +127,7 @@ export const PronunciationPracticeList: React.FC<PronunciationPracticeListProps>
               className={`p-4 sm:p-5 rounded-2xl border transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${
                 isDarkMode
                   ? 'bg-slate-900 border-slate-800 hover:border-slate-700'
-                  : 'bg-white border-slate-200 hover:border-orange-300 hover:shadow-md'
+                  : 'bg-white border-slate-200 hover:border-indigo-300 hover:shadow-md'
               }`}
             >
               {/* Word info */}
@@ -136,7 +136,7 @@ export const PronunciationPracticeList: React.FC<PronunciationPracticeListProps>
                   <span className={`text-xl font-black ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
                     {word.word}
                   </span>
-                  <span className="text-xs font-mono font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded border border-orange-200">
+                  <span className="text-xs font-mono font-bold text-indigo-700 bg-indigo-50/60 px-2 py-0.5 rounded border border-indigo-200">
                     {word.phonetic}
                   </span>
                   <span className={`text-[11px] font-bold px-2 py-0.5 rounded border ${isDarkMode ? 'bg-slate-800 text-slate-400 border-slate-700' : 'bg-slate-100 text-slate-600 border-slate-200'}`}>
@@ -183,7 +183,7 @@ export const PronunciationPracticeList: React.FC<PronunciationPracticeListProps>
                 <button
                   onClick={() => handlePlay(word, 1.0)}
                   disabled={isPlaying}
-                  className="p-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white transition-all shadow-xs"
+                  className="p-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-xs"
                   title="Nghe phát âm chuẩn (1.0x)"
                 >
                   <Volume2 className="w-4 h-4" />
@@ -208,10 +208,10 @@ export const PronunciationPracticeList: React.FC<PronunciationPracticeListProps>
                   className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
                     isDarkMode
                       ? 'bg-slate-800 hover:bg-slate-700 text-slate-200'
-                      : 'bg-orange-50 hover:bg-orange-100 text-orange-700 border border-orange-200'
+                      : 'bg-indigo-50/60 hover:bg-indigo-100 text-indigo-800 border border-indigo-200'
                   }`}
                 >
-                  <Mic className="w-4 h-4 text-orange-600" />
+                  <Mic className="w-4 h-4 text-indigo-700" />
                   <span>Luyện đọc lại</span>
                 </button>
               </div>
@@ -228,7 +228,7 @@ export const PronunciationPracticeList: React.FC<PronunciationPracticeListProps>
             className={`flex items-center gap-2 px-6 py-2.5 rounded-2xl border text-xs font-bold transition-all ${
               isDarkMode
                 ? 'bg-slate-900 border-slate-800 text-slate-200 hover:bg-slate-800'
-                : 'bg-white border-slate-200 text-slate-700 hover:bg-orange-50 hover:text-orange-600 shadow-2xs'
+                : 'bg-white border-slate-200 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 shadow-2xs'
             }`}
           >
             <ArrowDown className="w-3.5 h-3.5" />

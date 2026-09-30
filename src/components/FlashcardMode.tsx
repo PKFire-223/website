@@ -114,7 +114,7 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
             className={`text-xs font-bold px-2.5 py-1 rounded-lg border ${
               isDarkMode
                 ? 'bg-slate-800 text-slate-300 border-slate-700'
-                : 'bg-orange-50 text-orange-700 border-orange-200'
+                : 'bg-indigo-50/60 text-indigo-800 border-indigo-200'
             }`}
           >
             {currentWord.level}
@@ -144,7 +144,7 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
         }`}
       >
         <div
-          className="bg-gradient-to-r from-orange-500 to-amber-500 h-full transition-all duration-300 rounded-full"
+          className="bg-gradient-to-r from-indigo-600 to-sky-600 h-full transition-all duration-300 rounded-full"
           style={{ width: `${((currentIndex + 1) / words.length) * 100}%` }}
         />
       </div>
@@ -155,7 +155,7 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
         className={`relative min-h-[380px] sm:min-h-[420px] cursor-pointer select-none rounded-3xl p-8 border transition-all duration-300 flex flex-col justify-between group shadow-xl ${
           isDarkMode
             ? 'bg-slate-900 border-slate-800 hover:border-slate-700'
-            : 'bg-white border-slate-200 hover:border-orange-400 hover:shadow-2xl'
+            : 'bg-white border-slate-200 hover:border-indigo-400 hover:shadow-2xl'
         }`}
       >
         {/* Flip Hint */}
@@ -172,7 +172,7 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
 
           <span
             className={`flex items-center gap-1 font-semibold transition-colors ${
-              isDarkMode ? 'text-slate-400 group-hover:text-orange-400' : 'text-slate-500 group-hover:text-orange-600'
+              isDarkMode ? 'text-slate-400 group-hover:text-indigo-400' : 'text-slate-500 group-hover:text-indigo-700'
             }`}
           >
             <Rotate3d className="w-4 h-4" />
@@ -202,7 +202,7 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
               {currentWord.word}
             </div>
 
-            <div className="text-xl sm:text-2xl font-mono font-bold text-orange-600">
+            <div className="text-xl sm:text-2xl font-mono font-bold text-indigo-700">
               {currentWord.phonetic}
             </div>
 
@@ -220,7 +220,7 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
             <div className="pt-4 flex items-center justify-center gap-3">
               <button
                 onClick={handlePlayAudio}
-                className="p-3.5 rounded-2xl bg-orange-500 text-white hover:bg-orange-600 transition-all shadow-md active:scale-95"
+                className="p-3.5 rounded-2xl bg-indigo-600 text-white hover:bg-indigo-700 transition-all shadow-md active:scale-95"
                 title="Phát âm chuẩn giọng bản xứ"
               >
                 <Volume2 className="w-6 h-6" />
@@ -234,11 +234,11 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
                 className={`inline-flex items-center gap-2 px-4 py-3 rounded-2xl text-xs font-bold border transition-all ${
                   isDarkMode
                     ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
-                    : 'bg-slate-100 hover:bg-orange-50 hover:text-orange-600 hover:border-orange-300 text-slate-800 border-slate-200 shadow-2xs'
+                    : 'bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-300 text-slate-800 border-slate-200 shadow-2xs'
                 }`}
                 title="Luyện đọc bằng giọng nói của bạn"
               >
-                <Mic className="w-4 h-4 text-orange-500" />
+                <Mic className="w-4 h-4 text-indigo-600" />
                 <span>Luyện đọc với Micro</span>
               </button>
             </div>
@@ -254,7 +254,7 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
               >
                 Nghĩa Tiếng Việt:
               </span>
-              <h3 className="text-2xl sm:text-3xl font-black text-orange-600 mt-1">
+              <h3 className="text-2xl sm:text-3xl font-black text-indigo-700 mt-1">
                 {currentWord.vietnameseMeaning}
               </h3>
             </div>
@@ -268,14 +268,14 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
               }`}
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-orange-600 flex items-center gap-1.5">
+                <span className="text-xs font-bold text-indigo-700 flex items-center gap-1.5">
                   <BookOpen className="w-3.5 h-3.5" />
                   Câu ví dụ thực tế:
                 </span>
                 <button
                   onClick={handlePlayExample}
                   className={`p-1.5 rounded-lg transition-colors ${
-                    isDarkMode ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-orange-600'
+                    isDarkMode ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-indigo-700'
                   }`}
                   title="Nghe câu ví dụ"
                 >
@@ -310,7 +310,7 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
                 }`}
               >
                 <span className="font-bold">Cụm từ hay gặp: </span>
-                <span className="font-mono text-orange-600">{currentWord.collocations.join(' • ')}</span>
+                <span className="font-mono text-indigo-700">{currentWord.collocations.join(' • ')}</span>
               </div>
             )}
 
@@ -403,7 +403,7 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
 
           <button
             onClick={handleNext}
-            className="flex-1 py-3 px-4 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs flex items-center justify-center gap-1 transition-all shadow-md shadow-orange-500/20"
+            className="flex-1 py-3 px-4 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs flex items-center justify-center gap-1 transition-all shadow-md shadow-indigo-600/20"
           >
             <span>Thẻ tiếp theo</span>
             <ChevronRight className="w-4 h-4" />

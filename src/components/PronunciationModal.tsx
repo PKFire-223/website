@@ -125,7 +125,7 @@ export const PronunciationModal: React.FC<PronunciationModalProps> = ({
           }`}
         >
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-orange-500" />
+            <span className="w-2.5 h-2.5 rounded-full bg-indigo-600" />
             <h3 className="text-base font-black">Luyện Đọc Phát Âm Với Micro</h3>
           </div>
           <button
@@ -146,11 +146,11 @@ export const PronunciationModal: React.FC<PronunciationModalProps> = ({
               isDarkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-50 border-slate-200'
             }`}
           >
-            <span className="text-[11px] font-bold text-orange-600 uppercase tracking-wider">
+            <span className="text-[11px] font-bold text-indigo-700 uppercase tracking-wider">
               {word.partOfSpeech}
             </span>
             <div className="text-3xl sm:text-4xl font-black">{word.word}</div>
-            <div className="text-sm font-mono font-bold text-orange-600">{word.phonetic}</div>
+            <div className="text-sm font-mono font-bold text-indigo-700">{word.phonetic}</div>
             {word.sinoVietnamese && (
               <div className="text-xs font-bold text-rose-600">
                 Hán-Việt: {word.sinoVietnamese}
@@ -166,7 +166,7 @@ export const PronunciationModal: React.FC<PronunciationModalProps> = ({
             <button
               onClick={() => handlePlayAudio(1.0)}
               disabled={isPlaying}
-              className="px-4 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm"
+              className="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm"
             >
               <Volume2 className="w-4 h-4" />
               <span>Nghe mẫu (1.0x)</span>
@@ -188,7 +188,7 @@ export const PronunciationModal: React.FC<PronunciationModalProps> = ({
             {!isListening ? (
               <button
                 onClick={startListening}
-                className="w-20 h-20 rounded-full bg-orange-500 hover:bg-orange-600 text-white flex items-center justify-center mx-auto shadow-lg shadow-orange-500/30 transition-transform active:scale-95"
+                className="w-20 h-20 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white flex items-center justify-center mx-auto shadow-lg shadow-indigo-600/20 transition-transform active:scale-95"
                 title="Bấm để bắt đầu đọc"
               >
                 <Mic className="w-8 h-8" />
