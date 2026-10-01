@@ -9,6 +9,7 @@ import { FlashcardMode } from './components/FlashcardMode';
 import { PracticeMode } from './components/PracticeMode';
 import { PeriodicTestMode } from './components/PeriodicTestMode';
 import { PronunciationPracticeList } from './components/PronunciationPracticeList';
+import { SentencePatternsMode } from './components/SentencePatternsMode';
 import { VocabularyNotebook } from './components/VocabularyNotebook';
 import { PronunciationModal } from './components/PronunciationModal';
 import { VOCABULARY_DATABASE } from './data/vocabData';
@@ -118,6 +119,14 @@ export const App: React.FC = () => {
             profile={profile}
             onUpdateProfile={handleUpdateProfile}
             onOpenPronounce={(w) => setActivePronounceWord(w)}
+            isDarkMode={isDarkMode}
+          />
+        )}
+
+        {activeTab === 'patterns' && (
+          <SentencePatternsMode
+            currentLang={currentLang}
+            onLanguageChange={handleLanguageChange}
             isDarkMode={isDarkMode}
           />
         )}
@@ -232,7 +241,7 @@ export const App: React.FC = () => {
             <span className={`font-bold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               LinguaVocab Standard
             </span>{' '}
-            &mdash; Kho từ điển &gt; 5.120 từ vựng tiếng Anh (Oxford/CEFR) & &gt; 5.150 từ vựng tiếng Trung (HSK) riêng biệt (Tổng &gt; 10.270 từ chuẩn).
+            &mdash; Kho từ điển &gt; 8.500 từ vựng tiếng Anh (Oxford/CEFR) & &gt; 8.500 từ vựng tiếng Trung (HSK) riêng biệt (Tổng &gt; 17.000 từ chuẩn) cùng Hệ thống Mẫu câu giao tiếp chuẩn quốc tế.
           </div>
           <div className="flex items-center gap-4 text-[11px]">
             <span>Lặp lại ngắt quãng (SM-2)</span>

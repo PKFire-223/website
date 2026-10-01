@@ -355,7 +355,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                       </div>
 
                       {/* Main Word & Phonetic */}
-                      <div className="flex items-baseline justify-between gap-3 mt-1">
+                      <div className="flex items-baseline justify-between gap-3 mt-1 flex-wrap">
                         <div
                           className={`text-2xl font-black transition-colors ${
                             isDarkMode
@@ -365,9 +365,54 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                         >
                           {word.word}
                         </div>
-                        <div className="text-sm font-mono font-bold text-indigo-700 bg-indigo-50/60 px-2 py-0.5 rounded border border-indigo-200">
-                          {word.phonetic}
-                        </div>
+
+                        {/* Phonetics & Standards */}
+                        {word.language === 'en' ? (
+                          <div className="flex items-center gap-1.5 flex-wrap">
+                            {word.phoneticUk && (
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  speak(word.word, 'en', 1.0, undefined, 'uk');
+                                }}
+                                className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs font-mono font-bold bg-indigo-50/80 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800/80 hover:bg-indigo-100 cursor-pointer"
+                                title="Phát âm chuẩn Anh - Anh (UK - Oxford)"
+                              >
+                                <span className="text-[10px]">🇬🇧</span>
+                                <span>{word.phoneticUk}</span>
+                              </button>
+                            )}
+                            {word.phoneticUs && word.phoneticUs !== word.phoneticUk && (
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  speak(word.word, 'en', 1.0, undefined, 'us');
+                                }}
+                                className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs font-mono font-bold bg-sky-50/80 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200/80 dark:border-sky-800/80 hover:bg-sky-100 cursor-pointer"
+                                title="Phát âm chuẩn Anh - Mỹ (US)"
+                              >
+                                <span className="text-[10px]">🇺🇸</span>
+                                <span>{word.phoneticUs}</span>
+                              </button>
+                            )}
+                            {!word.phoneticUk && !word.phoneticUs && (
+                              <div className="text-sm font-mono font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50/60 dark:bg-indigo-950/40 px-2 py-0.5 rounded border border-indigo-200 dark:border-indigo-800">
+                                {word.phonetic}
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <div className="flex items-center gap-2 flex-wrap">
+                            {word.sinoVietnamese && (
+                              <span className="text-xs font-bold text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">
+                                Hán-Việt: {word.sinoVietnamese}
+                              </span>
+                            )}
+                            <div className="text-sm font-mono font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50/60 dark:bg-indigo-950/40 px-2 py-0.5 rounded border border-indigo-200 dark:border-indigo-800">
+                              {word.phonetic}
+                            </div>
+                          </div>
+                        )}
                       </div>
 
                       {/* Vietnamese Meaning */}
@@ -381,30 +426,51 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
 
                       {/* Pronounce & Listen Toolbar */}
                       <div className="mt-3.5 flex items-center gap-2 flex-wrap">
-                        <button
-                          onClick={() => speak(word.word, word.language, 1.0)}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-xs font-bold transition-all shadow-xs"
-                          title="Phát âm chuẩn (Tốc độ thường 1.0x)"
-                        >
-                          <Volume2 className="w-3.5 h-3.5" />
-                          <span>Nghe đọc</span>
-                        </button>
+                        {word.language === 'en' ? (
+                          <>
+                            <button
+                              onClick={() => speak(word.word, 'en', 1.0, undefined, 'uk')}
+                              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-xs font-bold transition-all shadow-xs cursor-pointer"
+                              title="Nghe phát âm chuẩn giọng Anh (UK Oxford)"
+                            >
+                              <Volume2 className="w-3.5 h-3.5" />
+                              <span>🇬🇧 UK</span>
+                            </button>
+                            <button
+                              onClick={() => speak(word.word, 'en', 1.0, undefined, 'us')}
+                              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-sky-600 text-white hover:bg-sky-700 text-xs font-bold transition-all shadow-xs cursor-pointer"
+                              title="Nghe phát âm chuẩn giọng Mỹ (US)"
+                            >
+                              <Volume2 className="w-3.5 h-3.5" />
+                              <span>🇺🇸 US</span>
+                            </button>
+                          </>
+                        ) : (
+                          <button
+                            onClick={() => speak(word.word, word.language, 1.0)}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-xs font-bold transition-all shadow-xs cursor-pointer"
+                            title="Phát âm chuẩn tiếng Phổ thông (普通话)"
+                          >
+                            <Volume2 className="w-3.5 h-3.5" />
+                            <span>Nghe đọc</span>
+                          </button>
+                        )}
 
                         <button
                           onClick={() => speak(word.word, word.language, 0.75)}
-                          className={`px-2.5 py-1.5 rounded-xl text-xs font-mono font-bold transition-colors ${
+                          className={`px-2.5 py-1.5 rounded-xl text-xs font-mono font-bold transition-colors cursor-pointer ${
                             isDarkMode
                               ? 'bg-slate-800 text-slate-300 hover:text-white'
                               : 'bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200'
                           }`}
-                          title="Phát âm chậm (0.75x)"
+                          title="Phát âm chậm rõ từng âm (0.75x)"
                         >
                           0.75x
                         </button>
 
                         <button
                           onClick={() => onOpenPronounce(word)}
-                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ml-auto ${
+                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ml-auto cursor-pointer ${
                             isDarkMode
                               ? 'bg-slate-800 hover:bg-slate-700 text-slate-200'
                               : 'bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-300 border border-slate-200 text-slate-700'

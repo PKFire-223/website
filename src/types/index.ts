@@ -12,6 +12,8 @@ export interface VocabWord {
   unit: string;
   word: string;
   phonetic: string; // IPA for English, Pinyin with tones for Chinese
+  phoneticUk?: string; // Standard British (RP) IPA
+  phoneticUs?: string; // Standard American (GA) IPA
   partOfSpeech: string;
   sinoVietnamese?: string; // Hán-Việt cho tiếng Trung
   vietnameseMeaning: string;

@@ -291,6 +291,11 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
                 <div className={`text-[11px] italic mt-2 line-clamp-2 ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                   &ldquo;{word.example}&rdquo;
                 </div>
+                {word.examplePhonetic && (
+                  <div className="text-[10px] font-mono text-amber-600 dark:text-amber-400 mt-0.5 line-clamp-1">
+                    {word.examplePhonetic}
+                  </div>
+                )}
               </div>
 
               {/* Bottom Quick Audio Buttons */}
@@ -300,17 +305,36 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
                 }`}
               >
                 <div className="flex items-center gap-1.5">
-                  <button
-                    onClick={() => speak(word.word, word.language, 1.0)}
-                    className="p-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-2xs"
-                    title="Nghe phát âm"
-                  >
-                    <Volume2 className="w-3.5 h-3.5" />
-                  </button>
+                  {word.language === 'en' ? (
+                    <div className="flex items-center gap-1">
+                      <button
+                        onClick={() => speak(word.word, 'en', 1.0, undefined, 'uk')}
+                        className="px-2 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-[11px] font-bold transition-all shadow-2xs cursor-pointer"
+                        title="Phát âm chuẩn Anh (UK)"
+                      >
+                        🇬🇧 UK
+                      </button>
+                      <button
+                        onClick={() => speak(word.word, 'en', 1.0, undefined, 'us')}
+                        className="px-2 py-1 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-[11px] font-bold transition-all shadow-2xs cursor-pointer"
+                        title="Phát âm chuẩn Mỹ (US)"
+                      >
+                        🇺🇸 US
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => speak(word.word, word.language, 1.0)}
+                      className="p-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-2xs cursor-pointer"
+                      title="Nghe phát âm chuẩn"
+                    >
+                      <Volume2 className="w-3.5 h-3.5" />
+                    </button>
+                  )}
 
                   <button
                     onClick={() => onOpenPronounce(word)}
-                    className={`p-1.5 rounded-lg border transition-colors ${
+                    className={`p-1.5 rounded-lg border transition-colors cursor-pointer ${
                       isDarkMode
                         ? 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-700'
                         : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200'

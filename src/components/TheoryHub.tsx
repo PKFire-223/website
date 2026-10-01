@@ -28,7 +28,7 @@ import {
   COMMON_CHINESE_RADICALS,
 } from '../data/theoryData';
 import { StrokeCanvas } from './StrokeCanvas';
-import { speak } from '../utils/speech';
+import { speak, getPreferredAccent, setPreferredAccent, EnglishAccent } from '../utils/speech';
 
 interface TheoryHubProps {
   currentLang: Language;
@@ -50,6 +50,12 @@ export const TheoryHub: React.FC<TheoryHubProps> = ({
   const [irregularSearch, setIrregularSearch] = useState('');
   const [radicalSearch, setRadicalSearch] = useState('');
   const [ipaTypeFilter, setIpaTypeFilter] = useState<string>('all');
+  const [currentAccent, setCurrentAccent] = useState<EnglishAccent>(getPreferredAccent());
+
+  const handleAccentChange = (accent: EnglishAccent) => {
+    setCurrentAccent(accent);
+    setPreferredAccent(accent);
+  };
 
   // Filtered irregular verbs
   const filteredIrregulars = COMMON_IRREGULAR_VERBS.filter((v) => {
@@ -189,31 +195,60 @@ export const TheoryHub: React.FC<TheoryHubProps> = ({
           {/* TAB 1: 44 IPA PHONETIC SOUNDS */}
           {enSubTab === 'ipa' && (
             <div className="space-y-6">
-              {/* Type Filter */}
-              <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
-                <span className="text-xs font-bold text-slate-400 mr-1">Bộ lọc âm:</span>
-                {[
-                  { id: 'all', label: 'Tất cả (44 âm)' },
-                  { id: 'vowel-short', label: 'Nguyên âm ngắn (7)' },
-                  { id: 'vowel-long', label: 'Nguyên âm dài (5)' },
-                  { id: 'diphthong', label: 'Nguyên âm đôi (8)' },
-                  { id: 'consonant-unvoiced', label: 'Phụ âm vô thanh' },
-                  { id: 'consonant-voiced', label: 'Phụ âm hữu thanh' },
-                ].map((f) => (
+              {/* Accent & Type Filter Toolbar */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 rounded-2xl border bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-800">
+                <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 no-scrollbar">
+                  <span className="text-xs font-bold text-slate-400 mr-1">Bộ lọc âm:</span>
+                  {[
+                    { id: 'all', label: 'Tất cả (44 âm)' },
+                    { id: 'vowel-short', label: 'Nguyên âm ngắn (7)' },
+                    { id: 'vowel-long', label: 'Nguyên âm dài (5)' },
+                    { id: 'diphthong', label: 'Nguyên âm đôi (8)' },
+                    { id: 'consonant-unvoiced', label: 'Phụ âm vô thanh' },
+                    { id: 'consonant-voiced', label: 'Phụ âm hữu thanh' },
+                  ].map((f) => (
+                    <button
+                      key={f.id}
+                      onClick={() => setIpaTypeFilter(f.id)}
+                      className={`px-3 py-1.5 rounded-xl border text-xs font-semibold transition-colors cursor-pointer ${
+                        ipaTypeFilter === f.id
+                          ? 'bg-indigo-50 border-indigo-300 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 font-bold'
+                          : isDarkMode
+                          ? 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white'
+                          : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                      }`}
+                    >
+                      {f.label}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Accent Selection Pill */}
+                <div className="flex items-center gap-1.5 self-start sm:self-auto shrink-0 bg-white dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800">
+                  <span className="text-[11px] font-bold text-slate-400 px-1.5">Giọng đọc:</span>
                   <button
-                    key={f.id}
-                    onClick={() => setIpaTypeFilter(f.id)}
-                    className={`px-3 py-1.5 rounded-xl border text-xs font-semibold transition-colors ${
-                      ipaTypeFilter === f.id
-                        ? 'bg-indigo-50 border-indigo-300 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 font-bold'
-                        : isDarkMode
-                        ? 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white'
-                        : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+                    onClick={() => handleAccentChange('uk')}
+                    className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                      currentAccent === 'uk'
+                        ? 'bg-indigo-600 text-white shadow-2xs'
+                        : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
                     }`}
                   >
-                    {f.label}
+                    <span>🇬🇧</span>
+                    <span>Anh (UK)</span>
                   </button>
-                ))}
+                  <button
+                    onClick={() => handleAccentChange('us')}
+                    className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                      currentAccent === 'us'
+                        ? 'bg-indigo-600 text-white shadow-2xs'
+                        : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
+                    }`}
+                  >
+                    <span>🇺🇸</span>
+                    <span>Mỹ (US)</span>
+                  </button>
+                </div>
               </div>
 
               {/* IPA Grid */}
@@ -233,9 +268,9 @@ export const TheoryHub: React.FC<TheoryHubProps> = ({
                           /{item.symbol}/
                         </span>
                         <button
-                          onClick={() => speak(item.audioSample, 'en')}
+                          onClick={() => speak(item.audioSample, 'en', 1.0, undefined, currentAccent)}
                           className="p-2 rounded-xl bg-indigo-50 text-indigo-600 hover:bg-indigo-100 dark:bg-slate-800 dark:text-indigo-400 transition-colors cursor-pointer"
-                          title="Bấm để nghe âm thanh mẫu"
+                          title={`Nghe âm chuẩn quốc tế (${currentAccent.toUpperCase()})`}
                         >
                           <Volume2 className="w-4 h-4" />
                         </button>
@@ -252,8 +287,9 @@ export const TheoryHub: React.FC<TheoryHubProps> = ({
                         {item.examples.map((ex, eIdx) => (
                           <button
                             key={eIdx}
-                            onClick={() => speak(ex, 'en')}
+                            onClick={() => speak(ex, 'en', 1.0, undefined, currentAccent)}
                             className="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-mono font-medium hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/60 dark:hover:text-indigo-300 transition-colors cursor-pointer"
+                            title={`Bấm để nghe: ${ex} (${currentAccent.toUpperCase()})`}
                           >
                             {ex}
                           </button>
@@ -668,28 +704,30 @@ export const TheoryHub: React.FC<TheoryHubProps> = ({
           {/* TAB 2: TONES & TONE SANDHI */}
           {zhSubTab === 'tones' && (
             <div className="space-y-6">
-              {/* 4 Main Tones */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {/* 5 Standard Pinyin Tones */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
                 {[
-                  { name: 'Thanh 1 (Âm Bình)', mark: 'ā (55)', desc: 'Cao và bằng phẳng, giữ nguyên cao độ từ đầu đến cuối.', ex: 'mā (妈 - mẹ)' },
-                  { name: 'Thanh 2 (Dương Bình)', mark: 'á (35)', desc: 'Đi từ trung bình lên cao, tương tự dấu sắc trong tiếng Việt.', ex: 'má (麻 - cây gai)' },
-                  { name: 'Thanh 3 (Thượng Thanh)', mark: 'ǎ (214)', desc: 'Hạ thấp giọng rồi uốn lượn nhẹ lên cao, tương tự dấu hỏi.', ex: 'mǎ (马 - con ngựa)' },
-                  { name: 'Thanh 4 (Khứ Thanh)', mark: 'à (51)', desc: 'Dứt khoát rơi từ đỉnh cao nhất xuống đáy, nhấn mạnh dứt khoát.', ex: 'mà (骂 - mắng mỏ)' },
+                  { name: 'Thanh 1 (Âm Bình)', mark: 'ā (55)', desc: 'Cao và bằng phẳng, giữ nguyên cao độ từ đầu đến cuối.', ex: 'mā (妈 - mẹ)', char: '妈' },
+                  { name: 'Thanh 2 (Dương Bình)', mark: 'á (35)', desc: 'Đi từ trung bình lên cao, tương tự dấu sắc tiếng Việt.', ex: 'má (麻 - cây gai)', char: '麻' },
+                  { name: 'Thanh 3 (Thượng Thanh)', mark: 'ǎ (214)', desc: 'Hạ thấp giọng rồi uốn lượn nhẹ lên cao, như dấu hỏi.', ex: 'mǎ (马 - con ngựa)', char: '马' },
+                  { name: 'Thanh 4 (Khứ Thanh)', mark: 'à (51)', desc: 'Dứt khoát rơi từ đỉnh cao nhất xuống đáy, nhấn mạnh.', ex: 'mà (骂 - mắng mỏ)', char: '骂' },
+                  { name: 'Khinh Thanh (Thanh Nhẹ)', mark: 'a (0)', desc: 'Đọc nhẹ và ngắn, phụ thuộc vào cao độ âm đứng trước.', ex: 'ba (爸 - bàba)', char: '爸爸' },
                 ].map((t, idx) => (
                   <div
                     key={idx}
-                    className={`p-5 rounded-2xl border text-center transition-all ${
+                    className={`p-4 rounded-2xl border text-center transition-all ${
                       isDarkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200 shadow-xs'
                     }`}
                   >
-                    <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 block mb-1">{t.name}</span>
-                    <span className="text-3xl font-black font-mono text-slate-800 dark:text-slate-100 block mb-2">{t.mark}</span>
-                    <p className="text-xs text-slate-500 mb-3">{t.desc}</p>
+                    <span className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 block mb-1">{t.name}</span>
+                    <span className="text-2xl font-black font-mono text-slate-800 dark:text-slate-100 block mb-1">{t.mark}</span>
+                    <p className="text-[11px] text-slate-500 mb-2 leading-relaxed">{t.desc}</p>
                     <button
-                      onClick={() => speak(t.ex.split('(')[1].split(' ')[0], 'zh')}
-                      className="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-bold hover:bg-indigo-50 hover:text-indigo-600 transition-colors cursor-pointer"
+                      onClick={() => speak(t.char, 'zh')}
+                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-bold hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-slate-700 transition-colors cursor-pointer"
                     >
-                      Nghe: {t.ex}
+                      <Volume2 className="w-3.5 h-3.5" />
+                      <span>{t.ex}</span>
                     </button>
                   </div>
                 ))}
@@ -701,15 +739,33 @@ export const TheoryHub: React.FC<TheoryHubProps> = ({
                   isDarkMode ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
                 }`}
               >
-                <h3 className="text-lg font-black mb-4">Các Quy Tắc Biến Điệu Quan Trọng Bậc Nhất</h3>
+                <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                  <h3 className="text-lg font-black">Các Quy Tắc Biến Điệu Chuẩn Quốc Tế Bậc Nhất</h3>
+                  <span className="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-2.5 py-1 rounded-lg border border-indigo-200 dark:border-indigo-800">
+                    Bấm loa để nghe trực tiếp biến điệu thực tế
+                  </span>
+                </div>
                 <div className="space-y-4 text-xs sm:text-sm">
                   <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
                     <span className="font-bold text-indigo-600 block mb-1">1. Quy tắc hai thanh 3 đi liền nhau (3 + 3 &rarr; 2 + 3):</span>
                     <p className="text-xs text-slate-600 dark:text-slate-300">
                       Khi hai từ mang thanh 3 đứng liền nhau, từ thứ nhất biến âm thành thanh 2 (dấu sắc).
                     </p>
-                    <div className="mt-2 text-xs font-mono text-indigo-600 dark:text-indigo-400">
-                      Ví dụ: 你好 (nǐ hǎo &rarr; đọc thành <strong>ní hǎo</strong>), 很好 (hěn hǎo &rarr; <strong>hén hǎo</strong>).
+                    <div className="mt-2.5 flex items-center gap-3 flex-wrap">
+                      <button
+                        onClick={() => speak('你好', 'zh')}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-mono font-bold hover:text-indigo-600 hover:border-indigo-300 cursor-pointer shadow-2xs"
+                      >
+                        <Volume2 className="w-3.5 h-3.5 text-indigo-600" />
+                        <span>你好 (nǐ hǎo &rarr; <strong>ní hǎo</strong>)</span>
+                      </button>
+                      <button
+                        onClick={() => speak('很好', 'zh')}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-mono font-bold hover:text-indigo-600 hover:border-indigo-300 cursor-pointer shadow-2xs"
+                      >
+                        <Volume2 className="w-3.5 h-3.5 text-indigo-600" />
+                        <span>很好 (hěn hǎo &rarr; <strong>hén hǎo</strong>)</span>
+                      </button>
                     </div>
                   </div>
 
@@ -718,17 +774,46 @@ export const TheoryHub: React.FC<TheoryHubProps> = ({
                     <p className="text-xs text-slate-600 dark:text-slate-300">
                       Nguyên bản mang thanh 4 (bù). Khi đứng trước một từ mang thanh 4, nó biến thành thanh 2 (bú).
                     </p>
-                    <div className="mt-2 text-xs font-mono text-indigo-600 dark:text-indigo-400">
-                      Ví dụ: 不是 (bù shì &rarr; đọc thành <strong>bú shì</strong>), 不对 (bù duì &rarr; <strong>bú duì</strong>).
+                    <div className="mt-2.5 flex items-center gap-3 flex-wrap">
+                      <button
+                        onClick={() => speak('不是', 'zh')}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-mono font-bold hover:text-indigo-600 hover:border-indigo-300 cursor-pointer shadow-2xs"
+                      >
+                        <Volume2 className="w-3.5 h-3.5 text-indigo-600" />
+                        <span>不是 (bù shì &rarr; <strong>bú shì</strong>)</span>
+                      </button>
+                      <button
+                        onClick={() => speak('不对', 'zh')}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-mono font-bold hover:text-indigo-600 hover:border-indigo-300 cursor-pointer shadow-2xs"
+                      >
+                        <Volume2 className="w-3.5 h-3.5 text-indigo-600" />
+                        <span>不对 (bù duì &rarr; <strong>bú duì</strong>)</span>
+                      </button>
                     </div>
                   </div>
 
                   <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
                     <span className="font-bold text-indigo-600 block mb-1">3. Biến điệu của chữ &quot;一&quot; (yī):</span>
-                    <p className="text-xs text-slate-600 dark:text-slate-300">
-                      - Đứng trước thanh 1, 2, 3: đọc thành thanh 4 (yì). Ví dụ: 一天 (yì tiān), 一起 (yì qǐ).<br />
-                      - Đứng trước thanh 4: đọc thành thanh 2 (yí). Ví dụ: 一样 (yí yàng), 一块 (yí kuài).
+                    <p className="text-xs text-slate-600 dark:text-slate-300 mb-2">
+                      - Đứng trước thanh 1, 2, 3: đọc thành thanh 4 (yì).<br />
+                      - Đứng trước thanh 4: đọc thành thanh 2 (yí).
                     </p>
+                    <div className="flex items-center gap-3 flex-wrap">
+                      <button
+                        onClick={() => speak('一起', 'zh')}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-mono font-bold hover:text-indigo-600 hover:border-indigo-300 cursor-pointer shadow-2xs"
+                      >
+                        <Volume2 className="w-3.5 h-3.5 text-indigo-600" />
+                        <span>一起 (yī + qǐ &rarr; <strong>yì qǐ</strong>)</span>
+                      </button>
+                      <button
+                        onClick={() => speak('一样', 'zh')}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-mono font-bold hover:text-indigo-600 hover:border-indigo-300 cursor-pointer shadow-2xs"
+                      >
+                        <Volume2 className="w-3.5 h-3.5 text-indigo-600" />
+                        <span>一样 (yī + yàng &rarr; <strong>yí yàng</strong>)</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

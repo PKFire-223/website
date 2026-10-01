@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BookOpen,
   Flame,
@@ -14,8 +14,11 @@ import {
   FileText,
   GraduationCap,
   MessagesSquare,
+  Volume2,
+  Quote,
 } from 'lucide-react';
 import { Language, UserProfileProgress } from '../types';
+import { getPreferredAccent, setPreferredAccent, EnglishAccent } from '../utils/speech';
 
 interface HeaderProps {
   currentLang: Language;
@@ -40,8 +43,16 @@ export const Header: React.FC<HeaderProps> = ({
   totalWordsCount,
   currentLangWordsCount,
 }) => {
+  const [currentAccent, setCurrentAccent] = useState<EnglishAccent>(getPreferredAccent());
+
+  const handleAccentChange = (accent: EnglishAccent) => {
+    setCurrentAccent(accent);
+    setPreferredAccent(accent);
+  };
+
   const tabs = [
     { id: 'explore', label: 'Cấp bậc từ vựng', icon: BookOpen },
+    { id: 'patterns', label: 'Mẫu câu chuẩn', icon: Quote },
     { id: 'theory', label: 'Lý thuyết & Cách học', icon: GraduationCap },
     { id: 'dialogue', label: 'Hội thoại giao tiếp', icon: MessagesSquare },
     { id: 'random-draw', label: 'Lật thẻ Random', icon: Shuffle },
@@ -127,6 +138,39 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
           </div>
 
+          {/* Accent Switcher (UK Oxford vs US American) */}
+          {currentLang === 'en' && (
+            <div
+              className={`hidden md:flex items-center p-1 rounded-xl border text-[11px] font-bold ${
+                isDarkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-100/90 border-slate-200'
+              }`}
+              title="Chọn chuẩn giọng phát âm quốc tế: Anh - Anh (Oxford) hoặc Anh - Mỹ (US)"
+            >
+              <button
+                onClick={() => handleAccentChange('uk')}
+                className={`flex items-center gap-1 px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
+                  currentAccent === 'uk'
+                    ? 'bg-indigo-600 text-white shadow-2xs font-bold'
+                    : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
+                }`}
+              >
+                <span>🇬🇧</span>
+                <span>Giọng Anh (UK)</span>
+              </button>
+              <button
+                onClick={() => handleAccentChange('us')}
+                className={`flex items-center gap-1 px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
+                  currentAccent === 'us'
+                    ? 'bg-indigo-600 text-white shadow-2xs font-bold'
+                    : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
+                }`}
+              >
+                <span>🇺🇸</span>
+                <span>Giọng Mỹ (US)</span>
+              </button>
+            </div>
+          )}
+
           {/* Right Stats & Controls */}
           <div className="flex items-center gap-2.5">
             {/* Massive Database Count Pill */}
@@ -136,11 +180,13 @@ export const Header: React.FC<HeaderProps> = ({
                   ? 'bg-blue-950/60 border-blue-800/80 text-blue-400'
                   : 'bg-blue-50 border-blue-200 text-blue-700'
               }`}
-              title={`Kho từ vựng: ${currentLang === 'en' ? '5.120 từ Tiếng Anh' : '5.150 từ Tiếng Trung'} (Tổng ${totalWordsCount.toLocaleString()} từ hai ngôn ngữ)`}
+              title={`Kho từ vựng: ${currentLang === 'en' ? `${(currentLangWordsCount || 8500).toLocaleString()} từ Tiếng Anh (Oxford/CEFR)` : `${(currentLangWordsCount || 8500).toLocaleString()} từ Tiếng Trung (HSK)`} (Tổng ${totalWordsCount.toLocaleString()} từ hai ngôn ngữ)`}
             >
               <Database className="w-3.5 h-3.5 text-blue-500" />
               <span>
-                {currentLang === 'en' ? '🇬🇧 5.120 từ EN' : '🇨🇳 5.150 từ ZH'}
+                {currentLang === 'en'
+                  ? `🇬🇧 ${(currentLangWordsCount || 8500).toLocaleString()} từ EN`
+                  : `🇨🇳 ${(currentLangWordsCount || 8500).toLocaleString()} từ ZH`}
               </span>
               <span className="opacity-50">&bull;</span>
               <span className="text-[11px] font-normal opacity-90">Tổng {totalWordsCount.toLocaleString()} từ</span>

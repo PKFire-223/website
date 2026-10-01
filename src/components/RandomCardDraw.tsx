@@ -525,15 +525,36 @@ export const RandomCardDraw: React.FC<RandomCardDrawProps> = ({
                     <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-indigo-600">
                       {currentWord.word}
                     </h2>
-                    <span
-                      className={`text-base sm:text-lg font-mono font-medium ${
-                        isDarkMode ? 'text-slate-400' : 'text-slate-500'
-                      }`}
-                    >
-                      {currentWord.phonetic}
-                    </span>
+
+                    {currentWord.language === 'en' && currentWord.phoneticUk && currentWord.phoneticUs ? (
+                      <div className="flex items-center gap-2 flex-wrap" onClick={(e) => e.stopPropagation()}>
+                        <button
+                          onClick={() => speak(currentWord.word, 'en', 1.0, undefined, 'uk')}
+                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs font-mono font-bold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-100 cursor-pointer"
+                          title="Phát âm chuẩn Anh - Anh (UK - Oxford)"
+                        >
+                          <span>🇬🇧 UK:</span> {currentWord.phoneticUk}
+                        </button>
+                        <button
+                          onClick={() => speak(currentWord.word, 'en', 1.0, undefined, 'us')}
+                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs font-mono font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 cursor-pointer"
+                          title="Phát âm chuẩn Anh - Mỹ (US)"
+                        >
+                          <span>🇺🇸 US:</span> {currentWord.phoneticUs}
+                        </button>
+                      </div>
+                    ) : (
+                      <span
+                        className={`text-base sm:text-lg font-mono font-medium ${
+                          isDarkMode ? 'text-slate-400' : 'text-slate-500'
+                        }`}
+                      >
+                        {currentWord.phonetic}
+                      </span>
+                    )}
+
                     {currentWord.sinoVietnamese && (
-                      <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-rose-50 text-rose-700 border border-rose-200">
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800">
                         Hán-Việt: {currentWord.sinoVietnamese}
                       </span>
                     )}
@@ -583,19 +604,48 @@ export const RandomCardDraw: React.FC<RandomCardDrawProps> = ({
                   className="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-800 gap-2 flex-wrap"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => speak(currentWord.word, currentWord.language)}
-                      className={`flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-bold border transition-colors ${
-                        isDarkMode
-                          ? 'bg-slate-800 border-slate-700 text-white hover:bg-slate-700'
-                          : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
-                      }`}
-                      title="Nghe phát âm chuẩn"
-                    >
-                      <Volume2 className="w-3.5 h-3.5 text-indigo-600" />
-                      <span>Nghe lại</span>
-                    </button>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {currentWord.language === 'en' ? (
+                      <>
+                        <button
+                          onClick={() => speak(currentWord.word, 'en', 1.0, undefined, 'uk')}
+                          className={`flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
+                            isDarkMode
+                              ? 'bg-slate-800 border-slate-700 text-white hover:bg-slate-700'
+                              : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
+                          }`}
+                          title="Nghe phát âm chuẩn giọng Anh (UK)"
+                        >
+                          <Volume2 className="w-3.5 h-3.5 text-indigo-600" />
+                          <span>🇬🇧 UK</span>
+                        </button>
+                        <button
+                          onClick={() => speak(currentWord.word, 'en', 1.0, undefined, 'us')}
+                          className={`flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
+                            isDarkMode
+                              ? 'bg-slate-800 border-slate-700 text-white hover:bg-slate-700'
+                              : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
+                          }`}
+                          title="Nghe phát âm chuẩn giọng Mỹ (US)"
+                        >
+                          <Volume2 className="w-3.5 h-3.5 text-sky-600" />
+                          <span>🇺🇸 US</span>
+                        </button>
+                      </>
+                    ) : (
+                      <button
+                        onClick={() => speak(currentWord.word, currentWord.language)}
+                        className={`flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
+                          isDarkMode
+                            ? 'bg-slate-800 border-slate-700 text-white hover:bg-slate-700'
+                            : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200'
+                        }`}
+                        title="Nghe phát âm chuẩn tiếng Phổ thông"
+                      >
+                        <Volume2 className="w-3.5 h-3.5 text-indigo-600" />
+                        <span>Nghe đọc</span>
+                      </button>
+                    )}
 
                     <button
                       onClick={() => onOpenPronounce(currentWord)}
