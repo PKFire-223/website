@@ -13,6 +13,7 @@ import {
   Shuffle,
   FileText,
   GraduationCap,
+  MessagesSquare,
 } from 'lucide-react';
 import { Language, UserProfileProgress } from '../types';
 
@@ -42,6 +43,7 @@ export const Header: React.FC<HeaderProps> = ({
   const tabs = [
     { id: 'explore', label: 'Cấp bậc từ vựng', icon: BookOpen },
     { id: 'theory', label: 'Lý thuyết & Cách học', icon: GraduationCap },
+    { id: 'dialogue', label: 'Hội thoại giao tiếp', icon: MessagesSquare },
     { id: 'random-draw', label: 'Lật thẻ Random', icon: Shuffle },
     { id: 'cloze', label: 'Điền từ đoạn văn', icon: FileText },
     { id: 'flashcard', label: 'Lật thẻ (SRS)', icon: Sparkles },

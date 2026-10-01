@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { VocabularyExplorer } from './components/VocabularyExplorer';
 import { TheoryHub } from './components/TheoryHub';
+import { SituationalDialogue } from './components/SituationalDialogue';
 import { RandomCardDraw } from './components/RandomCardDraw';
 import { ClozeTestMode } from './components/ClozeTestMode';
 import { FlashcardMode } from './components/FlashcardMode';
@@ -123,6 +124,14 @@ export const App: React.FC = () => {
 
         {activeTab === 'theory' && (
           <TheoryHub
+            currentLang={currentLang}
+            onLanguageChange={handleLanguageChange}
+            isDarkMode={isDarkMode}
+          />
+        )}
+
+        {activeTab === 'dialogue' && (
+          <SituationalDialogue
             currentLang={currentLang}
             onLanguageChange={handleLanguageChange}
             isDarkMode={isDarkMode}
