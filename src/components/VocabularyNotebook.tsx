@@ -86,6 +86,59 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
     });
   };
 
+  const handleToggleMastered = (wordId: string) => {
+    const currentProgress = profile.wordsProgress[wordId];
+    const isCurrentlyMastered = currentProgress?.status === 'mastered';
+    const now = Date.now();
+
+    let updated: any;
+
+    if (isCurrentlyMastered) {
+      updated = {
+        ...(currentProgress || {
+          wordId,
+          repetitions: 1,
+          easeFactor: 2.5,
+          intervalDays: 1,
+          nextReviewDate: now + 24 * 60 * 60 * 1000,
+          correctCount: 1,
+          incorrectCount: 0,
+          lastReviewed: now,
+          isBookmarked: false,
+        }),
+        status: 'learning',
+        repetitions: 1,
+        intervalDays: 1,
+      };
+    } else {
+      updated = {
+        ...(currentProgress || {
+          wordId,
+          repetitions: 4,
+          easeFactor: 2.5,
+          intervalDays: 14,
+          nextReviewDate: now + 14 * 24 * 60 * 60 * 1000,
+          correctCount: 4,
+          incorrectCount: 0,
+          lastReviewed: now,
+          isBookmarked: false,
+        }),
+        status: 'mastered',
+        repetitions: Math.max(4, (currentProgress?.repetitions || 0) + 1),
+        intervalDays: Math.max(14, (currentProgress?.intervalDays || 1) * 2),
+        lastReviewed: now,
+      };
+    }
+
+    onUpdateProfile({
+      ...profile,
+      wordsProgress: {
+        ...profile.wordsProgress,
+        [wordId]: updated,
+      },
+    });
+  };
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
       {/* Title & Stats */}
@@ -345,15 +398,20 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
                   </button>
                 </div>
 
-                {isMastered ? (
-                  <span className="text-[11px] font-bold text-emerald-600 flex items-center gap-1">
-                    <CheckCircle2 className="w-3 h-3" /> Thuộc lòng
-                  </span>
-                ) : (
-                  <span className={`text-[10px] ${isDarkMode ? 'text-slate-500' : 'text-slate-400'}`}>
-                    Chưa thuộc
-                  </span>
-                )}
+                <button
+                  onClick={() => handleToggleMastered(word.id)}
+                  className={`text-[11px] font-bold px-2 py-1 rounded-lg border transition-all cursor-pointer flex items-center gap-1 active:scale-95 ${
+                    isMastered
+                      ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs hover:bg-emerald-700'
+                      : isDarkMode
+                      ? 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200 hover:border-slate-600'
+                      : 'bg-slate-100 text-slate-600 border-slate-200 hover:text-emerald-700 hover:border-emerald-300'
+                  }`}
+                  title={isMastered ? 'Nhấn để chuyển sang Đang học' : 'Nhấn 1 chạm để đánh dấu Đã thuộc lòng'}
+                >
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>{isMastered ? 'Đã thuộc' : 'Chưa thuộc'}</span>
+                </button>
               </div>
             </div>
           );

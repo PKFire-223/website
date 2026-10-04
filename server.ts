@@ -4,9 +4,25 @@ import { GoogleGenAI } from '@google/genai';
 import compression from 'compression';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { exec } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+function autoOpenBrowser(url: string) {
+  if (process.env.NO_AUTO_OPEN === 'true' || process.env.CI) return;
+
+  const cmd =
+    process.platform === 'darwin'
+      ? `open "${url}"`
+      : process.platform === 'win32'
+      ? `start "" "${url}"`
+      : `xdg-open "${url}"`;
+
+  exec(cmd, () => {
+    // Gracefully handle headless systems or environments without desktop GUI
+  });
+}
 
 async function startServer() {
   const app = express();
@@ -275,7 +291,15 @@ PHẢN HỒI BẮT BUỘC DƯỚI DẠNG DUY NHẤT LÀ MỘT OBJECT JSON HỢP 
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`LinguaVocab Server running on http://0.0.0.0:${PORT}`);
+    const localUrl = `http://localhost:${PORT}`;
+    console.log(`\n======================================================`);
+    console.log(`🚀 LinguaVocab Server is running successfully!`);
+    console.log(`🌐 Local URL:   ${localUrl}`);
+    console.log(`🌐 Network URL: http://0.0.0.0:${PORT}`);
+    console.log(`======================================================\n`);
+
+    // Auto open browser on successful startup
+    autoOpenBrowser(localUrl);
   });
 }
 

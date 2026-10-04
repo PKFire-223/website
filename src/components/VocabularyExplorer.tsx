@@ -238,13 +238,57 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
     });
   };
 
-  const handleMarkLearned = (wordId: string) => {
+  const handleToggleMastered = (wordId: string) => {
     const currentProgress = profile.wordsProgress[wordId];
-    const updated = updateWordSrs(currentProgress, wordId, 4);
+    const isCurrentlyMastered = currentProgress?.status === 'mastered';
+    const now = Date.now();
+
+    let updated: any;
+
+    if (isCurrentlyMastered) {
+      // Toggle off: mark as learning
+      updated = {
+        ...(currentProgress || {
+          wordId,
+          repetitions: 1,
+          easeFactor: 2.5,
+          intervalDays: 1,
+          nextReviewDate: now + 24 * 60 * 60 * 1000,
+          correctCount: 1,
+          incorrectCount: 0,
+          lastReviewed: now,
+          isBookmarked: false,
+        }),
+        status: 'learning',
+        repetitions: 1,
+        intervalDays: 1,
+      };
+    } else {
+      // Toggle on: instantly mark as mastered on 1 click!
+      updated = {
+        ...(currentProgress || {
+          wordId,
+          repetitions: 4,
+          easeFactor: 2.5,
+          intervalDays: 14,
+          nextReviewDate: now + 14 * 24 * 60 * 60 * 1000,
+          correctCount: 4,
+          incorrectCount: 0,
+          lastReviewed: now,
+          isBookmarked: false,
+        }),
+        status: 'mastered',
+        repetitions: Math.max(4, (currentProgress?.repetitions || 0) + 1),
+        intervalDays: Math.max(14, (currentProgress?.intervalDays || 1) * 2),
+        lastReviewed: now,
+      };
+    }
 
     onUpdateProfile({
       ...profile,
-      todayLearnedCount: profile.todayLearnedCount + 1,
+      todayLearnedCount: isCurrentlyMastered
+        ? Math.max(0, profile.todayLearnedCount - 1)
+        : profile.todayLearnedCount + 1,
       wordsProgress: {
         ...profile.wordsProgress,
         [wordId]: updated,
@@ -735,16 +779,24 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                       </button>
 
                       <button
-                        onClick={() => handleMarkLearned(word.id)}
-                        className={`px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                        onClick={() => handleToggleMastered(word.id)}
+                        className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1 active:scale-95 ${
                           isMastered
-                            ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300'
+                            ? 'bg-emerald-600 text-white shadow-xs hover:bg-emerald-700'
                             : isDarkMode
-                            ? 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                            ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700'
                             : 'bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-300 border border-slate-200'
                         }`}
+                        title={isMastered ? 'Nhấn để hủy đánh dấu đã thuộc' : 'Nhấn 1 chạm để đánh dấu đã thuộc lòng từ này'}
                       >
-                        {isMastered ? '✓ Đã thuộc' : 'Đánh dấu đã học'}
+                        {isMastered ? (
+                          <>
+                            <Check className="w-3.5 h-3.5" />
+                            <span>✓ Đã thuộc</span>
+                          </>
+                        ) : (
+                          <span>Đánh dấu đã học</span>
+                        )}
                       </button>
                     </div>
                   </div>
