@@ -16,6 +16,9 @@ import {
   MessagesSquare,
   Volume2,
   Quote,
+  Bookmark,
+  Camera,
+  Bot,
 } from 'lucide-react';
 import { Language, UserProfileProgress } from '../types';
 import { getPreferredAccent, setPreferredAccent, EnglishAccent } from '../utils/speech';
@@ -30,6 +33,8 @@ interface HeaderProps {
   onToggleDarkMode: () => void;
   totalWordsCount: number;
   currentLangWordsCount?: number;
+  onOpenBookmarks?: () => void;
+  bookmarkedCount?: number;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -42,6 +47,8 @@ export const Header: React.FC<HeaderProps> = ({
   onToggleDarkMode,
   totalWordsCount,
   currentLangWordsCount,
+  onOpenBookmarks,
+  bookmarkedCount = 0,
 }) => {
   const [currentAccent, setCurrentAccent] = useState<EnglishAccent>(getPreferredAccent());
 
@@ -53,8 +60,10 @@ export const Header: React.FC<HeaderProps> = ({
   const tabs = [
     { id: 'explore', label: 'Cấp bậc từ vựng', icon: BookOpen },
     { id: 'patterns', label: 'Mẫu câu chuẩn', icon: Quote },
-    { id: 'theory', label: 'Lý thuyết & Cách học', icon: GraduationCap },
+    { id: 'ai-translate', label: 'Dịch ảnh AI (Chuyên gia)', icon: Camera },
+    { id: 'ai-roleplay', label: 'AI Nhập vai (Mic & Chat)', icon: Bot },
     { id: 'dialogue', label: 'Hội thoại giao tiếp', icon: MessagesSquare },
+    { id: 'theory', label: 'Lý thuyết & Cách học', icon: GraduationCap },
     { id: 'random-draw', label: 'Lật thẻ Random', icon: Shuffle },
     { id: 'cloze', label: 'Điền từ đoạn văn', icon: FileText },
     { id: 'flashcard', label: 'Lật thẻ (SRS)', icon: Sparkles },
@@ -180,17 +189,34 @@ export const Header: React.FC<HeaderProps> = ({
                   ? 'bg-blue-950/60 border-blue-800/80 text-blue-400'
                   : 'bg-blue-50 border-blue-200 text-blue-700'
               }`}
-              title={`Kho từ vựng: ${currentLang === 'en' ? `${(currentLangWordsCount || 8500).toLocaleString()} từ Tiếng Anh (Oxford/CEFR)` : `${(currentLangWordsCount || 8500).toLocaleString()} từ Tiếng Trung (HSK)`} (Tổng ${totalWordsCount.toLocaleString()} từ hai ngôn ngữ)`}
+              title={`Kho từ vựng: ${currentLang === 'en' ? `${(currentLangWordsCount || 10000).toLocaleString()} từ Tiếng Anh (Oxford/CEFR)` : `${(currentLangWordsCount || 10000).toLocaleString()} từ Tiếng Trung (HSK)`} (Tổng ${totalWordsCount.toLocaleString()} từ hai ngôn ngữ)`}
             >
               <Database className="w-3.5 h-3.5 text-blue-500" />
               <span>
                 {currentLang === 'en'
-                  ? `🇬🇧 ${(currentLangWordsCount || 8500).toLocaleString()} từ EN`
-                  : `🇨🇳 ${(currentLangWordsCount || 8500).toLocaleString()} từ ZH`}
+                  ? `🇬🇧 ${(currentLangWordsCount || 10000).toLocaleString()} từ EN`
+                  : `🇨🇳 ${(currentLangWordsCount || 10000).toLocaleString()} từ ZH`}
               </span>
               <span className="opacity-50">&bull;</span>
               <span className="text-[11px] font-normal opacity-90">Tổng {totalWordsCount.toLocaleString()} từ</span>
             </div>
+
+            {/* Bookmarked Words Quick Access Button */}
+            <button
+              onClick={onOpenBookmarks}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-2xs ${
+                isDarkMode
+                  ? 'bg-amber-950/40 border-amber-800/80 text-amber-400 hover:bg-amber-900/50'
+                  : 'bg-amber-50 border-amber-200 text-amber-800 hover:bg-amber-100/90'
+              }`}
+              title="Xem danh sách các từ vựng đã đánh dấu lưu lại (bấm để xem & nhảy đến từ)"
+            >
+              <Bookmark className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
+              <span className="hidden sm:inline">Từ đã lưu</span>
+              <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-amber-500 text-white font-black">
+                {bookmarkedCount}
+              </span>
+            </button>
 
             {/* Streak */}
             <div

@@ -12,6 +12,10 @@ import { PronunciationPracticeList } from './components/PronunciationPracticeLis
 import { SentencePatternsMode } from './components/SentencePatternsMode';
 import { VocabularyNotebook } from './components/VocabularyNotebook';
 import { PronunciationModal } from './components/PronunciationModal';
+import { ScrollToTop } from './components/ScrollToTop';
+import { BookmarkedWordsDrawer } from './components/BookmarkedWordsDrawer';
+import { AiPhotoTranslator } from './components/AiPhotoTranslator';
+import { AiRoleplayChat } from './components/AiRoleplayChat';
 import { VOCABULARY_DATABASE } from './data/vocabData';
 import { Language, LevelType, UserProfileProgress, VocabWord } from './types';
 import { loadUserProfile, saveUserProfile } from './utils/srs';
@@ -22,6 +26,8 @@ export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('explore');
   const [profile, setProfile] = useState<UserProfileProgress>(loadUserProfile());
   const [activePronounceWord, setActivePronounceWord] = useState<VocabWord | null>(null);
+  const [isBookmarksOpen, setIsBookmarksOpen] = useState<boolean>(false);
+  const [targetJumpWord, setTargetJumpWord] = useState<VocabWord | null>(null);
 
   // Theme: Default to Bright (Light Mode) as explicitly requested by user ("màu sáng tí")
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
@@ -50,6 +56,42 @@ export const App: React.FC = () => {
   const handleUpdateProfile = (updated: UserProfileProgress) => {
     setProfile(updated);
     saveUserProfile(updated);
+  };
+
+  const handleToggleBookmark = (wordId: string) => {
+    const currentProgress = profile.wordsProgress[wordId] || {
+      wordId,
+      status: 'learning',
+      repetitions: 0,
+      easeFactor: 2.5,
+      intervalDays: 1,
+      nextReviewDate: Date.now(),
+      correctCount: 0,
+      incorrectCount: 0,
+      lastReviewed: Date.now(),
+      isBookmarked: false,
+    };
+
+    handleUpdateProfile({
+      ...profile,
+      wordsProgress: {
+        ...profile.wordsProgress,
+        [wordId]: {
+          ...currentProgress,
+          isBookmarked: !currentProgress.isBookmarked,
+        },
+      },
+    });
+  };
+
+  const handleJumpToWord = (word: VocabWord) => {
+    if (word.language !== currentLang) {
+      setCurrentLang(word.language);
+    }
+    setCurrentLevel(word.level);
+    setActiveTab('explore');
+    setTargetJumpWord(word);
+    setIsBookmarksOpen(false);
   };
 
   const handleScoreSave = (score: number) => {
@@ -89,6 +131,11 @@ export const App: React.FC = () => {
   // Filter words by language
   const languageWords = VOCABULARY_DATABASE.filter((w) => w.language === currentLang);
 
+  // Bookmarked words count for active language
+  const bookmarkedCount = languageWords.filter(
+    (w) => profile.wordsProgress[w.id]?.isBookmarked
+  ).length;
+
   return (
     <div
       className={`min-h-screen flex flex-col font-['Plus_Jakarta_Sans',sans-serif] selection:bg-indigo-600 selection:text-white transition-colors duration-200 ${
@@ -107,6 +154,8 @@ export const App: React.FC = () => {
         onToggleDarkMode={handleToggleDarkMode}
         totalWordsCount={VOCABULARY_DATABASE.length}
         currentLangWordsCount={languageWords.length}
+        onOpenBookmarks={() => setIsBookmarksOpen(true)}
+        bookmarkedCount={bookmarkedCount}
       />
 
       <main className="flex-grow">
@@ -120,11 +169,27 @@ export const App: React.FC = () => {
             onUpdateProfile={handleUpdateProfile}
             onOpenPronounce={(w) => setActivePronounceWord(w)}
             isDarkMode={isDarkMode}
+            targetJumpWord={targetJumpWord}
           />
         )}
 
         {activeTab === 'patterns' && (
           <SentencePatternsMode
+            currentLang={currentLang}
+            onLanguageChange={handleLanguageChange}
+            isDarkMode={isDarkMode}
+          />
+        )}
+
+        {activeTab === 'ai-translate' && (
+          <AiPhotoTranslator
+            currentLang={currentLang}
+            isDarkMode={isDarkMode}
+          />
+        )}
+
+        {activeTab === 'ai-roleplay' && (
+          <AiRoleplayChat
             currentLang={currentLang}
             onLanguageChange={handleLanguageChange}
             isDarkMode={isDarkMode}
@@ -228,6 +293,21 @@ export const App: React.FC = () => {
         />
       )}
 
+      {/* Bookmarked Words Quick Access Drawer */}
+      <BookmarkedWordsDrawer
+        words={languageWords}
+        profile={profile}
+        onToggleBookmark={handleToggleBookmark}
+        onJumpToWord={handleJumpToWord}
+        isOpen={isBookmarksOpen}
+        onClose={() => setIsBookmarksOpen(false)}
+        isDarkMode={isDarkMode}
+        currentLang={currentLang}
+      />
+
+      {/* Floating Scroll To Top Button (Bottom-Right) */}
+      <ScrollToTop isDarkMode={isDarkMode} />
+
       {/* Footer */}
       <footer
         className={`py-8 text-xs border-t transition-colors ${
@@ -241,7 +321,7 @@ export const App: React.FC = () => {
             <span className={`font-bold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
               LinguaVocab Standard
             </span>{' '}
-            &mdash; Kho từ điển &gt; 8.500 từ vựng tiếng Anh (Oxford/CEFR) & &gt; 8.500 từ vựng tiếng Trung (HSK) riêng biệt (Tổng &gt; 17.000 từ chuẩn) cùng Hệ thống Mẫu câu giao tiếp chuẩn quốc tế.
+            &mdash; Kho từ điển &gt; 10.000 từ vựng tiếng Anh (Oxford/CEFR) & &gt; 10.000 từ vựng tiếng Trung (HSK) riêng biệt (Tổng &gt; 20.000 từ chuẩn) cùng Hệ thống Mẫu câu giao tiếp chuẩn quốc tế.
           </div>
           <div className="flex items-center gap-4 text-[11px]">
             <span>Lặp lại ngắt quãng (SM-2)</span>

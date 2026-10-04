@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Volume2, Mic, Bookmark, Check, BookOpen, Sparkles, Lightbulb, ChevronDown, ChevronUp, Search } from 'lucide-react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Volume2, Mic, Bookmark, Check, BookOpen, Sparkles, Lightbulb, ChevronDown, ChevronUp, Search, ChevronLeft, ChevronRight, Filter, Award } from 'lucide-react';
 import { VocabWord, LevelType, Language, UserProfileProgress } from '../types';
 import { speak } from '../utils/speech';
 import { updateWordSrs } from '../utils/srs';
@@ -13,6 +13,7 @@ interface VocabularyExplorerProps {
   onUpdateProfile: (updated: UserProfileProgress) => void;
   onOpenPronounce: (word: VocabWord) => void;
   isDarkMode?: boolean;
+  targetJumpWord?: VocabWord | null;
 }
 
 export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
@@ -24,9 +25,64 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
   onUpdateProfile,
   onOpenPronounce,
   isDarkMode = false,
+  targetJumpWord,
 }) => {
   const [expandedWordId, setExpandedWordId] = useState<string | null>(null);
+  const [highlightedId, setHighlightedId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedUnit, setSelectedUnit] = useState<string>('ALL');
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const WORDS_PER_PAGE = 40;
+
+  // Jump to specific word when targetJumpWord is passed
+  useEffect(() => {
+    if (!targetJumpWord) return;
+
+    if (targetJumpWord.level !== currentLevel) {
+      onLevelChange(targetJumpWord.level);
+    }
+
+    setSearchQuery('');
+    setSelectedUnit('ALL');
+
+    // Find page of word
+    const lvlWords = words.filter((w) => w.level === targetJumpWord.level);
+    const wordIdx = lvlWords.findIndex((w) => w.id === targetJumpWord.id);
+    if (wordIdx !== -1) {
+      const page = Math.floor(wordIdx / WORDS_PER_PAGE) + 1;
+      setCurrentPage(page);
+    }
+
+    setHighlightedId(targetJumpWord.id);
+    setExpandedWordId(targetJumpWord.id);
+
+    // Scroll into view smoothly
+    setTimeout(() => {
+      const el = document.getElementById(`word-${targetJumpWord.id}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 250);
+
+    // Clear pulse highlight after 4 seconds
+    const timer = setTimeout(() => {
+      setHighlightedId(null);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [targetJumpWord]);
+
+  // Reset pagination and unit filter when level changes
+  useEffect(() => {
+    setSelectedUnit('ALL');
+    setCurrentPage(1);
+    setExpandedWordId(null);
+  }, [currentLevel, currentLang]);
+
+  // Reset page when search changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery]);
 
   const englishLevels: { id: LevelType; label: string; desc: string; badge: string }[] = [
     { id: 'A1', label: 'Cấp A1 (Beginner)', desc: 'Từ vựng giao tiếp thiết yếu hằng ngày', badge: 'Oxford 3000' },
@@ -47,28 +103,99 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
 
   const levels = currentLang === 'en' ? englishLevels : chineseLevels;
 
-  // Filter words by selected level and search
-  const filteredWords = words
-    .filter((w) => w.level === currentLevel)
-    .filter((w) => {
-      if (!searchQuery.trim()) return true;
-      const q = searchQuery.toLowerCase();
-      return (
-        w.word.toLowerCase().includes(q) ||
-        w.vietnameseMeaning.toLowerCase().includes(q) ||
-        (w.sinoVietnamese && w.sinoVietnamese.toLowerCase().includes(q)) ||
-        w.phonetic.toLowerCase().includes(q)
-      );
-    });
+  // Words for current level
+  const currentLevelWords = useMemo(() => {
+    return words.filter((w) => w.level === currentLevel);
+  }, [words, currentLevel]);
 
-  // Group by Unit
-  const unitsMap = filteredWords.reduce((acc, word) => {
-    if (!acc[word.unit]) {
-      acc[word.unit] = [];
+  // Distinct units in current level
+  const availableUnits = useMemo(() => {
+    const set = new Set<string>();
+    currentLevelWords.forEach((w) => set.add(w.unit));
+    return Array.from(set);
+  }, [currentLevelWords]);
+
+  // Filter words by search and unit
+  const filteredWords = useMemo(() => {
+    let result = currentLevelWords;
+
+    if (selectedUnit !== 'ALL') {
+      result = result.filter((w) => w.unit === selectedUnit);
     }
-    acc[word.unit].push(word);
-    return acc;
-  }, {} as Record<string, VocabWord[]>);
+
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase().trim();
+      result = result.filter(
+        (w) =>
+          w.word.toLowerCase().includes(q) ||
+          w.vietnameseMeaning.toLowerCase().includes(q) ||
+          (w.sinoVietnamese && w.sinoVietnamese.toLowerCase().includes(q)) ||
+          w.phonetic.toLowerCase().includes(q)
+      );
+    }
+
+    return result;
+  }, [currentLevelWords, selectedUnit, searchQuery]);
+
+  // Total pages
+  const totalPages = Math.max(1, Math.ceil(filteredWords.length / WORDS_PER_PAGE));
+
+  // Paged slice of words for lightning-fast rendering
+  const paginatedWords = useMemo(() => {
+    const startIndex = (currentPage - 1) * WORDS_PER_PAGE;
+    return filteredWords.slice(startIndex, startIndex + WORDS_PER_PAGE);
+  }, [filteredWords, currentPage]);
+
+  // Group paginated words by Unit
+  const unitsMap = useMemo(() => {
+    return paginatedWords.reduce((acc, word) => {
+      if (!acc[word.unit]) {
+        acc[word.unit] = [];
+      }
+      acc[word.unit].push(word);
+      return acc;
+    }, {} as Record<string, VocabWord[]>);
+  }, [paginatedWords]);
+
+  // Progress for current level
+  const levelMasteredCount = useMemo(() => {
+    return currentLevelWords.filter(
+      (w) => profile.wordsProgress[w.id]?.status === 'mastered'
+    ).length;
+  }, [currentLevelWords, profile.wordsProgress]);
+
+  // Progress for current unit (if unit selected)
+  const unitProgress = useMemo(() => {
+    if (selectedUnit === 'ALL') return null;
+    const uWords = currentLevelWords.filter((w) => w.unit === selectedUnit);
+    const mastered = uWords.filter(
+      (w) => profile.wordsProgress[w.id]?.status === 'mastered'
+    ).length;
+    return {
+      total: uWords.length,
+      mastered,
+      percent: uWords.length > 0 ? Math.round((mastered / uWords.length) * 100) : 0,
+    };
+  }, [selectedUnit, currentLevelWords, profile.wordsProgress]);
+
+  // Navigate units
+  const handlePrevUnit = () => {
+    if (selectedUnit === 'ALL') return;
+    const currentIndex = availableUnits.indexOf(selectedUnit);
+    if (currentIndex > 0) {
+      setSelectedUnit(availableUnits[currentIndex - 1]);
+      setCurrentPage(1);
+    }
+  };
+
+  const handleNextUnit = () => {
+    if (selectedUnit === 'ALL') return;
+    const currentIndex = availableUnits.indexOf(selectedUnit);
+    if (currentIndex < availableUnits.length - 1) {
+      setSelectedUnit(availableUnits[currentIndex + 1]);
+      setCurrentPage(1);
+    }
+  };
 
   const toggleBookmark = (wordId: string) => {
     const currentProgress = profile.wordsProgress[wordId] || {
@@ -122,7 +249,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
       >
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 mb-1.5">
+            <div className="flex items-center gap-2 mb-1.5 flex-wrap">
               <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-indigo-600 text-white">
                 CHUYÊN GIA NGÔN NGỮ
               </span>
@@ -131,7 +258,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                   isDarkMode ? 'text-slate-400' : 'text-slate-600'
                 }`}
               >
-                Kho từ vựng chuyên sâu &gt; 5.000 từ chuẩn quốc tế (Oxford / HSK)
+                Kho từ vựng chuyên sâu &gt; 10.000 từ chuẩn quốc tế ({currentLang === 'en' ? 'Oxford / CEFR' : 'HSK 3.0'}) &bull; Tổng &gt; 20.000 từ
               </span>
             </div>
             <h1 className="text-xl sm:text-2xl font-black tracking-tight">
@@ -186,7 +313,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
               isDarkMode ? 'text-slate-400' : 'text-slate-500'
             }`}
           >
-            {filteredWords.length} từ ở cấp này
+            {currentLevelWords.length.toLocaleString()} từ ở cấp này &bull; Đã thuộc {levelMasteredCount}/{currentLevelWords.length}
           </span>
         </div>
 
@@ -202,7 +329,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
               <button
                 key={lvl.id}
                 onClick={() => onLevelChange(lvl.id)}
-                className={`p-4 rounded-2xl border text-left transition-all ${
+                className={`p-4 rounded-2xl border text-left transition-all cursor-pointer ${
                   isSelected
                     ? isDarkMode
                       ? 'bg-gradient-to-b from-orange-500/20 to-amber-500/10 border-orange-500 shadow-lg ring-2 ring-orange-500'
@@ -215,7 +342,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                 <div className="flex items-center justify-between">
                   <span
                     className={`text-sm font-black ${
-                      isSelected ? 'text-indigo-700' : isDarkMode ? 'text-white' : 'text-slate-900'
+                      isSelected ? 'text-indigo-700 dark:text-orange-400' : isDarkMode ? 'text-white' : 'text-slate-900'
                     }`}
                   >
                     {lvl.id}
@@ -223,18 +350,18 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                   <span
                     className={`text-[11px] font-bold px-1.5 py-0.5 rounded ${
                       isSelected
-                        ? 'bg-indigo-100 text-indigo-800'
+                        ? 'bg-indigo-100 text-indigo-800 dark:bg-orange-950 dark:text-orange-300'
                         : isDarkMode
                         ? 'bg-slate-800 text-slate-400'
                         : 'bg-slate-100 text-slate-600'
                     }`}
                   >
-                    {lvlWords.length} từ
+                    {lvlWords.length.toLocaleString()} từ
                   </span>
                 </div>
                 <div
                   className={`text-xs font-bold mt-1.5 line-clamp-1 ${
-                    isSelected ? 'text-indigo-950 font-extrabold' : isDarkMode ? 'text-slate-200' : 'text-slate-800'
+                    isSelected ? 'text-indigo-950 dark:text-white font-extrabold' : isDarkMode ? 'text-slate-200' : 'text-slate-800'
                   }`}
                 >
                   {lvl.label}
@@ -247,9 +374,9 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                   {lvl.desc}
                 </div>
                 {/* Progress bar */}
-                <div className="mt-2.5 w-full bg-slate-200/70 h-1.5 rounded-full overflow-hidden">
+                <div className="mt-2.5 w-full bg-slate-200/70 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
                   <div
-                    className="bg-indigo-600 h-full rounded-full transition-all duration-300"
+                    className="bg-indigo-600 dark:bg-orange-500 h-full rounded-full transition-all duration-300"
                     style={{
                       width: `${lvlWords.length > 0 ? (masteredCount / lvlWords.length) * 100 : 0}%`,
                     }}
@@ -258,6 +385,99 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
               </button>
             );
           })}
+        </div>
+      </div>
+
+      {/* Unit Filter & Smart Navigation Bar */}
+      <div
+        className={`p-4 rounded-2xl border flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 transition-all ${
+          isDarkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200 shadow-xs'
+        }`}
+      >
+        {/* Left: Unit Selector Dropdown */}
+        <div className="flex items-center gap-3 flex-wrap">
+          <div className="flex items-center gap-1.5 text-xs font-bold text-slate-500">
+            <Filter className="w-3.5 h-3.5 text-indigo-600" />
+            <span>Bài học:</span>
+          </div>
+
+          <select
+            value={selectedUnit}
+            onChange={(e) => {
+              setSelectedUnit(e.target.value);
+              setCurrentPage(1);
+            }}
+            className={`px-3 py-1.5 rounded-xl border text-xs font-bold outline-none cursor-pointer transition-all ${
+              isDarkMode
+                ? 'bg-slate-950 border-slate-800 text-white focus:border-indigo-500'
+                : 'bg-slate-50 border-slate-200 text-slate-800 focus:border-indigo-600'
+            }`}
+          >
+            <option value="ALL">Tất cả bài học ({availableUnits.length} Units - {currentLevelWords.length.toLocaleString()} từ)</option>
+            {availableUnits.map((u) => {
+              const uCount = currentLevelWords.filter((w) => w.unit === u).length;
+              return (
+                <option key={u} value={u}>
+                  {u} ({uCount} từ)
+                </option>
+              );
+            })}
+          </select>
+
+          {/* Unit Next/Prev buttons if specific unit selected */}
+          {selectedUnit !== 'ALL' && (
+            <div className="flex items-center gap-1">
+              <button
+                onClick={handlePrevUnit}
+                disabled={availableUnits.indexOf(selectedUnit) === 0}
+                className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer text-xs"
+                title="Bài trước"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+              </button>
+              <button
+                onClick={handleNextUnit}
+                disabled={availableUnits.indexOf(selectedUnit) === availableUnits.length - 1}
+                className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer text-xs"
+                title="Bài tiếp theo"
+              >
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          )}
+
+          {/* Unit mastery stats */}
+          {unitProgress && (
+            <div className="hidden md:flex items-center gap-2 px-2.5 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 text-xs font-semibold">
+              <Award className="w-3.5 h-3.5" />
+              <span>Tiến độ bài: {unitProgress.mastered}/{unitProgress.total} từ ({unitProgress.percent}%)</span>
+            </div>
+          )}
+        </div>
+
+        {/* Right: Quick Pagination Controls */}
+        <div className="flex items-center justify-between sm:justify-end gap-2">
+          <span className="text-xs text-slate-500">
+            Hiển thị {paginatedWords.length}/{filteredWords.length} từ &bull; Trang {currentPage}/{totalPages}
+          </span>
+          <div className="flex items-center gap-1">
+            <button
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              disabled={currentPage <= 1}
+              className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              title="Trang trước"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              disabled={currentPage >= totalPages}
+              className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+              title="Trang sau"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -302,12 +522,16 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                 const isExpanded = expandedWordId === word.id;
                 const isBookmarked = progress?.isBookmarked || false;
                 const isMastered = progress?.status === 'mastered';
+                const isHighlighted = highlightedId === word.id;
 
                 return (
                   <div
                     key={word.id}
-                    className={`rounded-2xl border p-5 flex flex-col justify-between transition-all group ${
-                      isDarkMode
+                    id={`word-${word.id}`}
+                    className={`rounded-2xl border p-5 flex flex-col justify-between transition-all duration-300 group ${
+                      isHighlighted
+                        ? 'ring-4 ring-amber-400 dark:ring-amber-500 scale-[1.02] shadow-2xl border-amber-400 dark:border-amber-500 bg-amber-50/90 dark:bg-amber-950/50'
+                        : isDarkMode
                         ? 'bg-slate-950/70 border-slate-800/80 hover:border-slate-700'
                         : 'bg-white border-slate-200/90 hover:border-indigo-400 hover:shadow-md'
                     }`}
@@ -340,7 +564,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                         <div className="flex items-center gap-1">
                           <button
                             onClick={() => toggleBookmark(word.id)}
-                            className={`p-1.5 rounded-lg transition-colors ${
+                            className={`p-1.5 rounded-lg transition-colors cursor-pointer ${
                               isBookmarked
                                 ? 'text-amber-500 hover:text-amber-600'
                                 : isDarkMode
@@ -354,149 +578,80 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                         </div>
                       </div>
 
-                      {/* Main Word & Phonetic */}
-                      <div className="flex items-baseline justify-between gap-3 mt-1 flex-wrap">
-                        <div
-                          className={`text-2xl font-black transition-colors ${
-                            isDarkMode
-                              ? 'text-white group-hover:text-indigo-400'
-                              : 'text-slate-900 group-hover:text-indigo-700'
-                          }`}
-                        >
-                          {word.word}
-                        </div>
+                      {/* Main Word Header */}
+                      <div className="flex items-start justify-between gap-3 mt-1">
+                        <div>
+                          <div className="flex items-baseline gap-2">
+                            <span
+                              className={`text-xl sm:text-2xl font-black tracking-tight ${
+                                isDarkMode ? 'text-white' : 'text-slate-900'
+                              }`}
+                            >
+                              {word.word}
+                            </span>
+                          </div>
 
-                        {/* Phonetics & Standards */}
-                        {word.language === 'en' ? (
-                          <div className="flex items-center gap-1.5 flex-wrap">
-                            {word.phoneticUk && (
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  speak(word.word, 'en', 1.0, undefined, 'uk');
-                                }}
-                                className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs font-mono font-bold bg-indigo-50/80 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800/80 hover:bg-indigo-100 cursor-pointer"
-                                title="Phát âm chuẩn Anh - Anh (UK - Oxford)"
-                              >
-                                <span className="text-[10px]">🇬🇧</span>
-                                <span>{word.phoneticUk}</span>
-                              </button>
-                            )}
-                            {word.phoneticUs && word.phoneticUs !== word.phoneticUk && (
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  speak(word.word, 'en', 1.0, undefined, 'us');
-                                }}
-                                className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs font-mono font-bold bg-sky-50/80 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200/80 dark:border-sky-800/80 hover:bg-sky-100 cursor-pointer"
-                                title="Phát âm chuẩn Anh - Mỹ (US)"
-                              >
-                                <span className="text-[10px]">🇺🇸</span>
-                                <span>{word.phoneticUs}</span>
-                              </button>
-                            )}
-                            {!word.phoneticUk && !word.phoneticUs && (
-                              <div className="text-sm font-mono font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50/60 dark:bg-indigo-950/40 px-2 py-0.5 rounded border border-indigo-200 dark:border-indigo-800">
-                                {word.phonetic}
+                          {/* International Phonetic Representation */}
+                          <div className="flex items-center gap-2 mt-1 flex-wrap">
+                            <span className="text-xs sm:text-sm font-mono font-medium text-emerald-600 dark:text-emerald-400">
+                              {word.phonetic}
+                            </span>
+                            {word.phoneticUk && word.phoneticUs && (
+                              <div className="flex items-center gap-1 text-[11px] font-mono text-slate-500">
+                                <span>🇬🇧 {word.phoneticUk}</span>
+                                <span>&bull;</span>
+                                <span>🇺🇸 {word.phoneticUs}</span>
                               </div>
                             )}
                           </div>
-                        ) : (
-                          <div className="flex items-center gap-2 flex-wrap">
-                            {word.sinoVietnamese && (
-                              <span className="text-xs font-bold text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded border border-amber-200 dark:border-amber-800">
-                                Hán-Việt: {word.sinoVietnamese}
-                              </span>
-                            )}
-                            <div className="text-sm font-mono font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-50/60 dark:bg-indigo-950/40 px-2 py-0.5 rounded border border-indigo-200 dark:border-indigo-800">
-                              {word.phonetic}
-                            </div>
-                          </div>
-                        )}
-                      </div>
+                        </div>
 
-                      {/* Vietnamese Meaning */}
-                      <p
-                        className={`mt-2 text-sm font-bold ${
-                          isDarkMode ? 'text-slate-200' : 'text-slate-800'
-                        }`}
-                      >
-                        {word.vietnameseMeaning}
-                      </p>
-
-                      {/* Pronounce & Listen Toolbar */}
-                      <div className="mt-3.5 flex items-center gap-2 flex-wrap">
-                        {word.language === 'en' ? (
-                          <>
-                            <button
-                              onClick={() => speak(word.word, 'en', 1.0, undefined, 'uk')}
-                              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-xs font-bold transition-all shadow-xs cursor-pointer"
-                              title="Nghe phát âm chuẩn giọng Anh (UK Oxford)"
-                            >
-                              <Volume2 className="w-3.5 h-3.5" />
-                              <span>🇬🇧 UK</span>
-                            </button>
-                            <button
-                              onClick={() => speak(word.word, 'en', 1.0, undefined, 'us')}
-                              className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-sky-600 text-white hover:bg-sky-700 text-xs font-bold transition-all shadow-xs cursor-pointer"
-                              title="Nghe phát âm chuẩn giọng Mỹ (US)"
-                            >
-                              <Volume2 className="w-3.5 h-3.5" />
-                              <span>🇺🇸 US</span>
-                            </button>
-                          </>
-                        ) : (
+                        {/* Audio & Mic Buttons */}
+                        <div className="flex items-center gap-1">
                           <button
-                            onClick={() => speak(word.word, word.language, 1.0)}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-xs font-bold transition-all shadow-xs cursor-pointer"
-                            title="Phát âm chuẩn tiếng Phổ thông (普通话)"
+                            onClick={() => speak(word.word, word.language)}
+                            className="p-2.5 rounded-xl bg-indigo-50 dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-600 hover:text-white transition-all cursor-pointer shadow-xs"
+                            title="Nghe phát âm chuẩn quốc tế"
                           >
-                            <Volume2 className="w-3.5 h-3.5" />
-                            <span>Nghe đọc</span>
+                            <Volume2 className="w-4 h-4" />
                           </button>
-                        )}
 
-                        <button
-                          onClick={() => speak(word.word, word.language, 0.75)}
-                          className={`px-2.5 py-1.5 rounded-xl text-xs font-mono font-bold transition-colors cursor-pointer ${
-                            isDarkMode
-                              ? 'bg-slate-800 text-slate-300 hover:text-white'
-                              : 'bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200'
-                          }`}
-                          title="Phát âm chậm rõ từng âm (0.75x)"
-                        >
-                          0.75x
-                        </button>
-
-                        <button
-                          onClick={() => onOpenPronounce(word)}
-                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ml-auto cursor-pointer ${
-                            isDarkMode
-                              ? 'bg-slate-800 hover:bg-slate-700 text-slate-200'
-                              : 'bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-300 border border-slate-200 text-slate-700'
-                          }`}
-                          title="Luyện đọc bằng Micro với AI chấm điểm"
-                        >
-                          <Mic className="w-3.5 h-3.5 text-indigo-600" />
-                          <span>Luyện đọc lại</span>
-                        </button>
+                          <button
+                            onClick={() => onOpenPronounce(word)}
+                            className="p-2.5 rounded-xl bg-sky-50 dark:bg-slate-800 text-sky-600 dark:text-sky-400 hover:bg-sky-600 hover:text-white transition-all cursor-pointer shadow-xs"
+                            title="Luyện nói & chấm điểm AI Speech Recognition"
+                          >
+                            <Mic className="w-4 h-4" />
+                          </button>
+                        </div>
                       </div>
 
-                      {/* Example sentence */}
+                      {/* Meaning */}
+                      <div className="mt-2.5">
+                        <p
+                          className={`text-sm font-semibold ${
+                            isDarkMode ? 'text-slate-200' : 'text-slate-800'
+                          }`}
+                        >
+                          {word.vietnameseMeaning}
+                        </p>
+                      </div>
+
+                      {/* Example Sentence */}
                       <div
-                        className={`mt-3.5 p-3 rounded-xl border text-xs ${
+                        className={`mt-3 p-3 rounded-xl border text-xs transition-colors ${
                           isDarkMode
-                            ? 'bg-slate-900/90 border-slate-800 text-slate-300'
-                            : 'bg-slate-50 border-slate-200/90 text-slate-800'
+                            ? 'bg-slate-900/80 border-slate-800 text-slate-300'
+                            : 'bg-slate-50/80 border-slate-200/70 text-slate-700'
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1">
-                          <span className="font-bold text-[10px] uppercase tracking-wider text-indigo-700">
-                            Ví dụ thực tế:
+                          <span className="font-bold text-[10px] text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">
+                            Câu ví dụ thực tế
                           </span>
                           <button
-                            onClick={() => speak(word.example, word.language, 0.9)}
-                            className="p-1 rounded hover:text-indigo-600 transition-colors"
+                            onClick={() => speak(word.example, word.language)}
+                            className="p-1 hover:bg-indigo-100 dark:hover:bg-slate-800 rounded transition-colors cursor-pointer"
                             title="Nghe câu ví dụ"
                           >
                             <Volume2 className="w-3 h-3 text-slate-400 hover:text-indigo-600" />
@@ -538,7 +693,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                           {word.collocations && word.collocations.length > 0 && (
                             <div className="text-[11px]">
                               <strong>Cụm từ liên quan:</strong>{' '}
-                              <span className="font-mono text-indigo-800">
+                              <span className="font-mono text-indigo-800 dark:text-indigo-300">
                                 {word.collocations.join(', ')}
                               </span>
                             </div>
@@ -555,7 +710,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                     >
                       <button
                         onClick={() => setExpandedWordId(isExpanded ? null : word.id)}
-                        className={`inline-flex items-center gap-1 text-[11px] font-bold transition-colors ${
+                        className={`inline-flex items-center gap-1 text-[11px] font-bold transition-colors cursor-pointer ${
                           isDarkMode
                             ? 'text-slate-400 hover:text-white'
                             : 'text-slate-500 hover:text-slate-900'
@@ -567,9 +722,9 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
 
                       <button
                         onClick={() => handleMarkLearned(word.id)}
-                        className={`px-3 py-1 rounded-lg text-xs font-bold transition-all ${
+                        className={`px-3 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                           isMastered
-                            ? 'bg-emerald-100 text-emerald-800'
+                            ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300'
                             : isDarkMode
                             ? 'bg-slate-800 text-slate-300 hover:bg-slate-700'
                             : 'bg-slate-100 text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-300 border border-slate-200'
@@ -585,6 +740,45 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
           </div>
         ))}
       </div>
+
+      {/* Bottom Pagination Bar */}
+      {totalPages > 1 && (
+        <div
+          className={`p-4 rounded-2xl border flex items-center justify-between transition-all ${
+            isDarkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200 shadow-xs'
+          }`}
+        >
+          <button
+            onClick={() => {
+              setCurrentPage((p) => Math.max(1, p - 1));
+              window.scrollTo({ top: 300, behavior: 'smooth' });
+            }}
+            disabled={currentPage <= 1}
+            className="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+          >
+            <ChevronLeft className="w-4 h-4" />
+            <span>Trang trước</span>
+          </button>
+
+          <div className="flex items-center gap-1">
+            <span className="text-xs font-bold text-slate-600 dark:text-slate-400">
+              Trang {currentPage} / {totalPages} ({filteredWords.length.toLocaleString()} từ)
+            </span>
+          </div>
+
+          <button
+            onClick={() => {
+              setCurrentPage((p) => Math.min(totalPages, p + 1));
+              window.scrollTo({ top: 300, behavior: 'smooth' });
+            }}
+            disabled={currentPage >= totalPages}
+            className="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+          >
+            <span>Trang sau</span>
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+      )}
     </div>
   );
 };

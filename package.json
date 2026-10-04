@@ -4,21 +4,26 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0 --port 3000",
+    "dev": "tsx server.ts",
     "build": "tsc && vite build",
+    "start": "node server.ts",
     "preview": "vite preview --host 0.0.0.0 --port 3000",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@google/genai": "^2.27.0",
     "canvas-confetti": "^1.9.4",
+    "express": "^5.2.1",
     "lucide-react": "^1.16.0",
     "pinyin-pro": "^3.29.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tsx": "^4.23.15"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
     "@types/canvas-confetti": "^1.9.0",
+    "@types/express": "^5.0.6",
     "@types/node": "^22.13.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
