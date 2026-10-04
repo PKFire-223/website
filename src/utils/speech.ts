@@ -173,6 +173,13 @@ export const speak = (
   return true;
 };
 
+// Stop speech synthesis
+export const stopSpeech = (): void => {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+};
+
 // Check if speech recognition is available in browser
 export const isSpeechRecognitionSupported = (): boolean => {
   return typeof window !== 'undefined' && ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window);

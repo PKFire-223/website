@@ -1,6 +1,7 @@
 import express from 'express';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
+import compression from 'compression';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -10,6 +11,14 @@ const __dirname = path.dirname(__filename);
 async function startServer() {
   const app = express();
   const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
+
+  // Bandwidth & Transfer Optimization: Enable high-performance gzip/deflate compression
+  app.use(
+    compression({
+      level: 6,
+      threshold: 1024, // Compress responses above 1KB
+    })
+  );
 
   // JSON body parser with 20MB limit for image base64 payloads
   app.use(express.json({ limit: '20mb' }));
@@ -139,11 +148,122 @@ Quy tắc tương tác:
   });
 
   // =========================================================================
+  // API 3: AI Standard TOEIC & IELTS Exam Generator
+  // =========================================================================
+  app.post('/api/generate-exam', async (req, res) => {
+    try {
+      const {
+        examType = 'TOEIC',
+        part = 'TOEIC_PART5',
+        targetLevel = '750+',
+        topic = 'Công sở & Kinh doanh quốc tế (Business & Workplace)',
+        questionCount = 5,
+      } = req.body;
+
+      const systemInstruction = `Bạn là Chuyên gia Khảo thí và Biên soạn Đề thi Quốc tế hàng đầu về TOEIC (ETS) và IELTS (Cambridge/IDP).
+Nhiệm vụ của bạn là tạo một bộ đề thi mẫu chuẩn chỉnh 100% theo đúng format, độ khó và văn phong của đề thi thực tế (như trên các nền tảng luyện thi hàng đầu như STUDY4, ETS Official, Cambridge Practice Tests).
+
+Yêu cầu kỹ thuật & sư phạm:
+1. Độ chính xác học thuật cao, không sai sót ngữ pháp, từ vựng chuẩn ngữ cảnh TOEIC/IELTS.
+2. Với đề TOEIC:
+   - Part 1: Cung cấp mô tả ngữ cảnh ảnh sống động (imageScene) + 4 câu miêu tả (A, B, C, D) có 1 câu chuẩn xác nhất, 3 câu bẫy quen thuộc (hành động vs trạng thái, phát âm na ná, chủ ngữ sai).
+   - Part 2: Cung cấp 1 câu hỏi/phát biểu và 3 đáp án (A, B, C).
+   - Part 3/4: Cung cấp audioScript hội thoại hoặc bài nói chuyện công sở (họp hành, du lịch, giao nhận hàng, tiếp thị) + chùm câu hỏi.
+   - Part 5: Câu điền từ đơn lẻ với 4 đáp án (A, B, C, D) chia đều các dạng: từ loại (part of speech), thì/thể của động từ, liên từ/giới từ, và từ vựng nâng cao (collocations).
+   - Part 6 & 7: Đoạn văn chuẩn format (Email, Notice, Memo, Article, Invoice, Schedule) + các câu hỏi đọc hiểu (Main idea, Detail, Inference, Synonym).
+3. Với đề IELTS:
+   - Reading: Bài đọc học thuật chất lượng cao (Passage) + dạng câu hỏi chuẩn (Multiple Choice, True/False/Not Given, Heading Matching, Summary Completion).
+   - Listening: Audio script sống động, tự nhiên + dạng câu hỏi Note completion hoặc Multiple Choice.
+   - Speaking / Writing: Bộ đề thi thật kèm dàn ý chuẩn Band 8.0, từ vựng C1/C2 (Collocations/Idioms) và bài mẫu tham khảo.
+4. MỖI CÂU HỎI BẮT BUỘC PHẢI CÓ:
+   - explanation: Lời giải thích tiếng Việt cực kỳ chi tiết, chỉ rõ quy tắc ngữ pháp, tại sao chọn đáp án này, tại sao 3 đáp án còn lại sai (phân tích bẫy đề thi).
+   - translation: Dịch nghĩa hoàn chỉnh tiếng Việt của câu/đoạn trích.
+   - keyVocab: Danh sách 2-4 từ vựng đắt giá trong câu (word, phonetic, pos, meaning, example).
+
+PHẢN HỒI BẮT BUỘC DƯỚI DẠNG DUY NHẤT LÀ MỘT OBJECT JSON HỢP LỆ (KHÔNG VIẾT CHỮ NÀO KHÁC NGOÀI JSON):
+{
+  "id": "exam-string",
+  "title": "Tên đề thi ngắn gọn, hấp dẫn",
+  "examType": "${examType}",
+  "part": "${part}",
+  "targetLevel": "${targetLevel}",
+  "topic": "${topic}",
+  "timeLimitMinutes": ${Math.max(5, Math.min(30, questionCount * 2))},
+  "passage": "Nội dung bài đọc nếu là Part 6, Part 7 hoặc IELTS Reading (để trống nếu Part 5/Part 2)",
+  "audioScript": "Lời thoại kịch bản audio nếu là Listening (để ứng dụng tự phát âm qua Web Speech TTS)",
+  "imageScene": "Mô tả hình ảnh nếu là TOEIC Part 1",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Câu hỏi hoặc câu có chỗ trống ____",
+      "options": ["(A) ...", "(B) ...", "(C) ...", "(D) ..."],
+      "correctAnswer": "A",
+      "explanation": "Giải thích chi tiết tại sao A đúng và các đáp án khác sai...",
+      "translation": "Bản dịch nghĩa tiếng Việt...",
+      "keyVocab": [
+        {
+          "word": "từ vựng",
+          "phonetic": "/phiên âm/",
+          "pos": "n/v/adj",
+          "meaning": "nghĩa tiếng Việt",
+          "example": "ví dụ minh họa"
+        }
+      ]
+    }
+  ]
+}`;
+
+      const userPrompt = `Hãy tạo một bộ đề thi ${examType} phần ${part} với ${questionCount} câu hỏi, trình độ mục tiêu: ${targetLevel}, chủ đề: ${topic}.`;
+
+      const response = await ai.models.generateContent({
+        model: 'gemini-3.8-flash',
+        contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
+        config: {
+          systemInstruction,
+          responseMimeType: 'application/json',
+        },
+      });
+
+      const rawText = response.text || '{}';
+      let examData;
+      try {
+        examData = JSON.parse(rawText);
+      } catch (parseErr) {
+        // Fallback cleanup if markdown blocks leaked
+        const cleaned = rawText.replace(/```json\s*|```/g, '').trim();
+        examData = JSON.parse(cleaned);
+      }
+
+      res.json(examData);
+    } catch (error: any) {
+      console.error('Error in /api/generate-exam:', error);
+      res.status(500).json({ error: error?.message || 'Lỗi khi tạo đề thi AI' });
+    }
+  });
+
+  // =========================================================================
   // Vite Middlewares in Dev / Static serving in Production
   // =========================================================================
   if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, 'dist')));
+    // Cache static assets (JS, CSS, images) with immutable 1 year cache
+    app.use(
+      express.static(path.join(__dirname, 'dist'), {
+        maxAge: '1y',
+        immutable: true,
+        setHeaders: (res, filePath) => {
+          // HTML and Service Worker files must never be cached to ensure users get immediate updates
+          if (
+            filePath.endsWith('.html') ||
+            filePath.endsWith('sw.js') ||
+            filePath.endsWith('manifest.webmanifest')
+          ) {
+            res.setHeader('Cache-Control', 'no-cache');
+          }
+        },
+      })
+    );
     app.get('*', (req, res) => {
+      res.setHeader('Cache-Control', 'no-cache');
       res.sendFile(path.join(__dirname, 'dist', 'index.html'));
     });
   } else {

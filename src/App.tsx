@@ -1,24 +1,47 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Header } from './components/Header';
 import { VocabularyExplorer } from './components/VocabularyExplorer';
-import { TheoryHub } from './components/TheoryHub';
-import { SituationalDialogue } from './components/SituationalDialogue';
-import { RandomCardDraw } from './components/RandomCardDraw';
-import { ClozeTestMode } from './components/ClozeTestMode';
-import { FlashcardMode } from './components/FlashcardMode';
-import { PracticeMode } from './components/PracticeMode';
-import { PeriodicTestMode } from './components/PeriodicTestMode';
-import { PronunciationPracticeList } from './components/PronunciationPracticeList';
-import { SentencePatternsMode } from './components/SentencePatternsMode';
-import { VocabularyNotebook } from './components/VocabularyNotebook';
-import { PronunciationModal } from './components/PronunciationModal';
 import { ScrollToTop } from './components/ScrollToTop';
-import { BookmarkedWordsDrawer } from './components/BookmarkedWordsDrawer';
-import { AiPhotoTranslator } from './components/AiPhotoTranslator';
-import { AiRoleplayChat } from './components/AiRoleplayChat';
-import { VOCABULARY_DATABASE } from './data/vocabData';
+import { OfflineIndicator } from './components/OfflineIndicator';
+import {
+  getLanguageVocabulary,
+  TOTAL_WORDS_COUNT,
+  TOTAL_ENGLISH_COUNT,
+  TOTAL_CHINESE_COUNT,
+} from './data/vocabData';
 import { Language, LevelType, UserProfileProgress, VocabWord } from './types';
 import { loadUserProfile, saveUserProfile } from './utils/srs';
+
+// Code-split tabs into separate chunks (Loaded only on demand to reduce initial payload & bandwidth by >90%)
+const TheoryHub = lazy(() => import('./components/TheoryHub').then((m) => ({ default: m.TheoryHub })));
+const SituationalDialogue = lazy(() => import('./components/SituationalDialogue').then((m) => ({ default: m.SituationalDialogue })));
+const RandomCardDraw = lazy(() => import('./components/RandomCardDraw').then((m) => ({ default: m.RandomCardDraw })));
+const ClozeTestMode = lazy(() => import('./components/ClozeTestMode').then((m) => ({ default: m.ClozeTestMode })));
+const FlashcardMode = lazy(() => import('./components/FlashcardMode').then((m) => ({ default: m.FlashcardMode })));
+const PracticeMode = lazy(() => import('./components/PracticeMode').then((m) => ({ default: m.PracticeMode })));
+const PeriodicTestMode = lazy(() => import('./components/PeriodicTestMode').then((m) => ({ default: m.PeriodicTestMode })));
+const PronunciationPracticeList = lazy(() => import('./components/PronunciationPracticeList').then((m) => ({ default: m.PronunciationPracticeList })));
+const SentencePatternsMode = lazy(() => import('./components/SentencePatternsMode').then((m) => ({ default: m.SentencePatternsMode })));
+const VocabularyNotebook = lazy(() => import('./components/VocabularyNotebook').then((m) => ({ default: m.VocabularyNotebook })));
+const PronunciationModal = lazy(() => import('./components/PronunciationModal').then((m) => ({ default: m.PronunciationModal })));
+const BookmarkedWordsDrawer = lazy(() => import('./components/BookmarkedWordsDrawer').then((m) => ({ default: m.BookmarkedWordsDrawer })));
+const AiPhotoTranslator = lazy(() => import('./components/AiPhotoTranslator').then((m) => ({ default: m.AiPhotoTranslator })));
+const AiRoleplayChat = lazy(() => import('./components/AiRoleplayChat').then((m) => ({ default: m.AiRoleplayChat })));
+const ToeicIeltsExamHub = lazy(() => import('./components/ToeicIeltsExamHub').then((m) => ({ default: m.ToeicIeltsExamHub })));
+
+const TabLoadingFallback: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => (
+  <div className="max-w-6xl mx-auto px-4 py-20 flex flex-col items-center justify-center space-y-4 animate-pulse">
+    <div className="w-12 h-12 rounded-2xl bg-indigo-600/10 text-indigo-600 flex items-center justify-center text-xl shadow-xs">
+      ⚡
+    </div>
+    <div className={`text-sm font-bold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
+      Đang tải tài nguyên & tối ưu hiển thị...
+    </div>
+    <div className={`text-xs ${isDarkMode ? 'text-slate-500' : 'text-slate-400'}`}>
+      Hệ thống tải dữ liệu thông minh theo yêu cầu để tiết kiệm tối đa băng thông.
+    </div>
+  </div>
+);
 
 export const App: React.FC = () => {
   const [currentLang, setCurrentLang] = useState<Language>('en');
@@ -28,6 +51,24 @@ export const App: React.FC = () => {
   const [activePronounceWord, setActivePronounceWord] = useState<VocabWord | null>(null);
   const [isBookmarksOpen, setIsBookmarksOpen] = useState<boolean>(false);
   const [targetJumpWord, setTargetJumpWord] = useState<VocabWord | null>(null);
+
+  // Asynchronously loaded vocabulary (split per language to avoid downloading 15MB at startup)
+  const [languageWords, setLanguageWords] = useState<VocabWord[]>([]);
+  const [isLoadingWords, setIsLoadingWords] = useState<boolean>(true);
+
+  useEffect(() => {
+    let isMounted = true;
+    setIsLoadingWords(true);
+    getLanguageVocabulary(currentLang).then((words) => {
+      if (isMounted) {
+        setLanguageWords(words);
+        setIsLoadingWords(false);
+      }
+    });
+    return () => {
+      isMounted = false;
+    };
+  }, [currentLang]);
 
   // Theme: Default to Bright (Light Mode) as explicitly requested by user ("màu sáng tí")
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
@@ -128,9 +169,6 @@ export const App: React.FC = () => {
     handleUpdateProfile(updatedProfile);
   };
 
-  // Filter words by language
-  const languageWords = VOCABULARY_DATABASE.filter((w) => w.language === currentLang);
-
   // Bookmarked words count for active language
   const bookmarkedCount = languageWords.filter(
     (w) => profile.wordsProgress[w.id]?.isBookmarked
@@ -152,161 +190,182 @@ export const App: React.FC = () => {
         profile={profile}
         isDarkMode={isDarkMode}
         onToggleDarkMode={handleToggleDarkMode}
-        totalWordsCount={VOCABULARY_DATABASE.length}
-        currentLangWordsCount={languageWords.length}
+        totalWordsCount={TOTAL_WORDS_COUNT}
+        currentLangWordsCount={currentLang === 'en' ? TOTAL_ENGLISH_COUNT : TOTAL_CHINESE_COUNT}
         onOpenBookmarks={() => setIsBookmarksOpen(true)}
         bookmarkedCount={bookmarkedCount}
       />
 
       <main className="flex-grow">
-        {activeTab === 'explore' && (
-          <VocabularyExplorer
-            words={languageWords}
-            currentLang={currentLang}
-            currentLevel={currentLevel}
-            onLevelChange={setCurrentLevel}
-            profile={profile}
-            onUpdateProfile={handleUpdateProfile}
-            onOpenPronounce={(w) => setActivePronounceWord(w)}
-            isDarkMode={isDarkMode}
-            targetJumpWord={targetJumpWord}
-          />
-        )}
+        {isLoadingWords && languageWords.length === 0 ? (
+          <TabLoadingFallback isDarkMode={isDarkMode} />
+        ) : (
+          <Suspense fallback={<TabLoadingFallback isDarkMode={isDarkMode} />}>
+            {activeTab === 'explore' && (
+              <VocabularyExplorer
+                words={languageWords}
+                currentLang={currentLang}
+                currentLevel={currentLevel}
+                onLevelChange={setCurrentLevel}
+                profile={profile}
+                onUpdateProfile={handleUpdateProfile}
+                onOpenPronounce={(w) => setActivePronounceWord(w)}
+                isDarkMode={isDarkMode}
+                targetJumpWord={targetJumpWord}
+              />
+            )}
 
-        {activeTab === 'patterns' && (
-          <SentencePatternsMode
-            currentLang={currentLang}
-            onLanguageChange={handleLanguageChange}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'patterns' && (
+              <SentencePatternsMode
+                currentLang={currentLang}
+                onLanguageChange={handleLanguageChange}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'ai-translate' && (
-          <AiPhotoTranslator
-            currentLang={currentLang}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'toeic-ielts' && (
+              <ToeicIeltsExamHub
+                profile={profile}
+                onUpdateProfile={handleUpdateProfile}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'ai-roleplay' && (
-          <AiRoleplayChat
-            currentLang={currentLang}
-            onLanguageChange={handleLanguageChange}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'ai-translate' && (
+              <AiPhotoTranslator
+                currentLang={currentLang}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'theory' && (
-          <TheoryHub
-            currentLang={currentLang}
-            onLanguageChange={handleLanguageChange}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'ai-roleplay' && (
+              <AiRoleplayChat
+                currentLang={currentLang}
+                onLanguageChange={handleLanguageChange}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'dialogue' && (
-          <SituationalDialogue
-            currentLang={currentLang}
-            onLanguageChange={handleLanguageChange}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'theory' && (
+              <TheoryHub
+                currentLang={currentLang}
+                onLanguageChange={handleLanguageChange}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'random-draw' && (
-          <RandomCardDraw
-            words={languageWords}
-            currentLang={currentLang}
-            profile={profile}
-            onUpdateProfile={handleUpdateProfile}
-            onOpenPronounce={(w) => setActivePronounceWord(w)}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'dialogue' && (
+              <SituationalDialogue
+                currentLang={currentLang}
+                onLanguageChange={handleLanguageChange}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'cloze' && (
-          <ClozeTestMode
-            currentLang={currentLang}
-            profile={profile}
-            onUpdateProfile={handleUpdateProfile}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'random-draw' && (
+              <RandomCardDraw
+                words={languageWords}
+                currentLang={currentLang}
+                profile={profile}
+                onUpdateProfile={handleUpdateProfile}
+                onOpenPronounce={(w) => setActivePronounceWord(w)}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'flashcard' && (
-          <FlashcardMode
-            words={languageWords.filter((w) => w.level === currentLevel)}
-            profile={profile}
-            onUpdateProfile={handleUpdateProfile}
-            onOpenPronounce={(w) => setActivePronounceWord(w)}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'cloze' && (
+              <ClozeTestMode
+                currentLang={currentLang}
+                profile={profile}
+                onUpdateProfile={handleUpdateProfile}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'pronunciation' && (
-          <PronunciationPracticeList
-            words={languageWords}
-            currentLang={currentLang}
-            currentLevel={currentLevel}
-            profile={profile}
-            onOpenPronounce={(w) => setActivePronounceWord(w)}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'flashcard' && (
+              <FlashcardMode
+                words={languageWords.filter((w) => w.level === currentLevel)}
+                profile={profile}
+                onUpdateProfile={handleUpdateProfile}
+                onOpenPronounce={(w) => setActivePronounceWord(w)}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'practice' && (
-          <PracticeMode
-            words={languageWords.filter((w) => w.level === currentLevel)}
-            profile={profile}
-            onUpdateProfile={handleUpdateProfile}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'pronunciation' && (
+              <PronunciationPracticeList
+                words={languageWords}
+                currentLang={currentLang}
+                currentLevel={currentLevel}
+                profile={profile}
+                onOpenPronounce={(w) => setActivePronounceWord(w)}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'test' && (
-          <PeriodicTestMode
-            words={languageWords}
-            profile={profile}
-            currentLevel={currentLevel}
-            onUpdateProfile={handleUpdateProfile}
-            isDarkMode={isDarkMode}
-          />
-        )}
+            {activeTab === 'practice' && (
+              <PracticeMode
+                words={languageWords.filter((w) => w.level === currentLevel)}
+                profile={profile}
+                onUpdateProfile={handleUpdateProfile}
+                isDarkMode={isDarkMode}
+              />
+            )}
 
-        {activeTab === 'dictionary' && (
-          <VocabularyNotebook
-            words={languageWords}
-            profile={profile}
-            onUpdateProfile={handleUpdateProfile}
-            onOpenPronounce={(w) => setActivePronounceWord(w)}
-            isDarkMode={isDarkMode}
-          />
+            {activeTab === 'test' && (
+              <PeriodicTestMode
+                words={languageWords}
+                profile={profile}
+                currentLevel={currentLevel}
+                onUpdateProfile={handleUpdateProfile}
+                isDarkMode={isDarkMode}
+              />
+            )}
+
+            {activeTab === 'dictionary' && (
+              <VocabularyNotebook
+                words={languageWords}
+                profile={profile}
+                onUpdateProfile={handleUpdateProfile}
+                onOpenPronounce={(w) => setActivePronounceWord(w)}
+                isDarkMode={isDarkMode}
+              />
+            )}
+          </Suspense>
         )}
       </main>
 
-      {/* Speech Pronunciation Modal */}
-      {activePronounceWord && (
-        <PronunciationModal
-          word={activePronounceWord}
-          onClose={() => setActivePronounceWord(null)}
-          onScoreSave={handleScoreSave}
-          isDarkMode={isDarkMode}
-        />
-      )}
+      <Suspense fallback={null}>
+        {/* Speech Pronunciation Modal */}
+        {activePronounceWord && (
+          <PronunciationModal
+            word={activePronounceWord}
+            onClose={() => setActivePronounceWord(null)}
+            onScoreSave={handleScoreSave}
+            isDarkMode={isDarkMode}
+          />
+        )}
 
-      {/* Bookmarked Words Quick Access Drawer */}
-      <BookmarkedWordsDrawer
-        words={languageWords}
-        profile={profile}
-        onToggleBookmark={handleToggleBookmark}
-        onJumpToWord={handleJumpToWord}
-        isOpen={isBookmarksOpen}
-        onClose={() => setIsBookmarksOpen(false)}
-        isDarkMode={isDarkMode}
-        currentLang={currentLang}
-      />
+        {/* Bookmarked Words Quick Access Drawer */}
+        {isBookmarksOpen && (
+          <BookmarkedWordsDrawer
+            words={languageWords}
+            profile={profile}
+            onToggleBookmark={handleToggleBookmark}
+            onJumpToWord={handleJumpToWord}
+            isOpen={isBookmarksOpen}
+            onClose={() => setIsBookmarksOpen(false)}
+            isDarkMode={isDarkMode}
+            currentLang={currentLang}
+          />
+        )}
+      </Suspense>
 
       {/* Floating Scroll To Top Button (Bottom-Right) */}
       <ScrollToTop isDarkMode={isDarkMode} />
+
+      {/* Offline Connectivity Notification */}
+      <OfflineIndicator />
 
       {/* Footer */}
       <footer

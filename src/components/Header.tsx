@@ -19,9 +19,11 @@ import {
   Bookmark,
   Camera,
   Bot,
+  Target,
 } from 'lucide-react';
 import { Language, UserProfileProgress } from '../types';
 import { getPreferredAccent, setPreferredAccent, EnglishAccent } from '../utils/speech';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface HeaderProps {
   currentLang: Language;
@@ -60,6 +62,7 @@ export const Header: React.FC<HeaderProps> = ({
   const tabs = [
     { id: 'explore', label: 'Cấp bậc từ vựng', icon: BookOpen },
     { id: 'patterns', label: 'Mẫu câu chuẩn', icon: Quote },
+    { id: 'toeic-ielts', label: 'Luyện thi TOEIC / IELTS', icon: Target },
     { id: 'ai-translate', label: 'Dịch ảnh AI (Chuyên gia)', icon: Camera },
     { id: 'ai-roleplay', label: 'AI Nhập vai (Mic & Chat)', icon: Bot },
     { id: 'dialogue', label: 'Hội thoại giao tiếp', icon: MessagesSquare },
@@ -245,6 +248,9 @@ export const Header: React.FC<HeaderProps> = ({
                 {profile.todayLearnedCount}/{profile.dailyGoal}
               </span>
             </div>
+
+            {/* PWA Install Button */}
+            <PWAInstallButton isDarkMode={isDarkMode} />
 
             {/* Light / Dark Mode Toggle */}
             <button

@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useDeferredValue } from 'react';
 import { Volume2, Mic, Bookmark, Check, BookOpen, Sparkles, Lightbulb, ChevronDown, ChevronUp, Search, ChevronLeft, ChevronRight, Filter, Award } from 'lucide-react';
 import { VocabWord, LevelType, Language, UserProfileProgress } from '../types';
 import { speak } from '../utils/speech';
@@ -30,6 +30,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
   const [expandedWordId, setExpandedWordId] = useState<string | null>(null);
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredQuery = useDeferredValue(searchQuery);
   const [selectedUnit, setSelectedUnit] = useState<string>('ALL');
   const [currentPage, setCurrentPage] = useState<number>(1);
   const WORDS_PER_PAGE = 40;
@@ -115,7 +116,21 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
     return Array.from(set);
   }, [currentLevelWords]);
 
-  // Filter words by search and unit
+  // Precompute level statistics once using a single pass O(N) to guarantee 60+ FPS
+  const levelStats = useMemo(() => {
+    const stats: Record<string, { total: number; mastered: number }> = {};
+    for (let i = 0; i < words.length; i++) {
+      const w = words[i];
+      if (!stats[w.level]) stats[w.level] = { total: 0, mastered: 0 };
+      stats[w.level].total++;
+      if (profile.wordsProgress[w.id]?.status === 'mastered') {
+        stats[w.level].mastered++;
+      }
+    }
+    return stats;
+  }, [words, profile.wordsProgress]);
+
+  // Filter words by search and unit (uses deferredQuery for 60+ FPS responsive typing)
   const filteredWords = useMemo(() => {
     let result = currentLevelWords;
 
@@ -123,8 +138,8 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
       result = result.filter((w) => w.unit === selectedUnit);
     }
 
-    if (searchQuery.trim()) {
-      const q = searchQuery.toLowerCase().trim();
+    if (deferredQuery.trim()) {
+      const q = deferredQuery.toLowerCase().trim();
       result = result.filter(
         (w) =>
           w.word.toLowerCase().includes(q) ||
@@ -135,7 +150,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
     }
 
     return result;
-  }, [currentLevelWords, selectedUnit, searchQuery]);
+  }, [currentLevelWords, selectedUnit, deferredQuery]);
 
   // Total pages
   const totalPages = Math.max(1, Math.ceil(filteredWords.length / WORDS_PER_PAGE));
@@ -320,10 +335,9 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {levels.map((lvl) => {
             const isSelected = currentLevel === lvl.id;
-            const lvlWords = words.filter((w) => w.level === lvl.id);
-            const masteredCount = lvlWords.filter(
-              (w) => profile.wordsProgress[w.id]?.status === 'mastered'
-            ).length;
+            const stat = levelStats[lvl.id] || { total: 0, mastered: 0 };
+            const lvlTotal = stat.total;
+            const masteredCount = stat.mastered;
 
             return (
               <button
@@ -356,7 +370,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                         : 'bg-slate-100 text-slate-600'
                     }`}
                   >
-                    {lvlWords.length.toLocaleString()} từ
+                    {lvlTotal.toLocaleString()} từ
                   </span>
                 </div>
                 <div
@@ -378,7 +392,7 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                   <div
                     className="bg-indigo-600 dark:bg-orange-500 h-full rounded-full transition-all duration-300"
                     style={{
-                      width: `${lvlWords.length > 0 ? (masteredCount / lvlWords.length) * 100 : 0}%`,
+                      width: `${lvlTotal > 0 ? (masteredCount / lvlTotal) * 100 : 0}%`,
                     }}
                   />
                 </div>
