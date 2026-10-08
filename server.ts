@@ -10,7 +10,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 function autoOpenBrowser(url: string) {
-  if (process.env.NO_AUTO_OPEN === 'true' || process.env.CI) return;
+  if (
+    process.env.NO_AUTO_OPEN === 'true' ||
+    process.env.CI ||
+    (process.platform === 'linux' && !process.env.DISPLAY && !process.env.WAYLAND_DISPLAY)
+  ) {
+    return;
+  }
 
   const cmd =
     process.platform === 'darwin'
@@ -19,9 +25,13 @@ function autoOpenBrowser(url: string) {
       ? `start "" "${url}"`
       : `xdg-open "${url}"`;
 
-  exec(cmd, () => {
-    // Gracefully handle headless systems or environments without desktop GUI
-  });
+  try {
+    exec(cmd, () => {
+      // Gracefully handle headless systems or environments without desktop GUI
+    });
+  } catch {
+    // Ignore any spawn or execution errors silently
+  }
 }
 
 async function startServer() {

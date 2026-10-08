@@ -361,14 +361,14 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
                   {word.language === 'en' ? (
                     <div className="flex items-center gap-1">
                       <button
-                        onClick={() => speak(word.word, 'en', 1.0, undefined, 'uk')}
+                        onClick={() => speak(word.word, 'en', undefined, undefined, 'uk')}
                         className="px-2 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-[11px] font-bold transition-all shadow-2xs cursor-pointer"
                         title="Phát âm chuẩn Anh (UK)"
                       >
                         🇬🇧 UK
                       </button>
                       <button
-                        onClick={() => speak(word.word, 'en', 1.0, undefined, 'us')}
+                        onClick={() => speak(word.word, 'en', undefined, undefined, 'us')}
                         className="px-2 py-1 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-[11px] font-bold transition-all shadow-2xs cursor-pointer"
                         title="Phát âm chuẩn Mỹ (US)"
                       >
@@ -377,7 +377,7 @@ export const VocabularyNotebook: React.FC<VocabularyNotebookProps> = ({
                     </div>
                   ) : (
                     <button
-                      onClick={() => speak(word.word, word.language, 1.0)}
+                      onClick={() => speak(word.word, word.language)}
                       className="p-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-all shadow-2xs cursor-pointer"
                       title="Nghe phát âm chuẩn"
                     >

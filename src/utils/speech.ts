@@ -1,8 +1,10 @@
 // International Standard Text-to-Speech (TTS) & Speech Recognition (STT) Engine
 
 export type EnglishAccent = 'uk' | 'us';
+export type SpeechSpeedOption = 0.7 | 0.85 | 1.0 | 1.2;
 
 const ACCENT_STORAGE_KEY = 'linguavocab_en_accent';
+const SPEED_STORAGE_KEY = 'linguavocab_speech_speed';
 
 // Retrieve saved accent preference (default: US)
 export const getPreferredAccent = (): EnglishAccent => {
@@ -18,8 +20,39 @@ export const getPreferredAccent = (): EnglishAccent => {
 export const setPreferredAccent = (accent: EnglishAccent): void => {
   try {
     localStorage.setItem(ACCENT_STORAGE_KEY, accent);
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('speech_accent_change', { detail: accent }));
+    }
   } catch (e) {
     // ignore local storage errors
+  }
+};
+
+// Retrieve saved speech speed preference (default: 0.85x - optimal golden standard for language learning)
+export const getPreferredSpeed = (): number => {
+  try {
+    const saved = localStorage.getItem(SPEED_STORAGE_KEY);
+    if (saved) {
+      const parsed = parseFloat(saved);
+      if (!isNaN(parsed) && parsed >= 0.5 && parsed <= 1.5) {
+        return parsed;
+      }
+    }
+    return 0.85; // Default optimal speed for language acquisition
+  } catch (e) {
+    return 0.85;
+  }
+};
+
+// Set and save speech speed preference
+export const setPreferredSpeed = (speed: number): void => {
+  try {
+    localStorage.setItem(SPEED_STORAGE_KEY, speed.toString());
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('speech_speed_change', { detail: speed }));
+    }
+  } catch (e) {
+    // ignore
   }
 };
 
@@ -60,28 +93,73 @@ const findBestVoice = (
 ): SpeechSynthesisVoice | null => {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null;
 
+  // Refresh voice list if empty
+  if (cachedVoices.length === 0) {
+    cachedVoices = window.speechSynthesis.getVoices();
+  }
   const voices = cachedVoices.length > 0 ? cachedVoices : window.speechSynthesis.getVoices();
   if (!voices || voices.length === 0) return null;
 
   if (lang === 'en') {
     const targetTag = accent === 'uk' ? 'en-GB' : 'en-US';
 
-    // Prioritized list of high quality voices
-    const ukVoiceNames = ['google uk english female', 'google uk english male', 'libby', 'ryan', 'daniel', 'serena', 'oliver', 'george', 'sonia', 'en-gb'];
-    const usVoiceNames = ['google us english', 'jenny', 'guy', 'aria', 'samantha', 'alex', 'ava', 'davis', 'en-us'];
+    // Prioritized list of high quality native voices across Chrome, Edge, Safari, iOS, Android
+    const ukVoiceNames = [
+      'google uk english female',
+      'google uk english male',
+      'microsoft libby online (natural)',
+      'microsoft ryan online (natural)',
+      'microsoft sonia online (natural)',
+      'microsoft hazel',
+      'microsoft george',
+      'libby',
+      'ryan',
+      'daniel',
+      'serena',
+      'oliver',
+      'george',
+      'sonia',
+      'hazel',
+      'stephanie',
+      'en-gb'
+    ];
+    const usVoiceNames = [
+      'google us english',
+      'microsoft jenny online (natural)',
+      'microsoft guy online (natural)',
+      'microsoft aria online (natural)',
+      'microsoft ava online (natural)',
+      'microsoft michelle online (natural)',
+      'microsoft christopher online (natural)',
+      'microsoft david',
+      'microsoft zira',
+      'samantha',
+      'alex',
+      'ava',
+      'allison',
+      'tom',
+      'karen',
+      'victoria',
+      'en-us'
+    ];
 
     const preferredNames = accent === 'uk' ? ukVoiceNames : usVoiceNames;
 
     // 1. Try preferred neural/high quality voice names
     for (const name of preferredNames) {
       const match = voices.find(
-        (v) => v.name.toLowerCase().includes(name) || (v.lang.toLowerCase() === targetTag.toLowerCase() && v.name.toLowerCase().includes(name))
+        (v) =>
+          v.name.toLowerCase().includes(name) ||
+          (v.lang.toLowerCase().replace('_', '-') === targetTag.toLowerCase() &&
+            v.name.toLowerCase().includes(name))
       );
       if (match) return match;
     }
 
     // 2. Try exact locale match
-    const exactMatch = voices.find((v) => v.lang.toLowerCase() === targetTag.toLowerCase());
+    const exactMatch = voices.find(
+      (v) => v.lang.toLowerCase().replace('_', '-') === targetTag.toLowerCase()
+    );
     if (exactMatch) return exactMatch;
 
     // 3. Fallback to any English voice
@@ -89,16 +167,43 @@ const findBestVoice = (
   }
 
   if (lang === 'zh') {
-    const preferredChineseNames = ['google 普通话', 'xiaoxiao', 'yunxi', 'yunjian', 'xiaoyi', 'tingting', 'sinji', 'cmn', 'zh-cn'];
+    // High-quality Mandarin Chinese native voices (Standard Beijing / Putonghua)
+    const preferredChineseNames = [
+      'google 普通话',
+      'google 普通話',
+      'microsoft xiaoxiao online (natural)',
+      'microsoft yunxi online (natural)',
+      'microsoft yunjian online (natural)',
+      'microsoft xiaoyi online (natural)',
+      'xiaoxiao',
+      'yunxi',
+      'yunjian',
+      'xiaoyi',
+      'tingting',
+      'sinji',
+      'huihui',
+      'yaoyao',
+      'kangkang',
+      'cmn-hans-cn',
+      'cmn-cn',
+      'zh-cn'
+    ];
     for (const name of preferredChineseNames) {
       const match = voices.find(
-        (v) => v.name.toLowerCase().includes(name) || (v.lang.toLowerCase().includes('zh') && v.name.toLowerCase().includes(name))
+        (v) =>
+          v.name.toLowerCase().includes(name) ||
+          ((v.lang.toLowerCase().startsWith('zh') || v.lang.toLowerCase().startsWith('cmn')) &&
+            v.name.toLowerCase().includes(name))
       );
       if (match) return match;
     }
 
     // Locale match
-    const zhMatch = voices.find((v) => v.lang.toLowerCase().startsWith('zh') || v.lang.toLowerCase().startsWith('cmn'));
+    const zhMatch = voices.find(
+      (v) =>
+        v.lang.toLowerCase().startsWith('zh') ||
+        v.lang.toLowerCase().startsWith('cmn')
+    );
     if (zhMatch) return zhMatch;
   }
 
@@ -109,7 +214,7 @@ const findBestVoice = (
 export const speak = (
   text: string,
   lang: 'en' | 'zh',
-  rate: number = 1.0,
+  rate?: number,
   onEnd?: () => void,
   customAccent?: EnglishAccent
 ): boolean => {
@@ -121,11 +226,12 @@ export const speak = (
   const cleanText = cleanTextForSpeech(text);
   if (!cleanText) return false;
 
-  // Cancel any ongoing speech
+  // Cancel any ongoing speech immediately for crisp responsiveness
   window.speechSynthesis.cancel();
 
   const utterance = new SpeechSynthesisUtterance(cleanText);
-  utterance.rate = rate;
+  // Default to global learning speed (0.85x) if not explicitly set
+  utterance.rate = typeof rate === 'number' ? rate : getPreferredSpeed();
   utterance.pitch = 1.0;
 
   const accent = customAccent || getPreferredAccent();

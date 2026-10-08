@@ -268,7 +268,7 @@ export const TheoryHub: React.FC<TheoryHubProps> = ({
                           /{item.symbol}/
                         </span>
                         <button
-                          onClick={() => speak(item.audioSample, 'en', 1.0, undefined, currentAccent)}
+                          onClick={() => speak(item.audioSample, 'en', undefined, undefined, currentAccent)}
                           className="p-2 rounded-xl bg-indigo-50 text-indigo-600 hover:bg-indigo-100 dark:bg-slate-800 dark:text-indigo-400 transition-colors cursor-pointer"
                           title={`Nghe âm chuẩn quốc tế (${currentAccent.toUpperCase()})`}
                         >
@@ -287,7 +287,7 @@ export const TheoryHub: React.FC<TheoryHubProps> = ({
                         {item.examples.map((ex, eIdx) => (
                           <button
                             key={eIdx}
-                            onClick={() => speak(ex, 'en', 1.0, undefined, currentAccent)}
+                            onClick={() => speak(ex, 'en', undefined, undefined, currentAccent)}
                             className="px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-mono font-medium hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/60 dark:hover:text-indigo-300 transition-colors cursor-pointer"
                             title={`Bấm để nghe: ${ex} (${currentAccent.toUpperCase()})`}
                           >

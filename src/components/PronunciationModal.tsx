@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Volume2, Mic, MicOff, CheckCircle2, RotateCcw, X, Sparkles, AlertCircle } from 'lucide-react';
 import { VocabWord } from '../types';
-import { speak, isSpeechRecognitionSupported, calculatePronunciationScore } from '../utils/speech';
+import { speak, isSpeechRecognitionSupported, calculatePronunciationScore, getPreferredSpeed } from '../utils/speech';
 
 interface PronunciationModalProps {
   word: VocabWord;
@@ -17,7 +17,7 @@ export const PronunciationModal: React.FC<PronunciationModalProps> = ({
   isDarkMode = false,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [playbackSpeed, setPlaybackSpeed] = useState<number>(1.0);
+  const [playbackSpeed, setPlaybackSpeed] = useState<number>(getPreferredSpeed());
   const [isListening, setIsListening] = useState(false);
   const [spokenText, setSpokenText] = useState('');
   const [score, setScore] = useState<number | null>(null);

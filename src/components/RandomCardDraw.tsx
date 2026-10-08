@@ -19,7 +19,7 @@ import {
   Eye,
   RefreshCw,
 } from 'lucide-react';
-import { VocabWord, Language, LevelType, UserProfileProgress } from '../types';
+import { VocabWord, Language, LevelType, UserProfileProgress, UserWordProgress } from '../types';
 import { speak } from '../utils/speech';
 import { updateWordSrs } from '../utils/srs';
 
@@ -167,13 +167,54 @@ export const RandomCardDraw: React.FC<RandomCardDrawProps> = ({
     }, 100);
   };
 
-  // Mark current word as Mastered / Learned
+  // Mark current word as Mastered / Learned (Instant 1-touch 1-click toggle)
   const handleMarkMastered = (word: VocabWord) => {
     const cur = profile.wordsProgress[word.id];
-    const updated = updateWordSrs(cur, word.id, 4);
+    const isCurrentlyMastered = cur?.status === 'mastered';
+    const now = Date.now();
+
+    const updated: UserWordProgress = isCurrentlyMastered
+      ? {
+          ...(cur || {
+            wordId: word.id,
+            status: 'learning',
+            repetitions: 1,
+            easeFactor: 2.5,
+            intervalDays: 1,
+            nextReviewDate: now + 86400000,
+            correctCount: 1,
+            incorrectCount: 0,
+            lastReviewed: now,
+            isBookmarked: false,
+          }),
+          status: 'learning',
+          repetitions: 1,
+          intervalDays: 1,
+        }
+      : {
+          ...(cur || {
+            wordId: word.id,
+            status: 'mastered',
+            repetitions: 4,
+            easeFactor: 2.5,
+            intervalDays: 14,
+            nextReviewDate: now + 14 * 86400000,
+            correctCount: 4,
+            incorrectCount: 0,
+            lastReviewed: now,
+            isBookmarked: false,
+          }),
+          status: 'mastered',
+          repetitions: Math.max(4, (cur?.repetitions || 0) + 1),
+          intervalDays: Math.max(14, (cur?.intervalDays || 1) * 2),
+          lastReviewed: now,
+        };
+
     onUpdateProfile({
       ...profile,
-      todayLearnedCount: profile.todayLearnedCount + 1,
+      todayLearnedCount: isCurrentlyMastered
+        ? Math.max(0, profile.todayLearnedCount - 1)
+        : profile.todayLearnedCount + 1,
       wordsProgress: {
         ...profile.wordsProgress,
         [word.id]: updated,
@@ -241,7 +282,7 @@ export const RandomCardDraw: React.FC<RandomCardDrawProps> = ({
             }`}
           >
             Mỗi ngày rút ngẫu nhiên các thẻ từ vựng từ kho hơn{' '}
-            <strong className="text-indigo-600 font-bold">5.000+ từ vựng {currentLang === 'en' ? 'tiếng Anh' : 'tiếng Trung'}</strong>{' '}
+            <strong className="text-indigo-600 font-bold">10.000+ từ vựng {currentLang === 'en' ? 'tiếng Anh' : 'tiếng Trung'}</strong>{' '}
             để học mới mà không lo bị trùng bài cũ!
           </p>
         </div>
@@ -503,15 +544,18 @@ export const RandomCardDraw: React.FC<RandomCardDrawProps> = ({
                       </button>
 
                       <button
-                        onClick={() => handleMarkMastered(currentWord)}
-                        className={`p-2 rounded-xl border transition-all ${
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleMarkMastered(currentWord);
+                        }}
+                        className={`p-2 rounded-xl border transition-all cursor-pointer ${
                           isCurrentMastered
                             ? 'bg-emerald-100 border-emerald-300 text-emerald-700'
                             : isDarkMode
                             ? 'border-slate-800 text-slate-400 hover:text-emerald-400'
                             : 'border-slate-200 text-slate-500 hover:bg-emerald-50 hover:text-emerald-600'
                         }`}
-                        title="Đánh dấu đã thuộc từ này (loại trừ khỏi các lần rút sau)"
+                        title={isCurrentMastered ? "Đã thuộc (nhấn để hủy)" : "Đánh dấu đã thuộc từ này (loại trừ khỏi các lần rút sau)"}
                       >
                         <CheckCircle2
                           className={`w-4 h-4 ${isCurrentMastered ? 'fill-emerald-500 text-white' : ''}`}
@@ -529,14 +573,14 @@ export const RandomCardDraw: React.FC<RandomCardDrawProps> = ({
                     {currentWord.language === 'en' && currentWord.phoneticUk && currentWord.phoneticUs ? (
                       <div className="flex items-center gap-2 flex-wrap" onClick={(e) => e.stopPropagation()}>
                         <button
-                          onClick={() => speak(currentWord.word, 'en', 1.0, undefined, 'uk')}
+                          onClick={() => speak(currentWord.word, 'en', undefined, undefined, 'uk')}
                           className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs font-mono font-bold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-100 cursor-pointer"
                           title="Phát âm chuẩn Anh - Anh (UK - Oxford)"
                         >
                           <span>🇬🇧 UK:</span> {currentWord.phoneticUk}
                         </button>
                         <button
-                          onClick={() => speak(currentWord.word, 'en', 1.0, undefined, 'us')}
+                          onClick={() => speak(currentWord.word, 'en', undefined, undefined, 'us')}
                           className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs font-mono font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 cursor-pointer"
                           title="Phát âm chuẩn Anh - Mỹ (US)"
                         >
@@ -608,7 +652,7 @@ export const RandomCardDraw: React.FC<RandomCardDrawProps> = ({
                     {currentWord.language === 'en' ? (
                       <>
                         <button
-                          onClick={() => speak(currentWord.word, 'en', 1.0, undefined, 'uk')}
+                          onClick={() => speak(currentWord.word, 'en', undefined, undefined, 'uk')}
                           className={`flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
                             isDarkMode
                               ? 'bg-slate-800 border-slate-700 text-white hover:bg-slate-700'
@@ -620,7 +664,7 @@ export const RandomCardDraw: React.FC<RandomCardDrawProps> = ({
                           <span>🇬🇧 UK</span>
                         </button>
                         <button
-                          onClick={() => speak(currentWord.word, 'en', 1.0, undefined, 'us')}
+                          onClick={() => speak(currentWord.word, 'en', undefined, undefined, 'us')}
                           className={`flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
                             isDarkMode
                               ? 'bg-slate-800 border-slate-700 text-white hover:bg-slate-700'
@@ -820,9 +864,16 @@ export const RandomCardDraw: React.FC<RandomCardDrawProps> = ({
                           <Mic className="w-3.5 h-3.5" />
                         </button>
                         <button
-                          onClick={() => handleMarkMastered(word)}
-                          className="p-1.5 rounded-lg bg-blue-50 text-blue-600 dark:bg-slate-800 dark:text-blue-400"
-                          title="Đánh dấu đã thuộc"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleMarkMastered(word);
+                          }}
+                          className={`p-1.5 rounded-lg cursor-pointer transition-colors ${
+                            profile.wordsProgress[word.id]?.status === 'mastered'
+                              ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400'
+                              : 'bg-blue-50 text-blue-600 dark:bg-slate-800 dark:text-blue-400 hover:bg-emerald-50 hover:text-emerald-600'
+                          }`}
+                          title={profile.wordsProgress[word.id]?.status === 'mastered' ? "Đã thuộc lòng" : "Đánh dấu đã thuộc"}
                         >
                           <CheckCircle2 className="w-3.5 h-3.5" />
                         </button>

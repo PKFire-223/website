@@ -43,7 +43,7 @@ export const PronunciationPracticeList: React.FC<PronunciationPracticeListProps>
     return filteredWords.slice(0, displayCount);
   }, [filteredWords, displayCount]);
 
-  const handlePlay = (word: VocabWord, speed: number = 1.0) => {
+  const handlePlay = (word: VocabWord, speed?: number) => {
     setPlayingWordId(word.id);
     speak(word.word, word.language, speed, () => {
       setPlayingWordId(null);

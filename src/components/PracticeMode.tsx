@@ -132,7 +132,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
   // Automatically speak audio in audio-quiz or dictation when question changes
   useEffect(() => {
     if ((exerciseType === 'audio-quiz' || exerciseType === 'dictation') && currentWord && !isCompleted) {
-      speak(currentWord.word, currentWord.language, 1.0);
+      speak(currentWord.word, currentWord.language);
     }
   }, [currentIndex, exerciseType]);
 
@@ -472,7 +472,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
           >
             <div className="inline-flex items-center justify-center p-4 rounded-2xl bg-indigo-600 text-white shadow-md shadow-indigo-600/20 mb-2">
               <button
-                onClick={() => speak(currentWord.word, currentWord.language, 1.0)}
+                onClick={() => speak(currentWord.word, currentWord.language)}
                 className="flex items-center gap-2 cursor-pointer"
               >
                 <Volume2 className="w-7 h-7" />
@@ -625,7 +625,7 @@ export const PracticeMode: React.FC<PracticeModeProps> = ({
                 </span>
                 <div>
                   <button
-                    onClick={() => speak(currentWord.word, currentWord.language, 1.0)}
+                    onClick={() => speak(currentWord.word, currentWord.language)}
                     className="p-4 rounded-2xl bg-indigo-600 text-white hover:bg-indigo-700 shadow-md shadow-indigo-600/20 transition-transform active:scale-95 inline-flex items-center gap-2 cursor-pointer"
                   >
                     <Volume2 className="w-6 h-6" />

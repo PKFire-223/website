@@ -62,12 +62,12 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
 
   const handlePlayAudio = (e?: React.MouseEvent) => {
     e?.stopPropagation();
-    speak(currentWord.word, currentWord.language, slowAudio ? 0.75 : 1.0);
+    speak(currentWord.word, currentWord.language, slowAudio ? 0.7 : undefined);
   };
 
   const handlePlayExample = (e?: React.MouseEvent) => {
     e?.stopPropagation();
-    speak(currentWord.example, currentWord.language, 0.9);
+    speak(currentWord.example, currentWord.language, slowAudio ? 0.7 : 0.85);
   };
 
   const handleNext = () => {
@@ -220,8 +220,8 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
             <div className="pt-4 flex items-center justify-center gap-3">
               <button
                 onClick={handlePlayAudio}
-                className="p-3.5 rounded-2xl bg-indigo-600 text-white hover:bg-indigo-700 transition-all shadow-md active:scale-95"
-                title="Phát âm chuẩn giọng bản xứ"
+                className="p-3.5 rounded-2xl bg-indigo-600 text-white hover:bg-indigo-700 transition-all shadow-md active:scale-95 cursor-pointer"
+                title={`Phát âm chuẩn (${slowAudio ? 'Chế độ Chậm 0.7x 🐢' : 'Chuẩn học 0.85x 🎯'})`}
               >
                 <Volume2 className="w-6 h-6" />
               </button>
@@ -229,9 +229,26 @@ export const FlashcardMode: React.FC<FlashcardModeProps> = ({
               <button
                 onClick={(e) => {
                   e.stopPropagation();
+                  setSlowAudio(!slowAudio);
+                }}
+                className={`flex items-center gap-1.5 px-3 py-3 rounded-2xl text-xs font-bold border transition-all cursor-pointer ${
+                  slowAudio
+                    ? 'bg-amber-500 text-white border-amber-600 shadow-sm'
+                    : isDarkMode
+                    ? 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'
+                    : 'bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200'
+                }`}
+                title={slowAudio ? 'Đang bật đọc chậm 0.7x (Bấm để nghe tốc độ chuẩn)' : 'Bấm để nghe đọc chậm (0.7x 🐢)'}
+              >
+                <span>{slowAudio ? '🐢 Đang đọc chậm' : '🐢 Nghe chậm'}</span>
+              </button>
+
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
                   onOpenPronounce(currentWord);
                 }}
-                className={`inline-flex items-center gap-2 px-4 py-3 rounded-2xl text-xs font-bold border transition-all ${
+                className={`inline-flex items-center gap-2 px-4 py-3 rounded-2xl text-xs font-bold border transition-all cursor-pointer ${
                   isDarkMode
                     ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
                     : 'bg-slate-100 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-300 text-slate-800 border-slate-200 shadow-2xs'

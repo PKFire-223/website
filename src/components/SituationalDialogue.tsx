@@ -44,7 +44,7 @@ export const SituationalDialogue: React.FC<SituationalDialogueProps> = ({
   const currentTopic = availableTopics.find((t) => t.id === selectedTopicId) || availableTopics[0];
 
   // Play individual sentence
-  const handlePlayLine = (text: string, index: number, speed: number = 1.0) => {
+  const handlePlayLine = (text: string, index: number, speed?: number) => {
     setPlayingLineIndex(index);
     speak(text, currentLang, speed, () => {
       setPlayingLineIndex(null);
@@ -65,7 +65,7 @@ export const SituationalDialogue: React.FC<SituationalDialogueProps> = ({
       }
       setPlayingLineIndex(idx);
       const line = currentTopic.dialogue[idx];
-      speak(line.text, currentLang, 1.0, () => {
+      speak(line.text, currentLang, undefined, () => {
         idx++;
         setTimeout(playNext, 600); // 600ms natural conversational pause
       });

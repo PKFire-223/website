@@ -116,19 +116,34 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
     return Array.from(set);
   }, [currentLevelWords]);
 
-  // Precompute level statistics once using a single pass O(N) to guarantee 60+ FPS
-  const levelStats = useMemo(() => {
-    const stats: Record<string, { total: number; mastered: number }> = {};
+  // Precompute level totals and word level mapping based solely on vocabulary pool
+  const { levelTotals, wordLevelMap } = useMemo(() => {
+    const totals: Record<string, number> = {};
+    const map = new Map<string, string>();
     for (let i = 0; i < words.length; i++) {
       const w = words[i];
-      if (!stats[w.level]) stats[w.level] = { total: 0, mastered: 0 };
-      stats[w.level].total++;
-      if (profile.wordsProgress[w.id]?.status === 'mastered') {
-        stats[w.level].mastered++;
+      totals[w.level] = (totals[w.level] || 0) + 1;
+      map.set(w.id, w.level);
+    }
+    return { levelTotals: totals, wordLevelMap: map };
+  }, [words]);
+
+  // Precompute level statistics instantly (O(learned_words) instead of O(all_vocab))
+  const levelStats = useMemo(() => {
+    const stats: Record<string, { total: number; mastered: number }> = {};
+    for (const [lvl, total] of Object.entries(levelTotals)) {
+      stats[lvl] = { total, mastered: 0 };
+    }
+    for (const [wordId, prog] of Object.entries(profile.wordsProgress)) {
+      if (prog.status === 'mastered') {
+        const lvl = wordLevelMap.get(wordId);
+        if (lvl && stats[lvl]) {
+          stats[lvl].mastered++;
+        }
       }
     }
     return stats;
-  }, [words, profile.wordsProgress]);
+  }, [levelTotals, wordLevelMap, profile.wordsProgress]);
 
   // Filter words by search and unit (uses deferredQuery for 60+ FPS responsive typing)
   const filteredWords = useMemo(() => {
@@ -172,12 +187,10 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
     }, {} as Record<string, VocabWord[]>);
   }, [paginatedWords]);
 
-  // Progress for current level
+  // Progress for current level (O(1) lookup from levelStats)
   const levelMasteredCount = useMemo(() => {
-    return currentLevelWords.filter(
-      (w) => profile.wordsProgress[w.id]?.status === 'mastered'
-    ).length;
-  }, [currentLevelWords, profile.wordsProgress]);
+    return levelStats[currentLevel]?.mastered || 0;
+  }, [levelStats, currentLevel]);
 
   // Progress for current unit (if unit selected)
   const unitProgress = useMemo(() => {
@@ -779,7 +792,10 @@ export const VocabularyExplorer: React.FC<VocabularyExplorerProps> = ({
                       </button>
 
                       <button
-                        onClick={() => handleToggleMastered(word.id)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleToggleMastered(word.id);
+                        }}
                         className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1 active:scale-95 ${
                           isMastered
                             ? 'bg-emerald-600 text-white shadow-xs hover:bg-emerald-700'

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import React, { useState, useEffect, useCallback, Suspense, lazy } from 'react';
 import { Header } from './components/Header';
 import { VocabularyExplorer } from './components/VocabularyExplorer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -94,10 +94,10 @@ export const App: React.FC = () => {
     }
   };
 
-  const handleUpdateProfile = (updated: UserProfileProgress) => {
+  const handleUpdateProfile = useCallback((updated: UserProfileProgress) => {
     setProfile(updated);
     saveUserProfile(updated);
-  };
+  }, []);
 
   const handleToggleBookmark = (wordId: string) => {
     const currentProgress = profile.wordsProgress[wordId] || {

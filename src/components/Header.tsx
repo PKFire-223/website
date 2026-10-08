@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BookOpen,
   Flame,
@@ -20,9 +20,16 @@ import {
   Camera,
   Bot,
   Target,
+  Gauge,
 } from 'lucide-react';
 import { Language, UserProfileProgress } from '../types';
-import { getPreferredAccent, setPreferredAccent, EnglishAccent } from '../utils/speech';
+import {
+  getPreferredAccent,
+  setPreferredAccent,
+  EnglishAccent,
+  getPreferredSpeed,
+  setPreferredSpeed,
+} from '../utils/speech';
 import { PWAInstallButton } from './PWAInstallButton';
 
 interface HeaderProps {
@@ -53,10 +60,34 @@ export const Header: React.FC<HeaderProps> = ({
   bookmarkedCount = 0,
 }) => {
   const [currentAccent, setCurrentAccent] = useState<EnglishAccent>(getPreferredAccent());
+  const [currentSpeed, setCurrentSpeed] = useState<number>(getPreferredSpeed());
+
+  useEffect(() => {
+    const handleSpeedEvent = (e: Event) => {
+      const customEvt = e as CustomEvent<number>;
+      if (typeof customEvt.detail === 'number') {
+        setCurrentSpeed(customEvt.detail);
+      }
+    };
+    window.addEventListener('speech_speed_change', handleSpeedEvent);
+    return () => window.removeEventListener('speech_speed_change', handleSpeedEvent);
+  }, []);
 
   const handleAccentChange = (accent: EnglishAccent) => {
     setCurrentAccent(accent);
     setPreferredAccent(accent);
+  };
+
+  const handleSpeedChange = (speed: number) => {
+    setCurrentSpeed(speed);
+    setPreferredSpeed(speed);
+  };
+
+  const cycleSpeed = () => {
+    const speeds = [0.7, 0.85, 1.0];
+    const currentIndex = speeds.indexOf(currentSpeed);
+    const nextSpeed = speeds[(currentIndex + 1) % speeds.length];
+    handleSpeedChange(nextSpeed);
   };
 
   const tabs = [
@@ -182,6 +213,54 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
             </div>
           )}
+
+          {/* Universal Audio Speed Controller (Applied to Both English & Chinese) */}
+          <div
+            className={`hidden xl:flex items-center p-1 rounded-xl border text-[11px] font-medium ${
+              isDarkMode ? 'bg-slate-950 border-slate-800' : 'bg-slate-100/90 border-slate-200'
+            }`}
+            title="Tốc độ giọng đọc phát âm: 0.85x chuẩn học tập (khuyên dùng để nghe rõ âm và thanh điệu), 0.7x đọc chậm, 1.0x tự nhiên"
+          >
+            <div className="flex items-center gap-1 px-2 text-slate-500 dark:text-slate-400 font-bold">
+              <Gauge className="w-3.5 h-3.5 text-indigo-500" />
+              <span>Tốc độ:</span>
+            </div>
+            {[
+              { val: 0.7, label: '0.7x', desc: 'Chậm', icon: '🐢' },
+              { val: 0.85, label: '0.85x', desc: 'Chuẩn học', icon: '🎯' },
+              { val: 1.0, label: '1.0x', desc: 'Bản xứ', icon: '⚡' },
+            ].map((s) => (
+              <button
+                key={s.val}
+                onClick={() => handleSpeedChange(s.val)}
+                className={`flex items-center gap-1 px-2 py-0.5 rounded-lg transition-all cursor-pointer ${
+                  currentSpeed === s.val
+                    ? 'bg-indigo-600 text-white shadow-2xs font-bold'
+                    : 'text-slate-500 hover:text-slate-900 dark:hover:text-slate-200'
+                }`}
+                title={`Tốc độ đọc: ${s.label} (${s.desc})`}
+              >
+                <span>{s.icon}</span>
+                <span>{s.label}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Mobile/Tablet Compact Speed Switch Button */}
+          <button
+            onClick={cycleSpeed}
+            className={`flex xl:hidden items-center gap-1 px-2.5 py-1.5 rounded-xl border text-xs font-bold cursor-pointer transition-all ${
+              isDarkMode
+                ? 'bg-slate-950 border-slate-800 text-indigo-400 hover:bg-slate-900'
+                : 'bg-white border-slate-200 text-indigo-600 hover:bg-slate-50 shadow-2xs'
+            }`}
+            title="Nhấp để chuyển nhanh tốc độ đọc (0.7x Chậm / 0.85x Chuẩn học / 1.0x Tự nhiên)"
+          >
+            <Gauge className="w-3.5 h-3.5 text-indigo-500" />
+            <span>
+              {currentSpeed === 0.7 ? '🐢 0.7x' : currentSpeed === 0.85 ? '🎯 0.85x' : '⚡ 1.0x'}
+            </span>
+          </button>
 
           {/* Right Stats & Controls */}
           <div className="flex items-center gap-2.5">
