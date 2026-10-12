@@ -2,6 +2,75 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function() {
+        // Intercept Vite HMR WebSocket in proxy/iframe environment where HMR is disabled
+        if (typeof window !== 'undefined' && window.WebSocket) {
+          const NativeWebSocket = window.WebSocket;
+          window.WebSocket = function(url, protocols) {
+            const isViteHMR =
+              (typeof protocols === 'string' && (protocols.includes('vite-hmr') || protocols.includes('vite-ping'))) ||
+              (Array.isArray(protocols) && protocols.some(function(p) { return p.includes('vite-hmr') || p.includes('vite-ping'); })) ||
+              (typeof url === 'string' && (url.includes('vite-hmr') || url.includes('token=')));
+
+            if (isViteHMR) {
+              const listeners = {};
+              const dummySocket = {
+                OPEN: 1,
+                CONNECTING: 0,
+                CLOSING: 2,
+                CLOSED: 3,
+                readyState: 1,
+                url: url,
+                protocol: Array.isArray(protocols) ? protocols[0] : (protocols || ''),
+                addEventListener: function(event, cb) {
+                  if (!listeners[event]) listeners[event] = [];
+                  listeners[event].push(cb);
+                  if (event === 'open') {
+                    setTimeout(function() { cb({ type: 'open' }); }, 0);
+                  }
+                },
+                removeEventListener: function(event, cb) {
+                  if (listeners[event]) {
+                    listeners[event] = listeners[event].filter(function(fn) { return fn !== cb; });
+                  }
+                },
+                send: function() {},
+                close: function() {
+                  dummySocket.readyState = 3;
+                  if (listeners['close']) {
+                    listeners['close'].forEach(function(fn) { fn({ wasClean: true, code: 1000 }); });
+                  }
+                }
+              };
+              return dummySocket;
+            }
+            return new NativeWebSocket(url, protocols);
+          };
+          window.WebSocket.prototype = NativeWebSocket.prototype;
+          window.WebSocket.OPEN = NativeWebSocket.OPEN || 1;
+          window.WebSocket.CONNECTING = NativeWebSocket.CONNECTING || 0;
+          window.WebSocket.CLOSING = NativeWebSocket.CLOSING || 2;
+          window.WebSocket.CLOSED = NativeWebSocket.CLOSED || 3;
+        }
+
+        // Suppress any remaining WebSocket/HMR rejection or error logs
+        window.addEventListener('unhandledrejection', function(event) {
+          const msg = event?.reason?.message || String(event?.reason || '');
+          if (msg.includes('WebSocket') || msg.includes('vite')) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+          }
+        });
+        window.addEventListener('error', function(event) {
+          const msg = event?.message || '';
+          if (msg.includes('WebSocket') || msg.includes('vite')) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+          }
+        }, true);
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#4f46e5" />

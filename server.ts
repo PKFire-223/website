@@ -294,7 +294,10 @@ PHẢN HỒI BẮT BUỘC DƯỚI DẠNG DUY NHẤT LÀ MỘT OBJECT JSON HỢP 
     });
   } else {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+        hmr: false,
+      },
       appType: 'spa',
     });
     app.use(vite.middlewares);
