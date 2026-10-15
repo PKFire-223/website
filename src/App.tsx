@@ -1,398 +1,873 @@
-import React, { useState, useEffect, useCallback, Suspense, lazy } from 'react';
-import { Header } from './components/Header';
-import { VocabularyExplorer } from './components/VocabularyExplorer';
-import { ScrollToTop } from './components/ScrollToTop';
-import { OfflineIndicator } from './components/OfflineIndicator';
-import {
-  getLanguageVocabulary,
-  TOTAL_WORDS_COUNT,
-  TOTAL_ENGLISH_COUNT,
-  TOTAL_CHINESE_COUNT,
-} from './data/vocabData';
-import { Language, LevelType, UserProfileProgress, VocabWord } from './types';
-import { loadUserProfile, saveUserProfile } from './utils/srs';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { Sidebar } from './components/layout/Sidebar';
+import { Header } from './components/layout/Header';
+import { MobileBottomNav } from './components/layout/MobileBottomNav';
+import { LandingPageView } from './features/landing/LandingPageView';
+import { AuthSplitView } from './features/auth/AuthSplitView';
+import { DashboardView } from './features/dashboard/DashboardView';
+import { CoursesView } from './features/courses/CoursesView';
+import { TimetableView } from './features/timetable/TimetableView';
+import { TasksView } from './features/tasks/TasksView';
+import { NotesView } from './features/notes/NotesView';
+import { GoalsView } from './features/goals/GoalsView';
+import { AiAssistantView } from './features/ai/AiAssistantView';
+import { ErrorReportsView } from './features/errorReports/ErrorReportsView';
+import { NotificationsView } from './features/notifications/NotificationsView';
+import { ProfileView } from './features/profile/ProfileView';
+import { SettingsView } from './features/settings/SettingsView';
+import { AdminUsersView } from './features/admin/AdminUsersView';
+import { ToastContainer } from './components/common/ToastContainer';
+import { ToastProvider, useToast } from './context/ToastContext';
+import { api } from './services/api';
+import { Course, Task, Note, Goal, ErrorReport, ActiveTab, NotificationItem, TimetableEntry } from './types';
+import { useTheme } from './context/ThemeContext';
+import { useAuth } from './context/AuthContext';
 
-// Code-split tabs into separate chunks (Loaded only on demand to reduce initial payload & bandwidth by >90%)
-const TheoryHub = lazy(() => import('./components/TheoryHub').then((m) => ({ default: m.TheoryHub })));
-const SituationalDialogue = lazy(() => import('./components/SituationalDialogue').then((m) => ({ default: m.SituationalDialogue })));
-const RandomCardDraw = lazy(() => import('./components/RandomCardDraw').then((m) => ({ default: m.RandomCardDraw })));
-const ClozeTestMode = lazy(() => import('./components/ClozeTestMode').then((m) => ({ default: m.ClozeTestMode })));
-const FlashcardMode = lazy(() => import('./components/FlashcardMode').then((m) => ({ default: m.FlashcardMode })));
-const PracticeMode = lazy(() => import('./components/PracticeMode').then((m) => ({ default: m.PracticeMode })));
-const PeriodicTestMode = lazy(() => import('./components/PeriodicTestMode').then((m) => ({ default: m.PeriodicTestMode })));
-const PronunciationPracticeList = lazy(() => import('./components/PronunciationPracticeList').then((m) => ({ default: m.PronunciationPracticeList })));
-const SentencePatternsMode = lazy(() => import('./components/SentencePatternsMode').then((m) => ({ default: m.SentencePatternsMode })));
-const VocabularyNotebook = lazy(() => import('./components/VocabularyNotebook').then((m) => ({ default: m.VocabularyNotebook })));
-const PronunciationModal = lazy(() => import('./components/PronunciationModal').then((m) => ({ default: m.PronunciationModal })));
-const BookmarkedWordsDrawer = lazy(() => import('./components/BookmarkedWordsDrawer').then((m) => ({ default: m.BookmarkedWordsDrawer })));
-const AiPhotoTranslator = lazy(() => import('./components/AiPhotoTranslator').then((m) => ({ default: m.AiPhotoTranslator })));
-const AiRoleplayChat = lazy(() => import('./components/AiRoleplayChat').then((m) => ({ default: m.AiRoleplayChat })));
-const ToeicIeltsExamHub = lazy(() => import('./components/ToeicIeltsExamHub').then((m) => ({ default: m.ToeicIeltsExamHub })));
+function PlanoraWorkspace() {
+  const { isDark } = useTheme();
+  const { user } = useAuth();
+  const { showToast, clearAllToasts } = useToast();
 
-const TabLoadingFallback: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => (
-  <div className="max-w-6xl mx-auto px-4 py-20 flex flex-col items-center justify-center space-y-4 animate-pulse">
-    <div className="w-12 h-12 rounded-2xl bg-indigo-600/10 text-indigo-600 flex items-center justify-center text-xl shadow-xs">
-      ⚡
-    </div>
-    <div className={`text-sm font-bold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
-      Đang tải tài nguyên & tối ưu hiển thị...
-    </div>
-    <div className={`text-xs ${isDarkMode ? 'text-slate-500' : 'text-slate-400'}`}>
-      Hệ thống tải dữ liệu thông minh theo yêu cầu để tiết kiệm tối đa băng thông.
-    </div>
-  </div>
-);
+  // Primary view navigation: 'landing' (first view), 'auth' (split-screen), 'app' (LMS workspace)
+  const [viewMode, setViewMode] = useState<'landing' | 'auth' | 'app'>('landing');
+  const [authTab, setAuthTab] = useState<'login' | 'register'>('login');
 
-export const App: React.FC = () => {
-  const [currentLang, setCurrentLang] = useState<Language>('en');
-  const [currentLevel, setCurrentLevel] = useState<LevelType>('A1');
-  const [activeTab, setActiveTab] = useState<string>('explore');
-  const [profile, setProfile] = useState<UserProfileProgress>(loadUserProfile());
-  const [activePronounceWord, setActivePronounceWord] = useState<VocabWord | null>(null);
-  const [isBookmarksOpen, setIsBookmarksOpen] = useState<boolean>(false);
-  const [targetJumpWord, setTargetJumpWord] = useState<VocabWord | null>(null);
+  const [activeTab, setActiveTab] = useState<ActiveTab>('dashboard');
+  const [courses, setCourses] = useState<Course[]>([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [goals, setGoals] = useState<Goal[]>([]);
+  const [errors, setErrors] = useState<ErrorReport[]>([]);
+  const [notifications, setNotifications] = useState<NotificationItem[]>(() => {
+    try {
+      const saved = localStorage.getItem('planora_notifications');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+  const [crossContext, setCrossContext] = useState<{
+    courseId?: string;
+    courseCode?: string;
+    aiPrompt?: string;
+  }>({});
+  const [loading, setLoading] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [lastAutoSaveTime, setLastAutoSaveTime] = useState<string | null>(() => {
+    try {
+      const saved = localStorage.getItem('planora_last_backup_time');
+      if (saved) {
+        return new Date(saved).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+      }
+      return null;
+    } catch {
+      return null;
+    }
+  });
+  const [isAutoSaving, setIsAutoSaving] = useState(false);
 
-  // Asynchronously loaded vocabulary (split per language to avoid downloading 15MB at startup)
-  const [languageWords, setLanguageWords] = useState<VocabWord[]>([]);
-  const [isLoadingWords, setIsLoadingWords] = useState<boolean>(true);
+  // Track already-notified deadline task IDs to avoid repeat spamming
+  const notifiedDeadlinesRef = useRef<Set<string>>(new Set());
+
+  // 5-Minute Auto-Save Periodic Trigger (courses, tasks, goals -> MongoDB & localStorage)
+  const handleTriggerAutoSave = useCallback(async (isManual = false) => {
+    // Only auto-save if there is loaded data in state
+    if (courses.length === 0 && tasks.length === 0 && goals.length === 0) return;
+
+    setIsAutoSaving(true);
+    try {
+      const res = await api.autoSaveData({ courses, tasks, goals });
+      const nowTimeStr = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+      setLastAutoSaveTime(nowTimeStr);
+
+      if (isManual) {
+        showToast({
+          type: 'success',
+          title: 'Đã sao lưu an toàn',
+          message: `Đã lưu trạng thái (${res.counts?.courses ?? courses.length} môn, ${res.counts?.tasks ?? tasks.length} nhiệm vụ, ${res.counts?.goals ?? goals.length} mục tiêu).`,
+          duration: 3500
+        });
+      }
+    } catch (err: any) {
+      console.warn('[AutoSave] Backup warning:', err);
+      if (isManual) {
+        showToast({
+          type: 'warning',
+          title: 'Đã lưu cục bộ',
+          message: 'Dữ liệu đã được lưu an toàn vào bộ nhớ trình duyệt!',
+          duration: 3500
+        });
+      }
+    } finally {
+      setIsAutoSaving(false);
+    }
+  }, [courses, tasks, goals, showToast]);
+
+  // Periodic Auto-Save every 5 minutes (300,000 ms)
+  useEffect(() => {
+    // Run interval only if in LMS app mode
+    if (viewMode !== 'app') return;
+
+    const intervalId = setInterval(() => {
+      handleTriggerAutoSave(false);
+    }, 5 * 60 * 1000);
+
+    return () => clearInterval(intervalId);
+  }, [viewMode, handleTriggerAutoSave]);
+
+  // Network connection listener to safeguard against sudden offline disconnections
+  useEffect(() => {
+    const handleOffline = () => {
+      // Immediately backup current state to localStorage
+      api.autoSaveData({ courses, tasks, goals });
+      showToast({
+        type: 'warning',
+        title: 'Mất kết nối Internet',
+        message: 'Chế độ ngoại tuyến: Dữ liệu (courses, tasks, goals) đã được tự động lưu an toàn trong máy!',
+        duration: 5000
+      });
+    };
+
+    const handleOnline = () => {
+      showToast({
+        type: 'info',
+        title: 'Đã khôi phục Internet',
+        message: 'Đang tự động đồng bộ lại toàn bộ dữ liệu lên MongoDB...',
+        duration: 4000
+      });
+      handleTriggerAutoSave(false);
+    };
+
+    window.addEventListener('offline', handleOffline);
+    window.addEventListener('online', handleOnline);
+
+    return () => {
+      window.removeEventListener('offline', handleOffline);
+      window.removeEventListener('online', handleOnline);
+    };
+  }, [courses, tasks, goals, handleTriggerAutoSave, showToast]);
+
+  const handleToastNavigate = (tab: ActiveTab) => {
+    setViewMode('app');
+    setActiveTab(tab);
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleNavigateWithContext = (
+    tab: ActiveTab,
+    context?: { courseId?: string; courseCode?: string; aiPrompt?: string }
+  ) => {
+    if (context) {
+      setCrossContext(context);
+    }
+    setActiveTab(tab);
+  };
+
+  // Helper to sync toasts with persistent Notification Center history
+  const addSystemNotification = (item: {
+    title: string;
+    message: string;
+    type: NotificationItem['type'];
+    linkTab?: ActiveTab;
+  }) => {
+    const newNotif: NotificationItem = {
+      id: `notif-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+      title: item.title,
+      message: item.message,
+      type: item.type,
+      timestamp: 'Vừa xong',
+      read: false,
+      linkTab: item.linkTab
+    };
+    setNotifications(prev => [newNotif, ...prev]);
+  };
+
+  // Persist notifications on change
+  useEffect(() => {
+    try {
+      localStorage.setItem('planora_notifications', JSON.stringify(notifications));
+    } catch {
+      // ignore storage error
+    }
+  }, [notifications]);
+
+  const handleMarkAsRead = (id: string) => {
+    setNotifications(prev => prev.map(n => n.id === id ? { ...n, read: true } : n));
+  };
+
+  const handleMarkAllAsRead = () => {
+    setNotifications(prev => prev.map(n => ({ ...n, read: true })));
+  };
+
+  const handleDeleteNotification = (id: string) => {
+    setNotifications(prev => prev.filter(n => n.id !== id));
+  };
+
+  // Load initial data from backend API with automatic fallback
+  const loadData = async () => {
+    try {
+      const [coursesRes, tasksRes, notesRes, goalsRes, errorsRes] = await Promise.all([
+        api.getCourses(),
+        api.getTasks(),
+        api.getNotes(),
+        api.getGoals(),
+        api.getErrors()
+      ]);
+
+      if (coursesRes?.success && coursesRes.data) setCourses(coursesRes.data);
+      if (tasksRes?.success && tasksRes.data) setTasks(tasksRes.data);
+      if (notesRes?.success && notesRes.data) setNotes(notesRes.data);
+      if (goalsRes?.success && goalsRes.data) setGoals(goalsRes.data);
+      if (errorsRes?.success && errorsRes.data) setErrors(errorsRes.data);
+    } catch {
+      // Fallbacks are safely applied inside api.ts
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    let isMounted = true;
-    setIsLoadingWords(true);
-    getLanguageVocabulary(currentLang).then((words) => {
-      if (isMounted) {
-        setLanguageWords(words);
-        setIsLoadingWords(false);
-      }
-    });
-    return () => {
-      isMounted = false;
-    };
-  }, [currentLang]);
-
-  // Theme: Default to Bright (Light Mode) as explicitly requested by user ("màu sáng tí")
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const saved = localStorage.getItem('linguavocab_theme');
-    return saved === 'dark'; // default to false (bright / light mode)
-  });
-
-  const handleToggleDarkMode = () => {
-    setIsDarkMode((prev) => {
-      const next = !prev;
-      localStorage.setItem('linguavocab_theme', next ? 'dark' : 'light');
-      return next;
-    });
-  };
-
-  // When changing language, switch default level
-  const handleLanguageChange = (lang: Language) => {
-    setCurrentLang(lang);
-    if (lang === 'en') {
-      setCurrentLevel('A1');
-    } else {
-      setCurrentLevel('HSK1');
-    }
-  };
-
-  const handleUpdateProfile = useCallback((updated: UserProfileProgress) => {
-    setProfile(updated);
-    saveUserProfile(updated);
+    loadData();
   }, []);
 
-  const handleToggleBookmark = (wordId: string) => {
-    const currentProgress = profile.wordsProgress[wordId] || {
-      wordId,
-      status: 'learning',
-      repetitions: 0,
-      easeFactor: 2.5,
-      intervalDays: 1,
-      nextReviewDate: Date.now(),
-      correctCount: 0,
-      incorrectCount: 0,
-      lastReviewed: Date.now(),
-      isBookmarked: false,
-    };
+  // Automated 24h Deadline Detector - only runs inside LMS workspace ('app')
+  useEffect(() => {
+    if (viewMode !== 'app') return;
+    if (tasks.length === 0) return;
 
-    handleUpdateProfile({
-      ...profile,
-      wordsProgress: {
-        ...profile.wordsProgress,
-        [wordId]: {
-          ...currentProgress,
-          isBookmarked: !currentProgress.isBookmarked,
-        },
-      },
+    const now = new Date();
+    // 24 hours in the future
+    const next24Hours = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+
+    tasks.forEach(task => {
+      if (task.status === 'done') return;
+      if (!task.dueDate) return;
+
+      const due = new Date(task.dueDate);
+      if (isNaN(due.getTime())) return;
+
+      // Check if due is within next 24 hours or overdue
+      const isWithin24h = due.getTime() <= next24Hours.getTime();
+
+      if (isWithin24h && !notifiedDeadlinesRef.current.has(task.id)) {
+        notifiedDeadlinesRef.current.add(task.id);
+
+        const isOverdue = due.getTime() < now.getTime();
+        const title = isOverdue
+          ? `⚠️ Quá hạn nộp: "${task.title}"`
+          : `⏰ Deadline gấp trong 24h: "${task.title}"`;
+        const message = isOverdue
+          ? `Nhiệm vụ này đã quá hạn nộp (${task.dueDate}). Hãy kiểm tra và hoàn thành sớm!`
+          : `Hạn chót vào ${task.dueDate}. Chỉ còn dưới 24h nữa để nộp bài!`;
+
+        showToast({
+          type: 'deadline',
+          title,
+          message,
+          targetTab: 'tasks',
+          duration: 7500
+        });
+
+        // Also add to notification center history
+        addSystemNotification({
+          title,
+          message,
+          type: 'deadline',
+          linkTab: 'tasks'
+        });
+      }
     });
-  };
+  }, [tasks, viewMode, showToast]);
 
-  const handleJumpToWord = (word: VocabWord) => {
-    if (word.language !== currentLang) {
-      setCurrentLang(word.language);
+  // Course handlers
+  const handleCreateCourse = async (data: Partial<Course>) => {
+    const res = await api.createCourse(data);
+    if (res.success) {
+      setCourses(prev => [res.data, ...prev]);
+      showToast({
+        type: 'success',
+        title: 'Thêm khoá học thành công',
+        message: `Khoá học "${res.data.title}" (${res.data.code}) đã được kích hoạt`,
+        targetTab: 'courses'
+      });
+      addSystemNotification({
+        title: `Khoá học mới: ${res.data.title}`,
+        message: `Đã thêm môn ${res.data.code} vào danh mục học kỳ.`,
+        type: 'success',
+        linkTab: 'courses'
+      });
     }
-    setCurrentLevel(word.level);
-    setActiveTab('explore');
-    setTargetJumpWord(word);
-    setIsBookmarksOpen(false);
   };
 
-  const handleScoreSave = (score: number) => {
-    if (!activePronounceWord) return;
-    const wordId = activePronounceWord.id;
-    const currentProgress = profile.wordsProgress[wordId] || {
-      wordId,
-      status: 'learning',
-      repetitions: 1,
-      easeFactor: 2.5,
-      intervalDays: 1,
-      nextReviewDate: Date.now() + 24 * 60 * 60 * 1000,
-      correctCount: 1,
-      incorrectCount: 0,
-      lastReviewed: Date.now(),
-      isBookmarked: false,
-    };
-
-    const best = Math.max(currentProgress.bestSpeechScore || 0, score);
-
-    const updatedProfile: UserProfileProgress = {
-      ...profile,
-      todayLearnedCount: profile.todayLearnedCount + 1,
-      wordsProgress: {
-        ...profile.wordsProgress,
-        [wordId]: {
-          ...currentProgress,
-          bestSpeechScore: best,
-          lastReviewed: Date.now(),
-        },
-      },
-    };
-
-    handleUpdateProfile(updatedProfile);
+  const handleUpdateCourse = async (id: string, data: Partial<Course>) => {
+    const res = await api.updateCourse(id, data);
+    if (res.success) {
+      setCourses(prev => prev.map(c => c.id === id ? res.data : c));
+      showToast({
+        type: 'info',
+        title: 'Cập nhật khoá học',
+        message: `Đã lưu các thay đổi của "${res.data.title}"`,
+        targetTab: 'courses'
+      });
+    }
   };
 
-  // Bookmarked words count for active language
-  const bookmarkedCount = languageWords.filter(
-    (w) => profile.wordsProgress[w.id]?.isBookmarked
-  ).length;
+  const handleDeleteCourse = async (id: string) => {
+    const courseToDelete = courses.find(c => c.id === id);
+    const res = await api.deleteCourse(id);
+    if (res.success) {
+      setCourses(prev => prev.filter(c => c.id !== id));
+      showToast({
+        type: 'warning',
+        title: 'Đã xoá khoá học',
+        message: `Đã xoá khoá học "${courseToDelete?.title || ''}"`,
+        targetTab: 'courses'
+      });
+    }
+  };
+
+  // Timetable entry changes
+  const handleTimetableEntryChange = (action: 'create' | 'update' | 'delete', entry: TimetableEntry) => {
+    if (action === 'create') {
+      showToast({
+        type: 'success',
+        title: 'Thêm thời khoá biểu thành công',
+        message: `Đã xếp lịch môn "${entry.name}" (${entry.time})`,
+        targetTab: 'timetable'
+      });
+      addSystemNotification({
+        title: `Lịch học mới: ${entry.name}`,
+        message: `Môn ${entry.name} (${entry.time}) đã được thêm vào thời khoá biểu.`,
+        type: 'info',
+        linkTab: 'timetable'
+      });
+    } else if (action === 'update') {
+      showToast({
+        type: 'info',
+        title: 'Cập nhật thời khoá biểu',
+        message: `Đã lưu thay đổi thông tin môn "${entry.name}"`,
+        targetTab: 'timetable'
+      });
+    } else if (action === 'delete') {
+      showToast({
+        type: 'warning',
+        title: 'Đã xoá khỏi thời khoá biểu',
+        message: `Đã xoá môn "${entry.name}" khỏi lịch học`,
+        targetTab: 'timetable'
+      });
+    }
+  };
+
+  // Task handlers
+  const handleCreateTask = async (data: Partial<Task>) => {
+    const res = await api.createTask(data);
+    if (res.success) {
+      setTasks(prev => [res.data, ...prev]);
+      showToast({
+        type: 'success',
+        title: 'Thêm nhiệm vụ thành công',
+        message: `Nhiệm vụ "${res.data.title}" đã được tạo`,
+        targetTab: 'tasks'
+      });
+      addSystemNotification({
+        title: `Nhiệm vụ mới: ${res.data.title}`,
+        message: `Hạn chót: ${res.data.dueDate || 'Chưa đặt'}. Ưu tiên: ${res.data.priority}`,
+        type: 'info',
+        linkTab: 'tasks'
+      });
+    }
+  };
+
+  const handleUpdateTask = async (id: string, data: Partial<Task>) => {
+    const res = await api.updateTask(id, data);
+    if (res.success) {
+      setTasks(prev => prev.map(t => t.id === id ? res.data : t));
+      showToast({
+        type: 'info',
+        title: 'Cập nhật nhiệm vụ',
+        message: `Đã lưu các thay đổi cho "${res.data.title}"`,
+        targetTab: 'tasks'
+      });
+    }
+  };
+
+  const handleToggleTask = async (id: string, currentStatus: Task['status']) => {
+    const nextStatus = currentStatus === 'done' ? 'todo' : 'done';
+    const res = await api.updateTaskStatus(id, nextStatus);
+    if (res.success) {
+      setTasks(prev => prev.map(t => t.id === id ? res.data : t));
+      showToast({
+        type: nextStatus === 'done' ? 'success' : 'info',
+        title: nextStatus === 'done' ? '🎉 Hoàn thành nhiệm vụ!' : 'Đã mở lại nhiệm vụ',
+        message: `Nhiệm vụ "${res.data.title}" đã chuyển sang ${nextStatus === 'done' ? 'Hoàn thành' : 'Cần làm'}`,
+        targetTab: 'tasks'
+      });
+    }
+  };
+
+  const handleDeleteTask = async (id: string) => {
+    const taskToDelete = tasks.find(t => t.id === id);
+    const res = await api.deleteTask(id);
+    if (res.success) {
+      setTasks(prev => prev.filter(t => t.id !== id));
+      showToast({
+        type: 'warning',
+        title: 'Đã xoá nhiệm vụ',
+        message: `Đã xoá "${taskToDelete?.title || 'nhiệm vụ'}"`,
+        targetTab: 'tasks',
+        undoLabel: 'Hoàn tác',
+        undoAction: taskToDelete ? async () => {
+          const restoreRes = await api.createTask(taskToDelete);
+          if (restoreRes.success) {
+            setTasks(prev => [restoreRes.data, ...prev]);
+            showToast({
+              type: 'success',
+              title: 'Đã khôi phục nhiệm vụ',
+              message: `Nhiệm vụ "${taskToDelete.title}" đã được phục hồi!`,
+              targetTab: 'tasks'
+            });
+          }
+        } : undefined
+      });
+    }
+  };
+
+  const handleAiBreakdown = async (taskTitle: string, courseId?: string) => {
+    const res = await api.breakdownTask(taskTitle, courseId);
+    if (res.success && res.data) {
+      setTasks(prev => [...res.data, ...prev]);
+      showToast({
+        type: 'info',
+        title: 'AI Phân tách nhiệm vụ',
+        message: `Đã chia nhỏ "${taskTitle}" thành ${res.data.length} công việc cụ thể`,
+        targetTab: 'tasks'
+      });
+    }
+  };
+
+  // Note handlers
+  const handleCreateNote = async (data: Partial<Note>) => {
+    const res = await api.createNote(data);
+    if (res.success) {
+      setNotes(prev => [res.data, ...prev]);
+      showToast({
+        type: 'success',
+        title: 'Tạo ghi chú thành công',
+        message: `Ghi chú "${res.data.title}" đã được lưu`,
+        targetTab: 'notes'
+      });
+      addSystemNotification({
+        title: `Ghi chú mới: ${res.data.title}`,
+        message: `Đã thêm vào kho tài liệu học tập.`,
+        type: 'info',
+        linkTab: 'notes'
+      });
+    }
+  };
+
+  const handleUpdateNote = async (id: string, data: Partial<Note>) => {
+    const res = await api.updateNote(id, data);
+    if (res.success) {
+      setNotes(prev => prev.map(n => n.id === id ? res.data : n));
+      showToast({
+        type: 'info',
+        title: 'Cập nhật ghi chú',
+        message: `Đã lưu thay đổi ghi chú "${res.data.title}"`,
+        targetTab: 'notes'
+      });
+    }
+  };
+
+  const handleDeleteNote = async (id: string) => {
+    const noteToDelete = notes.find(n => n.id === id);
+    const res = await api.deleteNote(id);
+    if (res.success) {
+      setNotes(prev => prev.filter(n => n.id !== id));
+      showToast({
+        type: 'warning',
+        title: 'Đã xoá ghi chú',
+        message: `Đã xoá ghi chú "${noteToDelete?.title || ''}"`,
+        targetTab: 'notes',
+        undoLabel: 'Hoàn tác',
+        undoAction: noteToDelete ? async () => {
+          const restoreRes = await api.createNote(noteToDelete);
+          if (restoreRes.success) {
+            setNotes(prev => [restoreRes.data, ...prev]);
+            showToast({
+              type: 'success',
+              title: 'Đã khôi phục ghi chú',
+              message: `Ghi chú "${noteToDelete.title}" đã được phục hồi!`,
+              targetTab: 'notes'
+            });
+          }
+        } : undefined
+      });
+    }
+  };
+
+  // Goal handlers
+  const handleCreateGoal = async (data: Partial<Goal>) => {
+    const res = await api.createGoal(data);
+    if (res.success) {
+      setGoals(prev => [res.data, ...prev]);
+      showToast({
+        type: 'success',
+        title: 'Tạo mục tiêu thành công',
+        message: `Mục tiêu "${res.data.title}" (${res.data.targetValue} ${res.data.unit}) đã được kích hoạt`,
+        targetTab: 'goals'
+      });
+      addSystemNotification({
+        title: `Mục tiêu mới: ${res.data.title}`,
+        message: `Mục tiêu tự học ${res.data.targetValue} ${res.data.unit} đã được kích hoạt.`,
+        type: 'success',
+        linkTab: 'goals'
+      });
+    }
+  };
+
+  const handleUpdateGoal = async (id: string, data: Partial<Goal>) => {
+    const res = await api.updateGoal(id, data);
+    if (res.success) {
+      setGoals(prev => prev.map(g => g.id === id ? res.data : g));
+      showToast({
+        type: 'info',
+        title: 'Cập nhật mục tiêu',
+        message: `Đã cập nhật thông tin "${res.data.title}"`,
+        targetTab: 'goals'
+      });
+    }
+  };
+
+  const handleDeleteGoal = async (id: string) => {
+    const goalToDelete = goals.find(g => g.id === id);
+    const res = await api.deleteGoal(id);
+    if (res.success) {
+      setGoals(prev => prev.filter(g => g.id !== id));
+      showToast({
+        type: 'warning',
+        title: 'Đã xoá mục tiêu',
+        message: `Đã xoá mục tiêu "${goalToDelete?.title || ''}"`,
+        targetTab: 'goals',
+        undoLabel: 'Hoàn tác',
+        undoAction: goalToDelete ? async () => {
+          const restoreRes = await api.createGoal(goalToDelete);
+          if (restoreRes.success) {
+            setGoals(prev => [restoreRes.data, ...prev]);
+            showToast({
+              type: 'success',
+              title: 'Đã khôi phục mục tiêu',
+              message: `Mục tiêu "${goalToDelete.title}" đã được phục hồi!`,
+              targetTab: 'goals'
+            });
+          }
+        } : undefined
+      });
+    }
+  };
+
+  const handleIncrementGoal = async (id: string, amount: number) => {
+    const res = await api.updateGoalProgress(id, amount);
+    if (res.success) {
+      setGoals(prev => prev.map(g => g.id === id ? res.data : g));
+      const isCompleted = res.data.currentValue >= res.data.targetValue;
+      showToast({
+        type: isCompleted ? 'success' : 'info',
+        title: isCompleted ? '🎯 Hoàn thành mục tiêu!' : 'Cập nhật tiến độ',
+        message: `"${res.data.title}": ${res.data.currentValue}/${res.data.targetValue} ${res.data.unit}`,
+        targetTab: 'goals'
+      });
+    }
+  };
+
+  const handleUpdateGoalProgress = async (id: string, params: { increment?: number; currentValue?: number }) => {
+    const res = await api.updateGoalProgress(id, params);
+    if (res.success) {
+      setGoals(prev => prev.map(g => g.id === id ? res.data : g));
+      const isCompleted = res.data.currentValue >= res.data.targetValue;
+      showToast({
+        type: isCompleted ? 'success' : 'info',
+        title: isCompleted ? '🎯 Cán đích 100% mục tiêu!' : 'Cập nhật tiến độ',
+        message: `"${res.data.title}": ${res.data.currentValue}/${res.data.targetValue} ${res.data.unit}`,
+        targetTab: 'goals'
+      });
+    }
+  };
+
+  // Error handlers
+  const handleReportError = async (data: Partial<ErrorReport>) => {
+    const res = await api.reportError(data);
+    if (res.success) {
+      setErrors(prev => [res.data, ...prev]);
+      showToast({
+        type: 'info',
+        title: 'Đã gửi báo cáo lỗi',
+        message: `Báo cáo "${res.data.title}" đã được ghi nhận vào hệ thống`,
+        targetTab: 'errors'
+      });
+    }
+  };
+
+  const handleResolveError = async (id: string, notes: string) => {
+    const res = await api.resolveError(id, notes);
+    if (res.success) {
+      setErrors(prev => prev.map(e => e.id === id ? res.data : e));
+      showToast({
+        type: 'success',
+        title: 'Đã giải quyết vấn đề',
+        message: `Vấn đề đã được đánh dấu là đã giải quyết`,
+        targetTab: 'errors'
+      });
+    }
+  };
+
+  const openErrorCount = errors.filter(e => e.status !== 'resolved').length;
+
+  const handleOpenAuth = (tab: 'login' | 'register' = 'login') => {
+    clearAllToasts();
+    setAuthTab(tab);
+    setViewMode('auth');
+  };
+
+  const handleGoToLanding = () => {
+    clearAllToasts();
+    setViewMode('landing');
+  };
+
+  // View 1: Landing presentation page
+  if (viewMode === 'landing') {
+    return (
+      <LandingPageView
+        onOpenAuth={handleOpenAuth}
+        onEnterApp={() => {
+          if (user) {
+            setViewMode('app');
+          } else {
+            handleOpenAuth('login');
+          }
+        }}
+      />
+    );
+  }
+
+  // View 2: Split-screen authentication view
+  if (viewMode === 'auth') {
+    return (
+      <AuthSplitView
+        initialTab={authTab}
+        onBackToLanding={handleGoToLanding}
+        onEnterApp={() => setViewMode('app')}
+      />
+    );
+  }
+
+  // View 3: Planora LMS Workspace (requires authenticated user)
+  if (!user) {
+    return (
+      <AuthSplitView
+        initialTab="login"
+        onBackToLanding={handleGoToLanding}
+        onEnterApp={() => setViewMode('app')}
+      />
+    );
+  }
 
   return (
-    <div
-      className={`min-h-screen flex flex-col font-['Plus_Jakarta_Sans',sans-serif] selection:bg-indigo-600 selection:text-white transition-colors duration-200 ${
-        isDarkMode
-          ? 'bg-slate-950 text-slate-100'
-          : 'bg-[#f8fafc] text-slate-800'
-      }`}
-    >
-      <Header
-        currentLang={currentLang}
-        onLanguageChange={handleLanguageChange}
-        activeTab={activeTab}
-        onTabChange={setActiveTab}
-        profile={profile}
-        isDarkMode={isDarkMode}
-        onToggleDarkMode={handleToggleDarkMode}
-        totalWordsCount={TOTAL_WORDS_COUNT}
-        currentLangWordsCount={currentLang === 'en' ? TOTAL_ENGLISH_COUNT : TOTAL_CHINESE_COUNT}
-        onOpenBookmarks={() => setIsBookmarksOpen(true)}
-        bookmarkedCount={bookmarkedCount}
-      />
+    <>
+      <ToastContainer onNavigate={handleToastNavigate} />
+      <div className={`h-screen w-full flex flex-row overflow-hidden transition-colors duration-200 ${
+        isDark ? 'bg-neutral-950 text-neutral-100' : 'bg-slate-50 text-slate-900'
+      }`}>
+        {/* Responsive Sidebar (Desktop persistent + Mobile slide-over drawer) */}
+        <Sidebar
+          activeTab={activeTab}
+          onTabChange={(tab) => {
+            setActiveTab(tab);
+            setIsMobileMenuOpen(false);
+          }}
+          errorCount={openErrorCount}
+          onGoToLanding={handleGoToLanding}
+          isMobileOpen={isMobileMenuOpen}
+          onCloseMobile={() => setIsMobileMenuOpen(false)}
+          lastAutoSaveTime={lastAutoSaveTime}
+          isAutoSaving={isAutoSaving}
+          onTriggerManualSave={() => handleTriggerAutoSave(true)}
+        />
 
-      <main className="flex-grow">
-        {isLoadingWords && languageWords.length === 0 ? (
-          <TabLoadingFallback isDarkMode={isDarkMode} />
-        ) : (
-          <Suspense fallback={<TabLoadingFallback isDarkMode={isDarkMode} />}>
-            {activeTab === 'explore' && (
-              <VocabularyExplorer
-                words={languageWords}
-                currentLang={currentLang}
-                currentLevel={currentLevel}
-                onLevelChange={setCurrentLevel}
-                profile={profile}
-                onUpdateProfile={handleUpdateProfile}
-                onOpenPronounce={(w) => setActivePronounceWord(w)}
-                isDarkMode={isDarkMode}
-                targetJumpWord={targetJumpWord}
-              />
-            )}
-
-            {activeTab === 'patterns' && (
-              <SentencePatternsMode
-                currentLang={currentLang}
-                onLanguageChange={handleLanguageChange}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'toeic-ielts' && (
-              <ToeicIeltsExamHub
-                profile={profile}
-                onUpdateProfile={handleUpdateProfile}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'ai-translate' && (
-              <AiPhotoTranslator
-                currentLang={currentLang}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'ai-roleplay' && (
-              <AiRoleplayChat
-                currentLang={currentLang}
-                onLanguageChange={handleLanguageChange}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'theory' && (
-              <TheoryHub
-                currentLang={currentLang}
-                onLanguageChange={handleLanguageChange}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'dialogue' && (
-              <SituationalDialogue
-                currentLang={currentLang}
-                onLanguageChange={handleLanguageChange}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'random-draw' && (
-              <RandomCardDraw
-                words={languageWords}
-                currentLang={currentLang}
-                profile={profile}
-                onUpdateProfile={handleUpdateProfile}
-                onOpenPronounce={(w) => setActivePronounceWord(w)}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'cloze' && (
-              <ClozeTestMode
-                currentLang={currentLang}
-                profile={profile}
-                onUpdateProfile={handleUpdateProfile}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'flashcard' && (
-              <FlashcardMode
-                words={languageWords.filter((w) => w.level === currentLevel)}
-                profile={profile}
-                onUpdateProfile={handleUpdateProfile}
-                onOpenPronounce={(w) => setActivePronounceWord(w)}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'pronunciation' && (
-              <PronunciationPracticeList
-                words={languageWords}
-                currentLang={currentLang}
-                currentLevel={currentLevel}
-                profile={profile}
-                onOpenPronounce={(w) => setActivePronounceWord(w)}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'practice' && (
-              <PracticeMode
-                words={languageWords.filter((w) => w.level === currentLevel)}
-                profile={profile}
-                onUpdateProfile={handleUpdateProfile}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'test' && (
-              <PeriodicTestMode
-                words={languageWords}
-                profile={profile}
-                currentLevel={currentLevel}
-                onUpdateProfile={handleUpdateProfile}
-                isDarkMode={isDarkMode}
-              />
-            )}
-
-            {activeTab === 'dictionary' && (
-              <VocabularyNotebook
-                words={languageWords}
-                profile={profile}
-                onUpdateProfile={handleUpdateProfile}
-                onOpenPronounce={(w) => setActivePronounceWord(w)}
-                isDarkMode={isDarkMode}
-              />
-            )}
-          </Suspense>
-        )}
-      </main>
-
-      <Suspense fallback={null}>
-        {/* Speech Pronunciation Modal */}
-        {activePronounceWord && (
-          <PronunciationModal
-            word={activePronounceWord}
-            onClose={() => setActivePronounceWord(null)}
-            onScoreSave={handleScoreSave}
-            isDarkMode={isDarkMode}
+        {/* Main Content Area */}
+        <div className="flex-1 flex flex-col h-full min-w-0 overflow-hidden relative">
+          <Header
+            activeTab={activeTab}
+            onOpenAi={() => setActiveTab('ai')}
+            onGoToLanding={handleGoToLanding}
+            onOpenAuth={(tab) => handleOpenAuth(tab)}
+            notifications={notifications}
+            onMarkAsRead={handleMarkAsRead}
+            onMarkAllAsRead={handleMarkAllAsRead}
+            onNavigate={(tab) => {
+              setActiveTab(tab);
+              setIsMobileMenuOpen(false);
+            }}
+            onDeleteNotification={handleDeleteNotification}
+            onToggleMobileMenu={() => setIsMobileMenuOpen(prev => !prev)}
           />
-        )}
 
-        {/* Bookmarked Words Quick Access Drawer */}
-        {isBookmarksOpen && (
-          <BookmarkedWordsDrawer
-            words={languageWords}
-            profile={profile}
-            onToggleBookmark={handleToggleBookmark}
-            onJumpToWord={handleJumpToWord}
-            isOpen={isBookmarksOpen}
-            onClose={() => setIsBookmarksOpen(false)}
-            isDarkMode={isDarkMode}
-            currentLang={currentLang}
-          />
-        )}
-      </Suspense>
+          <main className="flex-1 p-3 sm:p-5 md:p-6 pb-28 sm:pb-32 lg:pb-12 max-w-7xl w-full mx-auto overflow-y-auto min-w-0">
+            {loading ? (
+              <div className={`flex items-center justify-center h-64 text-xs font-medium ${
+                isDark ? 'text-neutral-400' : 'text-slate-500'
+              }`}>
+                Đang kết nối hệ thống Planora LMS...
+              </div>
+            ) : (
+              <>
+                {activeTab === 'dashboard' && (
+                  <DashboardView
+                    courses={courses}
+                    tasks={tasks}
+                    goals={goals}
+                    errors={errors}
+                    notes={notes}
+                    onNavigate={setActiveTab}
+                    onToggleTask={handleToggleTask}
+                  />
+                )}
 
-      {/* Floating Scroll To Top Button (Bottom-Right) */}
-      <ScrollToTop isDarkMode={isDarkMode} />
+                {activeTab === 'courses' && (
+                  <CoursesView
+                    courses={courses}
+                    onCreateCourse={handleCreateCourse}
+                    onUpdateCourse={handleUpdateCourse}
+                    onDeleteCourse={handleDeleteCourse}
+                    onNavigateToTab={handleNavigateWithContext}
+                  />
+                )}
 
-      {/* Offline Connectivity Notification */}
-      <OfflineIndicator />
+                {activeTab === 'timetable' && (
+                  <TimetableView
+                    onNavigateToCourses={() => setActiveTab('courses')}
+                    onEntryChange={handleTimetableEntryChange}
+                  />
+                )}
 
-      {/* Footer */}
-      <footer
-        className={`py-8 text-xs border-t transition-colors ${
-          isDarkMode
-            ? 'bg-slate-950 border-slate-900 text-slate-500'
-            : 'bg-white border-slate-200 text-slate-500 shadow-2xs'
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div>
-            <span className={`font-bold ${isDarkMode ? 'text-slate-300' : 'text-slate-700'}`}>
-              LinguaVocab Standard
-            </span>{' '}
-            &mdash; Kho từ điển &gt; 10.000 từ vựng tiếng Anh (Oxford/CEFR) & &gt; 10.000 từ vựng tiếng Trung (HSK) riêng biệt (Tổng &gt; 20.000 từ chuẩn) cùng Hệ thống Mẫu câu giao tiếp chuẩn quốc tế.
-          </div>
-          <div className="flex items-center gap-4 text-[11px]">
-            <span>Lặp lại ngắt quãng (SM-2)</span>
-            <span>&bull;</span>
-            <span>Web Speech API TTS/STT</span>
-            <span>&bull;</span>
-            <span className="font-semibold text-indigo-600 dark:text-indigo-400">Tone màu dịu mắt &bull; Giao diện chuẩn</span>
-          </div>
+                {activeTab === 'tasks' && (
+                  <TasksView
+                    tasks={tasks}
+                    courses={courses}
+                    onCreateTask={handleCreateTask}
+                    onUpdateTask={handleUpdateTask}
+                    onToggleTask={handleToggleTask}
+                    onDeleteTask={handleDeleteTask}
+                    onAiBreakdown={handleAiBreakdown}
+                    initialCourseId={crossContext.courseId}
+                  />
+                )}
+
+                {activeTab === 'notes' && (
+                  <NotesView
+                    notes={notes}
+                    courses={courses}
+                    onCreateNote={handleCreateNote}
+                    onUpdateNote={handleUpdateNote}
+                    onDeleteNote={handleDeleteNote}
+                    initialSearchTerm={crossContext.courseCode}
+                  />
+                )}
+
+                {activeTab === 'goals' && (
+                  <GoalsView
+                    goals={goals}
+                    onCreateGoal={handleCreateGoal}
+                    onUpdateGoal={handleUpdateGoal}
+                    onDeleteGoal={handleDeleteGoal}
+                    onIncrementGoal={handleIncrementGoal}
+                    onUpdateProgress={handleUpdateGoalProgress}
+                  />
+                )}
+
+                {activeTab === 'ai' && (
+                  <AiAssistantView
+                    initialPrompt={crossContext.aiPrompt}
+                    courses={courses}
+                    tasks={tasks}
+                    goals={goals}
+                    notes={notes}
+                    onCreateTask={handleCreateTask}
+                    onCreateNote={handleCreateNote}
+                    onCreateCourse={handleCreateCourse}
+                    onNavigate={(tab) => setActiveTab(tab as any)}
+                  />
+                )}
+
+                {activeTab === 'errors' && (
+                  <ErrorReportsView
+                    errors={errors}
+                    onReportError={handleReportError}
+                    onResolveError={handleResolveError}
+                  />
+                )}
+
+                {activeTab === 'notifications' && (
+                  <NotificationsView
+                    notifications={notifications}
+                    onMarkAsRead={handleMarkAsRead}
+                    onMarkAllAsRead={handleMarkAllAsRead}
+                    onDeleteNotification={handleDeleteNotification}
+                    onNavigate={setActiveTab}
+                  />
+                )}
+
+                {activeTab === 'profile' && (
+                  <ProfileView
+                    onNavigate={setActiveTab}
+                    coursesCount={courses.length}
+                    completedTasksCount={tasks.filter(t => t.status === 'done').length}
+                    goalsCount={goals.length}
+                    notesCount={notes.length}
+                  />
+                )}
+
+                {activeTab === 'settings' && (
+                  <SettingsView 
+                    lastAutoSaveTime={lastAutoSaveTime}
+                    isAutoSaving={isAutoSaving}
+                    onTriggerManualSave={() => handleTriggerAutoSave(true)}
+                    courses={courses}
+                    tasks={tasks}
+                    goals={goals}
+                    notes={notes}
+                  />
+                )}
+
+                {activeTab === 'users' && (
+                  <AdminUsersView />
+                )}
+              </>
+            )}
+
+            {/* Explicit clearance spacer for mobile and tablet floating bottom nav bar */}
+            <div className="h-28 sm:h-32 lg:hidden w-full shrink-0" aria-hidden="true" />
+          </main>
         </div>
-      </footer>
-    </div>
-  );
-};
 
-export default App;
+        {/* Mobile & Tablet Bottom Navigation Bar (< 1024px) */}
+        <MobileBottomNav
+          activeTab={activeTab}
+          onTabChange={(tab) => {
+            setActiveTab(tab);
+            setIsMobileMenuOpen(false);
+          }}
+          onToggleMenu={() => setIsMobileMenuOpen(true)}
+          pendingTasksCount={tasks.filter(t => t.status !== 'done').length}
+        />
+      </div>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <ToastProvider>
+      <PlanoraWorkspace />
+    </ToastProvider>
+  );
+}

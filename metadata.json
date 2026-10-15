@@ -1,8 +1,6 @@
 {
-  "name": "PKFire Portfolio Website",
-  "description": "Personal developer portfolio and project showcase for Bui Quang (PKFire-223).",
-  "permissions": [],
-  "capabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
+  "name": "Planora",
+  "description": "Planora - Nền tảng quản lý kế hoạch & học tập thông minh với chế độ sáng tối, xác thực tài khoản và trợ lý AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

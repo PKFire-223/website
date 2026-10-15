@@ -1,25 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 import './index.css';
-import { registerSW } from 'virtual:pwa-register';
-
-// Automatically register and activate service worker for offline caching
-registerSW({
-  immediate: true,
-  onNeedRefresh() {
-    console.log('LinguaVocab: New update available, updating service worker...');
-  },
-  onOfflineReady() {
-    console.log('LinguaVocab: App and vocabulary data ready to work offline!');
-  },
-});
+import App from './App';
+import { ThemeProvider } from './context/ThemeContext';
+import { AuthProvider } from './context/AuthContext';
+import { LanguageProvider } from './context/LanguageContext';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
-  ReactDOM.createRoot(rootElement).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+  createRoot(rootElement).render(
+    <StrictMode>
+      <LanguageProvider>
+        <ThemeProvider>
+          <AuthProvider>
+            <App />
+          </AuthProvider>
+        </ThemeProvider>
+      </LanguageProvider>
+    </StrictMode>
   );
 }
